@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/spring/WebClient/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>WebClient - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "WebClient";
+        var mkdocs_page_input_path = "spring\\WebClient.md";
+        var mkdocs_page_url = "/spring/WebClient/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">WebClient</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-add-dependency-in-pomxml">1. Add dependency in pom.xml</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-configure-webclient-bean">2. Configure WebClient Bean</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-using-webclient-to-make-a-request">3. Using WebClient to make a request</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-example-controller">4. Example Controller</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-handling-error-responses">5. Handling Error Responses</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-mono">1. Mono</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-flux">2. Flux</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Resiliency/">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Gateway/">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Spring</li>
+      <li class="breadcrumb-item active">WebClient</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="webclient">WebClient</h1>
+<p>WebClient is a non-blocking, reactive web client provided by Spring WebFlux, which is part of the Spring Framework. It is designed to perform HTTP requests and consume RESTful web services asynchronously. WebClient is a better alternative to RestTemplate when dealing with reactive applications.</p>
+<p>Here’s an example of how to use WebClient in a Spring Boot application:</p>
+<h3 id="1-add-dependency-in-pomxml">1. Add dependency in pom.xml</h3>
+<p>You need to add the Spring WebFlux dependency if it's not already in your project:</p>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-webflux&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h3 id="2-configure-webclient-bean">2. Configure WebClient Bean</h3>
+<p>You can define a WebClient bean in your configuration class:</p>
+<pre><code class="language-java">import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.function.client.WebClient;
+
+@Configuration
+public class WebClientConfig {
+
+    @Bean
+    public WebClient.Builder webClientBuilder() {
+        return WebClient.builder();
+    }
+}
+</code></pre>
+<h3 id="3-using-webclient-to-make-a-request">3. Using WebClient to make a request</h3>
+<p>Here’s how you can use WebClient to make an HTTP GET request:</p>
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
+
+@Service
+public class WebClientService {
+
+    @Autowired
+    private WebClient.Builder webClientBuilder;
+
+    public Mono&lt;String&gt; fetchData(String url) {
+        return webClientBuilder.baseUrl(url)
+                               .build()
+                               .get()
+                               .retrieve()
+                               .bodyToMono(String.class);
+    }
+}
+</code></pre>
+<h3 id="4-example-controller">4. Example Controller</h3>
+<p>You can inject the WebClientService into your controller to use it:</p>
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
+
+@RestController
+public class WebClientController {
+
+    @Autowired
+    private WebClientService webClientService;
+
+    @GetMapping(&quot;/fetch-data&quot;)
+    public Mono&lt;String&gt; fetchData() {
+        return webClientService.fetchData(&quot;https://api.example.com/data&quot;);
+    }
+}
+</code></pre>
+<h3 id="5-handling-error-responses">5. Handling Error Responses</h3>
+<p>WebClient has powerful error handling capabilities. You can customize error handling by using onStatus():</p>
+<pre><code class="language-java">public Mono&lt;String&gt; fetchDataWithErrorHandling(String url) {
+    return webClientBuilder.baseUrl(url)
+                           .build()
+                           .get()
+                           .retrieve()
+                           .onStatus(status -&gt; status.is4xxClientError(), response -&gt; Mono.error(new RuntimeException(&quot;Client error&quot;)))
+                           .onStatus(status -&gt; status.is5xxServerError(), response -&gt; Mono.error(new RuntimeException(&quot;Server error&quot;)))
+                           .bodyToMono(String.class);
+}
+</code></pre>
+<p>WebClient is highly useful for handling asynchronous, non-blocking HTTP requests, especially in reactive systems built using Spring WebFlux.</p>
+<p><strong>Example of a Blocking WebClient Call</strong></p>
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+
+@Service
+public class WebClientBlockingService {
+
+    @Autowired
+    private WebClient.Builder webClientBuilder;
+
+    public String fetchDataBlocking(String url) {
+        return webClientBuilder.baseUrl(url)
+                               .build()
+                               .get()
+                               .retrieve()
+                               .bodyToMono(String.class)
+                               .block(); // This makes it a blocking call
+    }
+}
+</code></pre>
+<p>Mono and Flux are two core classes in Project Reactor, the reactive library used in Spring WebFlux to represent asynchronous and non-blocking sequences of data.</p>
+<h3 id="1-mono">1. Mono</h3>
+<p>Mono represents a sequence that contains at most one item or is empty. It is similar to a Future or Optional, but it is reactive and can be used to represent a single value or a potential error.</p>
+<p><strong>Use cases for Mono:</strong>
+- Returning a single value or no value (empty).
+- Performing operations that complete with one result.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-java">import reactor.core.publisher.Mono;
+
+public class MonoExample {
+    public static void main(String[] args) {
+        Mono&lt;String&gt; mono = Mono.just(&quot;Hello, World!&quot;);
+
+        // Subscribe to the Mono and print the value
+        mono.subscribe(value -&gt; System.out.println(value));  // Output: Hello, World!
+    }
+}
+</code></pre>
+<h3 id="2-flux">2. Flux</h3>
+<p>Flux represents a sequence of 0 to N items and can be thought of as a stream of data over time. It is used when you expect multiple values or an indefinite sequence, like reading multiple records from a database, consuming a stream of events, etc.</p>
+<p><strong>Use cases for Flux:</strong>
+- Returning multiple items in a stream-like fashion.
+- Handling collections or lists asynchronously.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-java">import reactor.core.publisher.Flux;
+
+public class FluxExample {
+    public static void main(String[] args) {
+        Flux&lt;String&gt; flux = Flux.just(&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cherry&quot;);
+
+        // Subscribe to the Flux and print each value
+        flux.subscribe(value -&gt; System.out.println(value));
+        // Output:
+        // Apple
+        // Banana
+        // Cherry
+    }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../RestTemplate/" class="btn btn-neutral float-left" title="RestTemplate"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Spring%20boot%20annotations/" class="btn btn-neutral float-right" title="Spring boot annotations">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../RestTemplate/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Spring%20boot%20annotations/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

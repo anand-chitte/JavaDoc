@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/java/Hashmap/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Hashmap - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Hashmap";
+        var mkdocs_page_input_path = "java\\Hashmap.md";
+        var mkdocs_page_url = "/java/Hashmap/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Hashmap</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#key-concepts-of-hashmap">Key Concepts of HashMap</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-buckets">1. Buckets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-hashing">2. Hashing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-collisions">3. Collisions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-insertion">4. Insertion</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-retrieving">5. Retrieving</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-removing">6. Removing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-resize-rehashing">7. Resize (Rehashing)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example">Example</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Resiliency/">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Gateway/">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Java</li>
+      <li class="breadcrumb-item active">Hashmap</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="working-of-hashmap-in-java">Working of HashMap in Java</h1>
+<p>A <strong>HashMap</strong> in Java is a data structure that stores key-value pairs. Each key in the HashMap is unique, and it is associated with a specific value. It is part of the <code>java.util</code> package and implements the <code>Map</code> interface.</p>
+<h2 id="key-concepts-of-hashmap">Key Concepts of HashMap</h2>
+<h3 id="1-buckets">1. Buckets</h3>
+<ul>
+<li>Internally, a <strong>HashMap</strong> uses an array of <strong>buckets</strong> (also known as "bins" or "slots"). These buckets are used to store the key-value pairs. The <strong>bucket size</strong> refers to the number of available buckets in the underlying array.</li>
+<li>When a key-value pair is inserted into the HashMap, the <strong>bucket index</strong> is determined based on the <strong>hash code</strong> of the key, which is calculated by the <code>hashCode()</code> method. The bucket index is then computed as:<br />
+<code>bucket index = hashCode(key) % bucket size</code>.</li>
+<li><strong>Bucket size</strong> is an internal property that can be configured but typically defaults to 16 in many implementations of HashMap. When the number of entries in the HashMap exceeds the load factor multiplied by the current bucket size, the bucket size will increase, typically doubling.</li>
+</ul>
+<h3 id="2-hashing">2. Hashing</h3>
+<ul>
+<li><strong>Hash Code Calculation</strong>: When you insert a key-value pair into the HashMap, the hash code of the key is computed. The hash code is a number that is used to determine which bucket the key-value pair should be stored in.</li>
+<li>The hash code is then mapped to an index in the array of buckets. The formula used is:<br />
+<code>bucket index = hashCode(key) % bucket size</code>.</li>
+<li>For example, if the hash code of a key is <code>123</code> and the bucket size is <code>16</code>, the index will be:<br />
+<code>bucket index = 123 % 16 = 11</code>. This means the key-value pair will be stored in bucket 11.</li>
+</ul>
+<h3 id="3-collisions">3. Collisions</h3>
+<ul>
+<li><strong>Collision Handling</strong>: If two or more keys have the same hash code (i.e., they map to the same bucket), it leads to a <strong>collision</strong>. In this case, the HashMap stores these key-value pairs in a linked list (or tree if the collisions are high) at the same bucket index.</li>
+<li>When retrieving or updating values, HashMap traverses the linked list or tree to find the correct key-value pair.</li>
+</ul>
+<h3 id="4-insertion">4. Insertion</h3>
+<ul>
+<li><strong>put(key, value)</strong>: When you add a key-value pair, the key’s hash code is calculated, and the pair is stored in the appropriate bucket based on the index derived from the hash code.</li>
+<li>If the key already exists, the value is updated with the new one. If it's a new key, the pair is added to the HashMap.</li>
+</ul>
+<h3 id="5-retrieving">5. Retrieving</h3>
+<ul>
+<li><strong>get(key)</strong>: To retrieve a value, the HashMap calculates the hash code of the key, finds the appropriate bucket, and searches for the key in that bucket (either in the linked list or tree).</li>
+<li>If the key is found, the corresponding value is returned.</li>
+</ul>
+<h3 id="6-removing">6. Removing</h3>
+<ul>
+<li><strong>remove(key)</strong>: To remove a key-value pair, the HashMap calculates the hash code for the key, finds the appropriate bucket, and removes the pair from the linked list or tree at that bucket index.</li>
+</ul>
+<h3 id="7-resize-rehashing">7. Resize (Rehashing)</h3>
+<ul>
+<li><strong>Load Factor</strong>: A <strong>load factor</strong> determines when the HashMap should resize (rehash) the buckets. The default load factor is 0.75, meaning when 75% of the current bucket size is filled, the HashMap will resize the array of buckets.</li>
+<li><strong>Rehashing</strong>: When the bucket size exceeds the threshold (load factor * current bucket size), the <strong>HashMap resizes</strong> the array, typically doubling the bucket size. All existing key-value pairs are rehashed and redistributed into the new array of buckets, ensuring even distribution and avoiding too many collisions.</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-java">import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        // Create a HashMap instance with a default initial capacity of 16 buckets
+        HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+
+        // Insert key-value pairs
+        map.put(&quot;Apple&quot;, 5);
+        map.put(&quot;Banana&quot;, 7);
+        map.put(&quot;Orange&quot;, 3);
+
+        // Retrieve a value based on key
+        System.out.println(&quot;Apple's count: &quot; + map.get(&quot;Apple&quot;)); // Output: 5
+
+        // Update a value
+        map.put(&quot;Apple&quot;, 10);
+        System.out.println(&quot;Updated Apple's count: &quot; + map.get(&quot;Apple&quot;)); // Output: 10
+
+        // Remove a key-value pair
+        map.remove(&quot;Banana&quot;);
+
+        // Check if a key exists
+        System.out.println(&quot;Contains 'Banana'? &quot; + map.containsKey(&quot;Banana&quot;)); // Output: false
+    }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../FunctionalInterface/" class="btn btn-neutral float-left" title="Functional Interface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Comparable%20vs%20Compartor/" class="btn btn-neutral float-right" title="Comparable vs Compartor">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../FunctionalInterface/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Comparable%20vs%20Compartor/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
