@@ -1,163 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://example.com/java/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Collection%20Framework/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Collection%20Framework/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Comparable%20vs%20Compartor/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Comparable%20vs%20Compartor/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Exception%20in%20Java/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Exception%20in%20Java/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/FunctionalInterface/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/FunctionalInterface/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Generics/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Generics/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Hashmap/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Hashmap/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/How%20Java%20Works/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/How%20Java%20Works/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Interface/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Interface/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Iterator%20%26%20Iterable/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Iterator%20%26%20Iterable/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Java%20Virtual%20Machine%20%28JVM%29/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Java%20Virtual%20Machine%20%28JVM%29/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/LambdaExpression/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/LambdaExpression/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Method%20overloading%20%26%20overiding/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Method%20overloading%20%26%20overiding/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Object-Oriented%20Programming/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Object-Oriented%20Programming/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/ProgrammingQuestions/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/ProgrammingQuestions/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/StaticFinalKeyword/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/StaticFinalKeyword/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Stream/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Stream/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/StreamsLambdaFunctional/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/StreamsLambdaFunctional/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/String/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/String/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/java/Thread/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/Thread/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/microservices/ConfigServer/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/microservices/ConfigServer/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/microservices/EurekaServer/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/microservices/EurekaServer/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/microservices/FeignClient/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/microservices/FeignClient/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/microservices/Gateway/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/microservices/Gateway/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/microservices/Introduction/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/microservices/Introduction/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/microservices/Resillency/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/microservices/Resiliency/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/microservices/SpringCloudFunction/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/microservices/SpringCloudFunction/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/microservices/SpringCloudStream/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/microservices/SpringCloudStream/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/other/RabbitMQ/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/other/RabbitMQ/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/other/Redis/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/other/Redis/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/spring/CorrelationId/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/spring/CorrelationId/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/spring/Introduction/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/spring/Introduction/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/spring/Keycloak%20Implementation/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/spring/Keycloak%20Implementation/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/spring/RestTemplate/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/spring/RestTemplate/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/spring/Spring%20Boot/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/spring/Spring%20Boot/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/spring/Spring%20Container/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/spring/Spring%20Container/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/spring/Spring%20Profiles/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/spring/Spring%20Profiles/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/spring/Spring%20Security/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/spring/Spring%20Security/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/spring/Spring%20boot%20annotations/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/spring/Spring%20boot%20annotations/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
     <url>
-         <loc>https://example.com/spring/WebClient/</loc>
+         <loc>https://anand-chitte.github.io/JavaDoc/spring/WebClient/</loc>
          <lastmod>2025-01-06</lastmod>
     </url>
 </urlset>
