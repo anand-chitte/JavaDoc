@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/spring/Spring%20Security/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Spring Security - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Spring Security";
+        var mkdocs_page_input_path = "spring\\Spring Security.md";
+        var mkdocs_page_url = "/spring/Spring%20Security/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Spring Security</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-keycloak-setup">1. Keycloak Setup</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-spring-boot-security-configuration">2. Spring Boot Security Configuration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-jwt-token-validation">3. JWT Token Validation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-spring-security-integration">4. Spring Security Integration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-keycloak-role-conversion">5. Keycloak Role Conversion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-security-flow">6. Security Flow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-disabling-csrf-protection">7. Disabling CSRF Protection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-advantages-of-using-keycloak-with-spring-boot">8. Advantages of Using Keycloak with Spring Boot</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-token-expiry-and-refresh">9. Token Expiry and Refresh</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../microservices/Resiliency.md">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../microservices/GatewayServer.md">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Spring</li>
+      <li class="breadcrumb-item active">Spring Security</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="implementing-a-resource-server-with-keycloak-in-spring-boot">Implementing a Resource Server with Keycloak in Spring Boot</h1>
+<h2 id="1-keycloak-setup">1. Keycloak Setup</h2>
+<ul>
+<li><strong>Realm</strong>: A realm is a boundary for managing authentication and authorization in Keycloak. It contains clients, users, roles, and other security-related configurations.</li>
+<li><strong>Client</strong>: A client represents an application that interacts with Keycloak. When configuring a Spring Boot application, the client must be set up to authenticate using OAuth2 with Keycloak.</li>
+<li><strong>Roles</strong>: Keycloak uses roles to control access to resources. Roles are assigned to users and define their permissions. In the resource server, you use these roles to enforce access control on specific endpoints.</li>
+</ul>
+<h2 id="2-spring-boot-security-configuration">2. Spring Boot Security Configuration</h2>
+<ul>
+<li><strong>OAuth2 Resource Server</strong>: In the context of Spring Boot, a resource server is an application that serves resources (like APIs or data) and enforces authorization by validating access tokens. In this case, the resource server validates JWT (JSON Web Tokens) issued by Keycloak.</li>
+<li><strong>JWT Authentication</strong>: JWT tokens are used for secure authentication between the client (e.g., frontend or mobile app) and the resource server. The resource server needs to verify the authenticity of the JWT to grant or deny access to protected resources.</li>
+<li><strong>Role-based Access Control (RBAC)</strong>: The resource server uses roles assigned in Keycloak to control access to various resources. A user with a specific role can be granted or denied access to certain endpoints of the resource server.</li>
+</ul>
+<h2 id="3-jwt-token-validation">3. JWT Token Validation</h2>
+<ul>
+<li>When a client requests a resource from the resource server, it includes a JWT token in the Authorization header. The resource server validates this token to ensure its authenticity by checking its signature, issuer, and audience.</li>
+<li>The JWT is typically signed by Keycloak using a private key. The resource server uses a public key or a JWK (JSON Web Key) set to validate the token.</li>
+</ul>
+<h2 id="4-spring-security-integration">4. Spring Security Integration</h2>
+<ul>
+<li><strong>Spring Security</strong> integrates with OAuth2 and JWT to automatically handle the security aspects of the resource server.</li>
+<li>The <code>SecurityWebFilterChain</code> is configured to authorize HTTP requests based on the roles defined in Keycloak. For example, only users with specific roles (e.g., ACCOUNTS, CARDS, LOANS) can access certain endpoints.</li>
+<li>The <code>JwtAuthenticationConverter</code> in Spring Security extracts the roles from the JWT token and maps them to Spring Security authorities, allowing the application to apply role-based access control (RBAC).</li>
+</ul>
+<h2 id="5-keycloak-role-conversion">5. Keycloak Role Conversion</h2>
+<ul>
+<li>Keycloak uses its own role system to define permissions, and these roles need to be mapped to Spring Security roles to enforce access control.</li>
+<li>This conversion can be done via a custom converter that extracts roles from the JWT token and assigns them to the security context.</li>
+</ul>
+<h2 id="6-security-flow">6. Security Flow</h2>
+<ol>
+<li>The client first authenticates with Keycloak, obtains a JWT token, and then includes the token in subsequent API requests to the resource server.</li>
+<li>The resource server validates the JWT token using the configured public key or JWK endpoint from Keycloak.</li>
+<li>If the token is valid, the resource server checks the user's roles to determine if they have permission to access the requested resource.</li>
+<li>Access control is enforced based on the roles defined in both Keycloak and the application.</li>
+</ol>
+<h2 id="7-disabling-csrf-protection">7. Disabling CSRF Protection</h2>
+<ul>
+<li>In the context of a stateless resource server using JWT authentication, CSRF protection is typically disabled since the server is not maintaining session state, and the token in the header is sufficient for authentication and authorization.</li>
+</ul>
+<h2 id="8-advantages-of-using-keycloak-with-spring-boot">8. Advantages of Using Keycloak with Spring Boot</h2>
+<ul>
+<li><strong>Centralized Identity Management</strong>: Keycloak provides a centralized service for handling authentication and authorization, which reduces the complexity of implementing security in each individual service.</li>
+<li><strong>Scalability and Flexibility</strong>: Keycloak supports OAuth2 and OpenID Connect, which are industry-standard protocols for handling authentication and authorization, making it easy to scale your authentication system across multiple services.</li>
+<li><strong>Role-based Access Control</strong>: Keycloak simplifies the management of user roles and permissions, and Spring Security integrates seamlessly to enforce access policies.</li>
+</ul>
+<h2 id="9-token-expiry-and-refresh">9. Token Expiry and Refresh</h2>
+<ul>
+<li>JWT tokens have an expiry time, and after the token expires, the client needs to re-authenticate or use a refresh token (if configured in Keycloak) to obtain a new JWT token.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Spring%20boot%20annotations/" class="btn btn-neutral float-left" title="Spring boot annotations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Keycloak%20Implementation/" class="btn btn-neutral float-right" title="Keycloak">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Spring%20boot%20annotations/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Keycloak%20Implementation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

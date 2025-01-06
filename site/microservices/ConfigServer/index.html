@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/microservices/ConfigServer/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Configserver - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configserver";
+        var mkdocs_page_input_path = "microservices\\ConfigServer.md";
+        var mkdocs_page_url = "/microservices/ConfigServer/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Configserver</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-spring-cloud-config-server-setup">1. Spring Cloud Config Server Setup</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#a-add-dependencies-to-pomxml">a. Add Dependencies to pom.xml</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#b-enable-config-server-in-your-application">b. Enable Config Server in Your Application</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#c-configuration-in-applicationproperties">c. Configuration in application.properties</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-config-client-setup">2. Config Client Setup</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#a-add-dependencies-to-pomxml_1">a. Add Dependencies to pom.xml</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#b-enable-configuration-in-applicationproperties">b. Enable Configuration in application.properties</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-config-server-data-source">3. Config Server Data Source</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#a-git-repository">a. Git Repository</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#b-file-system">b. File System</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#c-vault">c. Vault</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../Resiliency.md">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../GatewayServer.md">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Microservices</li>
+      <li class="breadcrumb-item active">Configserver</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="spring-cloud-config-server-setup">Spring Cloud Config Server Setup</h1>
+<p>In a Spring Boot microservices architecture, a <strong>Config Server</strong> is used to centralize and manage the configuration of all microservices. The following steps show how to set up a Spring Cloud Config Server and configure the microservices to consume configurations.</p>
+<h2 id="1-spring-cloud-config-server-setup">1. Spring Cloud Config Server Setup</h2>
+<h3 id="a-add-dependencies-to-pomxml">a. Add Dependencies to <code>pom.xml</code></h3>
+<p>To enable Spring Cloud Config Server in your project, add the following dependency:</p>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-cloud-starter-config&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h3 id="b-enable-config-server-in-your-application">b. Enable Config Server in Your Application</h3>
+<p>In the main application class of your Config Server, add the <code>@EnableConfigServer</code> annotation:</p>
+<pre><code class="language-java">@SpringBootApplication
+@EnableConfigServer
+public class ConfigServerApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ConfigServerApplication.class, args);
+    }
+}
+</code></pre>
+<h3 id="c-configuration-in-applicationproperties">c. Configuration in application.properties</h3>
+<p>Configure the Config Server to source the properties (e.g., from a Git repository):</p>
+<pre><code class="language-properties"># Config Server Settings
+spring.application.name=config-server
+server.port=8071
+
+# Git repository configuration for the config server
+spring.cloud.config.server.git.uri=https://github.com/your-org/your-config-repo
+spring.cloud.config.server.git.clone-on-start=true
+
+# Optionally, if you want to use file system
+# spring.cloud.config.server.native.search-locations=file:///path/to/configs
+</code></pre>
+<h2 id="2-config-client-setup">2. Config Client Setup</h2>
+<p>Each microservice (client) that will fetch configurations from the Config Server needs to follow these steps.</p>
+<h3 id="a-add-dependencies-to-pomxml_1">a. Add Dependencies to pom.xml</h3>
+<p>Add the following dependency in the microservice's pom.xml file:</p>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-cloud-starter-config&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h3 id="b-enable-configuration-in-applicationproperties">b. Enable Configuration in application.properties</h3>
+<p>In your client microservice, specify the URI of the Config Server in the application.yml file:</p>
+<pre><code class="language-properties"># Config Client Settings
+spring.application.name=your-service-name
+spring.profiles.active=default
+
+# URI of the Config Server
+spring.cloud.config.uri=http://localhost:8071
+
+# Optionally, define a timeout for the connection to the Config Server
+spring.cloud.config.timeout=1000
+</code></pre>
+<h2 id="3-config-server-data-source">3. Config Server Data Source</h2>
+<p>The Config Server can source configuration from different locations:</p>
+<h3 id="a-git-repository">a. Git Repository</h3>
+<p>Store configuration files (such as application.properties or application.yml) in a Git repository. The uri configuration in the Config Server should point to this Git repository.</p>
+<h3 id="b-file-system">b. File System</h3>
+<p>The Config Server can read configuration files directly from the local file system.</p>
+<h3 id="c-vault">c. Vault</h3>
+<p>You can configure the Config Server to read from HashiCorp Vault for more secure configuration management.</p>
+<p>Example Structure in a Git Repo:
+In your Git repository, you might store the configuration for different applications like this:</p>
+<ul>
+<li><strong>your-service-name-dev.properties</strong>: Configuration file for your service in the development environment.</li>
+<li><strong>your-service-name-prod.properties</strong>: Configuration file for your service in the production environment.</li>
+<li><strong>application-dev.properties</strong>: General configuration for the application in the development environment.</li>
+<li><strong>application-prod.properties</strong>: General configuration for the application in the production environment.</li>
+<li><strong>bootstrap.yml</strong>: Contains configuration that is loaded during the initialization phase of the application.</li>
+</ul>
+<p>You can use these configuration files to manage different environments for your applications.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../EurekaServer/" class="btn btn-neutral float-left" title="Eureka Server"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../FeignClient/" class="btn btn-neutral float-right" title="FeignClient">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../EurekaServer/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../FeignClient/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

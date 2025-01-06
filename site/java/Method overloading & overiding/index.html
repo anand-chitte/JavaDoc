@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/java/Method%20overloading%20%26%20overiding/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Method overloading & overiding - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Method overloading \u0026 overiding";
+        var mkdocs_page_input_path = "java\\Method overloading \u0026 overiding.md";
+        var mkdocs_page_url = "/java/Method%20overloading%20%26%20overiding/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Method overloading & overiding</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-method-overloading">1. Method Overloading:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#definition">Definition:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-points">Key Points:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-method-overriding">2. Method Overriding:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#definition_1">Definition:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-points_1">Key Points:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../microservices/Resiliency.md">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../microservices/GatewayServer.md">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Java</li>
+      <li class="breadcrumb-item active">Method overloading & overiding</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="method-overloading-vs-method-overriding">Method Overloading vs. Method Overriding</h1>
+<h2 id="1-method-overloading">1. Method Overloading:</h2>
+<h3 id="definition">Definition:</h3>
+<p>Method overloading is a feature that allows a class to have multiple methods with the same name but with different parameters (i.e., different number or type of arguments).</p>
+<h3 id="key-points">Key Points:</h3>
+<ul>
+<li>Methods with the same name but different signatures (different parameter types or a different number of parameters).</li>
+<li>It is determined at <strong>compile time</strong> (known as compile-time polymorphism or static polymorphism).</li>
+<li>Overloaded methods must differ in the type or number of their parameters, <strong>not their return type</strong>.</li>
+<li>Overloading can occur within the <strong>same class</strong> or in a <strong>subclass</strong>.</li>
+</ul>
+<hr />
+<pre><code class="language-java">class Calculator {
+    // Overloaded method for adding two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded method for adding three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Overloaded method for adding two doubles
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(2, 3));        // Calls the method with two integers
+        System.out.println(calc.add(1, 2, 3));     // Calls the method with three integers
+        System.out.println(calc.add(2.5, 3.5));    // Calls the method with two doubles
+    }
+}
+</code></pre>
+<pre><code class="language-shell">Output:
+Copy code
+5
+6
+6.0
+</code></pre>
+<h2 id="2-method-overriding">2. Method Overriding:</h2>
+<h3 id="definition_1">Definition:</h3>
+<p>Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. The method signature (name, return type, and parameters) must be the same in both the superclass and subclass.</p>
+<h3 id="key-points_1">Key Points:</h3>
+<ul>
+<li>The method in the subclass must have the same <strong>name</strong>, <strong>return type</strong>, and <strong>parameters</strong> as in the superclass.</li>
+<li>It is determined at <strong>runtime</strong> (known as runtime polymorphism or dynamic polymorphism).</li>
+<li>Overriding allows a subclass to provide a specific implementation of a method that is already provided by its <strong>parent class</strong>.</li>
+<li>The method in the subclass can be called using an object of the <strong>subclass</strong> or the <strong>parent class</strong> (through a reference to the subclass).</li>
+<li>The <code>@Override</code> annotation is used to indicate method overriding, though it’s <strong>not mandatory</strong>.</li>
+</ul>
+<pre><code class="language-java">class Animal {
+    // Method to be overridden in subclass
+    void sound() {
+        System.out.println(&quot;Animal makes a sound&quot;);
+    }
+}
+
+class Dog extends Animal {
+    // Overriding the sound method in the subclass
+    @Override
+    void sound() {
+        System.out.println(&quot;Dog barks&quot;);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.sound();  // Calls the method in Animal class
+
+        Dog dog = new Dog();
+        dog.sound();     // Calls the overridden method in Dog class
+
+        Animal myDog = new Dog();
+        myDog.sound();   // Calls the overridden method in Dog class (runtime polymorphism)
+    }
+}
+</code></pre>
+<pre><code class="language-shell">
+Output:
+css
+Copy code
+Animal makes a sound
+Dog barks
+Dog barks
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Object-Oriented%20Programming/" class="btn btn-neutral float-left" title="Object-Oriented Programming"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../StaticFinalKeyword/" class="btn btn-neutral float-right" title="Static & Final Keyword">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Object-Oriented%20Programming/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../StaticFinalKeyword/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

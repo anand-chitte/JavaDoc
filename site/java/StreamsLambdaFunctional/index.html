@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/java/StreamsLambdaFunctional/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>StreamsLambdaFuncational - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "StreamsLambdaFuncational";
+        var mkdocs_page_input_path = "java\\StreamsLambdaFunctional.md";
+        var mkdocs_page_url = "/java/StreamsLambdaFunctional/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">StreamsLambdaFuncational</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-streams">1. Streams:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-lambda-expressions">2. Lambda Expressions:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-functional-interfaces">3. Functional Interfaces:</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../microservices/Resiliency.md">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../microservices/GatewayServer.md">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Java</li>
+      <li class="breadcrumb-item active">StreamsLambdaFuncational</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="streams-lambda-expressions-and-functional-interfaces">Streams, Lambda Expressions, and Functional Interfaces</h2>
+<h3 id="1-streams">1. Streams:</h3>
+<ul>
+<li>A <strong>stream</strong> is a sequence of elements that allows for functional-style operations on collections, such as filtering, mapping, and reducing. Streams can be processed sequentially or in parallel.</li>
+<li>Operations like <code>filter()</code>, <code>map()</code>, <code>reduce()</code>, <code>forEach()</code>, and <code>collect()</code> are commonly used to manipulate data within a stream.</li>
+</ul>
+<pre><code class="language-java">List&lt;String&gt; names = List.of(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;, &quot;David&quot;);
+names.stream()
+     .filter(name -&gt; name.startsWith(&quot;A&quot;))
+     .map(String::toUpperCase)
+     .forEach(System.out::println);
+</code></pre>
+<h3 id="2-lambda-expressions">2. Lambda Expressions:</h3>
+<ul>
+<li><strong>Lambda expressions</strong> provide a compact way to define anonymous functions (functions without a name).</li>
+<li>They allow you to pass behavior as parameters to methods or assign them to variables, typically used in conjunction with functional interfaces.</li>
+</ul>
+<pre><code class="language-java">List&lt;Integer&gt; numbers = List.of(1, 2, 3, 4, 5);
+int sum = numbers.stream()
+                 .filter(n -&gt; n % 2 == 0)
+                 .mapToInt(Integer::intValue)
+                 .sum();
+System.out.println(&quot;Sum of even numbers: &quot; + sum);
+
+</code></pre>
+<h3 id="3-functional-interfaces">3. Functional Interfaces:</h3>
+<ul>
+<li>A <strong>functional interface</strong> is an interface that has exactly one abstract method.</li>
+<li>They are intended to be used with lambda expressions, enabling a functional approach to programming.</li>
+<li>Common functional interfaces include:</li>
+<li><code>Predicate</code>: Represents a boolean-valued function of one argument.</li>
+<li><code>Function</code>: Represents a function that takes an argument and produces a result.</li>
+<li><code>Consumer</code>: Represents an operation that takes a single input and returns no result.</li>
+<li><code>Supplier</code>: Represents a supplier of results.</li>
+<li><code>UnaryOperator</code>: A function that takes a single argument and returns a result of the same type.</li>
+<li><code>BinaryOperator</code>: A function that takes two arguments of the same type and returns a result of the same type.</li>
+</ul>
+<pre><code class="language-java">@FunctionalInterface
+interface MyFunction {
+    int apply(int a, int b);
+}
+
+public class Example {
+    public static void main(String[] args) {
+        MyFunction add = (a, b) -&gt; a + b;
+        System.out.println(add.apply(5, 3)); // Output: 8
+    }
+}
+</code></pre>
+<hr />
+<p>These concepts enable cleaner, more readable, and more concise code, especially when working with collections or higher-order functions in Java.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Collection%20Framework/" class="btn btn-neutral float-left" title="Collection Framework"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Stream/" class="btn btn-neutral float-right" title="Stream">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Collection%20Framework/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Stream/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

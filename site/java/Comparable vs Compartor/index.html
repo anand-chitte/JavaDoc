@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/java/Comparable%20vs%20Compartor/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Comparable vs Compartor - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Comparable vs Compartor";
+        var mkdocs_page_input_path = "java\\Comparable vs Compartor.md";
+        var mkdocs_page_url = "/java/Comparable%20vs%20Compartor/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Comparable vs Compartor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-comparable-interface">1. Comparable Interface</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-comparator-interface">2. Comparator Interface</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-differences">Key Differences:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#when-to-use-which">When to Use Which?</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../microservices/Resiliency.md">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../microservices/GatewayServer.md">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Java</li>
+      <li class="breadcrumb-item active">Comparable vs Compartor</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="comparator-vs-comparable-in-java">Comparator vs Comparable in Java</h2>
+<h3 id="1-comparable-interface">1. <strong>Comparable Interface</strong></h3>
+<ul>
+<li>The <code>Comparable</code> interface is used for defining the natural ordering of objects.</li>
+<li>It contains the method <code>compareTo(T o)</code> that compares the current object with another object of the same type.</li>
+</ul>
+<pre><code class="language-java">int compareTo(T o);
+</code></pre>
+<ul>
+<li>The return value indicates the relative order:<ul>
+<li><strong>Negative value</strong>: Current object is less than the other.</li>
+<li><strong>Zero</strong>: Both objects are equal.</li>
+<li><strong>Positive value</strong>: Current object is greater than the other.</li>
+</ul>
+</li>
+<li><strong>Use Case</strong>: Implement this when you want the class to define its own sorting (for example, sorting by age or alphabetical order).</li>
+</ul>
+<pre><code class="language-java">   class Person implements Comparable&lt;Person&gt; {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public int compareTo(Person other) {
+        return this.age - other.age; // Sort by age
+    }
+}
+
+</code></pre>
+<pre><code class="language-java">// Usage:
+List&lt;Person&gt; people = new ArrayList&lt;&gt;();
+people.add(new Person(&quot;Alice&quot;, 30));
+people.add(new Person(&quot;Bob&quot;, 25));
+Collections.sort(people); // Sorts by age
+</code></pre>
+<h3 id="2-comparator-interface">2. <strong>Comparator Interface</strong></h3>
+<ul>
+<li>The <code>Comparator</code> interface allows defining an external strategy for comparing two objects.</li>
+<li>It contains the method <code>compare(T o1, T o2)</code> for comparing two objects.</li>
+</ul>
+<pre><code class="language-java">   int compare(T o1, T o2);  // Compare two objects
+boolean equals(Object obj);  // (Optional) Default method for equality
+
+</code></pre>
+<ul>
+<li><strong>Use Case</strong>: Implement this when you want to define multiple ways to compare objects (for example, sorting by name or by age), or when the class doesn't implement <code>Comparable</code>.</li>
+</ul>
+<pre><code class="language-java">   class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() { return name; }
+    public int getAge() { return age; }
+}
+
+// Comparator to sort by name
+class NameComparator implements Comparator&lt;Person&gt; {
+    @Override
+    public int compare(Person p1, Person p2) {
+        return p1.getName().compareTo(p2.getName()); // Sort alphabetically by name
+    }
+}
+
+// Usage:
+List&lt;Person&gt; people = new ArrayList&lt;&gt;();
+people.add(new Person(&quot;Alice&quot;, 30));
+people.add(new Person(&quot;Bob&quot;, 25));
+
+// Sort by name using comparator
+Collections.sort(people, new NameComparator());
+
+</code></pre>
+<h3 id="key-differences">Key Differences:</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Comparable</th>
+<th>Comparator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Defines natural ordering of objects within the class.</td>
+<td>Defines custom ordering of objects externally.</td>
+</tr>
+<tr>
+<td><strong>Method</strong></td>
+<td><code>compareTo(T o)</code></td>
+<td><code>compare(T o1, T o2)</code></td>
+</tr>
+<tr>
+<td><strong>Implementation</strong></td>
+<td>Implemented within the class to compare objects of the same type.</td>
+<td>Implemented in a separate class or as an anonymous class.</td>
+</tr>
+<tr>
+<td><strong>Use Case</strong></td>
+<td>Used when there's a single way to sort objects (like sorting by age).</td>
+<td>Used when there are multiple ways to sort objects (like sorting by name or age).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="when-to-use-which">When to Use Which?</h3>
+<ul>
+<li>Use <strong>Comparable</strong> for a natural, single way to sort objects.</li>
+<li>Use <strong>Comparator</strong> for defining multiple sorting strategies or when the class does not implement <code>Comparable</code>.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Hashmap/" class="btn btn-neutral float-left" title="Hashmap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Iterator%20%26%20Iterable/" class="btn btn-neutral float-right" title="Iterator vs Iterable">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Hashmap/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Iterator%20%26%20Iterable/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/java/FunctionalInterface/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Functional Interface - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Functional Interface";
+        var mkdocs_page_input_path = "java\\FunctionalInterface.md";
+        var mkdocs_page_url = "/java/FunctionalInterface/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Functional Interface</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#common-functional-interfaces">Common functional interfaces:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-runnable">1. Runnable</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-predicate">2. Predicate</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-function">3. Function</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-consumer">4. Consumer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-supplier">5. Supplier</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../microservices/Resiliency.md">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../microservices/GatewayServer.md">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Java</li>
+      <li class="breadcrumb-item active">Functional Interface</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="functional-interface">Functional Interface</h1>
+<ul>
+<li>A Functional Interface in Java is an interface that contains exactly one abstract method. These interfaces can have multiple default or static methods, but they must have only one abstract method. </li>
+<li>Functional interfaces are intended to be used primarily with lambda expressions or method references.</li>
+</ul>
+<hr />
+<p><strong>Example:</strong></p>
+<pre><code class="language-java">@FunctionalInterface
+interface Calculator {
+    int add(int a, int b);  // Abstract method
+
+    // Default method
+    default int subtract(int a, int b) {
+        return a - b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Using lambda expression
+        Calculator calc = (a, b) -&gt; a + b;
+        System.out.println(&quot;Sum: &quot; + calc.add(5, 3));
+        System.out.println(&quot;Subtraction: &quot; + calc.subtract(5, 3));
+    }
+}
+</code></pre>
+<h2 id="common-functional-interfaces">Common functional interfaces:</h2>
+<h3 id="1-runnable">1. Runnable</h3>
+<p>Runnable represents a task that can be executed asynchronously. It has a single abstract method run(), which does not accept any arguments and does not return a result.</p>
+<pre><code class="language-java">public class RunnableExample {
+    public static void main(String[] args) {
+        Runnable runnable = () -&gt; System.out.println(&quot;Task is running&quot;);
+        new Thread(runnable).start(); // Running the task in a separate thread
+    }
+}
+</code></pre>
+<h3 id="2-predicate">2. Predicate<T></h3>
+<p>Predicate is used for evaluating a condition. It accepts one argument of type T and returns a boolean value.</p>
+<pre><code class="language-java">import java.util.function.Predicate;
+
+public class PredicateExample {
+    public static void main(String[] args) {
+        Predicate&lt;Integer&gt; isEven = (number) -&gt; number % 2 == 0;
+
+        System.out.println(isEven.test(4)); // true
+        System.out.println(isEven.test(5)); // false
+    }
+}
+</code></pre>
+<h3 id="3-function">3. Function<T, R></h3>
+<p>Function takes one argument of type T and returns a result of type R. It is commonly used for transforming data.</p>
+<pre><code class="language-java">import java.util.function.Function;
+
+public class FunctionExample {
+    public static void main(String[] args) {
+        Function&lt;String, Integer&gt; stringLength = (str) -&gt; str.length();
+        System.out.println(stringLength.apply(&quot;Hello&quot;)); // 5
+    }
+}
+</code></pre>
+<h3 id="4-consumer">4. Consumer<T></h3>
+<p>Consumer represents an operation that accepts a single argument of type T and returns no result. It is typically used for performing operations such as printing or modifying a value.</p>
+<pre><code class="language-java">import java.util.function.Consumer;
+
+public class ConsumerExample {
+    public static void main(String[] args) {
+        Consumer&lt;String&gt; printMessage = (message) -&gt; System.out.println(message);
+        printMessage.accept(&quot;Hello, World!&quot;); // Output: Hello, World!
+    }
+}
+</code></pre>
+<h3 id="5-supplier">5. Supplier<T></h3>
+<p>Supplier represents a supplier of results. It does not take any arguments but returns a result of type T.</p>
+<pre><code class="language-java">import java.util.function.Supplier;
+
+public class SupplierExample {
+    public static void main(String[] args) {
+        Supplier&lt;Double&gt; randomNumber = () -&gt; Math.random();
+        System.out.println(randomNumber.get()); // Generates a random number
+    }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../LambdaExpression/" class="btn btn-neutral float-left" title="Lambda Expression"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Hashmap/" class="btn btn-neutral float-right" title="Hashmap">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../LambdaExpression/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Hashmap/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
