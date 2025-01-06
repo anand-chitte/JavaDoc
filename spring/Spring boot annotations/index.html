@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/spring/Spring%20boot%20annotations/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Spring boot annotations - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Spring boot annotations";
+        var mkdocs_page_input_path = "spring\\Spring boot annotations.md";
+        var mkdocs_page_url = "/spring/Spring%20boot%20annotations/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Spring boot annotations</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Resiliency/">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Gateway/">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Spring</li>
+      <li class="breadcrumb-item active">Spring boot annotations</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="springbootapplication">@SpringBootApplication</h3>
+<p>Marks the main class of a Spring Boot application. Combines <code>@Configuration</code>, <code>@EnableAutoConfiguration</code>, and <code>@ComponentScan</code>.</p>
+<pre><code class="language-java">@SpringBootApplication
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+</code></pre>
+<h3 id="component">@Component</h3>
+<p>Marks a class as a Spring component, enabling it to be managed by Spring's container.</p>
+<pre><code class="language-java">
+@Component
+public class MyComponent {
+    // component logic
+}
+</code></pre>
+<h3 id="configuration">@Configuration</h3>
+<p>Indicates that the class contains Spring bean definitions and that it can be processed by the Spring container to create and manage beans.</p>
+<pre><code class="language-java">
+@Configuration
+public class AppConfig {
+    @Bean
+    public SomeBean someBean() {
+        return new SomeBean();
+    }
+}
+</code></pre>
+<h3 id="bean">@Bean</h3>
+<p>Defines a bean to be managed by the Spring container.</p>
+<pre><code class="language-java">
+@Bean
+public SomeService someService() {
+    return new SomeService();
+}
+</code></pre>
+<h3 id="lazy">@Lazy</h3>
+<p>Indicates that a bean should be lazily initialized.</p>
+<pre><code class="language-java">
+@Lazy
+@Bean
+public SomeBean someBean() {
+    return new SomeBean();
+}
+</code></pre>
+<h3 id="autowired">@Autowired</h3>
+<p>Injects a bean into the class.</p>
+<pre><code class="language-java">
+@Autowired
+private UserService userService;
+</code></pre>
+<h3 id="value">@Value</h3>
+<p>It is used to inject values into fields, methods, or constructor parameters from property file.</p>
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyComponent {
+
+    @Value(&quot;${app.name}&quot;)
+    private String appName;
+
+    @Value(&quot;${app.version}&quot;)
+    private String appVersion;
+
+    @Value(&quot;#{2 * T(Math).PI}&quot;)
+    private double circleConstant;
+
+    public void printAppDetails() {
+        System.out.println(&quot;App Name: &quot; + appName);
+        System.out.println(&quot;App Version: &quot; + appVersion);
+        System.out.println(&quot;Circle Constant: &quot; + circleConstant);
+    }
+}
+</code></pre>
+<h4 id="applicationproperties">application.properties:</h4>
+<pre><code class="language-properties">app.name=MySpringApp
+app.version=1.0
+</code></pre>
+<h3 id="primary">@Primary</h3>
+<p>Indicates that a bean should be the default bean to autowire when multiple candidates exist.</p>
+<pre><code class="language-java">
+@Primary
+@Bean
+public SomeService defaultService() {
+    return new DefaultService();
+}
+</code></pre>
+<h3 id="enableconfigurationproperties">@EnableConfigurationProperties</h3>
+<p>Enables support for @ConfigurationProperties beans.</p>
+<pre><code class="language-java">
+@EnableConfigurationProperties(SomeProperties.class)
+@Configuration
+public class Config {
+    // configuration
+}
+</code></pre>
+<h3 id="springboottest">@SpringBootTest</h3>
+<p>Indicates that the class should run as a Spring Boot test.</p>
+<pre><code class="language-java">
+@SpringBootTest
+public class ApplicationTests {
+    @Test
+    public void contextLoads() {
+    }
+}
+</code></pre>
+<h3 id="restcontroller">@RestController</h3>
+<p>Combines @Controller and @ResponseBody, used for RESTful APIs.</p>
+<pre><code class="language-java">
+@RestController
+public class UserController {
+    @GetMapping(&quot;/users&quot;)
+    public List&lt;User&gt; getUsers() {
+        return userService.getUsers();
+    }
+}
+</code></pre>
+<h3 id="controller">@Controller</h3>
+<p>Indicates that a class is a Spring MVC controller.</p>
+<pre><code class="language-java">
+@Controller
+public class WebController {
+    @RequestMapping(&quot;/home&quot;)
+    public String home() {
+        return &quot;home&quot;;
+    }
+}
+</code></pre>
+<h3 id="requestmapping">@RequestMapping</h3>
+<p>Maps HTTP requests to handler methods of MVC and REST controllers.</p>
+<pre><code class="language-java">
+@RequestMapping(&quot;/users&quot;)
+public String getUsers() {
+    return &quot;users&quot;;
+}
+</code></pre>
+<h3 id="getmapping">@GetMapping</h3>
+<p>Maps HTTP GET requests to handler methods.</p>
+<pre><code class="language-java">
+@GetMapping(&quot;/users&quot;)
+public List&lt;User&gt; getUsers() {
+    return userService.getUsers();
+}
+</code></pre>
+<h3 id="postmapping">@PostMapping</h3>
+<p>Maps HTTP POST requests to handler methods.</p>
+<pre><code class="language-java">
+@PostMapping(&quot;/users&quot;)
+public User createUser(@RequestBody User user) {
+    return userService.createUser(user);
+}
+</code></pre>
+<h3 id="putmapping">@PutMapping</h3>
+<p>Maps HTTP PUT requests to handler methods.</p>
+<pre><code class="language-java">
+@PutMapping(&quot;/users/{id}&quot;)
+public User updateUser(@PathVariable Long id, @RequestBody User user) {
+    return userService.updateUser(id, user);
+}
+</code></pre>
+<h3 id="deletemapping">@DeleteMapping</h3>
+<p>Maps HTTP DELETE requests to handler methods.</p>
+<pre><code class="language-java">
+@DeleteMapping(&quot;/users/{id}&quot;)
+public void deleteUser(@PathVariable Long id) {
+    userService.deleteUser(id);
+}
+</code></pre>
+<h3 id="patchmapping">@PatchMapping</h3>
+<p>Maps HTTP PATCH requests to handler methods.</p>
+<pre><code class="language-java">
+@PatchMapping(&quot;/users/{id}&quot;)
+public User partialUpdateUser(@PathVariable Long id, @RequestBody User user) {
+    return userService.partialUpdateUser(id, user);
+}
+</code></pre>
+<h3 id="responsebody">@ResponseBody</h3>
+<p>Indicates that the return value of a method should be bound to the web response body.</p>
+<pre><code class="language-java">
+@ResponseBody
+public String getMessage() {
+    return &quot;Hello, World!&quot;;
+}
+</code></pre>
+<h3 id="pathvariable">@PathVariable</h3>
+<p>Binds a method parameter to a URI template variable.</p>
+<pre><code class="language-java">
+@GetMapping(&quot;/users/{id}&quot;)
+public User getUser(@PathVariable Long id) {
+    return userService.getUser(id);
+}
+</code></pre>
+<h3 id="requestparam">@RequestParam</h3>
+<p>Binds request parameters to method parameters.</p>
+<pre><code class="language-java">
+@GetMapping(&quot;/users&quot;)
+public List&lt;User&gt; getUsers(@RequestParam int page) {
+    return userService.getUsers(page);
+}
+</code></pre>
+<h3 id="requestbody">@RequestBody</h3>
+<p>Binds the request body to a method parameter.</p>
+<pre><code class="language-java">
+@PostMapping(&quot;/users&quot;)
+public User createUser(@RequestBody User user) {
+    return userService.createUser(user);
+}
+</code></pre>
+<h3 id="responsestatus">@ResponseStatus</h3>
+<p>Sets the status code for a method or exception.</p>
+<pre><code class="language-java">
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public class UserNotFoundException extends RuntimeException {
+    // exception details
+}
+</code></pre>
+<h3 id="crossorigin">@CrossOrigin</h3>
+<p>Enables Cross-Origin Resource Sharing (CORS) support.</p>
+<pre><code class="language-java">
+@CrossOrigin(origins = &quot;http://example.com&quot;)
+public class MyController {
+    // controller methods
+}
+</code></pre>
+<h3 id="service">@Service</h3>
+<p>Marks a class as a service, a specialization of @Component.</p>
+<pre><code class="language-java">
+@Service
+public class UserService {
+    // service logic
+}
+</code></pre>
+<h3 id="repository">@Repository</h3>
+<p>Marks a class as a repository, a specialization of @Component.</p>
+<pre><code class="language-java">
+@Repository
+public class UserRepository {
+    // repository logic
+}
+</code></pre>
+<h3 id="validated">@Validated</h3>
+<p>It is a used to trigger validation for Spring beans, such as method parameters or class fields, to ensure they meet specified constraints.</p>
+<pre><code class="language-java">@Validated
+public class UserController {
+
+    @PostMapping(&quot;/addUser&quot;)
+    public ResponseEntity&lt;String&gt; addUser(@Valid @RequestBody User user) {
+        // User object will be validated based on annotations like @NotNull, @Size, etc.
+        return ResponseEntity.ok(&quot;User added successfully&quot;);
+    }
+}
+
+</code></pre>
+<h3 id="valid">@Valid</h3>
+<p>Validates the annotated field or method parameter.</p>
+<pre><code class="language-java">
+public void createUser(@Valid User user) {
+    // validation logic
+}
+</code></pre>
+<h3 id="notnull">@NotNull</h3>
+<p>Ensures the annotated element is not null.</p>
+<pre><code class="language-java">
+@NotNull
+private String name;
+</code></pre>
+<h3 id="notempty">@NotEmpty</h3>
+<p>Ensures the annotated element is not empty.</p>
+<pre><code class="language-java">
+@NotEmpty
+private List&lt;String&gt; tags;
+</code></pre>
+<h3 id="notblank">@NotBlank</h3>
+<p>Ensures the annotated element is not blank (not null or not empty).</p>
+<pre><code class="language-java">
+@NotBlank
+private String username;
+</code></pre>
+<h3 id="size">@Size</h3>
+<p>Specifies the size constraints for the annotated field or method parameter.</p>
+<pre><code class="language-java">
+@Size(min = 2, max = 10)
+private String name;
+</code></pre>
+<h3 id="min-max">@Min / @Max</h3>
+<p>Specifies the minimum/maximum value for numeric fields.</p>
+<pre><code class="language-java">
+@Min(18)
+private int age;
+</code></pre>
+<h3 id="pattern">@Pattern</h3>
+<p>Specifies a regular expression that the annotated field must match.</p>
+<pre><code class="language-java">
+@Pattern(regexp = &quot;[A-Za-z0-9]+&quot;)
+private String code;
+</code></pre>
+<h3 id="controlleradvice">@ControllerAdvice</h3>
+<p>It is used to handle exceptions globally and provide centralized exception handling across all controllers</p>
+<pre><code class="language-java">public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
+    @Override
+    protected ResponseEntity&lt;Object&gt; handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
+            HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+
+        Map&lt;String, String&gt; validationErrors = new HashMap&lt;&gt;();
+        List&lt;ObjectError&gt; validationErrorList = ex.getBindingResult().getAllErrors();
+
+        validationErrorList.forEach((error) -&gt; {
+            String fieldName = ((FieldError) error).getField();
+            String validationMsg = error.getDefaultMessage();
+            validationErrors.put(fieldName, validationMsg);
+        });
+
+        return super.handleMethodArgumentNotValid(ex, headers, status, request);
+    }
+}
+
+</code></pre>
+<h3 id="exceptionhandler">@ExceptionHandler</h3>
+<p>Handles exceptions thrown by methods in the controller.</p>
+<pre><code class="language-java">
+@ExceptionHandler(Exception.class)
+public String handleException(Exception e) {
+    return &quot;Error: &quot; + e.getMessage();
+}
+</code></pre>
+<h3 id="transactional">@Transactional</h3>
+<p>Specifies that a method or class should be executed within a transaction context.</p>
+<pre><code class="language-java">
+@Transactional
+public void processOrder(Order order) {
+    orderRepository.save(order);
+    inventoryService.updateStock(order);
+}
+</code></pre>
+<h3 id="modifying">@Modifying</h3>
+<p>Indicates that a query method is modifying the data (insert, update, delete).</p>
+<pre><code class="language-java">
+@Modifying
+@Query(&quot;UPDATE User u SET u.name = :name WHERE u.id = :id&quot;)
+public int updateUserName(@Param(&quot;id&quot;) Long id, @Param(&quot;name&quot;) String name);
+</code></pre>
+<h3 id="query">@Query</h3>
+<p>Defines custom queries for Spring Data repositories. It can be used to define complex JPQL or native SQL queries.</p>
+<pre><code class="language-java">
+@Query(&quot;SELECT u FROM User u WHERE u.name = :name&quot;)
+public User findByName(@Param(&quot;name&quot;) String name);
+</code></pre>
+<h3 id="enablemethodsecurity">@EnableMethodSecurity</h3>
+<p>Enables method-level security in a Spring application, allowing annotations like @PreAuthorize, @Secured, and @RolesAllowed.</p>
+<pre><code class="language-java">
+@EnableMethodSecurity
+@Configuration
+public class SecurityConfig {
+    // security configuration
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../WebClient/" class="btn btn-neutral float-left" title="WebClient"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Spring%20Security/" class="btn btn-neutral float-right" title="Spring Security">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../WebClient/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Spring%20Security/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
