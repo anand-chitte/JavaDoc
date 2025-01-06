@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/microservices/Resiliency/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Resiliency - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Resiliency";
+        var mkdocs_page_input_path = "microservices\\Resiliency.md";
+        var mkdocs_page_url = "/JavaDoc/microservices/Resiliency/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Resiliency</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#steps-to-integrate-resilience4j-with-spring-boot">Steps to Integrate Resilience4j with Spring Boot</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-add-dependencies">1. Add Dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-enable-resilience4j">2. Enable Resilience4j</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-retry-configuration">2.1. Retry Configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#22-circuit-breaker-configuration">2.2. Circuit Breaker Configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#23-rate-limiter-configuration">2.3. Rate Limiter Configuration</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example">Example</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Gateway/">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Microservices</li>
+      <li class="breadcrumb-item active">Resiliency</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="resiliency">Resiliency</h1>
+<p>Resilience4j is a lightweight and easy-to-use library for building resilient systems in Java. It provides fault tolerance and resilience patterns like circuit breaker, rate limiter, bulkhead, retry, and time limiter.</p>
+<h2 id="steps-to-integrate-resilience4j-with-spring-boot">Steps to Integrate Resilience4j with Spring Boot</h2>
+<h3 id="1-add-dependencies">1. Add Dependencies</h3>
+<p>Include the required Resilience4j modules in your pom.xml if you're using Maven:</p>
+<pre><code class="language-xml">
+&lt;dependency&gt;
+    &lt;groupId&gt;io.github.resilience4j&lt;/groupId&gt;
+    &lt;artifactId&gt;resilience4j-spring-boot3&lt;/artifactId&gt;
+    &lt;version&gt;2.0.2&lt;/version&gt; &lt;!-- Replace with the latest version --&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h3 id="2-enable-resilience4j">2. Enable Resilience4j</h3>
+<p>Resilience4j automatically configures itself in a Spring Boot application. You just need to create configuration properties in your application.yml or application.properties file.</p>
+<h4 id="21-retry-configuration">2.1. Retry Configuration</h4>
+<p>To set up retry for a specific service method, you can configure it in application.properties like this:</p>
+<pre><code class="language-properties">resilience4j.retry.instances.myServiceRetry.maxAttempts=3
+resilience4j.retry.instances.myServiceRetry.waitDuration=500ms
+resilience4j.retry.instances.myServiceRetry.enableExponentialBackoff=true
+resilience4j.retry.instances.myServiceRetry.randomize=true
+</code></pre>
+<ul>
+<li><code>maxAttempts:</code> The maximum number of retry attempts (e.g., 3).</li>
+<li><code>waitDuration:</code> The wait time between retry attempts (e.g., 500ms).</li>
+<li><code>enableExponentialBackoff:</code> Enable exponential backoff between retries.</li>
+<li><code>randomize:</code> Randomize the backoff duration to avoid retries happening at the same time.</li>
+</ul>
+<h4 id="22-circuit-breaker-configuration">2.2. Circuit Breaker Configuration</h4>
+<p>For a circuit breaker, configure it like so:</p>
+<pre><code class="language-properties">resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.registerHealthIndicator=true
+resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.slidingWindowSize=10
+resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.failureRateThreshold=50
+resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.waitDurationInOpenState=10000ms
+</code></pre>
+<ul>
+<li><code>slidingWindowSize:</code> Defines the number of calls to consider for calculating failure rate.</li>
+<li><code>failureRateThreshold:</code> Percentage of failures above which the circuit breaker will open (e.g., 50%).</li>
+<li><code>waitDurationInOpenState:</code> Time the circuit breaker will stay open before attempting to close again.</li>
+</ul>
+<h4 id="23-rate-limiter-configuration">2.3. Rate Limiter Configuration</h4>
+<p>To limit the number of calls in a given time period, use:</p>
+<pre><code class="language-properties">resilience4j.ratelimiter.instances.myServiceRateLimiter.limitForPeriod=5
+resilience4j.ratelimiter.instances.myServiceRateLimiter.limitRefreshPeriod=1s
+resilience4j.ratelimiter.instances.myServiceRateLimiter.timeoutDuration=500ms
+</code></pre>
+<ul>
+<li><code>limitForPeriod:</code> Maximum number of requests allowed in the specified period.</li>
+<li><code>limitRefreshPeriod:</code> Time interval for refreshing the rate limit (e.g., 1 second).</li>
+<li><code>timeoutDuration:</code> Timeout if the rate limit is exceeded.</li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code class="language-java">@Retry(name = &quot;myServiceRetry&quot;)
+@CircuitBreaker(name = &quot;myServiceCircuitBreaker&quot;)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ConfigServer/" class="btn btn-neutral float-left" title="Configserver"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Gateway/" class="btn btn-neutral float-right" title="Spring Cloud Gateway">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../ConfigServer/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Gateway/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../sw-register.js"></script>
+      <script src="../../assets/service-worker.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
