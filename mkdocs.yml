@@ -44,6 +44,9 @@ nav:
       - Spring Cloud Function: microservices/SpringCloudFunction.md
       - Spring Cloud Stream: microservices/SpringCloudStream.md
   - Other:
+    - Maven: other/Maven.md
+    - Git: other/Git.md
+    - Docker: other/Docker.md
     - Redis: other/Redis.md
     - RabbitMQ: other/RabbitMQ.md
 
