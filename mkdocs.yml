@@ -66,6 +66,7 @@ nav:
     - Docker: other/Docker.md
     - Redis: other/Redis.md
     - RabbitMQ: other/RabbitMQ.md
+    - Agile: other/Agile.md
     - Fastag: other/Fastag.md
     - ILMS: other/ILMS.md
     - Flowchart: other/Flowchart.md
