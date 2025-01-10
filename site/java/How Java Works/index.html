@@ -36,14 +36,14 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
@@ -66,6 +66,12 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
@@ -82,7 +88,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
                   </li>
@@ -110,6 +116,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -154,6 +162,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
                   </li>
               </ul>
       </div>
@@ -224,29 +238,30 @@
 <hr />
 <h2 id="example-workflow">Example Workflow</h2>
 <ol>
-<li><strong>Write the Program</strong>:</li>
+<li>
+<p><strong>Write the Program</strong>:
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorld</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Compile the Program</strong>:
+<div class="highlight"><pre><span></span><code><span class="w">    </span>javac<span class="w"> </span>HelloWorld.java
+</code></pre></div>
+    This creates <code>HelloWorld.class</code>.</p>
+</li>
+<li>
+<p><strong>Run the Program</strong>:
+<div class="highlight"><pre><span></span><code><span class="w">    </span>java<span class="w"> </span>HelloWorld
+</code></pre></div>
+<strong>Output</strong>:
+<div class="highlight"><pre><span></span><code>    Hello, World!
+</code></pre></div></p>
+</li>
 </ol>
-<pre><code class="language-java">    public class HelloWorld {
-        public static void main(String[] args) {
-            System.out.println(&quot;Hello, World!&quot;);
-        }
-    }
-</code></pre>
-<ol>
-<li><strong>Compile the Program</strong>:</li>
-</ol>
-<pre><code class="language-bash">    javac HelloWorld.java
-</code></pre>
-<pre><code>This creates `HelloWorld.class`.
-</code></pre>
-<ol>
-<li><strong>Run the Program</strong>:</li>
-</ol>
-<pre><code class="language-bash">    java HelloWorld
-</code></pre>
-<p><strong>Output</strong>:</p>
-<pre><code>    Hello, World!
-</code></pre>
 <hr />
 <p>Java's layered architecture ensures portability, robustness, and scalability, making it widely used for enterprise applications, mobile apps, and web services.</p>
               
@@ -288,7 +303,6 @@
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
-      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

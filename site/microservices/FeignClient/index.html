@@ -36,14 +36,14 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/introduction/">Introduction</a>
@@ -51,6 +51,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
@@ -68,7 +74,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
                   </li>
@@ -96,6 +102,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -157,6 +165,12 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -196,67 +210,67 @@
 <h2 id="basic-setup">Basic Setup</h2>
 <h3 id="1-add-dependencies">1. Add Dependencies</h3>
 <p>Add the Spring Cloud OpenFeign dependency to your pom.xml:</p>
-<pre><code class="language-xml">&lt;dependency&gt;
-    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
-    &lt;artifactId&gt;spring-cloud-starter-openfeign&lt;/artifactId&gt;
-&lt;/dependency&gt;
-</code></pre>
-<p>Also, ensure your spring-cloud-dependencies version is included in the dependency management:</p>
-<pre><code class="language-xml">&lt;dependencyManagement&gt;
-    &lt;dependencies&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-cloud-dependencies&lt;/artifactId&gt;
-            &lt;version&gt;2023.0.3&lt;/version&gt;
-            &lt;type&gt;pom&lt;/type&gt;
-            &lt;scope&gt;import&lt;/scope&gt;
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
-&lt;/dependencyManagement&gt;
-</code></pre>
+<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.cloud<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-cloud-starter-openfeign<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+Also, ensure your spring-cloud-dependencies version is included in the dependency management:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependencyManagement&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.cloud<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-cloud-dependencies<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">            </span><span class="nt">&lt;version&gt;</span>2023.0.3<span class="nt">&lt;/version&gt;</span>
+<span class="w">            </span><span class="nt">&lt;type&gt;</span>pom<span class="nt">&lt;/type&gt;</span>
+<span class="w">            </span><span class="nt">&lt;scope&gt;</span>import<span class="nt">&lt;/scope&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
+<span class="nt">&lt;/dependencyManagement&gt;</span>
+</code></pre></div>
 <h3 id="2-enable-feign-clients">2. Enable Feign Clients</h3>
 <p>Add the @EnableFeignClients annotation in your Spring Boot application class:</p>
-<pre><code class="language-java">@SpringBootApplication
-@EnableFeignClients
-public class FeignExampleApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(FeignExampleApplication.class, args);
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@SpringBootApplication</span>
+<span class="nd">@EnableFeignClients</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FeignExampleApplication</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">FeignExampleApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="3-create-feign-client-interface">3. Create Feign Client Interface</h3>
 <p>Define an interface annotated with @FeignClient. For example:</p>
-<pre><code class="language-java">Copy code
-@FeignClient(name = &quot;user-service&quot;, url = &quot;http://localhost:8080&quot;)
-public interface UserServiceClient {
+<div class="highlight"><pre><span></span><code><span class="n">Copy</span><span class="w"> </span><span class="n">code</span>
+<span class="nd">@FeignClient</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;user-service&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;http://localhost:8080&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">UserServiceClient</span><span class="w"> </span><span class="p">{</span>
 
-    @GetMapping(&quot;/users/{id}&quot;)
-    User getUserById(@PathVariable(&quot;id&quot;) Long id);
+<span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/users/{id}&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">User</span><span class="w"> </span><span class="nf">getUserById</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
 
-    @PostMapping(&quot;/users&quot;)
-    User createUser(@RequestBody User user);
-}
-</code></pre>
+<span class="w">    </span><span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;/users&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">User</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="4-use-the-feign-client">4. Use the Feign Client</h3>
 <p>Inject and use the Feign client in your services or controllers:</p>
-<pre><code class="language-java">@Service
-public class UserService {
+<div class="highlight"><pre><span></span><code><span class="nd">@Service</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserService</span><span class="w"> </span><span class="p">{</span>
 
-    private final UserServiceClient userServiceClient;
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">UserServiceClient</span><span class="w"> </span><span class="n">userServiceClient</span><span class="p">;</span>
 
-    public UserService(UserServiceClient userServiceClient) {
-        this.userServiceClient = userServiceClient;
-    }
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">UserService</span><span class="p">(</span><span class="n">UserServiceClient</span><span class="w"> </span><span class="n">userServiceClient</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">userServiceClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userServiceClient</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-    public User getUser(Long id) {
-        return userServiceClient.getUserById(id);
-    }
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">getUser</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">userServiceClient</span><span class="p">.</span><span class="na">getUserById</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 
-    public User createUser(User user) {
-        return userServiceClient.createUser(user);
-    }
-}
-</code></pre>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">userServiceClient</span><span class="p">.</span><span class="na">createUser</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
               
             </div>
           </div><footer>
@@ -296,7 +310,6 @@ public class UserService {
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
-      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

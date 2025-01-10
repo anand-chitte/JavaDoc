@@ -36,14 +36,14 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/introduction/">Introduction</a>
@@ -51,6 +51,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
@@ -68,7 +74,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
                   </li>
@@ -96,6 +102,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -161,6 +169,12 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -191,55 +205,48 @@
 <h2 id="steps-to-integrate-resilience4j-with-spring-boot">Steps to Integrate Resilience4j with Spring Boot</h2>
 <h3 id="1-add-dependencies">1. Add Dependencies</h3>
 <p>Include the required Resilience4j modules in your pom.xml if you're using Maven:</p>
-<pre><code class="language-xml">
-&lt;dependency&gt;
-    &lt;groupId&gt;io.github.resilience4j&lt;/groupId&gt;
-    &lt;artifactId&gt;resilience4j-spring-boot3&lt;/artifactId&gt;
-    &lt;version&gt;2.0.2&lt;/version&gt; &lt;!-- Replace with the latest version --&gt;
-&lt;/dependency&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>io.github.resilience4j<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>resilience4j-spring-boot3<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>2.0.2<span class="nt">&lt;/version&gt;</span><span class="w"> </span><span class="cm">&lt;!-- Replace with the latest version --&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
 <h3 id="2-enable-resilience4j">2. Enable Resilience4j</h3>
 <p>Resilience4j automatically configures itself in a Spring Boot application. You just need to create configuration properties in your application.yml or application.properties file.</p>
 <h4 id="21-retry-configuration">2.1. Retry Configuration</h4>
-<p>To set up retry for a specific service method, you can configure it in application.properties like this:</p>
-<pre><code class="language-properties">resilience4j.retry.instances.myServiceRetry.maxAttempts=3
-resilience4j.retry.instances.myServiceRetry.waitDuration=500ms
-resilience4j.retry.instances.myServiceRetry.enableExponentialBackoff=true
-resilience4j.retry.instances.myServiceRetry.randomize=true
-</code></pre>
-<ul>
-<li><code>maxAttempts:</code> The maximum number of retry attempts (e.g., 3).</li>
-<li><code>waitDuration:</code> The wait time between retry attempts (e.g., 500ms).</li>
-<li><code>enableExponentialBackoff:</code> Enable exponential backoff between retries.</li>
-<li><code>randomize:</code> Randomize the backoff duration to avoid retries happening at the same time.</li>
-</ul>
+<p>To set up retry for a specific service method, you can configure it in application.properties like this:
+<div class="highlight"><pre><span></span><code><span class="na">resilience4j.retry.instances.myServiceRetry.maxAttempts</span><span class="o">=</span><span class="s">3</span>
+<span class="na">resilience4j.retry.instances.myServiceRetry.waitDuration</span><span class="o">=</span><span class="s">500ms</span>
+<span class="na">resilience4j.retry.instances.myServiceRetry.enableExponentialBackoff</span><span class="o">=</span><span class="s">true</span>
+<span class="na">resilience4j.retry.instances.myServiceRetry.randomize</span><span class="o">=</span><span class="s">true</span>
+</code></pre></div>
+- <code>maxAttempts:</code> The maximum number of retry attempts (e.g., 3).
+- <code>waitDuration:</code> The wait time between retry attempts (e.g., 500ms).
+- <code>enableExponentialBackoff:</code> Enable exponential backoff between retries.
+- <code>randomize:</code> Randomize the backoff duration to avoid retries happening at the same time.</p>
 <h4 id="22-circuit-breaker-configuration">2.2. Circuit Breaker Configuration</h4>
-<p>For a circuit breaker, configure it like so:</p>
-<pre><code class="language-properties">resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.registerHealthIndicator=true
-resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.slidingWindowSize=10
-resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.failureRateThreshold=50
-resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.waitDurationInOpenState=10000ms
-</code></pre>
-<ul>
-<li><code>slidingWindowSize:</code> Defines the number of calls to consider for calculating failure rate.</li>
-<li><code>failureRateThreshold:</code> Percentage of failures above which the circuit breaker will open (e.g., 50%).</li>
-<li><code>waitDurationInOpenState:</code> Time the circuit breaker will stay open before attempting to close again.</li>
-</ul>
+<p>For a circuit breaker, configure it like so:
+<div class="highlight"><pre><span></span><code><span class="na">resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.registerHealthIndicator</span><span class="o">=</span><span class="s">true</span>
+<span class="na">resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.slidingWindowSize</span><span class="o">=</span><span class="s">10</span>
+<span class="na">resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.failureRateThreshold</span><span class="o">=</span><span class="s">50</span>
+<span class="na">resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.waitDurationInOpenState</span><span class="o">=</span><span class="s">10000ms</span>
+</code></pre></div>
+- <code>slidingWindowSize:</code> Defines the number of calls to consider for calculating failure rate.
+- <code>failureRateThreshold:</code> Percentage of failures above which the circuit breaker will open (e.g., 50%).
+- <code>waitDurationInOpenState:</code> Time the circuit breaker will stay open before attempting to close again.</p>
 <h4 id="23-rate-limiter-configuration">2.3. Rate Limiter Configuration</h4>
 <p>To limit the number of calls in a given time period, use:</p>
-<pre><code class="language-properties">resilience4j.ratelimiter.instances.myServiceRateLimiter.limitForPeriod=5
-resilience4j.ratelimiter.instances.myServiceRateLimiter.limitRefreshPeriod=1s
-resilience4j.ratelimiter.instances.myServiceRateLimiter.timeoutDuration=500ms
-</code></pre>
-<ul>
-<li><code>limitForPeriod:</code> Maximum number of requests allowed in the specified period.</li>
-<li><code>limitRefreshPeriod:</code> Time interval for refreshing the rate limit (e.g., 1 second).</li>
-<li><code>timeoutDuration:</code> Timeout if the rate limit is exceeded.</li>
-</ul>
+<p><div class="highlight"><pre><span></span><code><span class="na">resilience4j.ratelimiter.instances.myServiceRateLimiter.limitForPeriod</span><span class="o">=</span><span class="s">5</span>
+<span class="na">resilience4j.ratelimiter.instances.myServiceRateLimiter.limitRefreshPeriod</span><span class="o">=</span><span class="s">1s</span>
+<span class="na">resilience4j.ratelimiter.instances.myServiceRateLimiter.timeoutDuration</span><span class="o">=</span><span class="s">500ms</span>
+</code></pre></div>
+- <code>limitForPeriod:</code> Maximum number of requests allowed in the specified period.
+- <code>limitRefreshPeriod:</code> Time interval for refreshing the rate limit (e.g., 1 second).
+- <code>timeoutDuration:</code> Timeout if the rate limit is exceeded.</p>
 <h3 id="example">Example</h3>
-<pre><code class="language-java">@Retry(name = &quot;myServiceRetry&quot;)
-@CircuitBreaker(name = &quot;myServiceCircuitBreaker&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Retry</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;myServiceRetry&quot;</span><span class="p">)</span>
+<span class="nd">@CircuitBreaker</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;myServiceCircuitBreaker&quot;</span><span class="p">)</span>
+</code></pre></div>
               
             </div>
           </div><footer>
@@ -279,7 +286,6 @@ resilience4j.ratelimiter.instances.myServiceRateLimiter.timeoutDuration=500ms
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
-      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

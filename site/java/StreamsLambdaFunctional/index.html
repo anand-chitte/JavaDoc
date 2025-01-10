@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/StreamsLambdaFunctional/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>StreamsLambdaFuncational - Java</title>
+    <title>StreamsLambdaFunctional - Java</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "StreamsLambdaFuncational";
+        var mkdocs_page_name = "StreamsLambdaFunctional";
         var mkdocs_page_input_path = "java\\StreamsLambdaFunctional.md";
         var mkdocs_page_url = "/JavaDoc/java/StreamsLambdaFunctional/";
       </script>
@@ -36,14 +36,14 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
@@ -51,6 +51,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
@@ -68,7 +74,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">StreamsLambdaFuncational</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">StreamsLambdaFunctional</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#1-streams">1. Streams:</a>
     </li>
@@ -104,6 +110,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -149,6 +157,12 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -165,7 +179,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Java</li>
-      <li class="breadcrumb-item active">StreamsLambdaFuncational</li>
+      <li class="breadcrumb-item active">StreamsLambdaFunctional</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -178,27 +192,26 @@
 <h3 id="1-streams">1. Streams:</h3>
 <ul>
 <li>A <strong>stream</strong> is a sequence of elements that allows for functional-style operations on collections, such as filtering, mapping, and reducing. Streams can be processed sequentially or in parallel.</li>
-<li>Operations like <code>filter()</code>, <code>map()</code>, <code>reduce()</code>, <code>forEach()</code>, and <code>collect()</code> are commonly used to manipulate data within a stream.</li>
+<li>Operations like <code>filter()</code>, <code>map()</code>, <code>reduce()</code>, <code>forEach()</code>, and <code>collect()</code> are commonly used to manipulate data within a stream.
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Charlie&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;David&quot;</span><span class="p">);</span>
+<span class="n">names</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">     </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">name</span><span class="p">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">))</span>
+<span class="w">     </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">String</span><span class="p">::</span><span class="n">toUpperCase</span><span class="p">)</span>
+<span class="w">     </span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+</code></pre></div></li>
 </ul>
-<pre><code class="language-java">List&lt;String&gt; names = List.of(&quot;Alice&quot;, &quot;Bob&quot;, &quot;Charlie&quot;, &quot;David&quot;);
-names.stream()
-     .filter(name -&gt; name.startsWith(&quot;A&quot;))
-     .map(String::toUpperCase)
-     .forEach(System.out::println);
-</code></pre>
 <h3 id="2-lambda-expressions">2. Lambda Expressions:</h3>
 <ul>
 <li><strong>Lambda expressions</strong> provide a compact way to define anonymous functions (functions without a name).</li>
-<li>They allow you to pass behavior as parameters to methods or assign them to variables, typically used in conjunction with functional interfaces.</li>
+<li>They allow you to pass behavior as parameters to methods or assign them to variables, typically used in conjunction with functional interfaces.
+<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">                 </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">                 </span><span class="p">.</span><span class="na">mapToInt</span><span class="p">(</span><span class="n">Integer</span><span class="p">::</span><span class="n">intValue</span><span class="p">)</span>
+<span class="w">                 </span><span class="p">.</span><span class="na">sum</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sum of even numbers: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
+</code></pre></div></li>
 </ul>
-<pre><code class="language-java">List&lt;Integer&gt; numbers = List.of(1, 2, 3, 4, 5);
-int sum = numbers.stream()
-                 .filter(n -&gt; n % 2 == 0)
-                 .mapToInt(Integer::intValue)
-                 .sum();
-System.out.println(&quot;Sum of even numbers: &quot; + sum);
-
-</code></pre>
 <h3 id="3-functional-interfaces">3. Functional Interfaces:</h3>
 <ul>
 <li>A <strong>functional interface</strong> is an interface that has exactly one abstract method.</li>
@@ -211,18 +224,18 @@ System.out.println(&quot;Sum of even numbers: &quot; + sum);
 <li><code>UnaryOperator</code>: A function that takes a single argument and returns a result of the same type.</li>
 <li><code>BinaryOperator</code>: A function that takes two arguments of the same type and returns a result of the same type.</li>
 </ul>
-<pre><code class="language-java">@FunctionalInterface
-interface MyFunction {
-    int apply(int a, int b);
-}
+<div class="highlight"><pre><span></span><code><span class="nd">@FunctionalInterface</span>
+<span class="kd">interface</span> <span class="nc">MyFunction</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
 
-public class Example {
-    public static void main(String[] args) {
-        MyFunction add = (a, b) -&gt; a + b;
-        System.out.println(add.apply(5, 3)); // Output: 8
-    }
-}
-</code></pre>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Example</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">MyFunction</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">add</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: 8</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <hr />
 <p>These concepts enable cleaner, more readable, and more concise code, especially when working with collections or higher-order functions in Java.</p>
               
@@ -264,7 +277,6 @@ public class Example {
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
-      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

@@ -36,14 +36,14 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
@@ -51,6 +51,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
@@ -100,7 +106,7 @@
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
                   </li>
@@ -128,6 +134,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -172,6 +180,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
                   </li>
               </ul>
       </div>
@@ -271,16 +285,16 @@
         list.add("Java");
         list.add("Python");
         list.add("JavaScript");</p>
-<pre><code>    // Iterating over List
+<div class="highlight"><pre><span></span><code>    // Iterating over List
     for (String lang : list) {
         System.out.println(lang);
     }
 
     // Set Example (no duplicates)
     Set&lt;String&gt; set = new HashSet&lt;&gt;();
-    set.add("Apple");
-    set.add("Banana");
-    set.add("Apple"); // Duplicate, won't be added
+    set.add(&quot;Apple&quot;);
+    set.add(&quot;Banana&quot;);
+    set.add(&quot;Apple&quot;); // Duplicate, won&#39;t be added
 
     // Iterating over Set
     for (String fruit : set) {
@@ -289,22 +303,22 @@
 
     // Map Example (key-value pairs)
     Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
-    map.put("Apple", 1);
-    map.put("Banana", 2);
+    map.put(&quot;Apple&quot;, 1);
+    map.put(&quot;Banana&quot;, 2);
 
     // Iterating over Map
     for (Map.Entry&lt;String, Integer&gt; entry : map.entrySet()) {
-        System.out.println(entry.getKey() + ": " + entry.getValue());
+        System.out.println(entry.getKey() + &quot;: &quot; + entry.getValue());
     }
 }
-</code></pre>
+</code></pre></div>
 <p>}</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../Generics/" class="btn btn-neutral float-left" title="Generics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../StreamsLambdaFunctional/" class="btn btn-neutral float-right" title="StreamsLambdaFuncational">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../StreamsLambdaFunctional/" class="btn btn-neutral float-right" title="StreamsLambdaFunctional">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -338,7 +352,6 @@
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
-      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

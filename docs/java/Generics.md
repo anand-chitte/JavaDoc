@@ -6,21 +6,19 @@
 A generic class is defined with a type parameter, allowing you to create classes that can work with any data type while maintaining type safety. The class will operate on the specified type, which can vary depending on how the class is instantiated.
 
 ```java
-public class GenericMethodExample {
-    public static <T> void printArray(T[] array) {
-        for (T element : array) {
-            System.out.println(element);
-        }
-    }
+class Container<T> {
+    private T item;
+    public Container(T item) { this.item = item; }
+    public T getItem() { return item; }
+}
 
+public class GenericExample {
     public static void main(String[] args) {
-        Integer[] intArray = {1, 2, 3};
-        String[] strArray = {"A", "B", "C"};
-
-        printArray(intArray);  // Output: 1 2 3
-        printArray(strArray);  // Output: A B C
+        System.out.println(new Container<>(42).getItem()); // Output: 42
+        System.out.println(new Container<>("Hello").getItem()); // Output: Hello
     }
 }
+
 ```
 
 ### 2. Generic Methods:

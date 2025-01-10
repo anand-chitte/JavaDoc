@@ -24,6 +24,7 @@ resilience4j.retry.instances.myServiceRetry.waitDuration=500ms
 resilience4j.retry.instances.myServiceRetry.enableExponentialBackoff=true
 resilience4j.retry.instances.myServiceRetry.randomize=true
 ```
+
 - `maxAttempts:` The maximum number of retry attempts (e.g., 3).
 - `waitDuration:` The wait time between retry attempts (e.g., 500ms).
 - `enableExponentialBackoff:` Enable exponential backoff between retries.
@@ -37,6 +38,7 @@ resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.slidingWindowSize=
 resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.failureRateThreshold=50
 resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.waitDurationInOpenState=10000ms
 ```
+
 - `slidingWindowSize:` Defines the number of calls to consider for calculating failure rate.
 - `failureRateThreshold:` Percentage of failures above which the circuit breaker will open (e.g., 50%).
 - `waitDurationInOpenState:` Time the circuit breaker will stay open before attempting to close again.
@@ -48,6 +50,7 @@ resilience4j.ratelimiter.instances.myServiceRateLimiter.limitForPeriod=5
 resilience4j.ratelimiter.instances.myServiceRateLimiter.limitRefreshPeriod=1s
 resilience4j.ratelimiter.instances.myServiceRateLimiter.timeoutDuration=500ms
 ```
+
 - `limitForPeriod:` Maximum number of requests allowed in the specified period.
 - `limitRefreshPeriod:` Time interval for refreshing the rate limit (e.g., 1 second).
 - `timeoutDuration:` Timeout if the rate limit is exceeded.

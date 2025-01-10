@@ -36,14 +36,14 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
@@ -51,6 +51,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
@@ -86,7 +92,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
                   </li>
@@ -114,6 +120,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -159,6 +167,12 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -196,38 +210,38 @@
 <li>Overloading can occur within the <strong>same class</strong> or in a <strong>subclass</strong>.</li>
 </ul>
 <hr />
-<pre><code class="language-java">class Calculator {
-    // Overloaded method for adding two integers
-    int add(int a, int b) {
-        return a + b;
-    }
+<p><div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Calculator</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Overloaded method for adding two integers</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-    // Overloaded method for adding three integers
-    int add(int a, int b, int c) {
-        return a + b + c;
-    }
+<span class="w">    </span><span class="c1">// Overloaded method for adding three integers</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-    // Overloaded method for adding two doubles
-    double add(double a, double b) {
-        return a + b;
-    }
-}
+<span class="w">    </span><span class="c1">// Overloaded method for adding two doubles</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-public class Main {
-    public static void main(String[] args) {
-        Calculator calc = new Calculator();
-        System.out.println(calc.add(2, 3));        // Calls the method with two integers
-        System.out.println(calc.add(1, 2, 3));     // Calls the method with three integers
-        System.out.println(calc.add(2.5, 3.5));    // Calls the method with two doubles
-    }
-}
-</code></pre>
-<pre><code class="language-shell">Output:
-Copy code
-5
-6
-6.0
-</code></pre>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Calculator</span><span class="w"> </span><span class="n">calc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Calculator</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">calc</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w">        </span><span class="c1">// Calls the method with two integers</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">calc</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w">     </span><span class="c1">// Calls the method with three integers</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">calc</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="mf">3.5</span><span class="p">));</span><span class="w">    </span><span class="c1">// Calls the method with two doubles</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Output:
+Copy<span class="w"> </span>code
+<span class="m">5</span>
+<span class="m">6</span>
+<span class="m">6</span>.0
+</code></pre></div></p>
 <h2 id="2-method-overriding">2. Method Overriding:</h2>
 <h3 id="definition_1">Definition:</h3>
 <p>Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its superclass. The method signature (name, return type, and parameters) must be the same in both the superclass and subclass.</p>
@@ -239,42 +253,41 @@ Copy code
 <li>The method in the subclass can be called using an object of the <strong>subclass</strong> or the <strong>parent class</strong> (through a reference to the subclass).</li>
 <li>The <code>@Override</code> annotation is used to indicate method overriding, though it’s <strong>not mandatory</strong>.</li>
 </ul>
-<pre><code class="language-java">class Animal {
-    // Method to be overridden in subclass
-    void sound() {
-        System.out.println(&quot;Animal makes a sound&quot;);
-    }
-}
+<p><div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Method to be overridden in subclass</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Animal makes a sound&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-class Dog extends Animal {
-    // Overriding the sound method in the subclass
-    @Override
-    void sound() {
-        System.out.println(&quot;Dog barks&quot;);
-    }
-}
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Overriding the sound method in the subclass</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog barks&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-public class Main {
-    public static void main(String[] args) {
-        Animal animal = new Animal();
-        animal.sound();  // Calls the method in Animal class
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Animal</span><span class="w"> </span><span class="n">animal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Animal</span><span class="p">();</span>
+<span class="w">        </span><span class="n">animal</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span><span class="w">  </span><span class="c1">// Calls the method in Animal class</span>
 
-        Dog dog = new Dog();
-        dog.sound();     // Calls the overridden method in Dog class
+<span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
+<span class="w">        </span><span class="n">dog</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span><span class="w">     </span><span class="c1">// Calls the overridden method in Dog class</span>
 
-        Animal myDog = new Dog();
-        myDog.sound();   // Calls the overridden method in Dog class (runtime polymorphism)
-    }
-}
-</code></pre>
-<pre><code class="language-shell">
-Output:
+<span class="w">        </span><span class="n">Animal</span><span class="w"> </span><span class="n">myDog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
+<span class="w">        </span><span class="n">myDog</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span><span class="w">   </span><span class="c1">// Calls the overridden method in Dog class (runtime polymorphism)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Output:
 css
-Copy code
-Animal makes a sound
-Dog barks
-Dog barks
-</code></pre>
+Copy<span class="w"> </span>code
+Animal<span class="w"> </span>makes<span class="w"> </span>a<span class="w"> </span>sound
+Dog<span class="w"> </span>barks
+Dog<span class="w"> </span>barks
+</code></pre></div></p>
               
             </div>
           </div><footer>
@@ -314,7 +327,6 @@ Dog barks
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
-      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

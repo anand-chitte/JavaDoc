@@ -47,16 +47,3 @@ It is the backbone of the Spring Framework, enabling the implementation of the I
 - **Spring AOP**: Supports aspect-oriented programming and declarative transaction management.
 
 ---
-
-# Lifecycle of Beans in the Spring Container
-
-1. **Instantiation**:  
-   Beans are created.
-2. **Property Setting**:  
-   Dependencies are injected.
-3. **Custom Initialization**:  
-   Initialization methods (e.g., `@PostConstruct` or `init-method`) are executed.
-4. **Bean Usage**:  
-   Beans are ready to be used.
-5. **Destruction**:  
-   Cleanup methods (e.g., `@PreDestroy` or `destroy-method`) are executed when the container shuts down.

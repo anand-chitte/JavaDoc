@@ -36,14 +36,14 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
@@ -51,6 +51,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
@@ -68,7 +74,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
                   </li>
@@ -119,6 +125,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
@@ -162,6 +170,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
                   </li>
               </ul>
       </div>
@@ -231,33 +245,33 @@
 <li><strong>Rehashing</strong>: When the bucket size exceeds the threshold (load factor * current bucket size), the <strong>HashMap resizes</strong> the array, typically doubling the bucket size. All existing key-value pairs are rehashed and redistributed into the new array of buckets, ensuring even distribution and avoiding too many collisions.</li>
 </ul>
 <h2 id="example">Example</h2>
-<pre><code class="language-java">import java.util.HashMap;
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
 
-public class HashMapExample {
-    public static void main(String[] args) {
-        // Create a HashMap instance with a default initial capacity of 16 buckets
-        HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HashMapExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create a HashMap instance with a default initial capacity of 16 buckets</span>
+<span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 
-        // Insert key-value pairs
-        map.put(&quot;Apple&quot;, 5);
-        map.put(&quot;Banana&quot;, 7);
-        map.put(&quot;Orange&quot;, 3);
+<span class="w">        </span><span class="c1">// Insert key-value pairs</span>
+<span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
+<span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 
-        // Retrieve a value based on key
-        System.out.println(&quot;Apple's count: &quot; + map.get(&quot;Apple&quot;)); // Output: 5
+<span class="w">        </span><span class="c1">// Retrieve a value based on key</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Apple&#39;s count: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: 5</span>
 
-        // Update a value
-        map.put(&quot;Apple&quot;, 10);
-        System.out.println(&quot;Updated Apple's count: &quot; + map.get(&quot;Apple&quot;)); // Output: 10
+<span class="w">        </span><span class="c1">// Update a value</span>
+<span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Updated Apple&#39;s count: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: 10</span>
 
-        // Remove a key-value pair
-        map.remove(&quot;Banana&quot;);
+<span class="w">        </span><span class="c1">// Remove a key-value pair</span>
+<span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
 
-        // Check if a key exists
-        System.out.println(&quot;Contains 'Banana'? &quot; + map.containsKey(&quot;Banana&quot;)); // Output: false
-    }
-}
-</code></pre>
+<span class="w">        </span><span class="c1">// Check if a key exists</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Contains &#39;Banana&#39;? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: false</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
               
             </div>
           </div><footer>
@@ -297,7 +311,6 @@ public class HashMapExample {
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
-      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

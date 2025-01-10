@@ -2,11 +2,17 @@ site_name: Java
 site_url: https://anand-chitte.github.io/JavaDoc/
 
 nav:
+  - Home: index.md
   - Java:
     - Introduction: java/introduction.md
     - How Java Works: java/How Java Works.md
     - JVM: java/Java Virtual Machine (JVM).md
+    - Garbage Collector: java/Garbage Collector.md
+    - Data Type: java/DataType.md
+    - Operators: java/Operators.md
+    - Casting: java/Casting.md
     - Object-Oriented Programming: java/Object-Oriented Programming.md
+    - Constructor: java/Constructor.md
     - Method overloading & overiding: java/Method overloading & overiding.md
     - Static & Final Keyword: java/StaticFinalKeyword.md
     - String: java/String.md
@@ -14,7 +20,7 @@ nav:
     - Exception in Java: java/Exception in Java.md
     - Generics: java/Generics.md
     - Collection Framework: java/Collection Framework.md
-    - StreamsLambdaFuncational: java/StreamsLambdaFunctional.md
+    - StreamsLambdaFunctional: java/StreamsLambdaFunctional.md
     - Stream: java/Stream.md
     - Lambda Expression: java/LambdaExpression.md
     - Functional Interface: java/FunctionalInterface.md
@@ -26,13 +32,20 @@ nav:
   - Spring:
       - Introduction: spring/Introduction.md
       - Spring Container: spring/Spring Container.md
+      - Bean: spring/Bean.md
       - Spring Boot: spring/Spring Boot.md
       - Spring Profiles: spring/Spring Profiles.md
+      - Spring Actuator: spring/Actuator.md
+      - ORM: spring/ORM.md
+      - JPA: spring/JPA.md
       - RestTemplate: spring/RestTemplate.md
       - WebClient: spring/WebClient.md
       - Spring boot annotations: spring/Spring boot annotations.md
       - Spring Security: spring/Spring Security.md
+      - OAuth2: spring/Oauth.md
+      - JWT: spring/JWT.md
       - Keycloak: spring/Keycloak Implementation.md
+      - Scheduling: spring/Scheduling.md
       - Correlation ID: spring/CorrelationId.md
   - Microservices:
       - Introduction: microservices/Introduction.md
@@ -43,13 +56,19 @@ nav:
       - FeignClient: microservices/FeignClient.md
       - Spring Cloud Function: microservices/SpringCloudFunction.md
       - Spring Cloud Stream: microservices/SpringCloudStream.md
+  - PostgeSQL:
+      - Dataset: postgres/Dataset.md
+      - Question: postgres/Question.md
+      - Answer: postgres/Answer.md
   - Other:
     - Maven: other/Maven.md
     - Git: other/Git.md
     - Docker: other/Docker.md
     - Redis: other/Redis.md
     - RabbitMQ: other/RabbitMQ.md
-
+    - Fastag: other/Fastag.md
+    - ILMS: other/ILMS.md
+    - Flowchart: other/Flowchart.md
 extra_css:
   - css/custom.css
 extra:
@@ -64,3 +83,10 @@ theme:
     - properties
     - bash
     - shell
+#plugins:
+#  - search
+#  - mermaid2
+#markdown_extensions:
+#  - pymdownx.superfences
+#  - pymdownx.highlight
+#  - pymdownx.inlinehilite

@@ -36,14 +36,14 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/introduction/">Introduction</a>
@@ -51,6 +51,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
@@ -68,7 +74,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
                   </li>
@@ -119,6 +125,8 @@
     </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Actuator/">Spring Actuator</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../RestTemplate/">RestTemplate</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../WebClient/">WebClient</a>
@@ -163,6 +171,12 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -194,40 +208,40 @@
 <h2 id="1-defining-profiles-in-applicationproperties-or-applicationyml">1. Defining Profiles in <code>application.properties</code> or <code>application.yml</code></h2>
 <p>You can define profile-specific properties in the <code>application.properties</code> or <code>application.yml</code> file. Below is an example of configurations for <code>dev</code>, <code>test</code>, and <code>prod</code> profiles:</p>
 <h3 id="default-configuration-applicationproperties">Default Configuration (<code>application.properties</code>)</h3>
-<pre><code class="language-properties"># Default configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/mydb
-spring.datasource.username=root
-spring.datasource.password=root
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Default configuration</span>
+<span class="na">spring.datasource.url</span><span class="o">=</span><span class="s">jdbc:mysql://localhost:3306/mydb</span>
+<span class="na">spring.datasource.username</span><span class="o">=</span><span class="s">root</span>
+<span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">root</span>
+</code></pre></div>
 <h3 id="development-profile-application-devproperties">Development Profile (application-dev.properties)</h3>
-<pre><code class="language-properties"># dev-specific configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/devdb
-spring.datasource.username=devuser
-spring.datasource.password=devpassword
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># dev-specific configuration</span>
+<span class="na">spring.datasource.url</span><span class="o">=</span><span class="s">jdbc:mysql://localhost:3306/devdb</span>
+<span class="na">spring.datasource.username</span><span class="o">=</span><span class="s">devuser</span>
+<span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">devpassword</span>
+</code></pre></div>
 <h3 id="production-profile-application-prodproperties">Production Profile (application-prod.properties)</h3>
-<pre><code class="language-properties"># prod-specific configuration
-spring.datasource.url=jdbc:mysql://prod-db-host:3306/proddb
-spring.datasource.username=produser
-spring.datasource.password=prodpassword
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># prod-specific configuration</span>
+<span class="na">spring.datasource.url</span><span class="o">=</span><span class="s">jdbc:mysql://prod-db-host:3306/proddb</span>
+<span class="na">spring.datasource.username</span><span class="o">=</span><span class="s">produser</span>
+<span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">prodpassword</span>
+</code></pre></div>
 <h2 id="2-activating-profiles">2. Activating Profiles</h2>
 <p>You can activate a profile using the following methods:</p>
 <h3 id="a-using-springprofilesactive-in-applicationproperties">a. Using spring.profiles.active in application.properties</h3>
-<pre><code class="language-properties">spring.profiles.active=dev
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="na">spring.profiles.active</span><span class="o">=</span><span class="s">dev</span>
+</code></pre></div>
 <h3 id="b-using-command-line-parameters">b. Using Command Line Parameters</h3>
-<pre><code class="language-bash">java -jar myapp.jar --spring.profiles.active=dev
-</code></pre>
+<div class="highlight"><pre><span></span><code>java<span class="w"> </span>-jar<span class="w"> </span>myapp.jar<span class="w"> </span>--spring.profiles.active<span class="o">=</span>dev
+</code></pre></div>
 <h3 id="c-using-environment-variables">c. Using Environment Variables</h3>
-<pre><code class="language-bash">export SPRING_PROFILES_ACTIVE=dev
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">SPRING_PROFILES_ACTIVE</span><span class="o">=</span>dev
+</code></pre></div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../Spring%20Boot/" class="btn btn-neutral float-left" title="Spring Boot"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../RestTemplate/" class="btn btn-neutral float-right" title="RestTemplate">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Actuator/" class="btn btn-neutral float-right" title="Spring Actuator">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -253,7 +267,7 @@ spring.datasource.password=prodpassword
       <span><a href="../Spring%20Boot/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../RestTemplate/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Actuator/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -261,7 +275,6 @@ spring.datasource.password=prodpassword
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
-      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

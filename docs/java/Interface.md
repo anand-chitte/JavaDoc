@@ -12,7 +12,7 @@ An interface is a reference type, similar to a class, that can contain only cons
 
 ### Limitations of Interfaces:
 - Cannot contain instance fields.
-- Cannot have constructors.b
+- Cannot have constructors
 
 ### Example:
 

@@ -36,14 +36,14 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/introduction/">Introduction</a>
@@ -51,6 +51,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
@@ -68,7 +74,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
                   </li>
@@ -96,6 +102,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Actuator/">Spring Actuator</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../RestTemplate/">RestTemplate</a>
                   </li>
@@ -143,6 +151,12 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -170,361 +184,323 @@
               
                 <h3 id="springbootapplication">@SpringBootApplication</h3>
 <p>Marks the main class of a Spring Boot application. Combines <code>@Configuration</code>, <code>@EnableAutoConfiguration</code>, and <code>@ComponentScan</code>.</p>
-<pre><code class="language-java">@SpringBootApplication
-public class Application {
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Application</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="component">@Component</h3>
 <p>Marks a class as a Spring component, enabling it to be managed by Spring's container.</p>
-<pre><code class="language-java">
-@Component
-public class MyComponent {
-    // component logic
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Component</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyComponent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// component logic</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="configuration">@Configuration</h3>
 <p>Indicates that the class contains Spring bean definitions and that it can be processed by the Spring container to create and manage beans.</p>
-<pre><code class="language-java">
-@Configuration
-public class AppConfig {
-    @Bean
-    public SomeBean someBean() {
-        return new SomeBean();
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Configuration</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppConfig</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Bean</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">SomeBean</span><span class="w"> </span><span class="nf">someBean</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SomeBean</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="bean">@Bean</h3>
 <p>Defines a bean to be managed by the Spring container.</p>
-<pre><code class="language-java">
-@Bean
-public SomeService someService() {
-    return new SomeService();
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Bean</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">SomeService</span><span class="w"> </span><span class="nf">someService</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SomeService</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="lazy">@Lazy</h3>
 <p>Indicates that a bean should be lazily initialized.</p>
-<pre><code class="language-java">
-@Lazy
-@Bean
-public SomeBean someBean() {
-    return new SomeBean();
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Lazy</span>
+<span class="nd">@Bean</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">SomeBean</span><span class="w"> </span><span class="nf">someBean</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SomeBean</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="autowired">@Autowired</h3>
 <p>Injects a bean into the class.</p>
-<pre><code class="language-java">
-@Autowired
-private UserService userService;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Autowired</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">UserService</span><span class="w"> </span><span class="n">userService</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="value">@Value</h3>
-<p>It is used to inject values into fields, methods, or constructor parameters from property file.</p>
-<pre><code class="language-java">import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+<p>It is used to inject values into fields, methods, or constructor parameters from property file.
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.annotation.Value</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span>
 
-@Component
-public class MyComponent {
+<span class="nd">@Component</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyComponent</span><span class="w"> </span><span class="p">{</span>
 
-    @Value(&quot;${app.name}&quot;)
-    private String appName;
+<span class="w">    </span><span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;${app.name}&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">appName</span><span class="p">;</span>
 
-    @Value(&quot;${app.version}&quot;)
-    private String appVersion;
+<span class="w">    </span><span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;${app.version}&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">appVersion</span><span class="p">;</span>
 
-    @Value(&quot;#{2 * T(Math).PI}&quot;)
-    private double circleConstant;
+<span class="w">    </span><span class="nd">@Value</span><span class="p">(</span><span class="s">&quot;#{2 * T(Math).PI}&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">circleConstant</span><span class="p">;</span>
 
-    public void printAppDetails() {
-        System.out.println(&quot;App Name: &quot; + appName);
-        System.out.println(&quot;App Version: &quot; + appVersion);
-        System.out.println(&quot;Circle Constant: &quot; + circleConstant);
-    }
-}
-</code></pre>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printAppDetails</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;App Name: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">appName</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;App Version: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">appVersion</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Circle Constant: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">circleConstant</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <h4 id="applicationproperties">application.properties:</h4>
-<pre><code class="language-properties">app.name=MySpringApp
-app.version=1.0
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="na">app.name</span><span class="o">=</span><span class="s">MySpringApp</span>
+<span class="na">app.version</span><span class="o">=</span><span class="s">1.0</span>
+</code></pre></div>
 <h3 id="primary">@Primary</h3>
 <p>Indicates that a bean should be the default bean to autowire when multiple candidates exist.</p>
-<pre><code class="language-java">
-@Primary
-@Bean
-public SomeService defaultService() {
-    return new DefaultService();
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Primary</span>
+<span class="nd">@Bean</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">SomeService</span><span class="w"> </span><span class="nf">defaultService</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DefaultService</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="enableconfigurationproperties">@EnableConfigurationProperties</h3>
 <p>Enables support for @ConfigurationProperties beans.</p>
-<pre><code class="language-java">
-@EnableConfigurationProperties(SomeProperties.class)
-@Configuration
-public class Config {
-    // configuration
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@EnableConfigurationProperties</span><span class="p">(</span><span class="n">SomeProperties</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="nd">@Configuration</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Config</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// configuration</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="springboottest">@SpringBootTest</h3>
 <p>Indicates that the class should run as a Spring Boot test.</p>
-<pre><code class="language-java">
-@SpringBootTest
-public class ApplicationTests {
-    @Test
-    public void contextLoads() {
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@SpringBootTest</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ApplicationTests</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Test</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">contextLoads</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="restcontroller">@RestController</h3>
 <p>Combines @Controller and @ResponseBody, used for RESTful APIs.</p>
-<pre><code class="language-java">
-@RestController
-public class UserController {
-    @GetMapping(&quot;/users&quot;)
-    public List&lt;User&gt; getUsers() {
-        return userService.getUsers();
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@RestController</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserController</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/users&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getUsers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">userService</span><span class="p">.</span><span class="na">getUsers</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="controller">@Controller</h3>
 <p>Indicates that a class is a Spring MVC controller.</p>
-<pre><code class="language-java">
-@Controller
-public class WebController {
-    @RequestMapping(&quot;/home&quot;)
-    public String home() {
-        return &quot;home&quot;;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Controller</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">WebController</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;/home&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">home</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;home&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="requestmapping">@RequestMapping</h3>
 <p>Maps HTTP requests to handler methods of MVC and REST controllers.</p>
-<pre><code class="language-java">
-@RequestMapping(&quot;/users&quot;)
-public String getUsers() {
-    return &quot;users&quot;;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&quot;/users&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getUsers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;users&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="getmapping">@GetMapping</h3>
 <p>Maps HTTP GET requests to handler methods.</p>
-<pre><code class="language-java">
-@GetMapping(&quot;/users&quot;)
-public List&lt;User&gt; getUsers() {
-    return userService.getUsers();
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/users&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getUsers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userService</span><span class="p">.</span><span class="na">getUsers</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="postmapping">@PostMapping</h3>
 <p>Maps HTTP POST requests to handler methods.</p>
-<pre><code class="language-java">
-@PostMapping(&quot;/users&quot;)
-public User createUser(@RequestBody User user) {
-    return userService.createUser(user);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;/users&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userService</span><span class="p">.</span><span class="na">createUser</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="putmapping">@PutMapping</h3>
 <p>Maps HTTP PUT requests to handler methods.</p>
-<pre><code class="language-java">
-@PutMapping(&quot;/users/{id}&quot;)
-public User updateUser(@PathVariable Long id, @RequestBody User user) {
-    return userService.updateUser(id, user);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@PutMapping</span><span class="p">(</span><span class="s">&quot;/users/{id}&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">updateUser</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userService</span><span class="p">.</span><span class="na">updateUser</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="deletemapping">@DeleteMapping</h3>
 <p>Maps HTTP DELETE requests to handler methods.</p>
-<pre><code class="language-java">
-@DeleteMapping(&quot;/users/{id}&quot;)
-public void deleteUser(@PathVariable Long id) {
-    userService.deleteUser(id);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@DeleteMapping</span><span class="p">(</span><span class="s">&quot;/users/{id}&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">deleteUser</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">userService</span><span class="p">.</span><span class="na">deleteUser</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="patchmapping">@PatchMapping</h3>
 <p>Maps HTTP PATCH requests to handler methods.</p>
-<pre><code class="language-java">
-@PatchMapping(&quot;/users/{id}&quot;)
-public User partialUpdateUser(@PathVariable Long id, @RequestBody User user) {
-    return userService.partialUpdateUser(id, user);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@PatchMapping</span><span class="p">(</span><span class="s">&quot;/users/{id}&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">partialUpdateUser</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userService</span><span class="p">.</span><span class="na">partialUpdateUser</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="responsebody">@ResponseBody</h3>
 <p>Indicates that the return value of a method should be bound to the web response body.</p>
-<pre><code class="language-java">
-@ResponseBody
-public String getMessage() {
-    return &quot;Hello, World!&quot;;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@ResponseBody</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getMessage</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="pathvariable">@PathVariable</h3>
 <p>Binds a method parameter to a URI template variable.</p>
-<pre><code class="language-java">
-@GetMapping(&quot;/users/{id}&quot;)
-public User getUser(@PathVariable Long id) {
-    return userService.getUser(id);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/users/{id}&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">getUser</span><span class="p">(</span><span class="nd">@PathVariable</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userService</span><span class="p">.</span><span class="na">getUser</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="requestparam">@RequestParam</h3>
 <p>Binds request parameters to method parameters.</p>
-<pre><code class="language-java">
-@GetMapping(&quot;/users&quot;)
-public List&lt;User&gt; getUsers(@RequestParam int page) {
-    return userService.getUsers(page);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/users&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getUsers</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">page</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userService</span><span class="p">.</span><span class="na">getUsers</span><span class="p">(</span><span class="n">page</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="requestbody">@RequestBody</h3>
 <p>Binds the request body to a method parameter.</p>
-<pre><code class="language-java">
-@PostMapping(&quot;/users&quot;)
-public User createUser(@RequestBody User user) {
-    return userService.createUser(user);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;/users&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userService</span><span class="p">.</span><span class="na">createUser</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="responsestatus">@ResponseStatus</h3>
 <p>Sets the status code for a method or exception.</p>
-<pre><code class="language-java">
-@ResponseStatus(HttpStatus.NOT_FOUND)
-public class UserNotFoundException extends RuntimeException {
-    // exception details
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@ResponseStatus</span><span class="p">(</span><span class="n">HttpStatus</span><span class="p">.</span><span class="na">NOT_FOUND</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserNotFoundException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">RuntimeException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// exception details</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="crossorigin">@CrossOrigin</h3>
 <p>Enables Cross-Origin Resource Sharing (CORS) support.</p>
-<pre><code class="language-java">
-@CrossOrigin(origins = &quot;http://example.com&quot;)
-public class MyController {
-    // controller methods
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@CrossOrigin</span><span class="p">(</span><span class="n">origins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;http://example.com&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyController</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// controller methods</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="service">@Service</h3>
 <p>Marks a class as a service, a specialization of @Component.</p>
-<pre><code class="language-java">
-@Service
-public class UserService {
-    // service logic
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Service</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserService</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// service logic</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="repository">@Repository</h3>
 <p>Marks a class as a repository, a specialization of @Component.</p>
-<pre><code class="language-java">
-@Repository
-public class UserRepository {
-    // repository logic
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Repository</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserRepository</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// repository logic</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="validated">@Validated</h3>
-<p>It is a used to trigger validation for Spring beans, such as method parameters or class fields, to ensure they meet specified constraints.</p>
-<pre><code class="language-java">@Validated
-public class UserController {
+<p>It is a used to trigger validation for Spring beans, such as method parameters or class fields, to ensure they meet specified constraints.
+<div class="highlight"><pre><span></span><code><span class="nd">@Validated</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserController</span><span class="w"> </span><span class="p">{</span>
 
-    @PostMapping(&quot;/addUser&quot;)
-    public ResponseEntity&lt;String&gt; addUser(@Valid @RequestBody User user) {
-        // User object will be validated based on annotations like @NotNull, @Size, etc.
-        return ResponseEntity.ok(&quot;User added successfully&quot;);
-    }
-}
-
-</code></pre>
+<span class="w">    </span><span class="nd">@PostMapping</span><span class="p">(</span><span class="s">&quot;/addUser&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">addUser</span><span class="p">(</span><span class="nd">@Valid</span><span class="w"> </span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// User object will be validated based on annotations like @NotNull, @Size, etc.</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ResponseEntity</span><span class="p">.</span><span class="na">ok</span><span class="p">(</span><span class="s">&quot;User added successfully&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <h3 id="valid">@Valid</h3>
 <p>Validates the annotated field or method parameter.</p>
-<pre><code class="language-java">
-public void createUser(@Valid User user) {
-    // validation logic
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">createUser</span><span class="p">(</span><span class="nd">@Valid</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// validation logic</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="notnull">@NotNull</h3>
 <p>Ensures the annotated element is not null.</p>
-<pre><code class="language-java">
-@NotNull
-private String name;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@NotNull</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="notempty">@NotEmpty</h3>
 <p>Ensures the annotated element is not empty.</p>
-<pre><code class="language-java">
-@NotEmpty
-private List&lt;String&gt; tags;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@NotEmpty</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tags</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="notblank">@NotBlank</h3>
 <p>Ensures the annotated element is not blank (not null or not empty).</p>
-<pre><code class="language-java">
-@NotBlank
-private String username;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@NotBlank</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="size">@Size</h3>
 <p>Specifies the size constraints for the annotated field or method parameter.</p>
-<pre><code class="language-java">
-@Size(min = 2, max = 10)
-private String name;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Size</span><span class="p">(</span><span class="n">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="min-max">@Min / @Max</h3>
 <p>Specifies the minimum/maximum value for numeric fields.</p>
-<pre><code class="language-java">
-@Min(18)
-private int age;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Min</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
+<span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="pattern">@Pattern</h3>
 <p>Specifies a regular expression that the annotated field must match.</p>
-<pre><code class="language-java">
-@Pattern(regexp = &quot;[A-Za-z0-9]+&quot;)
-private String code;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Pattern</span><span class="p">(</span><span class="n">regexp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;[A-Za-z0-9]+&quot;</span><span class="p">)</span>
+<span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">code</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="controlleradvice">@ControllerAdvice</h3>
-<p>It is used to handle exceptions globally and provide centralized exception handling across all controllers</p>
-<pre><code class="language-java">public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
-    @Override
-    protected ResponseEntity&lt;Object&gt; handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
-            HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+<p>It is used to handle exceptions globally and provide centralized exception handling across all controllers
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GlobalExceptionHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ResponseEntityExceptionHandler</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">handleMethodArgumentNotValid</span><span class="p">(</span><span class="n">MethodArgumentNotValidException</span><span class="w"> </span><span class="n">ex</span><span class="p">,</span>
+<span class="w">            </span><span class="n">HttpHeaders</span><span class="w"> </span><span class="n">headers</span><span class="p">,</span><span class="w"> </span><span class="n">HttpStatusCode</span><span class="w"> </span><span class="n">status</span><span class="p">,</span><span class="w"> </span><span class="n">WebRequest</span><span class="w"> </span><span class="n">request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
-        Map&lt;String, String&gt; validationErrors = new HashMap&lt;&gt;();
-        List&lt;ObjectError&gt; validationErrorList = ex.getBindingResult().getAllErrors();
+<span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">validationErrors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">ObjectError</span><span class="o">&gt;</span><span class="w"> </span><span class="n">validationErrorList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getBindingResult</span><span class="p">().</span><span class="na">getAllErrors</span><span class="p">();</span>
 
-        validationErrorList.forEach((error) -&gt; {
-            String fieldName = ((FieldError) error).getField();
-            String validationMsg = error.getDefaultMessage();
-            validationErrors.put(fieldName, validationMsg);
-        });
+<span class="w">        </span><span class="n">validationErrorList</span><span class="p">.</span><span class="na">forEach</span><span class="p">((</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">fieldName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">FieldError</span><span class="p">)</span><span class="w"> </span><span class="n">error</span><span class="p">).</span><span class="na">getField</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">validationMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="na">getDefaultMessage</span><span class="p">();</span>
+<span class="w">            </span><span class="n">validationErrors</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">fieldName</span><span class="p">,</span><span class="w"> </span><span class="n">validationMsg</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
 
-        return super.handleMethodArgumentNotValid(ex, headers, status, request);
-    }
-}
-
-</code></pre>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">handleMethodArgumentNotValid</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span><span class="w"> </span><span class="n">headers</span><span class="p">,</span><span class="w"> </span><span class="n">status</span><span class="p">,</span><span class="w"> </span><span class="n">request</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <h3 id="exceptionhandler">@ExceptionHandler</h3>
 <p>Handles exceptions thrown by methods in the controller.</p>
-<pre><code class="language-java">
-@ExceptionHandler(Exception.class)
-public String handleException(Exception e) {
-    return &quot;Error: &quot; + e.getMessage();
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@ExceptionHandler</span><span class="p">(</span><span class="n">Exception</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">handleException</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="transactional">@Transactional</h3>
 <p>Specifies that a method or class should be executed within a transaction context.</p>
-<pre><code class="language-java">
-@Transactional
-public void processOrder(Order order) {
-    orderRepository.save(order);
-    inventoryService.updateStock(order);
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Transactional</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">processOrder</span><span class="p">(</span><span class="n">Order</span><span class="w"> </span><span class="n">order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">orderRepository</span><span class="p">.</span><span class="na">save</span><span class="p">(</span><span class="n">order</span><span class="p">);</span>
+<span class="w">    </span><span class="n">inventoryService</span><span class="p">.</span><span class="na">updateStock</span><span class="p">(</span><span class="n">order</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="modifying">@Modifying</h3>
 <p>Indicates that a query method is modifying the data (insert, update, delete).</p>
-<pre><code class="language-java">
-@Modifying
-@Query(&quot;UPDATE User u SET u.name = :name WHERE u.id = :id&quot;)
-public int updateUserName(@Param(&quot;id&quot;) Long id, @Param(&quot;name&quot;) String name);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Modifying</span>
+<span class="nd">@Query</span><span class="p">(</span><span class="s">&quot;UPDATE User u SET u.name = :name WHERE u.id = :id&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">updateUserName</span><span class="p">(</span><span class="nd">@Param</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="nd">@Param</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+</code></pre></div>
 <h3 id="query">@Query</h3>
 <p>Defines custom queries for Spring Data repositories. It can be used to define complex JPQL or native SQL queries.</p>
-<pre><code class="language-java">
-@Query(&quot;SELECT u FROM User u WHERE u.name = :name&quot;)
-public User findByName(@Param(&quot;name&quot;) String name);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@Query</span><span class="p">(</span><span class="s">&quot;SELECT u FROM User u WHERE u.name = :name&quot;</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">findByName</span><span class="p">(</span><span class="nd">@Param</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+</code></pre></div>
 <h3 id="enablemethodsecurity">@EnableMethodSecurity</h3>
 <p>Enables method-level security in a Spring application, allowing annotations like @PreAuthorize, @Secured, and @RolesAllowed.</p>
-<pre><code class="language-java">
-@EnableMethodSecurity
-@Configuration
-public class SecurityConfig {
-    // security configuration
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nd">@EnableMethodSecurity</span>
+<span class="nd">@Configuration</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SecurityConfig</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// security configuration</span>
+<span class="p">}</span>
+</code></pre></div>
               
             </div>
           </div><footer>
@@ -564,7 +540,6 @@ public class SecurityConfig {
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
-      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

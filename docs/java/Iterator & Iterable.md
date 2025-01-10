@@ -26,10 +26,10 @@ The ArrayList class, which implements Iterable, allows the above usage.
 - Iterator is an interface in Java that allows you to traverse (iterate) through a collection, element by element, and optionally remove elements from the collection.
 
 - The Iterator interface provides three primary methods:
+  - **hasNext():** Returns true if there are more elements to iterate over.
+  - **next():** Returns the next element in the iteration.
+  - **remove():** Removes the last element returned by the iterator (optional operation).
 
-**hasNext():** Returns true if there are more elements to iterate over.
-**next():** Returns the next element in the iteration.
-**remove():** Removes the last element returned by the iterator (optional operation).
 ```java
 List<String> list = Arrays.asList("a", "b", "c");
 Iterator<String> iterator = list.iterator();
