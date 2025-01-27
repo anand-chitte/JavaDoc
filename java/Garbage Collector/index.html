@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/Garbage%20Collector/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Garbage Collector - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Garbage Collector";
+        var mkdocs_page_input_path = "java\\Garbage Collector.md";
+        var mkdocs_page_url = "/JavaDoc/java/Garbage%20Collector/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Garbage Collector</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-the-garbage-collector-works">How the Garbage Collector Works</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#heap-memory">Heap Memory</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mark-and-sweep-algorithm">Mark-and-Sweep Algorithm</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#generational-garbage-collection">Generational Garbage Collection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#garbage-collection-phases">Garbage Collection Phases</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#types-of-garbage-collectors">Types of Garbage Collectors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#garbage-collection-process">Garbage Collection Process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#garbage-collection-tuning">Garbage Collection Tuning</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#common-garbage-collection-issues">Common Garbage Collection Issues</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#final-thoughts">Final Thoughts</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Constructor/">Constructor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Resiliency/">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Gateway/">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Maven/">Maven</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Git/">Git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Docker/">Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Java</li>
+      <li class="breadcrumb-item active">Garbage Collector</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="understanding-garbage-collection-in-java">Understanding Garbage Collection in Java</h1>
+<p>The <strong>Garbage Collector (GC)</strong> in Java is responsible for automatically managing memory by reclaiming memory occupied by objects that are no longer in use. This helps prevent memory leaks and ensures that the application does not run out of memory.</p>
+<h2 id="how-the-garbage-collector-works">How the Garbage Collector Works</h2>
+<h3 id="heap-memory">Heap Memory</h3>
+<ul>
+<li>The <strong>heap</strong> is where all objects in Java are allocated.</li>
+<li>The heap is divided into <strong>Young Generation</strong> and <strong>Old Generation</strong>:</li>
+<li><strong>Young Generation</strong>: Contains recently created objects.</li>
+<li><strong>Old Generation</strong>: Contains objects that have been around for a while and survived multiple garbage collection cycles.</li>
+</ul>
+<h3 id="mark-and-sweep-algorithm">Mark-and-Sweep Algorithm</h3>
+<ul>
+<li>The GC uses a <strong>Mark-and-Sweep</strong> algorithm to identify and reclaim memory.</li>
+<li><strong>Mark Phase</strong>: The GC identifies which objects are still in use (reachable from root objects such as local variables, static variables, and active threads).</li>
+<li><strong>Sweep Phase</strong>: The GC removes objects that are no longer reachable (i.e., not marked during the mark phase).</li>
+</ul>
+<h3 id="generational-garbage-collection">Generational Garbage Collection</h3>
+<ul>
+<li>Objects are initially allocated in the <strong>Young Generation</strong>.</li>
+<li>After surviving several collections, objects are promoted to the <strong>Old Generation</strong>.</li>
+<li>This is based on the observation that most objects are short-lived (like temporary variables), and collecting them separately from longer-lived objects is more efficient.</li>
+</ul>
+<h3 id="garbage-collection-phases">Garbage Collection Phases</h3>
+<ul>
+<li><strong>Minor GC</strong>: Occurs when the <strong>Young Generation</strong> is full. It involves collecting only the Young Generation, which is relatively fast.</li>
+<li><strong>Major GC (Full GC)</strong>: Involves both the <strong>Young</strong> and <strong>Old Generations</strong>. It happens less frequently but is more expensive because it has to scan all objects in the heap.</li>
+</ul>
+<h2 id="types-of-garbage-collectors">Types of Garbage Collectors</h2>
+<ol>
+<li><strong>Serial Garbage Collector</strong> (<code>-XX:+UseSerialGC</code>):</li>
+<li>
+<p>Single-threaded collector that is simple and used for small applications or single-core machines.</p>
+</li>
+<li>
+<p><strong>Parallel Garbage Collector (Throughput Collector)</strong> (<code>-XX:+UseParallelGC</code>):</p>
+</li>
+<li>
+<p>Uses multiple threads to perform garbage collection in parallel, improving throughput on multi-core systems.</p>
+</li>
+<li>
+<p><strong>CMS (Concurrent Mark-Sweep) Garbage Collector</strong> (<code>-XX:+UseConcMarkSweepGC</code>):</p>
+</li>
+<li>
+<p>Performs most of its work concurrently with the application threads, minimizing pauses but is more complex.</p>
+</li>
+<li>
+<p><strong>G1 Garbage Collector (Garbage First)</strong> (<code>-XX:+UseG1GC</code>):</p>
+</li>
+<li>
+<p>Designed for large heaps, it divides the heap into regions and performs collection in a way that can prioritize low pause times.</p>
+</li>
+<li>
+<p><strong>ZGC (Z Garbage Collector)</strong> (<code>-XX:+UseZGC</code>):</p>
+</li>
+<li>
+<p>A low-latency collector that performs garbage collection with minimal pauses, suitable for applications requiring low latency.</p>
+</li>
+<li>
+<p><strong>Shenandoah GC</strong> (<code>-XX:+UseShenandoahGC</code>):</p>
+</li>
+<li>Another low-latency collector similar to ZGC, focused on reducing pause times.</li>
+</ol>
+<h2 id="garbage-collection-process">Garbage Collection Process</h2>
+<ol>
+<li><strong>Minor GC</strong>:</li>
+<li>Occurs when the <strong>Young Generation</strong> is full.</li>
+<li>
+<p>Objects that survive the collection are promoted to the <strong>Old Generation</strong>.</p>
+</li>
+<li>
+<p><strong>Major GC (Full GC)</strong>:</p>
+</li>
+<li>Occurs less frequently but is more expensive.</li>
+<li>It collects both <strong>Young</strong> and <strong>Old Generations</strong>.</li>
+<li>
+<p>The old generation objects are moved to a "free list" or compacted to reduce fragmentation.</p>
+</li>
+<li>
+<p><strong>Stop-the-World Events</strong>:</p>
+</li>
+<li>During GC, application threads may be paused (known as Stop-the-World).</li>
+<li>These pauses can be short (in the case of Minor GC) or longer (in the case of Major GC), depending on the collector and heap size.</li>
+</ol>
+<h2 id="garbage-collection-tuning">Garbage Collection Tuning</h2>
+<p>You can control various aspects of garbage collection to optimize performance using JVM options. For example:</p>
+<ul>
+<li>
+<p>Set the <strong>heap size</strong>:
+    <code>bash
+    -Xms1024m -Xmx2048m</code></p>
+</li>
+<li>
+<p>Set the garbage collector to use:
+    <code>bash
+    -XX:+UseG1GC</code></p>
+</li>
+<li>
+<p>Control the <strong>Young Generation size</strong>:
+    <code>bash
+    -XX:NewSize=512m -XX:MaxNewSize=1024m</code></p>
+</li>
+<li>
+<p>Enable <strong>verbose GC logging</strong>:
+    <code>bash
+    -XX:+PrintGCDetails -Xloggc:gc.log</code></p>
+</li>
+</ul>
+<h2 id="common-garbage-collection-issues">Common Garbage Collection Issues</h2>
+<ol>
+<li><strong>Long Garbage Collection Pauses</strong>:</li>
+<li>If the GC pauses are too long, it can affect application performance. This is common with Major GC or Full GC.</li>
+<li>
+<p><strong>Solution</strong>: Use a low-latency GC (like G1, ZGC, or Shenandoah) or optimize heap sizes.</p>
+</li>
+<li>
+<p><strong>Memory Leaks</strong>:</p>
+</li>
+<li>While Java has garbage collection, memory leaks can still happen if objects are unintentionally retained, preventing the GC from reclaiming memory.</li>
+<li>
+<p><strong>Solution</strong>: Use tools like VisualVM, Eclipse MAT, or JProfiler to identify memory leaks.</p>
+</li>
+<li>
+<p><strong>OutOfMemoryError</strong>:</p>
+</li>
+<li>If the heap is exhausted, Java will throw an <code>OutOfMemoryError</code>.</li>
+<li><strong>Solution</strong>: Monitor memory usage and ensure the heap size is adequate for your application.</li>
+</ol>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>The <strong>Garbage Collector</strong> helps manage memory by automatically cleaning up unused objects. Understanding its working mechanism, different collectors, and the tuning options allows you to write efficient Java applications while reducing memory-related issues.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Java%20Virtual%20Machine%20%28JVM%29/" class="btn btn-neutral float-left" title="JVM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../DataType/" class="btn btn-neutral float-right" title="Data Type">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Java%20Virtual%20Machine%20%28JVM%29/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../DataType/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
