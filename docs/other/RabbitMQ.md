@@ -32,7 +32,15 @@ RabbitMQ comes with a web-based management interface for monitoring queues, exch
 - **Queue:** A buffer that holds messages until they can be processed by a consumer.
 - **Consumer:** The entity that receives and processes messages from the queue.
 - **Exchange:** A routing mechanism that decides how to route messages to one or more queues.
-- **Binding:** A link between an exchange and a queue that tells the exchange where to send the message.
+    - **Direct Exchange:** Routes messages with a specific routing key.
+    - **Topic Exchange:** Routes messages based on routing keys that match patterns.
+    - **Fanout Exchange:** Routes messages to all bound queues.
+
+- **Binding:** A link between an exchange and a queue that tells the exchange where to send the message. The pattern might contain wildcards, such as * (matches exactly one word) and # (matches zero or more words).
+  - **Example of binding key patterns:**
+    - animals.*.mammal — Matches any routing key that starts with animals., followed by any word, and ending with .mammal.
+    - animals.# — Matches any routing key that starts with animals. followed by any number of words.
+    - *.dog.* — Matches any routing key with .dog. as the second word.
 - **Message:** The actual data being sent between the producer and consumer.
 
 ## Using RabbitMQ in Spring Boot Application
@@ -164,3 +172,60 @@ public class RabbitmqExampleApplication implements CommandLineRunner {
     }
 }
 ```
+
+## Durability Features in RabbitMQ
+
+- **Durable Queues**: Queues survive broker restarts.
+```java
+@Bean
+public Queue queue() {
+    return new Queue(QUEUE_NAME, true); // 'true' makes the queue durable
+}
+```
+- **Persistent Messages**: Messages are saved to disk and not lost if the broker crashes.
+```java
+public void sendMessage(String message) {
+    // Sending persistent message
+    rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE_NAME, RabbitMQConfig.ROUTING_KEY, message, messagePostProcessor -> {
+        messagePostProcessor.getMessageProperties().setDeliveryMode(MessageDeliveryMode.PERSISTENT); // Makes the message persistent
+        return messagePostProcessor;
+    });
+}
+```
+- **Acknowledgments**: Ensures messages are only removed once processed by the consumer.
+  - By default, Spring AMQP automatically acknowledges messages once they have been processed by the consumer.
+- **Publisher Confirms**: Confirms that the message has been successfully received by the broker.
+```java
+@Configuration
+public class RabbitMQConfig {
+
+    @Bean
+    public ConnectionFactory connectionFactory() {
+        CachingConnectionFactory connectionFactory = new CachingConnectionFactory("localhost");
+        connectionFactory.setPublisherConfirms(true); // Enable publisher confirms
+        return connectionFactory;
+    }
+}
+```
+- **Dead Letter Queues (DLQ)**: Stores messages that cannot be processed.
+```java
+@Bean
+public Queue dlq() {
+    return new Queue("deadLetterQueue", true); // Create DLQ
+}
+
+@Bean
+public Binding dlqBinding() {
+    return BindingBuilder.bind(dlq()).to(new DirectExchange("dlxExchange")).with("dlxRoutingKey");
+}
+
+@Bean
+public Queue queue() {
+    Map<String, Object> arguments = new HashMap<>();
+    arguments.put("x-dead-letter-exchange", "dlxExchange");
+    arguments.put("x-dead-letter-routing-key", "dlxRoutingKey");
+
+    return new Queue("mainQueue", true, false, false, arguments);
+}
+```
+- **High Availability Queues**: Ensures queues are available even in the event of a node failure.

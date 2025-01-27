@@ -59,3 +59,5 @@ resilience4j.ratelimiter.instances.myServiceRateLimiter.timeoutDuration=500ms
 @Retry(name = "myServiceRetry")
 @CircuitBreaker(name = "myServiceCircuitBreaker")
 ```
+If 5 requests have already been made within 1 second, additional requests will be queued for up to 500 milliseconds.
+If the queued request cannot proceed within the timeout period, it will fail (typically by throwing a RequestNotPermitted exception).

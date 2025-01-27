@@ -58,6 +58,11 @@ public class Main {
     }
 }
 ```
+- **Single Inheritance**: A class can inherit from only one superclass.
+- **Multilevel Inheritance**: A class can inherit from a class that itself inherits from another class.
+- **Hierarchical Inheritance**: Multiple subclasses inherit from a single superclass.
+- **Hybrid Inheritance**: A combination of the above types.
+
 
 ## 4. Encapsulation
 - **Definition**: 
@@ -82,7 +87,7 @@ class Person {
 
 ## 5. Polymorphism
 - **Definition**: 
-  - Polymorphism allows objects of different classes to be treated as objects of a common superclass. The most common use of polymorphism is when a parent class reference is used to point to child class objects. It also refers to the ability to call the same method on different objects, each of which responds in its own way.
+  - It allows objects to take on multiple forms by enabling a single action to behave differently based on the object performing it.
   - Ability to take many forms.
   - Two types:
     - Compile-time Polymorphism (Method Overloading)

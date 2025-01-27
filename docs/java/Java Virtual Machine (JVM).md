@@ -41,8 +41,10 @@ The **Java Virtual Machine (JVM)** is a critical component of the Java platform.
 ### 7. **Execution Engine**
    - Executes bytecode instructions.
    - Components:
-     - **Interpreter**: Executes bytecode line by line.
-     - **Just-In-Time (JIT) Compiler**: Converts bytecode to native code for faster execution.
+     - **Interpreter**: Executes bytecode line by line. It translates bytecode to native machine code at runtime.
+     - **Just-In-Time (JIT) Compiler**: Converts bytecode to native code for faster execution.Initially, the interpreter starts executing the bytecode.
+The JIT compiler identifies "hot spots" (frequently executed code **e.g.** methods or loops) and compiles them into native code. Once compiled, the native code is cached and reused, avoiding repetitive interpretation.
+
 
 ### 8. **Garbage Collector**
    - Automatically reclaims memory occupied by unused objects.

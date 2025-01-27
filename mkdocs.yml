@@ -54,6 +54,7 @@ nav:
       - Resiliency: microservices/Resiliency.md
       - Spring Cloud Gateway: microservices/Gateway.md
       - FeignClient: microservices/FeignClient.md
+      - SpringCloudSleuth: microservices/SpringCloudSleuth.md
       - Spring Cloud Function: microservices/SpringCloudFunction.md
       - Spring Cloud Stream: microservices/SpringCloudStream.md
   - PostgeSQL:

@@ -44,3 +44,27 @@ Once the application is running, you can access the available endpoints through 
 - **Health**: http://localhost:8080/actuator/health
 - **Metrics**: http://localhost:8080/actuator/metrics
 - **Info**: http://localhost:8080/actuator/info
+
+# Prometheus with Spring Boot Actuator
+
+Prometheus is an open-source monitoring and alerting toolkit widely used for gathering and storing time-series data, primarily focused on metrics. It collects and stores metrics in a time-series format, allowing you to query and analyze these metrics over time. Prometheus is often used for monitoring microservices and infrastructure.
+
+### 1. Add Dependency:
+Add the required dependencies for Spring Boot Actuator and the Prometheus metrics endpoint.
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.micrometer</groupId>
+    <artifactId>micrometer-registry-prometheus</artifactId>
+</dependency>
+```
+### 2. Enable Prometheus Endpoint
+Configure Spring Boot to expose the Prometheus-compatible metrics by adding the following in your `application.properties` or `application.yml`:
+```properties
+management.endpoints.web.exposure.include=health,metrics,prometheus
+management.endpoint.prometheus.enabled=true
+```
