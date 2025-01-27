@@ -44,6 +44,10 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/introduction/">Introduction</a>
@@ -52,7 +56,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Garbage%20Collector/">Garbage Collector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Constructor/">Constructor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
                   </li>
@@ -68,7 +82,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFuncational</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
                   </li>
@@ -93,9 +107,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -105,7 +127,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
                   </li>
@@ -124,9 +152,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -157,7 +196,35 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-concepts-in-rabbitmq">Key Concepts in RabbitMQ:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-rabbitmq-in-spring-boot-application">Using RabbitMQ in Spring Boot Application</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-add-dependencies">Step 1: Add Dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-configure-rabbitmq-in-applicationproperties">Step 2: Configure RabbitMQ in application.properties</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-create-a-configuration-class-for-rabbitmq">Step 3: Create a Configuration Class for RabbitMQ</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-create-a-producer-sender-to-send-messages">Step 4: Create a Producer (Sender) to Send Messages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-5-create-a-consumer-listener-to-receive-messages">Step 5: Create a Consumer (Listener) to Receive Messages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-6-test-the-application">Step 6: Test the Application</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#durability-features-in-rabbitmq">Durability Features in RabbitMQ</a>
+    </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Agile/">Agile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Flowchart/">Flowchart</a>
                   </li>
               </ul>
       </div>
@@ -185,7 +252,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="rabbitmq">RabbitMQ</h1>
-<p>RabbitMQ is an open-source message broker that facilitates communication between different applications or services by using message queues. It implements the Advanced Message Queuing Protocol (AMQP), allowing systems to send and receive messages in a scalable and reliable way.</p>
+<p>RabbitMQ is a message queueing system that follows the Advanced Message Queuing Protocol (AMQP). It is used to send messages between different systems, microservices, or even different parts of an application. It's helpful in distributed applications where reliability and communication between components are critical.</p>
 <hr />
 <h2 id="key-features-of-rabbitmq">Key features of RabbitMQ:</h2>
 <h3 id="message-queues">Message Queues:</h3>
@@ -200,11 +267,207 @@
 <p>It supports different messaging patterns such as publish/subscribe, request/reply, and point-to-point communication.</p>
 <h3 id="management-and-monitoring">Management and Monitoring:</h3>
 <p>RabbitMQ comes with a web-based management interface for monitoring queues, exchanges, and connections.</p>
+<hr />
+<h2 id="key-concepts-in-rabbitmq">Key Concepts in RabbitMQ:</h2>
+<ul>
+<li><strong>Producer:</strong> The entity that sends messages to the queue.</li>
+<li><strong>Queue:</strong> A buffer that holds messages until they can be processed by a consumer.</li>
+<li><strong>Consumer:</strong> The entity that receives and processes messages from the queue.</li>
+<li>
+<p><strong>Exchange:</strong> A routing mechanism that decides how to route messages to one or more queues.</p>
+<ul>
+<li><strong>Direct Exchange:</strong> Routes messages with a specific routing key.</li>
+<li><strong>Topic Exchange:</strong> Routes messages based on routing keys that match patterns.</li>
+<li><strong>Fanout Exchange:</strong> Routes messages to all bound queues.</li>
+</ul>
+</li>
+<li>
+<p><strong>Binding:</strong> A link between an exchange and a queue that tells the exchange where to send the message. The pattern might contain wildcards, such as * (matches exactly one word) and # (matches zero or more words).</p>
+</li>
+<li><strong>Example of binding key patterns:</strong><ul>
+<li>animals.*.mammal — Matches any routing key that starts with animals., followed by any word, and ending with .mammal.</li>
+<li>animals.# — Matches any routing key that starts with animals. followed by any number of words.</li>
+<li><em>.dog.</em> — Matches any routing key with .dog. as the second word.</li>
+</ul>
+</li>
+<li><strong>Message:</strong> The actual data being sent between the producer and consumer.</li>
+</ul>
+<h2 id="using-rabbitmq-in-spring-boot-application">Using RabbitMQ in Spring Boot Application</h2>
+<h3 id="step-1-add-dependencies">Step 1: Add Dependencies</h3>
+<p>Add the necessary dependencies to your <code>pom.xml</code> (for Maven) or <code>build.gradle</code> (for Gradle).</p>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-amqp&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h3 id="step-2-configure-rabbitmq-in-applicationproperties">Step 2: Configure RabbitMQ in application.properties</h3>
+<p>Configure RabbitMQ connection details in the <code>application.properties</code> or <code>application.yml</code> file.</p>
+<pre><code class="language-properties"># RabbitMQ Configuration
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=guest
+spring.rabbitmq.password=guest
+spring.rabbitmq.virtual-host=/
+</code></pre>
+<h3 id="step-3-create-a-configuration-class-for-rabbitmq">Step 3: Create a Configuration Class for RabbitMQ</h3>
+<p>You can configure RabbitMQ using @Configuration in a separate class. This step involves declaring Queue, Exchange, and Binding.</p>
+<pre><code class="language-java">import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class RabbitMQConfig {
+
+    @Bean
+    public Queue queue() {
+        return new Queue(&quot;testQueue&quot;, true);
+    }
+
+    @Bean
+    public TopicExchange exchange() {
+        return new TopicExchange(&quot;testExchange&quot;);
+    }
+
+    @Bean
+    public Binding binding(Queue queue, TopicExchange exchange) {
+        return BindingBuilder.bind(queue).to(exchange).with(&quot;routing.key.#&quot;);
+    }
+}
+</code></pre>
+<p>This configuration creates:</p>
+<p>A queue named testQueue.
+A topic exchange named testExchange.
+A binding between the queue and exchange with a routing key.</p>
+<h3 id="step-4-create-a-producer-sender-to-send-messages">Step 4: Create a Producer (Sender) to Send Messages</h3>
+<p>Create a service that will send messages to RabbitMQ.</p>
+<pre><code class="language-java">import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MessageProducer {
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
+
+    @Autowired
+    private TopicExchange exchange;
+
+    public void sendMessage(String message) {
+        amqpTemplate.convertAndSend(exchange.getName(), &quot;routing.key.test&quot;, message);
+        System.out.println(&quot;Sent: &quot; + message);
+    }
+}
+</code></pre>
+<p>In this code, amqpTemplate.convertAndSend sends the message to the RabbitMQ exchange with the specified routing key.</p>
+<h3 id="step-5-create-a-consumer-listener-to-receive-messages">Step 5: Create a Consumer (Listener) to Receive Messages</h3>
+<p>Create a listener that listens for messages from RabbitMQ.</p>
+<pre><code class="language-java">import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MessageListener {
+
+    @RabbitListener(queues = &quot;testQueue&quot;)
+    public void receiveMessage(String message) {
+        System.out.println(&quot;Received: &quot; + message);
+    }
+}
+</code></pre>
+<p>This listener listens on the testQueue and prints the received messages.</p>
+<h3 id="step-6-test-the-application">Step 6: Test the Application</h3>
+<p>In your main application class or a test class, you can autowire the MessageProducer and send a message to RabbitMQ:</p>
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RabbitmqExampleApplication implements CommandLineRunner {
+
+    @Autowired
+    private MessageProducer messageProducer;
+
+    public static void main(String[] args) {
+        SpringApplication.run(RabbitmqExampleApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        messageProducer.sendMessage(&quot;Hello, RabbitMQ!&quot;);
+    }
+}
+</code></pre>
+<h2 id="durability-features-in-rabbitmq">Durability Features in RabbitMQ</h2>
+<ul>
+<li><strong>Durable Queues</strong>: Queues survive broker restarts.</li>
+</ul>
+<pre><code class="language-java">@Bean
+public Queue queue() {
+    return new Queue(QUEUE_NAME, true); // 'true' makes the queue durable
+}
+</code></pre>
+<ul>
+<li><strong>Persistent Messages</strong>: Messages are saved to disk and not lost if the broker crashes.</li>
+</ul>
+<pre><code class="language-java">public void sendMessage(String message) {
+    // Sending persistent message
+    rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE_NAME, RabbitMQConfig.ROUTING_KEY, message, messagePostProcessor -&gt; {
+        messagePostProcessor.getMessageProperties().setDeliveryMode(MessageDeliveryMode.PERSISTENT); // Makes the message persistent
+        return messagePostProcessor;
+    });
+}
+</code></pre>
+<ul>
+<li><strong>Acknowledgments</strong>: Ensures messages are only removed once processed by the consumer.</li>
+<li>By default, Spring AMQP automatically acknowledges messages once they have been processed by the consumer.</li>
+<li><strong>Publisher Confirms</strong>: Confirms that the message has been successfully received by the broker.</li>
+</ul>
+<pre><code class="language-java">@Configuration
+public class RabbitMQConfig {
+
+    @Bean
+    public ConnectionFactory connectionFactory() {
+        CachingConnectionFactory connectionFactory = new CachingConnectionFactory(&quot;localhost&quot;);
+        connectionFactory.setPublisherConfirms(true); // Enable publisher confirms
+        return connectionFactory;
+    }
+}
+</code></pre>
+<ul>
+<li><strong>Dead Letter Queues (DLQ)</strong>: Stores messages that cannot be processed.</li>
+</ul>
+<pre><code class="language-java">@Bean
+public Queue dlq() {
+    return new Queue(&quot;deadLetterQueue&quot;, true); // Create DLQ
+}
+
+@Bean
+public Binding dlqBinding() {
+    return BindingBuilder.bind(dlq()).to(new DirectExchange(&quot;dlxExchange&quot;)).with(&quot;dlxRoutingKey&quot;);
+}
+
+@Bean
+public Queue queue() {
+    Map&lt;String, Object&gt; arguments = new HashMap&lt;&gt;();
+    arguments.put(&quot;x-dead-letter-exchange&quot;, &quot;dlxExchange&quot;);
+    arguments.put(&quot;x-dead-letter-routing-key&quot;, &quot;dlxRoutingKey&quot;);
+
+    return new Queue(&quot;mainQueue&quot;, true, false, false, arguments);
+}
+</code></pre>
+<ul>
+<li><strong>High Availability Queues</strong>: Ensures queues are available even in the event of a node failure.</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../Redis/" class="btn btn-neutral float-left" title="Redis"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Agile/" class="btn btn-neutral float-right" title="Agile">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -229,6 +492,8 @@
     
       <span><a href="../Redis/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../Agile/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
