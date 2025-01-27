@@ -36,7 +36,11 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -52,6 +56,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Garbage%20Collector/">Garbage Collector</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
@@ -59,6 +65,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Constructor/">Constructor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
                   </li>
@@ -107,11 +115,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -121,7 +135,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
                   </li>
@@ -140,9 +160,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -156,6 +187,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
                   </li>
@@ -195,17 +228,19 @@
 <li><strong>Iterable</strong> is an interface in Java that represents a collection of elements that can be iterated over (i.e., you can loop through them).</li>
 <li>A class that implements the <strong>Iterable</strong> interface provides the capability to traverse its elements one by one. This interface has a single method:</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">iterator</span><span class="p">();</span>
-<span class="w">  </span><span class="p">}</span>
-</code></pre></div>
-- Any collection class (like ArrayList, HashSet, etc.) that implements Iterable can be used in an enhanced for-loop (for-each loop).</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p">);</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-The ArrayList class, which implements Iterable, allows the above usage.</p>
+<pre><code class="language-java">  public interface Iterable&lt;T&gt; {
+      Iterator&lt;T&gt; iterator();
+  }
+</code></pre>
+<ul>
+<li>Any collection class (like ArrayList, HashSet, etc.) that implements Iterable can be used in an enhanced for-loop (for-each loop).</li>
+</ul>
+<pre><code class="language-java">List&lt;String&gt; list = Arrays.asList(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);
+for (String s : list) {
+    System.out.println(s);
+}
+</code></pre>
+<p>The ArrayList class, which implements Iterable, allows the above usage.</p>
 <h2 id="2-iterator">2. Iterator</h2>
 <ul>
 <li>
@@ -214,18 +249,18 @@ The ArrayList class, which implements Iterable, allows the above usage.</p>
 <li>
 <p>The Iterator interface provides three primary methods:</p>
 </li>
+<li><strong>hasNext():</strong> Returns true if there are more elements to iterate over.</li>
+<li><strong>next():</strong> Returns the next element in the iteration.</li>
+<li><strong>remove():</strong> Removes the last element returned by the iterator (optional operation).</li>
 </ul>
-<p><strong>hasNext():</strong> Returns true if there are more elements to iterate over.
-<strong>next():</strong> Returns the next element in the iteration.
-<strong>remove():</strong> Removes the last element returned by the iterator (optional operation).
-<div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="p">);</span>
-<span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">iterator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+<pre><code class="language-java">List&lt;String&gt; list = Arrays.asList(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);
+Iterator&lt;String&gt; iterator = list.iterator();
 
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">iterator</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iterator</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">element</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></p>
+while (iterator.hasNext()) {
+    String element = iterator.next();
+    System.out.println(element);
+}
+</code></pre>
 <h2 id="key-differences">Key Differences</h2>
 <ul>
 <li>Iterable is used to represent collections that can be traversed, while Iterator provides the mechanism for iterating over those collections.</li>
@@ -270,6 +305,7 @@ The ArrayList class, which implements Iterable, allows the above usage.</p>
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

@@ -36,7 +36,11 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -52,6 +56,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Garbage%20Collector/">Garbage Collector</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
@@ -59,6 +65,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Constructor/">Constructor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
                   </li>
@@ -99,6 +107,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Container/">Spring Container</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Bean/">Bean</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Spring Profiles</a>
@@ -127,6 +137,10 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Actuator/">Spring Actuator</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../JPA/">JPA</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../RestTemplate/">RestTemplate</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../WebClient/">WebClient</a>
@@ -135,7 +149,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../JWT/">JWT</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../CorrelationId/">Correlation ID</a>
                   </li>
@@ -154,9 +174,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -170,6 +201,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
                   </li>
@@ -208,34 +241,34 @@
 <h2 id="1-defining-profiles-in-applicationproperties-or-applicationyml">1. Defining Profiles in <code>application.properties</code> or <code>application.yml</code></h2>
 <p>You can define profile-specific properties in the <code>application.properties</code> or <code>application.yml</code> file. Below is an example of configurations for <code>dev</code>, <code>test</code>, and <code>prod</code> profiles:</p>
 <h3 id="default-configuration-applicationproperties">Default Configuration (<code>application.properties</code>)</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Default configuration</span>
-<span class="na">spring.datasource.url</span><span class="o">=</span><span class="s">jdbc:mysql://localhost:3306/mydb</span>
-<span class="na">spring.datasource.username</span><span class="o">=</span><span class="s">root</span>
-<span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">root</span>
-</code></pre></div>
+<pre><code class="language-properties"># Default configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/mydb
+spring.datasource.username=root
+spring.datasource.password=root
+</code></pre>
 <h3 id="development-profile-application-devproperties">Development Profile (application-dev.properties)</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># dev-specific configuration</span>
-<span class="na">spring.datasource.url</span><span class="o">=</span><span class="s">jdbc:mysql://localhost:3306/devdb</span>
-<span class="na">spring.datasource.username</span><span class="o">=</span><span class="s">devuser</span>
-<span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">devpassword</span>
-</code></pre></div>
+<pre><code class="language-properties"># dev-specific configuration
+spring.datasource.url=jdbc:mysql://localhost:3306/devdb
+spring.datasource.username=devuser
+spring.datasource.password=devpassword
+</code></pre>
 <h3 id="production-profile-application-prodproperties">Production Profile (application-prod.properties)</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># prod-specific configuration</span>
-<span class="na">spring.datasource.url</span><span class="o">=</span><span class="s">jdbc:mysql://prod-db-host:3306/proddb</span>
-<span class="na">spring.datasource.username</span><span class="o">=</span><span class="s">produser</span>
-<span class="na">spring.datasource.password</span><span class="o">=</span><span class="s">prodpassword</span>
-</code></pre></div>
+<pre><code class="language-properties"># prod-specific configuration
+spring.datasource.url=jdbc:mysql://prod-db-host:3306/proddb
+spring.datasource.username=produser
+spring.datasource.password=prodpassword
+</code></pre>
 <h2 id="2-activating-profiles">2. Activating Profiles</h2>
 <p>You can activate a profile using the following methods:</p>
 <h3 id="a-using-springprofilesactive-in-applicationproperties">a. Using spring.profiles.active in application.properties</h3>
-<div class="highlight"><pre><span></span><code><span class="na">spring.profiles.active</span><span class="o">=</span><span class="s">dev</span>
-</code></pre></div>
+<pre><code class="language-properties">spring.profiles.active=dev
+</code></pre>
 <h3 id="b-using-command-line-parameters">b. Using Command Line Parameters</h3>
-<div class="highlight"><pre><span></span><code>java<span class="w"> </span>-jar<span class="w"> </span>myapp.jar<span class="w"> </span>--spring.profiles.active<span class="o">=</span>dev
-</code></pre></div>
+<pre><code class="language-bash">java -jar myapp.jar --spring.profiles.active=dev
+</code></pre>
 <h3 id="c-using-environment-variables">c. Using Environment Variables</h3>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">SPRING_PROFILES_ACTIVE</span><span class="o">=</span>dev
-</code></pre></div>
+<pre><code class="language-bash">export SPRING_PROFILES_ACTIVE=dev
+</code></pre>
               
             </div>
           </div><footer>
@@ -275,6 +308,7 @@
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

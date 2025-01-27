@@ -71,6 +71,7 @@ nav:
     - Fastag: other/Fastag.md
     - ILMS: other/ILMS.md
     - Flowchart: other/Flowchart.md
+    - IntroduceYourself: other/IntroduceYourself.md
 extra_css:
   - css/custom.css
 extra:

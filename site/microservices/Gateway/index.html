@@ -36,7 +36,11 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -52,6 +56,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Garbage%20Collector/">Garbage Collector</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
@@ -59,6 +65,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Constructor/">Constructor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
                   </li>
@@ -99,11 +107,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -113,7 +127,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
                   </li>
@@ -156,9 +176,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../FeignClient/">FeignClient</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -172,6 +203,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
                   </li>
@@ -238,56 +271,56 @@
 </ul>
 <h3 id="1-add-dependencies">1. Add Dependencies</h3>
 <p>Add the following dependencies to your <code>pom.xml</code>:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;dependencies&gt;</span>
-<span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
-<span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.cloud<span class="nt">&lt;/groupId&gt;</span>
-<span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-cloud-starter-gateway<span class="nt">&lt;/artifactId&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
-<span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
-<span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-web<span class="nt">&lt;/artifactId&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
-<span class="nt">&lt;/dependencies&gt;</span>
-</code></pre></div>
-Ensure the Spring Cloud version is compatible with your Spring Boot version. You may need to include the Spring Cloud BOM for dependency management.</p>
+<pre><code class="language-xml">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-cloud-starter-gateway&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+<p>Ensure the Spring Cloud version is compatible with your Spring Boot version. You may need to include the Spring Cloud BOM for dependency management.</p>
 <h3 id="2-create-a-configuration-class">2. Create a Configuration Class</h3>
-<p>Define routes and filters programmatically in a Spring configuration class:
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.cloud.gateway.route.RouteLocator</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Bean</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
+<p>Define routes and filters programmatically in a Spring configuration class:</p>
+<pre><code class="language-java">import org.springframework.cloud.gateway.route.RouteLocator;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-<span class="nd">@Configuration</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatewayConfig</span><span class="w"> </span><span class="p">{</span>
+@Configuration
+public class GatewayConfig {
 
-<span class="w">    </span><span class="nd">@Bean</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">RouteLocator</span><span class="w"> </span><span class="nf">customRouteLocator</span><span class="p">(</span><span class="n">RouteLocatorBuilder</span><span class="w"> </span><span class="n">builder</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">routeLocatorBuilder</span><span class="p">.</span><span class="na">routes</span><span class="p">()</span>
-<span class="w">                        </span><span class="p">.</span><span class="na">route</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">p</span>
-<span class="w">                                </span><span class="p">.</span><span class="na">path</span><span class="p">(</span><span class="s">&quot;/eazybank/accounts/**&quot;</span><span class="p">)</span>
-<span class="w">                                </span><span class="p">.</span><span class="na">filters</span><span class="p">(</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">rewritePath</span><span class="p">(</span><span class="s">&quot;/eazybank/accounts/(?&lt;segment&gt;.*)&quot;</span><span class="p">,</span><span class="s">&quot;/${segment}&quot;</span><span class="p">)</span>
-<span class="w">                                        </span><span class="p">.</span><span class="na">addResponseHeader</span><span class="p">(</span><span class="s">&quot;X-Response-Time&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">toString</span><span class="p">())</span>
-<span class="w">                                        </span><span class="p">.</span><span class="na">circuitBreaker</span><span class="p">(</span><span class="n">config</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;accountsCircuitBreaker&quot;</span><span class="p">)</span>
-<span class="w">                                                </span><span class="p">.</span><span class="na">setFallbackUri</span><span class="p">(</span><span class="s">&quot;forward:/contactSupport&quot;</span><span class="p">)))</span>
-<span class="w">                                </span><span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="s">&quot;lb://ACCOUNTS&quot;</span><span class="p">))</span>
-<span class="w">                    </span><span class="p">.</span><span class="na">route</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">p</span>
-<span class="w">                            </span><span class="p">.</span><span class="na">path</span><span class="p">(</span><span class="s">&quot;/eazybank/loans/**&quot;</span><span class="p">)</span>
-<span class="w">                            </span><span class="p">.</span><span class="na">filters</span><span class="p">(</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">rewritePath</span><span class="p">(</span><span class="s">&quot;/eazybank/loans/(?&lt;segment&gt;.*)&quot;</span><span class="p">,</span><span class="s">&quot;/${segment}&quot;</span><span class="p">)</span>
-<span class="w">                                    </span><span class="p">.</span><span class="na">addResponseHeader</span><span class="p">(</span><span class="s">&quot;X-Response-Time&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">toString</span><span class="p">())</span>
-<span class="w">                                    </span><span class="p">.</span><span class="na">retry</span><span class="p">(</span><span class="n">retryConfig</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">retryConfig</span><span class="p">.</span><span class="na">setRetries</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="w">                                            </span><span class="p">.</span><span class="na">setMethods</span><span class="p">(</span><span class="n">HttpMethod</span><span class="p">.</span><span class="na">GET</span><span class="p">)</span>
-<span class="w">                                            </span><span class="p">.</span><span class="na">setBackoff</span><span class="p">(</span><span class="n">Duration</span><span class="p">.</span><span class="na">ofMillis</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span><span class="n">Duration</span><span class="p">.</span><span class="na">ofMillis</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span><span class="mi">2</span><span class="p">,</span><span class="kc">true</span><span class="p">)))</span>
-<span class="w">                            </span><span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="s">&quot;lb://LOANS&quot;</span><span class="p">))</span>
-<span class="w">                    </span><span class="p">.</span><span class="na">route</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">p</span>
-<span class="w">                            </span><span class="p">.</span><span class="na">path</span><span class="p">(</span><span class="s">&quot;/eazybank/cards/**&quot;</span><span class="p">)</span>
-<span class="w">                            </span><span class="p">.</span><span class="na">filters</span><span class="p">(</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="na">rewritePath</span><span class="p">(</span><span class="s">&quot;/eazybank/cards/(?&lt;segment&gt;.*)&quot;</span><span class="p">,</span><span class="s">&quot;/${segment}&quot;</span><span class="p">)</span>
-<span class="w">                                    </span><span class="p">.</span><span class="na">addResponseHeader</span><span class="p">(</span><span class="s">&quot;X-Response-Time&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">toString</span><span class="p">())</span>
-<span class="w">                                    </span><span class="p">.</span><span class="na">requestRateLimiter</span><span class="p">(</span><span class="n">config</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="na">setRateLimiter</span><span class="p">(</span><span class="n">redisRateLimiter</span><span class="p">())</span>
-<span class="w">                                            </span><span class="p">.</span><span class="na">setKeyResolver</span><span class="p">(</span><span class="n">userKeyResolver</span><span class="p">())))</span>
-<span class="w">                            </span><span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="s">&quot;lb://CARDS&quot;</span><span class="p">)).</span><span class="na">build</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+    @Bean
+    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+        return routeLocatorBuilder.routes()
+                        .route(p -&gt; p
+                                .path(&quot;/eazybank/accounts/**&quot;)
+                                .filters( f -&gt; f.rewritePath(&quot;/eazybank/accounts/(?&lt;segment&gt;.*)&quot;,&quot;/${segment}&quot;)
+                                        .addResponseHeader(&quot;X-Response-Time&quot;, LocalDateTime.now().toString())
+                                        .circuitBreaker(config -&gt; config.setName(&quot;accountsCircuitBreaker&quot;)
+                                                .setFallbackUri(&quot;forward:/contactSupport&quot;)))
+                                .uri(&quot;lb://ACCOUNTS&quot;))
+                    .route(p -&gt; p
+                            .path(&quot;/eazybank/loans/**&quot;)
+                            .filters( f -&gt; f.rewritePath(&quot;/eazybank/loans/(?&lt;segment&gt;.*)&quot;,&quot;/${segment}&quot;)
+                                    .addResponseHeader(&quot;X-Response-Time&quot;, LocalDateTime.now().toString())
+                                    .retry(retryConfig -&gt; retryConfig.setRetries(3)
+                                            .setMethods(HttpMethod.GET)
+                                            .setBackoff(Duration.ofMillis(100),Duration.ofMillis(1000),2,true)))
+                            .uri(&quot;lb://LOANS&quot;))
+                    .route(p -&gt; p
+                            .path(&quot;/eazybank/cards/**&quot;)
+                            .filters( f -&gt; f.rewritePath(&quot;/eazybank/cards/(?&lt;segment&gt;.*)&quot;,&quot;/${segment}&quot;)
+                                    .addResponseHeader(&quot;X-Response-Time&quot;, LocalDateTime.now().toString())
+                                    .requestRateLimiter(config -&gt; config.setRateLimiter(redisRateLimiter())
+                                            .setKeyResolver(userKeyResolver())))
+                            .uri(&quot;lb://CARDS&quot;)).build();
+    }
+}
+</code></pre>
               
             </div>
           </div><footer>
@@ -327,6 +360,7 @@ Ensure the Spring Cloud version is compatible with your Spring Boot version. You
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

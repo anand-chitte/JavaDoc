@@ -36,7 +36,11 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -52,6 +56,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Garbage%20Collector/">Garbage Collector</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
@@ -59,6 +65,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Constructor/">Constructor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
                   </li>
@@ -99,11 +107,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Container/">Spring Container</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Bean/">Bean</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Profiles/">Spring Profiles</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../JPA/">JPA</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">RestTemplate</a>
     <ul class="current">
@@ -129,7 +143,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../JWT/">JWT</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../CorrelationId/">Correlation ID</a>
                   </li>
@@ -148,9 +168,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -164,6 +195,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
                   </li>
@@ -210,88 +243,90 @@
 </ul>
 <hr />
 <h3 id="1-add-dependency-in-pomxml">1. Add Dependency in <code>pom.xml</code></h3>
-<div class="highlight"><pre><span></span><code><span class="na">&lt;dependency&gt;</span>
-<span class="w">    </span><span class="na">&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span>
-<span class="w">    </span><span class="na">&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span>
-<span class="na">&lt;/dependency&gt;</span>
-</code></pre></div>
+<pre><code class="language-properties">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+&lt;/dependency&gt;
+
+</code></pre>
 <h3 id="2-creating-a-resttemplate-bean">2. Creating a RestTemplate Bean</h3>
 <p>You can configure RestTemplate as a Spring Bean so that it can be injected into any component.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.web.client.RestTemplateBuilder</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Bean</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.client.RestTemplate</span><span class="p">;</span>
+<pre><code class="language-java">import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
-<span class="nd">@Configuration</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppConfig</span><span class="w"> </span><span class="p">{</span>
+@Configuration
+public class AppConfig {
 
-<span class="w">    </span><span class="nd">@Bean</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">RestTemplate</span><span class="w"> </span><span class="nf">restTemplate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RestTemplate</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
+</code></pre>
 <h3 id="3-using-resttemplate-in-a-service">3. Using RestTemplate in a Service</h3>
-<p>Here’s how you can use RestTemplate to make a GET request:
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.client.RestTemplate</span><span class="p">;</span>
+<p>Here’s how you can use RestTemplate to make a GET request:</p>
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
-<span class="nd">@Service</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyService</span><span class="w"> </span><span class="p">{</span>
+@Service
+public class MyService {
 
-<span class="w">    </span><span class="nd">@Autowired</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">RestTemplate</span><span class="w"> </span><span class="n">restTemplate</span><span class="p">;</span>
+    @Autowired
+    private RestTemplate restTemplate;
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getDataFromApi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://api.example.com/data&quot;</span><span class="p">;</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">restTemplate</span><span class="p">.</span><span class="na">getForObject</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+    public String getDataFromApi() {
+        String url = &quot;https://api.example.com/data&quot;;
+        return restTemplate.getForObject(url, String.class);
+    }
+}
+</code></pre>
 <h3 id="4-handling-json-responses">4. Handling JSON Responses</h3>
-<p>If you're working with JSON data, you can use RestTemplate with HttpEntity and HttpHeaders to send and receive JSON.
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.http.*</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.client.RestTemplate</span><span class="p">;</span>
+<p>If you're working with JSON data, you can use RestTemplate with HttpEntity and HttpHeaders to send and receive JSON.</p>
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
-<span class="nd">@Service</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyService</span><span class="w"> </span><span class="p">{</span>
+@Service
+public class MyService {
 
-<span class="w">    </span><span class="nd">@Autowired</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">RestTemplate</span><span class="w"> </span><span class="n">restTemplate</span><span class="p">;</span>
+    @Autowired
+    private RestTemplate restTemplate;
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ResponseDTO</span><span class="w"> </span><span class="nf">sendDataToApi</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://api.example.com/submit&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// URL of the API</span>
+    public ResponseDTO sendDataToApi(Object data) {
+        String url = &quot;https://api.example.com/submit&quot;;  // URL of the API
 
-<span class="w">        </span><span class="c1">// Create HttpHeaders and set Content-Type</span>
-<span class="w">        </span><span class="n">HttpHeaders</span><span class="w"> </span><span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpHeaders</span><span class="p">();</span>
-<span class="w">        </span><span class="n">headers</span><span class="p">.</span><span class="na">setContentType</span><span class="p">(</span><span class="n">MediaType</span><span class="p">.</span><span class="na">APPLICATION_JSON</span><span class="p">);</span>
+        // Create HttpHeaders and set Content-Type
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
 
-<span class="w">        </span><span class="c1">// Create HttpEntity with request body and headers</span>
-<span class="w">        </span><span class="n">HttpEntity</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpEntity</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">headers</span><span class="p">);</span>
+        // Create HttpEntity with request body and headers
+        HttpEntity&lt;Object&gt; entity = new HttpEntity&lt;&gt;(data, headers);
 
-<span class="w">        </span><span class="c1">// Make the POST request</span>
-<span class="w">        </span><span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">ResponseDTO</span><span class="o">&gt;</span><span class="w"> </span><span class="n">responseEntity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">restTemplate</span><span class="p">.</span><span class="na">exchange</span><span class="p">(</span>
-<span class="w">                </span><span class="n">url</span><span class="p">,</span><span class="w">               </span><span class="c1">// URL</span>
-<span class="w">                </span><span class="n">HttpMethod</span><span class="p">.</span><span class="na">POST</span><span class="p">,</span><span class="w">   </span><span class="c1">// HTTP Method (POST)</span>
-<span class="w">                </span><span class="n">entity</span><span class="p">,</span><span class="w">            </span><span class="c1">// HttpEntity containing request body and headers</span>
-<span class="w">                </span><span class="n">ResponseDTO</span><span class="p">.</span><span class="na">class</span><span class="w">  </span><span class="c1">// Expected response type</span>
-<span class="w">        </span><span class="p">);</span>
+        // Make the POST request
+        ResponseEntity&lt;ResponseDTO&gt; responseEntity = restTemplate.exchange(
+                url,               // URL
+                HttpMethod.POST,   // HTTP Method (POST)
+                entity,            // HttpEntity containing request body and headers
+                ResponseDTO.class  // Expected response type
+        );
 
-<span class="w">        </span><span class="c1">// Return the response body (ResponseDTO)</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">responseEntity</span><span class="p">.</span><span class="na">getBody</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+        // Return the response body (ResponseDTO)
+        return responseEntity.getBody();
+    }
+}
+
+</code></pre>
 <h3 id="recommended-alternative">Recommended Alternative</h3>
 <p>With the introduction of <strong>Spring WebFlux</strong>, the <strong>WebClient</strong> is preferred for new applications as it supports asynchronous and reactive programming paradigms, offering better performance and scalability in reactive systems.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Actuator/" class="btn btn-neutral float-left" title="Spring Actuator"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../JPA/" class="btn btn-neutral float-left" title="JPA"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../WebClient/" class="btn btn-neutral float-right" title="WebClient">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -315,7 +350,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../Actuator/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../JPA/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../WebClient/" style="color: #fcfcfc">Next &raquo;</a></span>
@@ -326,6 +361,7 @@
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

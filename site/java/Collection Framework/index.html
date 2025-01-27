@@ -36,7 +36,11 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -52,6 +56,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Garbage%20Collector/">Garbage Collector</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
@@ -59,6 +65,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Constructor/">Constructor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
                   </li>
@@ -131,11 +139,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -145,7 +159,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
                   </li>
@@ -164,9 +184,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -180,6 +211,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
                   </li>
@@ -213,7 +246,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="collection-framework-in-java">Collection Framework in Java</h1>
-<p>The Java <strong>Collection Framework</strong> is a unified architecture for representing and manipulating collections (groups of objects). It provides interfaces, implementations, and algorithms to handle various types of collections, such as lists, sets, queues, and maps. </p>
+<p>The Java <strong>Collection Framework</strong> is a unified architecture for representing and manipulating collections (groups of objects). It provides pre-built data structures like List, Set, Queue, and Map, making it easier to handle data in a structured way. </p>
 <h2 id="core-interfaces-in-the-collection-framework">Core Interfaces in the Collection Framework</h2>
 <h3 id="1-collection-interface">1. <strong>Collection Interface</strong></h3>
 <p>The root interface of the framework. It defines basic methods for adding, removing, and querying elements.</p>
@@ -276,43 +309,45 @@
 <li><strong>Autoboxing</strong>: Automatic conversion between primitive types and their corresponding wrapper classes when using collections (e.g., <code>int</code> to <code>Integer</code>).</li>
 </ul>
 <h2 id="example-usage">Example Usage</h2>
-<p>```java</p>
-<p>import java.util.*;</p>
-<p>public class CollectionExample {
+<pre><code class="language-java">
+import java.util.*;
+
+public class CollectionExample {
     public static void main(String[] args) {
         // List Example
-        List<String> list = new ArrayList&lt;&gt;();
-        list.add("Java");
-        list.add("Python");
-        list.add("JavaScript");</p>
-<div class="highlight"><pre><span></span><code>    // Iterating over List
-    for (String lang : list) {
-        System.out.println(lang);
-    }
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;Java&quot;);
+        list.add(&quot;Python&quot;);
+        list.add(&quot;JavaScript&quot;);
 
-    // Set Example (no duplicates)
-    Set&lt;String&gt; set = new HashSet&lt;&gt;();
-    set.add(&quot;Apple&quot;);
-    set.add(&quot;Banana&quot;);
-    set.add(&quot;Apple&quot;); // Duplicate, won&#39;t be added
+        // Iterating over List
+        for (String lang : list) {
+            System.out.println(lang);
+        }
 
-    // Iterating over Set
-    for (String fruit : set) {
-        System.out.println(fruit);
-    }
+        // Set Example (no duplicates)
+        Set&lt;String&gt; set = new HashSet&lt;&gt;();
+        set.add(&quot;Apple&quot;);
+        set.add(&quot;Banana&quot;);
+        set.add(&quot;Apple&quot;); // Duplicate, won't be added
 
-    // Map Example (key-value pairs)
-    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
-    map.put(&quot;Apple&quot;, 1);
-    map.put(&quot;Banana&quot;, 2);
+        // Iterating over Set
+        for (String fruit : set) {
+            System.out.println(fruit);
+        }
 
-    // Iterating over Map
-    for (Map.Entry&lt;String, Integer&gt; entry : map.entrySet()) {
-        System.out.println(entry.getKey() + &quot;: &quot; + entry.getValue());
+        // Map Example (key-value pairs)
+        Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+        map.put(&quot;Apple&quot;, 1);
+        map.put(&quot;Banana&quot;, 2);
+
+        // Iterating over Map
+        for (Map.Entry&lt;String, Integer&gt; entry : map.entrySet()) {
+            System.out.println(entry.getKey() + &quot;: &quot; + entry.getValue());
+        }
     }
 }
-</code></pre></div>
-<p>}</p>
+</code></pre>
               
             </div>
           </div><footer>
@@ -352,6 +387,7 @@
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

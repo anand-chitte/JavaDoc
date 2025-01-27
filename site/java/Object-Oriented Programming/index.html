@@ -36,7 +36,11 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -51,6 +55,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Garbage%20Collector/">Garbage Collector</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
                   </li>
@@ -75,6 +81,8 @@
     <li class="toctree-l2"><a class="reference internal" href="#advantages-of-oop">Advantages of OOP:</a>
     </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Constructor/">Constructor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
                   </li>
@@ -115,11 +123,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -129,7 +143,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
                   </li>
@@ -148,9 +168,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -164,6 +195,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
                   </li>
@@ -204,31 +237,31 @@
 <li>A blueprint for creating objects.</li>
 <li>Defines properties (fields) and behaviors (methods).</li>
 </ul>
-<p><strong>Example</strong>:
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<p><strong>Example</strong>:</p>
+<pre><code class="language-java">class Animal {
+    String name;
+    int age;
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is eating.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+    void eat() {
+        System.out.println(name + &quot; is eating.&quot;);
+    }
+}
+</code></pre>
 <h2 id="2-object">2. Object</h2>
 <ul>
 <li>An instance of a class.</li>
 <li>Represents a real-world entity.</li>
 </ul>
-<p><strong>Example</strong>:
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Animal</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Animal</span><span class="p">();</span>
-<span class="w">        </span><span class="n">dog</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Buddy&quot;</span><span class="p">;</span>
-<span class="w">        </span><span class="n">dog</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-<span class="w">        </span><span class="n">dog</span><span class="p">.</span><span class="na">eat</span><span class="p">();</span><span class="w"> </span><span class="c1">// Output: Buddy is eating.</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+<p><strong>Example</strong>:</p>
+<pre><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        Animal dog = new Animal();
+        dog.name = &quot;Buddy&quot;;
+        dog.age = 3;
+        dog.eat(); // Output: Buddy is eating.
+    }
+}
+</code></pre>
 <h2 id="3-inheritance">3. Inheritance</h2>
 <ul>
 <li><strong>Definition</strong>: </li>
@@ -236,21 +269,27 @@
 <li>Mechanism to acquire properties and methods from another class.</li>
 <li>Promotes code reuse.</li>
 </ul>
-<p><strong>Example</strong>: If you have a class <code>Animal</code>, a <code>Dog</code> class can inherit from <code>Animal</code>, gaining properties like <code>name</code> and methods like <code>eat()</code>. The <code>Dog</code> class can also have additional methods like <code>bark()</code>.
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">bark</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is barking.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<p><strong>Example</strong>: If you have a class <code>Animal</code>, a <code>Dog</code> class can inherit from <code>Animal</code>, gaining properties like <code>name</code> and methods like <code>eat()</code>. The <code>Dog</code> class can also have additional methods like <code>bark()</code>.</p>
+<pre><code class="language-java">class Dog extends Animal {
+    void bark() {
+        System.out.println(name + &quot; is barking.&quot;);
+    }
+}
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
-<span class="w">        </span><span class="n">dog</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Buddy&quot;</span><span class="p">;</span>
-<span class="w">        </span><span class="n">dog</span><span class="p">.</span><span class="na">bark</span><span class="p">();</span><span class="w"> </span><span class="c1">// Output: Buddy is barking.</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.name = &quot;Buddy&quot;;
+        dog.bark(); // Output: Buddy is barking.
+    }
+}
+</code></pre>
+<ul>
+<li><strong>Single Inheritance</strong>: A class can inherit from only one superclass.</li>
+<li><strong>Multilevel Inheritance</strong>: A class can inherit from a class that itself inherits from another class.</li>
+<li><strong>Hierarchical Inheritance</strong>: Multiple subclasses inherit from a single superclass.</li>
+<li><strong>Hybrid Inheritance</strong>: A combination of the above types.</li>
+</ul>
 <h2 id="4-encapsulation">4. Encapsulation</h2>
 <ul>
 <li><strong>Definition</strong>: </li>
@@ -258,23 +297,23 @@
 <li>Bundling data (fields) and methods into a single unit (class).</li>
 <li>Use access modifiers (private, public, protected) to control access.</li>
 </ul>
-<p><strong>Example</strong>: If you have a <code>Car</code> class, its attributes like <code>speed</code> and <code>fuelLevel</code> can be encapsulated, with methods like <code>accelerate()</code> or <code>refuel()</code> controlling how these properties change.
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<p><strong>Example</strong>: If you have a <code>Car</code> class, its attributes like <code>speed</code> and <code>fuelLevel</code> can be encapsulated, with methods like <code>accelerate()</code> or <code>refuel()</code> controlling how these properties change.</p>
+<pre><code class="language-java">class Person {
+    private String name;
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+    public String getName() {
+        return name;
+    }
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+</code></pre>
 <h2 id="5-polymorphism">5. Polymorphism</h2>
 <ul>
 <li><strong>Definition</strong>: </li>
-<li>Polymorphism allows objects of different classes to be treated as objects of a common superclass. The most common use of polymorphism is when a parent class reference is used to point to child class objects. It also refers to the ability to call the same method on different objects, each of which responds in its own way.</li>
+<li>It allows objects to take on multiple forms by enabling a single action to behave differently based on the object performing it.</li>
 <li>Ability to take many forms.</li>
 <li>Two types:<ul>
 <li>Compile-time Polymorphism (Method Overloading)</li>
@@ -283,31 +322,33 @@
 </li>
 </ul>
 <p><strong>Example</strong>: A method <code>makeSound()</code> might behave differently depending on whether it is called on a <code>Dog</code> object or a <code>Cat</code> object, even though the method signature is the same.
-- Method Overloading:
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Calculator</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+- Method Overloading:</p>
+<pre><code class="language-java">class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
 
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-- Method Overriding:
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Animal makes a sound&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+</code></pre>
+<ul>
+<li>Method Overriding:</li>
+</ul>
+<pre><code class="language-java">class Animal {
+    void sound() {
+        System.out.println(&quot;Animal makes a sound&quot;);
+    }
+}
 
-<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog barks&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println(&quot;Dog barks&quot;);
+    }
+}
+</code></pre>
 <h2 id="6-abstraction">6. Abstraction</h2>
 <ul>
 <li><strong>Definition</strong>: </li>
@@ -320,28 +361,30 @@
 </li>
 </ul>
 <p><strong>Example</strong>: A <code>Vehicle</code> class may be abstract, with a method <code>move()</code>. Classes like <code>Car</code> or <code>Bike</code> will inherit from it and implement the <code>move()</code> method in their own way (e.g., car moves on four wheels, bike moves on two).
-- Abstract Class:
-<div class="highlight"><pre><span></span><code><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Shape</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">();</span>
-<span class="p">}</span>
+- Abstract Class:</p>
+<pre><code class="language-java">abstract class Shape {
+    abstract void draw();
+}
 
-<span class="kd">class</span> <span class="nc">Circle</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Drawing Circle&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-- Interface:
-<div class="highlight"><pre><span></span><code><span class="kd">interface</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">();</span>
-<span class="p">}</span>
+class Circle extends Shape {
+    void draw() {
+        System.out.println(&quot;Drawing Circle&quot;);
+    }
+}
+</code></pre>
+<ul>
+<li>Interface:</li>
+</ul>
+<pre><code class="language-java">interface Animal {
+    void sound();
+}
 
-<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog barks&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+class Dog implements Animal {
+    public void sound() {
+        System.out.println(&quot;Dog barks&quot;);
+    }
+}
+</code></pre>
 <h2 id="advantages-of-oop">Advantages of OOP:</h2>
 <ul>
 <li><strong>Code Reusability</strong>: Through inheritance and composition, code can be reused across different parts of an application.</li>
@@ -354,7 +397,7 @@
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../Casting/" class="btn btn-neutral float-left" title="Casting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Method%20overloading%20%26%20overiding/" class="btn btn-neutral float-right" title="Method overloading & overiding">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Constructor/" class="btn btn-neutral float-right" title="Constructor">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -380,7 +423,7 @@
       <span><a href="../Casting/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Method%20overloading%20%26%20overiding/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Constructor/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
@@ -388,6 +431,7 @@
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

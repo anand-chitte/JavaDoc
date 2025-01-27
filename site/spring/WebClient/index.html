@@ -36,7 +36,11 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -52,6 +56,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Garbage%20Collector/">Garbage Collector</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
@@ -59,6 +65,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Constructor/">Constructor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
                   </li>
@@ -99,11 +107,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Container/">Spring Container</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Bean/">Bean</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Profiles/">Spring Profiles</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../JPA/">JPA</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../RestTemplate/">RestTemplate</a>
                   </li>
@@ -129,7 +143,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../JWT/">JWT</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../CorrelationId/">Correlation ID</a>
                   </li>
@@ -148,9 +168,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -164,6 +195,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
                   </li>
@@ -201,141 +234,141 @@
 <p>Here’s an example of how to use WebClient in a Spring Boot application:</p>
 <h3 id="1-add-dependency-in-pomxml">1. Add dependency in pom.xml</h3>
 <p>You need to add the Spring WebFlux dependency if it's not already in your project:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
-<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-webflux<span class="nt">&lt;/artifactId&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-webflux&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
 <h3 id="2-configure-webclient-bean">2. Configure WebClient Bean</h3>
 <p>You can define a WebClient bean in your configuration class:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.web.client.RestTemplateBuilder</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Bean</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.reactive.function.client.WebClient</span><span class="p">;</span>
+<pre><code class="language-java">import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.function.client.WebClient;
 
-<span class="nd">@Configuration</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">WebClientConfig</span><span class="w"> </span><span class="p">{</span>
+@Configuration
+public class WebClientConfig {
 
-<span class="w">    </span><span class="nd">@Bean</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">WebClient</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="nf">webClientBuilder</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">WebClient</span><span class="p">.</span><span class="na">builder</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+    @Bean
+    public WebClient.Builder webClientBuilder() {
+        return WebClient.builder();
+    }
+}
+</code></pre>
 <h3 id="3-using-webclient-to-make-a-request">3. Using WebClient to make a request</h3>
 <p>Here’s how you can use WebClient to make an HTTP GET request:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.reactive.function.client.WebClient</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">reactor.core.publisher.Mono</span><span class="p">;</span>
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
 
-<span class="nd">@Service</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">WebClientService</span><span class="w"> </span><span class="p">{</span>
+@Service
+public class WebClientService {
 
-<span class="w">    </span><span class="nd">@Autowired</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">WebClient</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">webClientBuilder</span><span class="p">;</span>
+    @Autowired
+    private WebClient.Builder webClientBuilder;
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Mono</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">fetchData</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">webClientBuilder</span><span class="p">.</span><span class="na">baseUrl</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="w">                               </span><span class="p">.</span><span class="na">build</span><span class="p">()</span>
-<span class="w">                               </span><span class="p">.</span><span class="na">get</span><span class="p">()</span>
-<span class="w">                               </span><span class="p">.</span><span class="na">retrieve</span><span class="p">()</span>
-<span class="w">                               </span><span class="p">.</span><span class="na">bodyToMono</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+    public Mono&lt;String&gt; fetchData(String url) {
+        return webClientBuilder.baseUrl(url)
+                               .build()
+                               .get()
+                               .retrieve()
+                               .bodyToMono(String.class);
+    }
+}
+</code></pre>
 <h3 id="4-example-controller">4. Example Controller</h3>
 <p>You can inject the WebClientService into your controller to use it:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">reactor.core.publisher.Mono</span><span class="p">;</span>
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
 
-<span class="nd">@RestController</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">WebClientController</span><span class="w"> </span><span class="p">{</span>
+@RestController
+public class WebClientController {
 
-<span class="w">    </span><span class="nd">@Autowired</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">WebClientService</span><span class="w"> </span><span class="n">webClientService</span><span class="p">;</span>
+    @Autowired
+    private WebClientService webClientService;
 
-<span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/fetch-data&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Mono</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">fetchData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">webClientService</span><span class="p">.</span><span class="na">fetchData</span><span class="p">(</span><span class="s">&quot;https://api.example.com/data&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+    @GetMapping(&quot;/fetch-data&quot;)
+    public Mono&lt;String&gt; fetchData() {
+        return webClientService.fetchData(&quot;https://api.example.com/data&quot;);
+    }
+}
+</code></pre>
 <h3 id="5-handling-error-responses">5. Handling Error Responses</h3>
 <p>WebClient has powerful error handling capabilities. You can customize error handling by using onStatus():</p>
-<p><div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">Mono</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">fetchDataWithErrorHandling</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">webClientBuilder</span><span class="p">.</span><span class="na">baseUrl</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="w">                           </span><span class="p">.</span><span class="na">build</span><span class="p">()</span>
-<span class="w">                           </span><span class="p">.</span><span class="na">get</span><span class="p">()</span>
-<span class="w">                           </span><span class="p">.</span><span class="na">retrieve</span><span class="p">()</span>
-<span class="w">                           </span><span class="p">.</span><span class="na">onStatus</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">status</span><span class="p">.</span><span class="na">is4xxClientError</span><span class="p">(),</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Mono</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;Client error&quot;</span><span class="p">)))</span>
-<span class="w">                           </span><span class="p">.</span><span class="na">onStatus</span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">status</span><span class="p">.</span><span class="na">is5xxServerError</span><span class="p">(),</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Mono</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;Server error&quot;</span><span class="p">)))</span>
-<span class="w">                           </span><span class="p">.</span><span class="na">bodyToMono</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-WebClient is highly useful for handling asynchronous, non-blocking HTTP requests, especially in reactive systems built using Spring WebFlux.</p>
-<p><strong>Example of a Blocking WebClient Call</strong>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Service</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.reactive.function.client.WebClient</span><span class="p">;</span>
+<pre><code class="language-java">public Mono&lt;String&gt; fetchDataWithErrorHandling(String url) {
+    return webClientBuilder.baseUrl(url)
+                           .build()
+                           .get()
+                           .retrieve()
+                           .onStatus(status -&gt; status.is4xxClientError(), response -&gt; Mono.error(new RuntimeException(&quot;Client error&quot;)))
+                           .onStatus(status -&gt; status.is5xxServerError(), response -&gt; Mono.error(new RuntimeException(&quot;Server error&quot;)))
+                           .bodyToMono(String.class);
+}
+</code></pre>
+<p>WebClient is highly useful for handling asynchronous, non-blocking HTTP requests, especially in reactive systems built using Spring WebFlux.</p>
+<p><strong>Example of a Blocking WebClient Call</strong></p>
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
 
-<span class="nd">@Service</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">WebClientBlockingService</span><span class="w"> </span><span class="p">{</span>
+@Service
+public class WebClientBlockingService {
 
-<span class="w">    </span><span class="nd">@Autowired</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">WebClient</span><span class="p">.</span><span class="na">Builder</span><span class="w"> </span><span class="n">webClientBuilder</span><span class="p">;</span>
+    @Autowired
+    private WebClient.Builder webClientBuilder;
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">fetchDataBlocking</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">webClientBuilder</span><span class="p">.</span><span class="na">baseUrl</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="w">                               </span><span class="p">.</span><span class="na">build</span><span class="p">()</span>
-<span class="w">                               </span><span class="p">.</span><span class="na">get</span><span class="p">()</span>
-<span class="w">                               </span><span class="p">.</span><span class="na">retrieve</span><span class="p">()</span>
-<span class="w">                               </span><span class="p">.</span><span class="na">bodyToMono</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
-<span class="w">                               </span><span class="p">.</span><span class="na">block</span><span class="p">();</span><span class="w"> </span><span class="c1">// This makes it a blocking call</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+    public String fetchDataBlocking(String url) {
+        return webClientBuilder.baseUrl(url)
+                               .build()
+                               .get()
+                               .retrieve()
+                               .bodyToMono(String.class)
+                               .block(); // This makes it a blocking call
+    }
+}
+</code></pre>
 <p>Mono and Flux are two core classes in Project Reactor, the reactive library used in Spring WebFlux to represent asynchronous and non-blocking sequences of data.</p>
 <h3 id="1-mono">1. Mono</h3>
 <p>Mono represents a sequence that contains at most one item or is empty. It is similar to a Future or Optional, but it is reactive and can be used to represent a single value or a potential error.</p>
 <p><strong>Use cases for Mono:</strong>
 - Returning a single value or no value (empty).
 - Performing operations that complete with one result.</p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">reactor.core.publisher.Mono</span><span class="p">;</span>
+<p><strong>Example:</strong></p>
+<pre><code class="language-java">import reactor.core.publisher.Mono;
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MonoExample</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Mono</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mono</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mono</span><span class="p">.</span><span class="na">just</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span>
+public class MonoExample {
+    public static void main(String[] args) {
+        Mono&lt;String&gt; mono = Mono.just(&quot;Hello, World!&quot;);
 
-<span class="w">        </span><span class="c1">// Subscribe to the Mono and print the value</span>
-<span class="w">        </span><span class="n">mono</span><span class="p">.</span><span class="na">subscribe</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">value</span><span class="p">));</span><span class="w">  </span><span class="c1">// Output: Hello, World!</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+        // Subscribe to the Mono and print the value
+        mono.subscribe(value -&gt; System.out.println(value));  // Output: Hello, World!
+    }
+}
+</code></pre>
 <h3 id="2-flux">2. Flux</h3>
 <p>Flux represents a sequence of 0 to N items and can be thought of as a stream of data over time. It is used when you expect multiple values or an indefinite sequence, like reading multiple records from a database, consuming a stream of events, etc.</p>
 <p><strong>Use cases for Flux:</strong>
 - Returning multiple items in a stream-like fashion.
 - Handling collections or lists asynchronously.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">reactor.core.publisher.Flux</span><span class="p">;</span>
+<pre><code class="language-java">import reactor.core.publisher.Flux;
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FluxExample</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Flux</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">flux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Flux</span><span class="p">.</span><span class="na">just</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Cherry&quot;</span><span class="p">);</span>
+public class FluxExample {
+    public static void main(String[] args) {
+        Flux&lt;String&gt; flux = Flux.just(&quot;Apple&quot;, &quot;Banana&quot;, &quot;Cherry&quot;);
 
-<span class="w">        </span><span class="c1">// Subscribe to the Flux and print each value</span>
-<span class="w">        </span><span class="n">flux</span><span class="p">.</span><span class="na">subscribe</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">value</span><span class="p">));</span>
-<span class="w">        </span><span class="c1">// Output:</span>
-<span class="w">        </span><span class="c1">// Apple</span>
-<span class="w">        </span><span class="c1">// Banana</span>
-<span class="w">        </span><span class="c1">// Cherry</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+        // Subscribe to the Flux and print each value
+        flux.subscribe(value -&gt; System.out.println(value));
+        // Output:
+        // Apple
+        // Banana
+        // Cherry
+    }
+}
+</code></pre>
               
             </div>
           </div><footer>
@@ -375,6 +408,7 @@ WebClient is highly useful for handling asynchronous, non-blocking HTTP requests
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

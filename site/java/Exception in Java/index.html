@@ -36,7 +36,11 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -52,6 +56,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Garbage%20Collector/">Garbage Collector</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
@@ -59,6 +65,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Constructor/">Constructor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
                   </li>
@@ -119,11 +127,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -133,7 +147,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
                   </li>
@@ -152,9 +172,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -168,6 +199,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
                   </li>
@@ -202,6 +235,7 @@
               
                 <h1 id="exception-in-java">Exception in Java</h1>
 <p>An exception in Java is an event that disrupts the normal flow of the program's execution. It can occur due to a variety of reasons, such as invalid input, attempting to divide by zero, file errors, or network issues. When an exception occurs, Java creates an <code>Exception</code> object and throws it.</p>
+<p><a href="https://mermaid.live/edit#pako:eNqNlN9vgjAQx_8Vck9bgkZQK_KwZJsz8cGxTLOHjT10cEqz0prabjrj_z7QYKq4H7xw9-W-H7gr7QYSmSKEMOPyM8mo0s50EAunuKaZkp_0jeNLDIfYuRgJjWpGE7yM4fWk0mk0rpw7paQqPLu7c3HL6XL5Y-0qwYVmUpT1VVzz7Ell_RNT2lA-pknGBFZvOqP-woiMjmZjzKVaV4BT6Rf3RNPkPfooRlAMrPLXxTrh0F1JGUV251b2h-_RCM1ytM2nUo1g00vGkHG8l3oojUht0Fn9T9pdNDxaRCuteWufWgLuDecPkpV_lQ06J_8POBIprnYrelO2sjya9E_P_oe-VkxnOWqW2NAz6hEOXMhR5ZSlxT7blPgYdIY5xhAWIWfzTMcQi21RSI2Wk7VIINTKoAtKmnkG4YzyZZGZRUo1DhidK5pXJQsqnqW0Uwg3sIKw4QWk2Q88r9MN-l2_7bmwhtAjvSbxiR-QVisgXeL1ti587QBekwS9jt8hnVbb9_xW4AKmTEs13p8Ru6Ni-w0Ee2md"><img alt="" src="https://mermaid.ink/img/pako:eNqNlN9vgjAQx_8Vck9bgkZQK_KwZJsz8cGxTLOHjT10cEqz0prabjrj_z7QYKq4H7xw9-W-H7gr7QYSmSKEMOPyM8mo0s50EAunuKaZkp_0jeNLDIfYuRgJjWpGE7yM4fWk0mk0rpw7paQqPLu7c3HL6XL5Y-0qwYVmUpT1VVzz7Ell_RNT2lA-pknGBFZvOqP-woiMjmZjzKVaV4BT6Rf3RNPkPfooRlAMrPLXxTrh0F1JGUV251b2h-_RCM1ytM2nUo1g00vGkHG8l3oojUht0Fn9T9pdNDxaRCuteWufWgLuDecPkpV_lQ06J_8POBIprnYrelO2sjya9E_P_oe-VkxnOWqW2NAz6hEOXMhR5ZSlxT7blPgYdIY5xhAWIWfzTMcQi21RSI2Wk7VIINTKoAtKmnkG4YzyZZGZRUo1DhidK5pXJQsqnqW0Uwg3sIKw4QWk2Q88r9MN-l2_7bmwhtAjvSbxiR-QVisgXeL1ti587QBekwS9jt8hnVbb9_xW4AKmTEs13p8Ru6Ni-w0Ee2md?type=png" /></a></p>
 <h2 id="types-of-exceptions">Types of Exceptions</h2>
 <h3 id="1-checked-exceptions">1. <strong>Checked Exceptions</strong></h3>
 <p>These are exceptions that must be explicitly handled by the programmer using a <code>try-catch</code> block or declared using the <code>throws</code> keyword. Examples include <code>IOException</code>, <code>SQLException</code>.</p>
@@ -210,31 +244,31 @@
 <h2 id="handling-exceptions">Handling Exceptions</h2>
 <h3 id="1-try-catch-block">1. <strong>Try-Catch Block</strong></h3>
 <p>It allows you to handle exceptions and prevent the program from crashing.</p>
-<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Code that might throw an exception</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// This will throw ArithmeticException</span>
-<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Handle the exception</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-java">try {
+    // Code that might throw an exception
+    int result = 10 / 0; // This will throw ArithmeticException
+} catch (ArithmeticException e) {
+    // Handle the exception
+    System.out.println(&quot;Error: &quot; + e.getMessage());
+}
+</code></pre>
 <h3 id="2-finally-block">2. <strong>Finally Block</strong></h3>
 <p>The finally block is optional and is used for code that must be executed regardless of whether an exception occurred or not, such as closing resources.</p>
-<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Code that might throw an exception</span>
-<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Handle the exception</span>
-<span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Cleanup code</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;This will always execute&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-java">try {
+    // Code that might throw an exception
+} catch (Exception e) {
+    // Handle the exception
+} finally {
+    // Cleanup code
+    System.out.println(&quot;This will always execute&quot;);
+}
+</code></pre>
 <h3 id="3-throws-clause">3. <strong>Throws Clause</strong></h3>
 <p>If a method can throw an exception, you can declare it using the throws keyword.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">readFile</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Code that may throw IOException</span>
-<span class="p">}</span>
-</code></pre></div>
+<pre><code class="language-java">public void readFile() throws IOException {
+    // Code that may throw IOException
+}
+</code></pre>
               
             </div>
           </div><footer>
@@ -274,6 +308,7 @@
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

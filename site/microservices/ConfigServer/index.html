@@ -36,7 +36,11 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="../.." class="icon icon-home"> Java
-        </a>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
@@ -52,6 +56,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Garbage%20Collector/">Garbage Collector</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
@@ -59,6 +65,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Constructor/">Constructor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
                   </li>
@@ -99,11 +107,17 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
                   </li>
@@ -113,7 +127,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
                   </li>
@@ -162,9 +182,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../FeignClient/">FeignClient</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -178,6 +209,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
                   </li>
@@ -215,55 +248,55 @@
 <h2 id="1-spring-cloud-config-server-setup">1. Spring Cloud Config Server Setup</h2>
 <h3 id="a-add-dependencies-to-pomxml">a. Add Dependencies to <code>pom.xml</code></h3>
 <p>To enable Spring Cloud Config Server in your project, add the following dependency:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
-<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.cloud<span class="nt">&lt;/groupId&gt;</span>
-<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-cloud-starter-config<span class="nt">&lt;/artifactId&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-cloud-starter-config&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
 <h3 id="b-enable-config-server-in-your-application">b. Enable Config Server in Your Application</h3>
-<p>In the main application class of your Config Server, add the <code>@EnableConfigServer</code> annotation:
-<div class="highlight"><pre><span></span><code><span class="nd">@SpringBootApplication</span>
-<span class="nd">@EnableConfigServer</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ConfigServerApplication</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">SpringApplication</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">ConfigServerApplication</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
+<p>In the main application class of your Config Server, add the <code>@EnableConfigServer</code> annotation:</p>
+<pre><code class="language-java">@SpringBootApplication
+@EnableConfigServer
+public class ConfigServerApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ConfigServerApplication.class, args);
+    }
+}
+</code></pre>
 <h3 id="c-configuration-in-applicationproperties">c. Configuration in application.properties</h3>
-<p>Configure the Config Server to source the properties (e.g., from a Git repository):
-<div class="highlight"><pre><span></span><code><span class="c1"># Config Server Settings</span>
-<span class="na">spring.application.name</span><span class="o">=</span><span class="s">config-server</span>
-<span class="na">server.port</span><span class="o">=</span><span class="s">8071</span>
+<p>Configure the Config Server to source the properties (e.g., from a Git repository):</p>
+<pre><code class="language-properties"># Config Server Settings
+spring.application.name=config-server
+server.port=8071
 
-<span class="c1"># Git repository configuration for the config server</span>
-<span class="na">spring.cloud.config.server.git.uri</span><span class="o">=</span><span class="s">https://github.com/your-org/your-config-repo</span>
-<span class="na">spring.cloud.config.server.git.clone-on-start</span><span class="o">=</span><span class="s">true</span>
+# Git repository configuration for the config server
+spring.cloud.config.server.git.uri=https://github.com/your-org/your-config-repo
+spring.cloud.config.server.git.clone-on-start=true
 
-<span class="c1"># Optionally, if you want to use file system</span>
-<span class="c1"># spring.cloud.config.server.native.search-locations=file:///path/to/configs</span>
-</code></pre></div></p>
+# Optionally, if you want to use file system
+# spring.cloud.config.server.native.search-locations=file:///path/to/configs
+</code></pre>
 <h2 id="2-config-client-setup">2. Config Client Setup</h2>
 <p>Each microservice (client) that will fetch configurations from the Config Server needs to follow these steps.</p>
 <h3 id="a-add-dependencies-to-pomxml_1">a. Add Dependencies to pom.xml</h3>
-<p>Add the following dependency in the microservice's pom.xml file:
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
-<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.cloud<span class="nt">&lt;/groupId&gt;</span>
-<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-cloud-starter-config<span class="nt">&lt;/artifactId&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div></p>
+<p>Add the following dependency in the microservice's pom.xml file:</p>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-cloud-starter-config&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
 <h3 id="b-enable-configuration-in-applicationproperties">b. Enable Configuration in application.properties</h3>
-<p>In your client microservice, specify the URI of the Config Server in the application.yml file:
-<div class="highlight"><pre><span></span><code><span class="c1"># Config Client Settings</span>
-<span class="na">spring.application.name</span><span class="o">=</span><span class="s">your-service-name</span>
-<span class="na">spring.profiles.active</span><span class="o">=</span><span class="s">default</span>
+<p>In your client microservice, specify the URI of the Config Server in the application.yml file:</p>
+<pre><code class="language-properties"># Config Client Settings
+spring.application.name=your-service-name
+spring.profiles.active=default
 
-<span class="c1"># URI of the Config Server</span>
-<span class="na">spring.cloud.config.uri</span><span class="o">=</span><span class="s">http://localhost:8071</span>
+# URI of the Config Server
+spring.cloud.config.uri=http://localhost:8071
 
-<span class="c1"># Optionally, define a timeout for the connection to the Config Server</span>
-<span class="na">spring.cloud.config.timeout</span><span class="o">=</span><span class="s">1000</span>
-</code></pre></div></p>
+# Optionally, define a timeout for the connection to the Config Server
+spring.cloud.config.timeout=1000
+</code></pre>
 <h2 id="3-config-server-data-source">3. Config Server Data Source</h2>
 <p>The Config Server can source configuration from different locations:</p>
 <h3 id="a-git-repository">a. Git Repository</h3>
@@ -321,6 +354,7 @@ In your Git repository, you might store the configuration for different applicat
     <script>var base_url = "../..";</script>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
