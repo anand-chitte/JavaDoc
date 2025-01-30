@@ -464,6 +464,64 @@ public Queue queue() {
 <ul>
 <li><strong>High Availability Queues</strong>: Ensures queues are available even in the event of a node failure.</li>
 </ul>
+<p><strong>Example:</strong> One DLQ for each queue</p>
+<pre><code class="language-java">@Configuration
+public class RabbitMQConfig {
+
+    @Bean
+    public Queue queue1() {
+        return QueueBuilder.durable(&quot;queue1&quot;)
+            .withArgument(&quot;x-dead-letter-exchange&quot;, &quot;DLX-exchange&quot;)
+            .withArgument(&quot;x-dead-letter-routing-key&quot;, &quot;queue1-dlq&quot;)
+            .withArgument(&quot;x-message-ttl&quot;, 60000) // 1 minute TTL
+            .build();
+    }
+
+
+    @Bean
+    public Queue queue1DLQ() {
+        return QueueBuilder.durable(&quot;queue1-dlq&quot;).build();
+    }
+
+    @Bean
+    public Queue queue2() {
+        return QueueBuilder.durable(&quot;queue2&quot;)
+                .withArgument(&quot;x-dead-letter-exchange&quot;, &quot;DLX-exchange&quot;)
+                .withArgument(&quot;x-dead-letter-routing-key&quot;, &quot;queue2-dlq&quot;)
+                .build();
+    }
+
+    @Bean
+    public Queue queue2DLQ() {
+        return QueueBuilder.durable(&quot;queue2-dlq&quot;).build();
+    }
+
+    @Bean
+    public DirectExchange directExchange() {
+        return new DirectExchange(&quot;DLX-exchange&quot;);
+    }
+
+    @Bean
+    public Binding queue1Binding() {
+        return BindingBuilder.bind(queue1()).to(directExchange()).with(&quot;queue1&quot;);
+    }
+
+    @Bean
+    public Binding queue2Binding() {
+        return BindingBuilder.bind(queue2()).to(directExchange()).with(&quot;queue2&quot;);
+    }
+
+    @Bean
+    public Binding queue1DLQBinding() {
+        return BindingBuilder.bind(queue1DLQ()).to(directExchange()).with(&quot;queue1-dlq&quot;);
+    }
+
+    @Bean
+    public Binding queue2DLQBinding() {
+        return BindingBuilder.bind(queue2DLQ()).to(directExchange()).with(&quot;queue2-dlq&quot;);
+    }
+}
+</code></pre>
               
             </div>
           </div><footer>
