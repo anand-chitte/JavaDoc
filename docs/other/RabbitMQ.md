@@ -229,3 +229,64 @@ public Queue queue() {
 }
 ```
 - **High Availability Queues**: Ensures queues are available even in the event of a node failure.
+
+**Example:** One DLQ for each queue
+
+```java
+@Configuration
+public class RabbitMQConfig {
+
+    @Bean
+    public Queue queue1() {
+        return QueueBuilder.durable("queue1")
+            .withArgument("x-dead-letter-exchange", "DLX-exchange")
+            .withArgument("x-dead-letter-routing-key", "queue1-dlq")
+            .withArgument("x-message-ttl", 60000) // 1 minute TTL
+            .build();
+    }
+
+
+    @Bean
+    public Queue queue1DLQ() {
+        return QueueBuilder.durable("queue1-dlq").build();
+    }
+
+    @Bean
+    public Queue queue2() {
+        return QueueBuilder.durable("queue2")
+                .withArgument("x-dead-letter-exchange", "DLX-exchange")
+                .withArgument("x-dead-letter-routing-key", "queue2-dlq")
+                .build();
+    }
+
+    @Bean
+    public Queue queue2DLQ() {
+        return QueueBuilder.durable("queue2-dlq").build();
+    }
+
+    @Bean
+    public DirectExchange directExchange() {
+        return new DirectExchange("DLX-exchange");
+    }
+
+    @Bean
+    public Binding queue1Binding() {
+        return BindingBuilder.bind(queue1()).to(directExchange()).with("queue1");
+    }
+
+    @Bean
+    public Binding queue2Binding() {
+        return BindingBuilder.bind(queue2()).to(directExchange()).with("queue2");
+    }
+
+    @Bean
+    public Binding queue1DLQBinding() {
+        return BindingBuilder.bind(queue1DLQ()).to(directExchange()).with("queue1-dlq");
+    }
+
+    @Bean
+    public Binding queue2DLQBinding() {
+        return BindingBuilder.bind(queue2DLQ()).to(directExchange()).with("queue2-dlq");
+    }
+}
+```
