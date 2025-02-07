@@ -73,8 +73,12 @@ nav:
     - ILMS: other/ILMS.md
     - Flowchart: other/Flowchart.md
     - IntroduceYourself: other/IntroduceYourself.md
-    - CBS: other/CBS.md
-    - CBS Developer Document: other/CBSDevelopment.md
+  - CBS:
+    - CBS: cbs/CBS.md
+    - CBS Developer Document: cbs/CBSDevelopment.md
+    - HLD: cbs/HLD.md
+    - LLD: cbs/LLD.md
+    - CBS Developer Document(Blockchain): cbs/CBSDevelopmentBlockchain.md
 extra_css:
   - css/custom.css
 extra:
