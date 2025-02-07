@@ -137,6 +137,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/References/">References</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Microservices</span></p>
               <ul class="current">
@@ -210,6 +212,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/IntroduceYourself/">IntroduceYourself</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/CBS/">CBS</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -264,10 +268,10 @@ resilience4j.retry.instances.myServiceRetry.randomize=true
 </ul>
 <h4 id="22-circuit-breaker-configuration">2.2. Circuit Breaker Configuration</h4>
 <p>For a circuit breaker, configure it like so:</p>
-<pre><code class="language-properties">resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.registerHealthIndicator=true
-resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.slidingWindowSize=10
-resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.failureRateThreshold=50
-resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.waitDurationInOpenState=10000ms
+<pre><code class="language-properties">resilience4j.circuitbreaker.configs.sliding-window-size=10
+resilience4j.circuitbreaker.configs.permitted-number-of-calls-in-half-open-state=2
+resilience4j.circuitbreaker.configs.failure-rate-threshold=50
+resilience4j.circuitbreaker.configs.wait-duration-in-open-state=10000
 </code></pre>
 <ul>
 <li><code>slidingWindowSize:</code> Defines the number of calls to consider for calculating failure rate.</li>

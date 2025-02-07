@@ -33,10 +33,10 @@ resilience4j.retry.instances.myServiceRetry.randomize=true
 #### 2.2. Circuit Breaker Configuration
 For a circuit breaker, configure it like so:
 ```properties
-resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.registerHealthIndicator=true
-resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.slidingWindowSize=10
-resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.failureRateThreshold=50
-resilience4j.circuitbreaker.instances.myServiceCircuitBreaker.waitDurationInOpenState=10000ms
+resilience4j.circuitbreaker.configs.sliding-window-size=10
+resilience4j.circuitbreaker.configs.permitted-number-of-calls-in-half-open-state=2
+resilience4j.circuitbreaker.configs.failure-rate-threshold=50
+resilience4j.circuitbreaker.configs.wait-duration-in-open-state=10000
 ```
 
 - `slidingWindowSize:` Defines the number of calls to consider for calculating failure rate.

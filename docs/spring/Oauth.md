@@ -2,6 +2,12 @@
 
 OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service without exposing the user's credentials. It allows third-party applications to act on behalf of users through a delegated access mechanism.
 
+OpenID Connect is a protocol that sits on top of the OAuth 2.0 framework. While OAuth 2.0 provides authorization via an
+access token containing scopes, OpenID Connect provides authentication by introducing a new ID token which contains a
+new set of information and claims specifically for identity.
+
+. With the ID token, OpenID Connect brings standards around sharing identity details among the applications.
+
 ---
 
 ## **Key Roles in OAuth 2.0**
