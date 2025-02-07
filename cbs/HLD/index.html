@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/microservices/SpringCloudFunction/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/cbs/HLD/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Spring Cloud Function - Java</title>
+    <title>HLD - Java</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Spring Cloud Function";
-        var mkdocs_page_input_path = "microservices\\SpringCloudFunction.md";
-        var mkdocs_page_url = "/JavaDoc/microservices/SpringCloudFunction/";
+        var mkdocs_page_name = "HLD";
+        var mkdocs_page_input_path = "cbs\\HLD.md";
+        var mkdocs_page_url = "/JavaDoc/cbs/HLD/";
       </script>
     
     <!--[if lt IE 9]>
@@ -141,44 +141,24 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Microservices</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Introduction/">Introduction</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../EurekaServer/">Eureka Server</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ConfigServer/">Configserver</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Resiliency/">Resiliency</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Resiliency/">Resiliency</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Gateway/">Spring Cloud Gateway</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Gateway/">Spring Cloud Gateway</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FeignClient/">FeignClient</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../SpringCloudSleuth/">SpringCloudSleuth</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Spring Cloud Function</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#1-add-dependencies">1. Add Dependencies</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#2-create-a-function">2. Create a Function</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#deploying-to-the-cloud">Deploying to the Cloud</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#1-aws-lambda">1. AWS Lambda</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#2-azure-functions">2. Azure Functions</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../SpringCloudStream/">Spring Cloud Stream</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">PostgeSQL</span></p>
@@ -214,16 +194,56 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">CBS</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../cbs/CBS/">CBS</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../CBS/">CBS</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../../cbs/CBSDevelopment.md">CBS Developer Document</a>
+                  <li class="toctree-l1"><a class="" href="../CBSDevelopment.md">CBS Developer Document</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../cbs/HLD/">HLD</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">HLD</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-system-architecture-overview">1. System Architecture Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#11-architectural-components">1.1 Architectural Components</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#12-component-diagram">1.2 Component Diagram</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-key-components">2. Key Components</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-client-layer">2.1 Client Layer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-api-gateway">2.2 API Gateway</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#23-microservices-layer">2.3 Microservices Layer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#24-data-layer">2.4 Data Layer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#25-security-layer">2.5 Security Layer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#26-integration-layer">2.6 Integration Layer</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-data-flow">3. Data Flow</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-fund-transfer-workflow">Example: Fund Transfer Workflow</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-deployment-architecture">4. Deployment Architecture</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-security-considerations">5. Security Considerations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-performance-scalability">6. Performance &amp; Scalability</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-conclusion">7. Conclusion</a>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../cbs/LLD/">LLD</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../LLD/">LLD</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../cbs/CBSDevelopmentBlockchain/">CBS Developer Document(Blockchain)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../CBSDevelopmentBlockchain/">CBS Developer Document(Blockchain)</a>
                   </li>
               </ul>
       </div>
@@ -240,8 +260,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Microservices</li>
-      <li class="breadcrumb-item active">Spring Cloud Function</li>
+          <li class="breadcrumb-item">CBS</li>
+      <li class="breadcrumb-item active">HLD</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -250,63 +270,117 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="spring-cloud-function">Spring Cloud Function</h1>
-<p>Spring Cloud Function enables the development of business logic as functions and decouples the development lifecycle from deployment. It allows you to write reusable and easily deployable functional code for various environments like AWS Lambda, Azure, or on-premise.</p>
+                <h1 id="high-level-design-hld-for-core-banking-system-cbs"><strong>High-Level Design (HLD) for Core Banking System (CBS)</strong></h1>
+<h2 id="1-system-architecture-overview"><strong>1. System Architecture Overview</strong></h2>
+<p>The Core Banking System (CBS) is designed using a modular, scalable, and cloud-native architecture. The system follows a microservices architecture to ensure flexibility, fault isolation, and easy integration with third-party systems.</p>
+<h3 id="11-architectural-components"><strong>1.1 Architectural Components</strong></h3>
+<ul>
+<li><strong>Client Layer:</strong> Interfaces for end users, including customers, employees, and administrators.</li>
+<li><strong>API Gateway:</strong> A unified entry point to all backend services, handling request routing, authentication, and load balancing.</li>
+<li><strong>Service Layer:</strong> Microservices implementing specific banking functionalities (Customer Management, Account Management, Transactions, etc.).</li>
+<li><strong>Data Layer:</strong> Databases and persistent storage solutions.</li>
+<li><strong>Security Layer:</strong> Ensures secure access control, data protection, and user authentication.</li>
+</ul>
+<h3 id="12-component-diagram"><strong>1.2 Component Diagram</strong></h3>
+<pre><code>[Client Layer] &lt;--&gt; [API Gateway] &lt;--&gt; [Microservices Layer] &lt;--&gt; [Data Layer]
+                                         |                |
+                                    [Security Layer]  [External Systems]
+</code></pre>
 <hr />
-<h2 id="key-features">Key Features</h2>
+<h2 id="2-key-components"><strong>2. Key Components</strong></h2>
+<h3 id="21-client-layer"><strong>2.1 Client Layer</strong></h3>
+<ul>
+<li><strong>Customer Interface:</strong></li>
+<li>Mobile and web apps developed using Flutter.</li>
+<li>Features: View balances, initiate fund transfers, apply for loans, etc.</li>
+<li><strong>Employee Interface:</strong></li>
+<li>Web application developed using Flutter.</li>
+<li>Features: Manage accounts, process loans, generate reports.</li>
+<li><strong>Admin Interface:</strong></li>
+<li>Web-based interface.</li>
+<li>Features: System monitoring, configuration management.</li>
+</ul>
+<h3 id="22-api-gateway"><strong>2.2 API Gateway</strong></h3>
+<ul>
+<li>Handles request routing, rate limiting, and cross-cutting concerns.</li>
+<li>Provides a secure entry point for all service requests.</li>
+<li><strong>Technology:</strong> Spring Cloud Gateway</li>
+</ul>
+<h3 id="23-microservices-layer"><strong>2.3 Microservices Layer</strong></h3>
+<p>Each microservice is independently deployable and handles a specific business domain.</p>
+<ul>
+<li><strong>Customer Management Service:</strong> Manages customer onboarding, KYC, and profile updates.</li>
+<li><strong>Account Management Service:</strong> Handles current, savings, and deposit accounts.</li>
+<li><strong>Transaction Processing Service:</strong> Manages deposits, withdrawals, and fund transfers.</li>
+<li><strong>Loan Management Service:</strong> Supports loan origination, disbursement, and repayment.</li>
+<li><strong>Reporting &amp; Analytics Service:</strong> Provides business intelligence insights.</li>
+<li><strong>Notification Service:</strong> Sends SMS, email, and push notifications.</li>
+</ul>
+<h3 id="24-data-layer"><strong>2.4 Data Layer</strong></h3>
+<ul>
+<li><strong>Database:</strong> PostgreSQL for relational data storage.</li>
+<li><strong>Data Caching:</strong> Redis for improved data retrieval speeds.</li>
+<li><strong>Backup Storage:</strong> Cloud-based storage for data backup and recovery.</li>
+</ul>
+<h3 id="25-security-layer"><strong>2.5 Security Layer</strong></h3>
+<ul>
+<li><strong>Authentication:</strong> JWT-based secure token management.</li>
+<li><strong>Authorization:</strong> Role-based access control (RBAC).</li>
+<li><strong>Data Protection:</strong> Encryption of sensitive data at rest and in transit.</li>
+<li><strong>Threat Detection:</strong> Integration with monitoring tools.</li>
+</ul>
+<h3 id="26-integration-layer"><strong>2.6 Integration Layer</strong></h3>
+<ul>
+<li><strong>Messaging Service:</strong> Apache Kafka for asynchronous communication between microservices.</li>
+<li><strong>External Payment Gateways:</strong> Integration for NEFT, RTGS, IMPS, and UPI.</li>
+<li><strong>Third-Party APIs:</strong> SWIFT integration for cross-border payments.</li>
+</ul>
+<hr />
+<h2 id="3-data-flow"><strong>3. Data Flow</strong></h2>
+<h3 id="example-fund-transfer-workflow"><strong>Example: Fund Transfer Workflow</strong></h3>
 <ol>
-<li><strong>Write Once, Run Anywhere</strong>: Develop functions independently of the runtime.</li>
-<li><strong>Adaptable</strong>: Deploy on AWS Lambda, Azure Functions, Apache OpenWhisk, or your own server.</li>
-<li><strong>Streamlined Testing</strong>: Write and test your function locally.</li>
-<li><strong>Efficient</strong>: Focus on business logic without worrying about infrastructure.</li>
+<li>The customer initiates a transfer request via the mobile app.</li>
+<li>The request is routed through the API Gateway to the Transaction Processing Service.</li>
+<li>The Transaction Processing Service validates the request by communicating with the Account Management Service.</li>
+<li>Upon successful validation, the transaction is processed, and account balances are updated.</li>
+<li>Notification Service sends a confirmation message to the customer.</li>
+<li>Reporting &amp; Analytics Service logs the transaction for audit purposes.</li>
 </ol>
 <hr />
-<h2 id="getting-started">Getting Started</h2>
-<h3 id="1-add-dependencies">1. Add Dependencies</h3>
-<p>In your <code>pom.xml</code>, include:</p>
-<pre><code class="language-xml">&lt;dependency&gt;
-    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
-    &lt;artifactId&gt;spring-cloud-starter-function-web&lt;/artifactId&gt;
-&lt;/dependency&gt;
-</code></pre>
-<h3 id="2-create-a-function">2. Create a Function</h3>
-<p>Write a function as a bean in a Spring Boot application.
-<strong>Example</strong>: A function that converts strings to uppercase.</p>
-<pre><code class="language-java">import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
-import java.util.function.Function;
-
-@Component
-public class FunctionExample {
-
-    @Bean
-    public Function&lt;String, String&gt; toUpperCase() {
-        return input -&gt; input.toUpperCase();
-    }
-}
-</code></pre>
-<h2 id="deploying-to-the-cloud">Deploying to the Cloud</h2>
-<h3 id="1-aws-lambda">1. AWS Lambda</h3>
-<p>Add the AWS adapter dependency:</p>
-<pre><code class="language-xml">&lt;dependency&gt;
-    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
-    &lt;artifactId&gt;spring-cloud-function-adapter-aws&lt;/artifactId&gt;
-&lt;/dependency&gt;
-</code></pre>
-<p>Then package your app as a .jar and deploy to AWS Lambda.</p>
-<h3 id="2-azure-functions">2. Azure Functions</h3>
-<p>Add the Azure adapter dependency:</p>
-<pre><code class="language-xml">&lt;dependency&gt;
-    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
-    &lt;artifactId&gt;spring-cloud-function-adapter-azure&lt;/artifactId&gt;
-&lt;/dependency&gt;
-</code></pre>
+<h2 id="4-deployment-architecture"><strong>4. Deployment Architecture</strong></h2>
+<ul>
+<li><strong>Environment:</strong> Cloud-native deployment on Kubernetes.</li>
+<li><strong>Containerization:</strong> Docker containers for microservices.</li>
+<li><strong>Orchestration:</strong> Kubernetes for service orchestration.</li>
+<li><strong>Load Balancing:</strong> NGINX or Kubernetes Ingress Controller.</li>
+<li><strong>Continuous Integration/Deployment:</strong> GitHub Actions for automated build and deployment.</li>
+</ul>
+<hr />
+<h2 id="5-security-considerations"><strong>5. Security Considerations</strong></h2>
+<ul>
+<li><strong>Data Security:</strong> End-to-end encryption for all data transfers.</li>
+<li><strong>Authentication:</strong> OAuth2 and JWT for secure access.</li>
+<li><strong>Authorization:</strong> Fine-grained role-based access control (RBAC).</li>
+<li><strong>Auditing:</strong> Comprehensive logging and monitoring for compliance.</li>
+<li><strong>Disaster Recovery:</strong> Backup and recovery strategies for high availability.</li>
+</ul>
+<hr />
+<h2 id="6-performance-scalability"><strong>6. Performance &amp; Scalability</strong></h2>
+<ul>
+<li><strong>Horizontal Scaling:</strong> Microservices can be independently scaled based on demand.</li>
+<li><strong>Caching:</strong> Use of Redis for frequently accessed data.</li>
+<li><strong>Fault Tolerance:</strong> Circuit breaker patterns using Resilience4j.</li>
+<li><strong>Load Balancing:</strong> Automatic distribution of incoming requests across services.</li>
+</ul>
+<hr />
+<h2 id="7-conclusion"><strong>7. Conclusion</strong></h2>
+<p>This High-Level Design (HLD) provides a blueprint for the development and deployment of a secure, scalable, and modular Core Banking System. The microservices architecture, combined with cloud-native technologies and strong security measures, ensures that the system is well-suited for modern banking operations.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../SpringCloudSleuth/" class="btn btn-neutral float-left" title="SpringCloudSleuth"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../SpringCloudStream/" class="btn btn-neutral float-right" title="Spring Cloud Stream">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../CBS/" class="btn btn-neutral float-left" title="CBS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../LLD/" class="btn btn-neutral float-right" title="LLD">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -329,10 +403,10 @@ public class FunctionExample {
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../SpringCloudSleuth/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../CBS/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../SpringCloudStream/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../LLD/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
