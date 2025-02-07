@@ -74,6 +74,7 @@ nav:
     - Flowchart: other/Flowchart.md
     - IntroduceYourself: other/IntroduceYourself.md
     - CBS: other/CBS.md
+    - CBS Developer Document: other/CBSDevelopment.md
 extra_css:
   - css/custom.css
 extra:
