@@ -49,6 +49,7 @@ spring.security.oauth2.resourceserver.jwt.issuer-uri=http://localhost:8080/realm
 Create a SecurityConfig class to define resource server settings and JWT validation.
 
 ## 3.1 SecurityConfig Class:
+** Before Spring 5 **
 ```java
 @Configuration
 @EnableWebSecurity
@@ -67,6 +68,29 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .anyRequest().authenticated();
     }
 }
+```
+
+** Before Spring 5 **
+```java
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+            .oauth2ResourceServer()
+            .jwt()
+            .and()
+            .authorizeRequests()
+            .antMatchers("/accounts/**").hasRole("ACCOUNTS")
+            .antMatchers("/cards/**").hasRole("CARDS")
+            .antMatchers("/loans/**").hasRole("LOANS")
+            .anyRequest().authenticated();
+        return http.build();
+    }
+}
+
 ```
 ### Role-Based Access Control:
 Here, we restrict access to certain URLs based on the roles (ACCOUNTS, CARDS, LOANS) defined in Keycloak.
