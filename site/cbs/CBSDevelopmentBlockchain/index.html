@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/cbs/CBSDevelopmentBlockchain/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>CBS Developer Document(Blockchain) - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CBS Developer Document(Blockchain)";
+        var mkdocs_page_input_path = "cbs\\CBSDevelopmentBlockchain.md";
+        var mkdocs_page_url = "/JavaDoc/cbs/CBSDevelopmentBlockchain/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Garbage%20Collector/">Garbage Collector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Constructor/">Constructor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/References/">References</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Resiliency/">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Gateway/">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Maven/">Maven</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Git/">Git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Docker/">Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/IntroduceYourself/">IntroduceYourself</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CBS</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../CBS/">CBS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CBSDevelopment/">CBS Developer Document</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HLD/">HLD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LLD/">LLD</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">CBS Developer Document(Blockchain)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-system-overview">1. System Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-key-features">2. Key Features</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-customer-management">2.1 Customer Management</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-account-deposit-management">2.2 Account &amp; Deposit Management</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#23-transaction-processing">2.3 Transaction Processing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#24-lending-loan-management">2.4 Lending &amp; Loan Management</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#25-payments-clearing">2.5 Payments &amp; Clearing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#26-treasury-management">2.6 Treasury Management</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#27-compliance-security">2.7 Compliance &amp; Security</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#28-channel-integration">2.8 Channel Integration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#29-reporting-analytics">2.9 Reporting &amp; Analytics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#210-service-management-crm">2.10 Service Management &amp; CRM</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#211-cloud-microservices-integration">2.11 Cloud &amp; Microservices Integration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#212-performance-high-availability">2.12 Performance &amp; High Availability</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-technology-stack">3. Technology Stack</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#backend">Backend</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frontend">Frontend</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#blockchain-integration">Blockchain Integration</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-customization-capabilities">4. Customization Capabilities</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#backend-customization">Backend Customization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frontend-customization">Frontend Customization</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-deployment-strategy">5. Deployment Strategy</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-blockchain-strategy">6. Blockchain Strategy</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common-blockchain-vs-separate-blockchain">Common Blockchain vs. Separate Blockchain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#recommended-approach-hybrid-consortium-model">Recommended Approach: Hybrid (Consortium Model)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-role-based-frontend-interfaces">7. Role-Based Frontend Interfaces</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#admindeveloper-interface">Admin/Developer Interface</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#employee-interface">Employee Interface</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#customeruser-interface">Customer/User Interface</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-security-considerations">8. Security Considerations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-conclusion">9. Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">CBS</li>
+      <li class="breadcrumb-item active">CBS Developer Document(Blockchain)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="core-banking-system-cbs-development-document">Core Banking System (CBS) Development Document</h1>
+<h2 id="1-system-overview"><strong>1. System Overview</strong></h2>
+<p>The Core Banking System (CBS) is a comprehensive solution designed for banking operations, customer engagement, and secure transaction processing. The system aims to provide a modular and scalable architecture leveraging blockchain technology, Quarkus for backend services, and Flutter for frontend interfaces.</p>
+<hr />
+<h2 id="2-key-features"><strong>2. Key Features</strong></h2>
+<h3 id="21-customer-management"><strong>2.1 Customer Management</strong></h3>
+<ul>
+<li>KYC details and customer profile management.</li>
+<li>Automated workflows for account opening and closure.</li>
+<li>Tailored financial product offers.</li>
+</ul>
+<h3 id="22-account-deposit-management"><strong>2.2 Account &amp; Deposit Management</strong></h3>
+<ul>
+<li>Real-time savings and current account operations.</li>
+<li>Recurring and fixed deposit management.</li>
+<li>Overdraft facilities.</li>
+</ul>
+<h3 id="23-transaction-processing"><strong>2.3 Transaction Processing</strong></h3>
+<ul>
+<li>Real-time deposits and withdrawals.</li>
+<li>Fund transfers through NEFT, RTGS, IMPS, UPI, and cross-border payments.</li>
+<li>Cheque processing and validation.</li>
+</ul>
+<h3 id="24-lending-loan-management"><strong>2.4 Lending &amp; Loan Management</strong></h3>
+<ul>
+<li>Loan origination, disbursement, and repayment workflows.</li>
+<li>Flexible EMI schedules and interest calculations.</li>
+<li>NPA (Non-Performing Asset) alerts.</li>
+</ul>
+<h3 id="25-payments-clearing"><strong>2.5 Payments &amp; Clearing</strong></h3>
+<ul>
+<li>Domestic and international payment processing.</li>
+<li>SWIFT integration.</li>
+<li>Card management systems.</li>
+</ul>
+<h3 id="26-treasury-management"><strong>2.6 Treasury Management</strong></h3>
+<ul>
+<li>Investment portfolio tracking.</li>
+<li>Liquidity optimization.</li>
+<li>Market risk monitoring.</li>
+</ul>
+<h3 id="27-compliance-security"><strong>2.7 Compliance &amp; Security</strong></h3>
+<ul>
+<li>Automated regulatory reporting.</li>
+<li>Fraud detection using AI/ML.</li>
+<li>Role-based access control and multi-factor authentication.</li>
+</ul>
+<h3 id="28-channel-integration"><strong>2.8 Channel Integration</strong></h3>
+<ul>
+<li>Real-time branch operations.</li>
+<li>ATM synchronization.</li>
+<li>Secure internet and mobile banking.</li>
+</ul>
+<h3 id="29-reporting-analytics"><strong>2.9 Reporting &amp; Analytics</strong></h3>
+<ul>
+<li>Business intelligence for strategic decisions.</li>
+<li>Financial and customer insight reports.</li>
+</ul>
+<h3 id="210-service-management-crm"><strong>2.10 Service Management &amp; CRM</strong></h3>
+<ul>
+<li>Customer support and complaint tracking.</li>
+<li>Personalized customer engagement.</li>
+</ul>
+<h3 id="211-cloud-microservices-integration"><strong>2.11 Cloud &amp; Microservices Integration</strong></h3>
+<ul>
+<li>Cloud-native infrastructure for scalability.</li>
+<li>Microservices architecture for modular functionality.</li>
+</ul>
+<h3 id="212-performance-high-availability"><strong>2.12 Performance &amp; High Availability</strong></h3>
+<ul>
+<li>Load balancing and fault tolerance.</li>
+<li>Disaster recovery mechanisms.</li>
+</ul>
+<hr />
+<h2 id="3-technology-stack"><strong>3. Technology Stack</strong></h2>
+<h3 id="backend"><strong>Backend</strong></h3>
+<ul>
+<li><strong>Framework:</strong> Quarkus (Java-based, lightweight, cloud-native)</li>
+<li><strong>Blockchain:</strong> Rust with Substrate framework for creating customizable blockchains</li>
+<li><strong>Database:</strong> PostgreSQL</li>
+<li><strong>Containerization:</strong> Docker &amp; Kubernetes for deployment</li>
+<li><strong>Messaging:</strong> Kafka for asynchronous communication</li>
+<li><strong>Authentication:</strong> JWT-based security</li>
+</ul>
+<h3 id="frontend"><strong>Frontend</strong></h3>
+<ul>
+<li><strong>Customer/User Interface:</strong> Flutter</li>
+<li><strong>Employee Interface:</strong> Flutter</li>
+<li><strong>Admin/Developer Interface:</strong> Flutter</li>
+</ul>
+<h3 id="blockchain-integration"><strong>Blockchain Integration</strong></h3>
+<ul>
+<li><strong>Blockchain Type:</strong> Hybrid (Consortium Model)</li>
+<li><strong>Smart Contracts:</strong> Written in Rust</li>
+<li><strong>Consensus Mechanism:</strong> Proof of Authority (PoA) or other customizable consensus models</li>
+<li><strong>Key Features:</strong> Data immutability, secure transactions, auditable logs</li>
+</ul>
+<hr />
+<h2 id="4-customization-capabilities"><strong>4. Customization Capabilities</strong></h2>
+<h3 id="backend-customization"><strong>Backend Customization</strong></h3>
+<ul>
+<li><strong>Plugin-Based Architecture:</strong> ServiceLoader API for dynamic service loading.</li>
+<li><strong>Smart Contract Extensions:</strong> Modular smart contracts for bank-specific operations.</li>
+<li><strong>Event-Driven Design:</strong> Kafka for asynchronous message handling.</li>
+<li><strong>Configuration Management:</strong> Quarkus Config Profiles for environment-specific setups.</li>
+</ul>
+<h3 id="frontend-customization"><strong>Frontend Customization</strong></h3>
+<ul>
+<li><strong>Dynamic Role-Based UI:</strong> Navigator 2.0 for separate UIs for admin, employees, and customers.</li>
+<li><strong>Theme Customization:</strong> Flutter <code>ThemeData</code> for customizable UI.</li>
+<li><strong>Feature Toggles:</strong> Backend-driven feature flagging.</li>
+<li><strong>Localization:</strong> <code>intl</code> package for multiple languages.</li>
+</ul>
+<hr />
+<h2 id="5-deployment-strategy"><strong>5. Deployment Strategy</strong></h2>
+<ul>
+<li><strong>Containerization:</strong> Docker for isolated environments.</li>
+<li><strong>Orchestration:</strong> Kubernetes for scalable deployments.</li>
+<li><strong>Continuous Integration:</strong> GitHub Actions for automated build and deployment.</li>
+</ul>
+<hr />
+<h2 id="6-blockchain-strategy"><strong>6. Blockchain Strategy</strong></h2>
+<h3 id="common-blockchain-vs-separate-blockchain"><strong>Common Blockchain vs. Separate Blockchain</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Aspect</strong></th>
+<th><strong>Common Blockchain</strong></th>
+<th><strong>Separate Blockchain</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost</td>
+<td>Lower</td>
+<td>Higher</td>
+</tr>
+<tr>
+<td>Privacy</td>
+<td>Moderate</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>Limited</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Interoperability</td>
+<td>High</td>
+<td>Limited</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommended-approach-hybrid-consortium-model"><strong>Recommended Approach:</strong> Hybrid (Consortium Model)</h3>
+<ul>
+<li>Shared blockchain for inter-bank operations.</li>
+<li>Private smart contracts for bank-specific functions.</li>
+<li>Role-based permission control for secure operations.</li>
+</ul>
+<hr />
+<h2 id="7-role-based-frontend-interfaces"><strong>7. Role-Based Frontend Interfaces</strong></h2>
+<h3 id="admindeveloper-interface"><strong>Admin/Developer Interface</strong></h3>
+<ul>
+<li>Manage plugins and system configurations.</li>
+<li>Monitor blockchain and backend services.</li>
+<li>View system logs and analytics.</li>
+</ul>
+<h3 id="employee-interface"><strong>Employee Interface</strong></h3>
+<ul>
+<li>Customer account management.</li>
+<li>Loan processing workflows.</li>
+<li>Reporting and reconciliation tasks.</li>
+</ul>
+<h3 id="customeruser-interface"><strong>Customer/User Interface</strong></h3>
+<ul>
+<li>View account details, balances, and transaction history.</li>
+<li>Initiate fund transfers and bill payments.</li>
+<li>Apply for loans and manage deposits.</li>
+</ul>
+<hr />
+<h2 id="8-security-considerations"><strong>8. Security Considerations</strong></h2>
+<ul>
+<li><strong>Authentication:</strong> JWT-based secure token management.</li>
+<li><strong>Blockchain Security:</strong> Immutable data storage and cryptographic transactions.</li>
+<li><strong>Data Privacy:</strong> Role-based access control and data encryption.</li>
+<li><strong>Audit Trails:</strong> Comprehensive logging for all activities.</li>
+</ul>
+<hr />
+<h2 id="9-conclusion"><strong>9. Conclusion</strong></h2>
+<p>This CBS system architecture provides a robust and scalable solution for banking operations with secure, blockchain-backed transaction processing and modular plugin capabilities. The combination of Quarkus, Rust, and Flutter ensures a modern, high-performance, and user-friendly banking experience.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../LLD/" class="btn btn-neutral float-left" title="LLD"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../LLD/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

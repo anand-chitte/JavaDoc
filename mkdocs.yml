@@ -42,6 +42,8 @@ nav:
       - WebClient: spring/WebClient.md
       - Spring boot annotations: spring/Spring boot annotations.md
       - Spring Security: spring/Spring Security.md
+      - Spring MVC: spring/SpringMVC.md
+      - JSP: spring/JSP.md
       - OAuth2: spring/Oauth.md
       - JWT: spring/JWT.md
       - Keycloak: spring/Keycloak Implementation.md

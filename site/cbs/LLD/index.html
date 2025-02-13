@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/cbs/LLD/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>LLD - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "LLD";
+        var mkdocs_page_input_path = "cbs\\LLD.md";
+        var mkdocs_page_url = "/JavaDoc/cbs/LLD/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Garbage%20Collector/">Garbage Collector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Constructor/">Constructor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overiding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Exception%20in%20Java/">Exception in Java</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/LambdaExpression/">Lambda Expression</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Thread/">Thread</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/ProgrammingQuestions/">Programming Questions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/References/">References</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Resiliency/">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Gateway/">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Maven/">Maven</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Git/">Git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Docker/">Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/IntroduceYourself/">IntroduceYourself</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CBS</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../CBS/">CBS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CBSDevelopment/">CBS Developer Document</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HLD/">HLD</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">LLD</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-overview">1. Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-component-level-architecture">2. Component-Level Architecture</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-backend-components">2.1 Backend Components</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#211-customer-management-module">2.1.1 Customer Management Module</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#212-account-deposit-management-module">2.1.2 Account &amp; Deposit Management Module</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#213-transaction-processing-module">2.1.3 Transaction Processing Module</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#214-loan-management-module">2.1.4 Loan Management Module</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#215-reporting-analytics-module">2.1.5 Reporting &amp; Analytics Module</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#216-security-module">2.1.6 Security Module</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-frontend-components">2.2 Frontend Components</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#221-customer-interface">2.2.1 Customer Interface</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#222-employee-interface">2.2.2 Employee Interface</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#223-admin-interface">2.2.3 Admin Interface</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-sequence-diagrams">3. Sequence Diagrams</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#31-customer-account-creation">3.1 Customer Account Creation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#32-fund-transfer">3.2 Fund Transfer</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-class-diagrams">4. Class Diagrams</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-database-schema">5. Database Schema</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#51-customers-table">5.1 customers Table</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#52-accounts-table">5.2 accounts Table</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#53-transactions-table">5.3 transactions Table</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-security-design">6. Security Design</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-error-handling-strategy">7. Error Handling Strategy</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-conclusion">8. Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CBSDevelopmentBlockchain/">CBS Developer Document(Blockchain)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">CBS</li>
+      <li class="breadcrumb-item active">LLD</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="low-level-design-lld-for-core-banking-system">Low-Level Design (LLD) for Core Banking System</h1>
+<h2 id="1-overview"><strong>1. Overview</strong></h2>
+<p>This document provides a detailed low-level design (LLD) for the Core Banking System (CBS), outlining the system’s components, modules, and their interactions to deliver a comprehensive banking solution.</p>
+<hr />
+<h2 id="2-component-level-architecture"><strong>2. Component-Level Architecture</strong></h2>
+<h3 id="21-backend-components"><strong>2.1 Backend Components</strong></h3>
+<h4 id="211-customer-management-module"><strong>2.1.1 Customer Management Module</strong></h4>
+<ul>
+<li><strong>Classes:</strong></li>
+<li><code>CustomerService</code>: Handles customer-related operations such as onboarding, KYC updates, and profile management.</li>
+<li><code>CustomerRepository</code>: Interacts with the PostgreSQL database to perform CRUD operations.</li>
+<li>
+<p><code>CustomerEntity</code>: Defines the data model for customer profiles.</p>
+</li>
+<li>
+<p><strong>Database Tables:</strong></p>
+</li>
+<li>
+<p><code>customers</code>: Stores KYC information, customer identifiers, and related metadata.</p>
+</li>
+<li>
+<p><strong>APIs:</strong></p>
+</li>
+<li><code>POST /customers</code>: Create a new customer.</li>
+<li><code>GET /customers/{id}</code>: Retrieve customer details by ID.</li>
+<li><code>PUT /customers/{id}</code>: Update customer details.</li>
+</ul>
+<h4 id="212-account-deposit-management-module"><strong>2.1.2 Account &amp; Deposit Management Module</strong></h4>
+<ul>
+<li><strong>Classes:</strong></li>
+<li><code>AccountService</code>: Manages account creation, deposit operations, and overdrafts.</li>
+<li><code>AccountRepository</code>: Handles database interactions.</li>
+<li>
+<p><code>AccountEntity</code>: Represents the account data model.</p>
+</li>
+<li>
+<p><strong>Database Tables:</strong></p>
+</li>
+<li>
+<p><code>accounts</code>: Stores account numbers, types, balances, and statuses.</p>
+</li>
+<li>
+<p><strong>APIs:</strong></p>
+</li>
+<li><code>POST /accounts</code>: Create a new account.</li>
+<li><code>GET /accounts/{accountNumber}</code>: Fetch account details.</li>
+</ul>
+<h4 id="213-transaction-processing-module"><strong>2.1.3 Transaction Processing Module</strong></h4>
+<ul>
+<li><strong>Classes:</strong></li>
+<li><code>TransactionService</code>: Processes deposits, withdrawals, and fund transfers.</li>
+<li><code>TransactionRepository</code>: Stores transaction details.</li>
+<li>
+<p><code>TransactionEntity</code>: Defines the data model for transactions.</p>
+</li>
+<li>
+<p><strong>Database Tables:</strong></p>
+</li>
+<li>
+<p><code>transactions</code>: Stores transaction history.</p>
+</li>
+<li>
+<p><strong>APIs:</strong></p>
+</li>
+<li><code>POST /transactions</code>: Initiate a transaction.</li>
+<li><code>GET /transactions/{accountNumber}</code>: Retrieve transaction history.</li>
+</ul>
+<h4 id="214-loan-management-module"><strong>2.1.4 Loan Management Module</strong></h4>
+<ul>
+<li><strong>Classes:</strong></li>
+<li><code>LoanService</code>: Manages loan creation, EMI schedules, and repayment.</li>
+<li><code>LoanRepository</code>: Interacts with the database for loan-related operations.</li>
+<li>
+<p><code>LoanEntity</code>: Represents the loan data model.</p>
+</li>
+<li>
+<p><strong>Database Tables:</strong></p>
+</li>
+<li>
+<p><code>loans</code>: Stores loan information, EMI schedules, and repayment statuses.</p>
+</li>
+<li>
+<p><strong>APIs:</strong></p>
+</li>
+<li><code>POST /loans</code>: Create a loan.</li>
+<li><code>GET /loans/{loanId}</code>: Fetch loan details.</li>
+</ul>
+<h4 id="215-reporting-analytics-module"><strong>2.1.5 Reporting &amp; Analytics Module</strong></h4>
+<ul>
+<li><strong>Classes:</strong></li>
+<li><code>ReportService</code>: Generates financial and operational reports.</li>
+<li><code>ReportRepository</code>: Fetches data for reports.</li>
+<li>
+<p><code>ReportGenerator</code>: Handles report generation logic.</p>
+</li>
+<li>
+<p><strong>APIs:</strong></p>
+</li>
+<li><code>GET /reports/financial</code>: Generate financial reports.</li>
+</ul>
+<h4 id="216-security-module"><strong>2.1.6 Security Module</strong></h4>
+<ul>
+<li><strong>Classes:</strong></li>
+<li><code>AuthService</code>: Handles user authentication and token management.</li>
+<li>
+<p><code>UserDetailsService</code>: Fetches user information for security purposes.</p>
+</li>
+<li>
+<p><strong>APIs:</strong></p>
+</li>
+<li><code>POST /auth/login</code>: Authenticate and generate JWT.</li>
+<li><code>POST /auth/validate</code>: Validate JWT.</li>
+</ul>
+<hr />
+<h3 id="22-frontend-components"><strong>2.2 Frontend Components</strong></h3>
+<h4 id="221-customer-interface"><strong>2.2.1 Customer Interface</strong></h4>
+<ul>
+<li><strong>Screens:</strong></li>
+<li>Login Screen: Allows secure login.</li>
+<li>Dashboard: Displays account balances and recent transactions.</li>
+<li>Fund Transfer: Form for transferring funds.</li>
+</ul>
+<h4 id="222-employee-interface"><strong>2.2.2 Employee Interface</strong></h4>
+<ul>
+<li><strong>Screens:</strong></li>
+<li>Customer Management Dashboard: Manage customer details.</li>
+<li>Loan Processing: Review and approve loan applications.</li>
+</ul>
+<h4 id="223-admin-interface"><strong>2.2.3 Admin Interface</strong></h4>
+<ul>
+<li><strong>Screens:</strong></li>
+<li>System Monitoring Dashboard: Track service statuses.</li>
+<li>Report Generation: Generate operational reports.</li>
+</ul>
+<hr />
+<h2 id="3-sequence-diagrams"><strong>3. Sequence Diagrams</strong></h2>
+<h3 id="31-customer-account-creation"><strong>3.1 Customer Account Creation</strong></h3>
+<ol>
+<li>Customer submits account creation request via frontend.</li>
+<li>Frontend calls <code>POST /accounts</code> API.</li>
+<li><code>AccountService</code> validates request and calls <code>AccountRepository</code>.</li>
+<li><code>AccountRepository</code> persists data to <code>accounts</code> table.</li>
+<li>Success response is returned to frontend.</li>
+</ol>
+<h3 id="32-fund-transfer"><strong>3.2 Fund Transfer</strong></h3>
+<ol>
+<li>Customer initiates fund transfer.</li>
+<li>Frontend calls <code>POST /transactions</code> API.</li>
+<li><code>TransactionService</code> validates request and ensures sufficient balance.</li>
+<li><code>TransactionRepository</code> stores transaction details.</li>
+<li>Balance updates are applied in <code>accounts</code> table.</li>
+<li>Success response is returned.</li>
+</ol>
+<hr />
+<h2 id="4-class-diagrams"><strong>4. Class Diagrams</strong></h2>
+<pre><code>+------------------+          +------------------+
+|  AccountService  |&lt;&gt;--------| AccountRepository |
++------------------+          +------------------+
+| +createAccount() |          | +save()           |
+| +getAccount()    |          | +findById()       |
++------------------+          +------------------+
+
++-------------------+         +-------------------+
+| TransactionService|&lt;&gt;-------|TransactionRepository|
++-------------------+         +-------------------+
+| +transferFunds()  |         | +saveTransaction() |
+| +getTransactions()|         | +findByAccount()   |
++-------------------+         +-------------------+
+</code></pre>
+<hr />
+<h2 id="5-database-schema"><strong>5. Database Schema</strong></h2>
+<h3 id="51-customers-table"><strong>5.1 customers Table</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Data Type</th>
+<th>Constraints</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_id</td>
+<td>INT</td>
+<td>PRIMARY KEY</td>
+</tr>
+<tr>
+<td>name</td>
+<td>VARCHAR</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td>email</td>
+<td>VARCHAR</td>
+<td>UNIQUE, NOT NULL</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>VARCHAR</td>
+<td>NOT NULL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-accounts-table"><strong>5.2 accounts Table</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Data Type</th>
+<th>Constraints</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_number</td>
+<td>INT</td>
+<td>PRIMARY KEY</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>INT</td>
+<td>FOREIGN KEY</td>
+</tr>
+<tr>
+<td>balance</td>
+<td>DECIMAL</td>
+<td>NOT NULL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-transactions-table"><strong>5.3 transactions Table</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Data Type</th>
+<th>Constraints</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>transaction_id</td>
+<td>INT</td>
+<td>PRIMARY KEY</td>
+</tr>
+<tr>
+<td>account_number</td>
+<td>INT</td>
+<td>FOREIGN KEY</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>DECIMAL</td>
+<td>NOT NULL</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-security-design"><strong>6. Security Design</strong></h2>
+<ul>
+<li><strong>Authentication:</strong> JWT-based security with token expiration.</li>
+<li><strong>Authorization:</strong> Role-based access control.</li>
+<li><strong>Data Protection:</strong> Encryption for sensitive fields.</li>
+<li><strong>Auditing:</strong> Comprehensive logs for all transactions.</li>
+</ul>
+<hr />
+<h2 id="7-error-handling-strategy"><strong>7. Error Handling Strategy</strong></h2>
+<ul>
+<li><strong>Validation Errors:</strong> Return <code>400 Bad Request</code> with descriptive messages.</li>
+<li><strong>Authentication Errors:</strong> Return <code>401 Unauthorized</code>.</li>
+<li><strong>Authorization Errors:</strong> Return <code>403 Forbidden</code>.</li>
+<li><strong>Database Errors:</strong> Return <code>500 Internal Server Error</code>.</li>
+</ul>
+<hr />
+<h2 id="8-conclusion"><strong>8. Conclusion</strong></h2>
+<p>This low-level design provides a detailed blueprint for the Core Banking System’s implementation. It ensures modularity, security, and scalability while catering to business requirements for modern banking operations.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../HLD/" class="btn btn-neutral float-left" title="HLD"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../CBSDevelopmentBlockchain/" class="btn btn-neutral float-right" title="CBS Developer Document(Blockchain)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../HLD/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../CBSDevelopmentBlockchain/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
