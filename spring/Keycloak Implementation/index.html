@@ -127,6 +127,10 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Spring%20Security/">Spring Security</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SpringMVC/">Spring MVC</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../JSP/">JSP</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Oauth/">OAuth2</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../JWT/">JWT</a>
@@ -326,6 +330,7 @@ spring.security.oauth2.resourceserver.jwt.issuer-uri=http://localhost:8080/realm
 <h2 id="3-security-configuration-class">3. Security Configuration Class</h2>
 <p>Create a SecurityConfig class to define resource server settings and JWT validation.</p>
 <h2 id="31-securityconfig-class">3.1 SecurityConfig Class:</h2>
+<p>** Before Spring 5 **</p>
 <pre><code class="language-java">@Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -343,6 +348,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .anyRequest().authenticated();
     }
 }
+</code></pre>
+<p>** Before Spring 5 **</p>
+<pre><code class="language-java">@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+            .oauth2ResourceServer()
+            .jwt()
+            .and()
+            .authorizeRequests()
+            .antMatchers(&quot;/accounts/**&quot;).hasRole(&quot;ACCOUNTS&quot;)
+            .antMatchers(&quot;/cards/**&quot;).hasRole(&quot;CARDS&quot;)
+            .antMatchers(&quot;/loans/**&quot;).hasRole(&quot;LOANS&quot;)
+            .anyRequest().authenticated();
+        return http.build();
+    }
+}
+
 </code></pre>
 <h3 id="role-based-access-control">Role-Based Access Control:</h3>
 <p>Here, we restrict access to certain URLs based on the roles (ACCOUNTS, CARDS, LOANS) defined in Keycloak.</p>

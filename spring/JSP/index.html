@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/spring/Scheduling/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/spring/JSP/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Scheduling - Java</title>
+    <title>JSP - Java</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Scheduling";
-        var mkdocs_page_input_path = "spring\\Scheduling.md";
-        var mkdocs_page_url = "/JavaDoc/spring/Scheduling/";
+        var mkdocs_page_name = "JSP";
+        var mkdocs_page_input_path = "spring\\JSP.md";
+        var mkdocs_page_url = "/JavaDoc/spring/JSP/";
       </script>
     
     <!--[if lt IE 9]>
@@ -129,7 +129,79 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SpringMVC/">Spring MVC</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../JSP/">JSP</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">JSP</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction-to-jsp">Introduction to JSP</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setting-up-jsp-environment">Setting Up JSP Environment</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-tomcat">Installing Tomcat</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-simple-jsp-page">Creating a Simple JSP Page</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-indexjsp">Example: index.jsp</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#jsp-directives">JSP Directives</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common-jsp-directives">Common JSP Directives</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#jsp-scripting-elements">JSP Scripting Elements</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#types-of-scripting-elements">Types of Scripting Elements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#jsp-implicit-objects">JSP Implicit Objects</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-using-request">Example: Using request</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#jsp-forms-and-request-handling">JSP Forms and Request Handling</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#form-example-formjsp">Form Example (form.jsp)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#processing-form-data-welcomejsp">Processing Form Data (welcome.jsp)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#jsp-session-management">JSP Session Management</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#storing-data-in-session">Storing Data in Session</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#retrieving-data-from-session">Retrieving Data from Session</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#invalidating-a-session">Invalidating a Session</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#jsp-error-handling">JSP Error Handling</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#using-errorpage-directive">Using errorPage Directive</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-errorjsp">Creating error.jsp</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#jsp-custom-tags-jstl">JSP Custom Tags (JSTL)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#adding-jstl-in-jsp">Adding JSTL in JSP</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-using-cforeach">Example: Using c:forEach</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deploying-a-jsp-application">Deploying a JSP Application</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Oauth/">OAuth2</a>
                   </li>
@@ -137,33 +209,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Keycloak%20Implementation/">Keycloak</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Scheduling</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#key-concepts">Key Concepts</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#1-scheduling-in-spring-boot">1. Scheduling in Spring Boot:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#2-types-of-scheduling-in-spring-boot">2. Types of Scheduling in Spring Boot:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#3-enabling-scheduling">3. Enabling Scheduling:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-scheduled-task-execution">4. Scheduled Task Execution:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#5-customizing-task-execution">5. Customizing Task Execution:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#6-task-scheduler">6. Task Scheduler:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#7-profiles-and-scheduling">7. Profiles and Scheduling:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#8-error-handling">8. Error Handling:</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#use-cases">Use Cases</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Scheduling/">Scheduling</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../CorrelationId/">Correlation ID</a>
                   </li>
@@ -251,7 +297,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Spring</li>
-      <li class="breadcrumb-item active">Scheduling</li>
+      <li class="breadcrumb-item active">JSP</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -260,82 +306,200 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="spring-boot-scheduler">Spring Boot Scheduler</h1>
-<p>A <strong>scheduler</strong> in Spring Boot is a feature that allows you to execute tasks at specific intervals or times without manual intervention. This is useful for tasks like periodic data processing, sending emails, generating reports, and any other background job that needs to run at fixed times or intervals.</p>
-<h2 id="key-concepts">Key Concepts</h2>
-<h3 id="1-scheduling-in-spring-boot">1. Scheduling in Spring Boot:</h3>
-<p>Scheduling refers to the process of automating the execution of tasks at specific times or intervals. Spring Boot provides a way to configure and manage such tasks using the <code>@Scheduled</code> annotation, which allows the developer to define when a task should run.</p>
-<h3 id="2-types-of-scheduling-in-spring-boot">2. Types of Scheduling in Spring Boot:</h3>
-<ul>
+                <h1 id="jsp-beginner-guide">JSP Beginner Guide</h1>
+<h2 id="introduction-to-jsp">Introduction to JSP</h2>
+<p>JavaServer Pages (JSP) is a server-side technology used for building dynamic web pages in Java. It allows embedding Java code inside HTML and is commonly used in Java-based web applications.</p>
+<hr />
+<h2 id="setting-up-jsp-environment">Setting Up JSP Environment</h2>
+<p>To run JSP applications, you need:
+1. <strong>Java Development Kit (JDK)</strong> - Install the latest JDK.
+2. <strong>Apache Tomcat</strong> - A servlet container to run JSP applications.
+3. <strong>IDE (Optional)</strong> - Eclipse, IntelliJ IDEA, or NetBeans for development.</p>
+<h3 id="installing-tomcat">Installing Tomcat</h3>
+<ol>
+<li>Download <strong>Apache Tomcat</strong> from <a href="https://tomcat.apache.org/">tomcat.apache.org</a>.</li>
+<li>Extract the files and configure environment variables (<code>CATALINA_HOME</code>).</li>
+<li>Start Tomcat using the <code>startup.sh</code> (Linux/macOS) or <code>startup.bat</code> (Windows) script.</li>
+<li>Access Tomcat in the browser at: <code>http://localhost:8080/</code>.</li>
+</ol>
+<hr />
+<h2 id="creating-a-simple-jsp-page">Creating a Simple JSP Page</h2>
+<p>A JSP file has a <strong>.jsp</strong> extension and contains a mix of HTML and Java code.</p>
+<h3 id="example-indexjsp">Example: <code>index.jsp</code></h3>
+<pre><code class="language-jsp">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;JSP Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to JSP!&lt;/h1&gt;
+    &lt;%-- Embedding Java Code --%&gt;
+    &lt;p&gt;Current Time: &lt;%= new java.util.Date() %&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Save this file inside <code>webapps/your_project/</code> in Tomcat.</p>
+<hr />
+<h2 id="jsp-directives">JSP Directives</h2>
+<p>JSP directives provide global information about the page.</p>
+<h3 id="common-jsp-directives">Common JSP Directives</h3>
+<ol>
+<li><strong>Page Directive</strong> - Defines attributes like language and encoding.
+   <code>jsp
+   &lt;%@ page language="java" contentType="text/html; charset=UTF-8" %&gt;</code></li>
+<li><strong>Include Directive</strong> - Includes another file at compile-time.
+   <code>jsp
+   &lt;%@ include file="header.jsp" %&gt;</code></li>
+<li><strong>Taglib Directive</strong> - Defines custom tag libraries.
+   <code>jsp
+   &lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %&gt;</code></li>
+</ol>
+<hr />
+<h2 id="jsp-scripting-elements">JSP Scripting Elements</h2>
+<p>JSP allows Java code inside the page using scripting elements.</p>
+<h3 id="types-of-scripting-elements">Types of Scripting Elements</h3>
+<ol>
 <li>
-<p><strong>Fixed Rate Scheduling</strong>: 
-  Executes the task repeatedly at fixed intervals, regardless of the execution time of the task. It is defined by the <code>fixedRate</code> attribute.</p>
+<p><strong>Declarations (<code>&lt;%! %&gt;</code>)</strong>
+   <code>jsp
+   &lt;%!
+       int sum(int a, int b) {
+           return a + b;
+       }
+   %&gt;</code></p>
 </li>
 <li>
-<p><strong>Fixed Delay Scheduling</strong>: 
-  Executes the task after a fixed amount of time, but the time is measured from the completion of the previous execution. It is defined by the <code>fixedDelay</code> attribute.</p>
+<p><strong>Scriptlets (<code>&lt;% %&gt;</code>)</strong>
+   <code>jsp
+   &lt;%
+       String message = "Hello, JSP!";
+       out.println("Message: " + message);
+   %&gt;</code></p>
 </li>
 <li>
-<p><strong>Cron Expression Scheduling</strong>: 
-  This provides a more flexible approach, allowing you to define more complex schedules using cron expressions (like running at a specific time of day, day of the week, etc.). It is defined by the <code>cron</code> attribute.</p>
+<p><strong>Expressions (<code>&lt;%= %&gt;</code>)</strong>
+   ```jsp
+ <br />
+<p>The sum of 5 and 10 is: <%= sum(5, 10) %></p></p>
 </li>
-</ul>
-<h3 id="3-enabling-scheduling">3. Enabling Scheduling:</h3>
-<ul>
-<li><strong><code>@EnableScheduling</code></strong>: 
-  This annotation is required to enable Spring's scheduling functionality in your application. It is typically added to the main application class to globally enable scheduled tasks.</li>
-</ul>
-<h3 id="4-scheduled-task-execution">4. Scheduled Task Execution:</h3>
-<ul>
-<li>The <code>@Scheduled</code> annotation is used to mark methods as scheduled tasks. Spring will execute these methods based on the configured schedule (fixed rate, fixed delay, or cron expression).</li>
-</ul>
-<h3 id="5-customizing-task-execution">5. Customizing Task Execution:</h3>
-<ul>
-<li>The default behavior of scheduled tasks is to execute in a single-threaded manner. However, this can be customized by providing a <code>ThreadPoolTaskScheduler</code> to control the number of threads used to execute scheduled tasks.</li>
-</ul>
-<h3 id="6-task-scheduler">6. Task Scheduler:</h3>
-<ul>
-<li>Spring Boot uses a <code>TaskScheduler</code> to handle the execution of scheduled tasks. By default, it uses a <code>SimpleAsyncTaskExecutor</code>, but a custom <code>ThreadPoolTaskScheduler</code> can be configured for more control, such as setting the number of threads or customizing task behavior.</li>
-</ul>
-<h3 id="7-profiles-and-scheduling">7. Profiles and Scheduling:</h3>
-<ul>
-<li>Scheduling tasks can be environment-specific, meaning you may want certain tasks to run only in specific environments (e.g., production but not development). Spring Boot supports defining scheduled tasks within specific profiles.</li>
-</ul>
-<h3 id="8-error-handling">8. Error Handling:</h3>
-<ul>
-<li>Scheduled tasks should be designed to handle failures. If a task fails, Spring doesn't automatically retry it. You should handle errors gracefully and ensure tasks don't break other processes.</li>
-</ul>
-<h2 id="use-cases">Use Cases</h2>
-<ul>
-<li>
-<p><strong>Data Cleanup</strong>: 
-  Periodically deleting old records from a database to maintain performance and data consistency.</p>
-</li>
-<li>
-<p><strong>Email Notifications</strong>: 
-  Sending periodic reminders, newsletters, or promotional emails.</p>
-</li>
-<li>
-<p><strong>Report Generation</strong>: 
-  Generating daily or weekly reports at specific times (e.g., midnight every day).</p>
-</li>
-<li>
-<p><strong>System Monitoring</strong>: 
-  Running health checks or monitoring system status at regular intervals.</p>
-</li>
-<li>
-<p><strong>Backup Jobs</strong>: 
-  Automating backups at specific times (e.g., every Sunday at 3:00 AM).</p>
-</li>
-</ul>
-<h2 id="summary">Summary</h2>
-<p>A scheduler in Spring Boot allows tasks to be executed automatically at specific intervals or times using the <code>@Scheduled</code> annotation. It can be configured with fixed rate, fixed delay, or cron expressions, and is essential for automating background processes like data cleanup, report generation, and system monitoring.</p>
+</ol>
+<p>```</p>
+<hr />
+<h2 id="jsp-implicit-objects">JSP Implicit Objects</h2>
+<p>JSP provides built-in objects for handling request and response data.</p>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>request</code></td>
+<td>Handles HTTP request data</td>
+</tr>
+<tr>
+<td><code>response</code></td>
+<td>Handles HTTP response data</td>
+</tr>
+<tr>
+<td><code>session</code></td>
+<td>Stores user session data</td>
+</tr>
+<tr>
+<td><code>application</code></td>
+<td>Stores application-wide data</td>
+</tr>
+<tr>
+<td><code>out</code></td>
+<td>Outputs data to the response</td>
+</tr>
+<tr>
+<td><code>config</code></td>
+<td>Servlet configuration details</td>
+</tr>
+<tr>
+<td><code>exception</code></td>
+<td>Handles exceptions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-using-request">Example: Using <code>request</code></h3>
+<pre><code class="language-jsp">&lt;%
+    String name = request.getParameter(&quot;username&quot;);
+    out.println(&quot;Hello, &quot; + name);
+%&gt;
+</code></pre>
+<hr />
+<h2 id="jsp-forms-and-request-handling">JSP Forms and Request Handling</h2>
+<h3 id="form-example-formjsp">Form Example (<code>form.jsp</code>)</h3>
+<pre><code class="language-jsp">&lt;form action=&quot;welcome.jsp&quot; method=&quot;post&quot;&gt;
+    Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<h3 id="processing-form-data-welcomejsp">Processing Form Data (<code>welcome.jsp</code>)</h3>
+<pre><code class="language-jsp">&lt;%
+    String name = request.getParameter(&quot;name&quot;);
+%&gt;
+&lt;h2&gt;Welcome, &lt;%= name %&gt;!&lt;/h2&gt;
+</code></pre>
+<hr />
+<h2 id="jsp-session-management">JSP Session Management</h2>
+<p>JSP supports <strong>session tracking</strong> to store user information across multiple pages.</p>
+<h3 id="storing-data-in-session">Storing Data in Session</h3>
+<pre><code class="language-jsp">&lt;%
+    session.setAttribute(&quot;username&quot;, &quot;JohnDoe&quot;);
+%&gt;
+</code></pre>
+<h3 id="retrieving-data-from-session">Retrieving Data from Session</h3>
+<pre><code class="language-jsp">&lt;%
+    String user = (String) session.getAttribute(&quot;username&quot;);
+    out.println(&quot;Welcome, &quot; + user);
+%&gt;
+</code></pre>
+<h3 id="invalidating-a-session">Invalidating a Session</h3>
+<pre><code class="language-jsp">&lt;%
+    session.invalidate();
+%&gt;
+</code></pre>
+<hr />
+<h2 id="jsp-error-handling">JSP Error Handling</h2>
+<h3 id="using-errorpage-directive">Using <code>errorPage</code> Directive</h3>
+<pre><code class="language-jsp">&lt;%@ page errorPage=&quot;error.jsp&quot; %&gt;
+</code></pre>
+<h3 id="creating-errorjsp">Creating <code>error.jsp</code></h3>
+<pre><code class="language-jsp">&lt;%@ page isErrorPage=&quot;true&quot; %&gt;
+&lt;h2&gt;Error Occurred: &lt;%= exception.getMessage() %&gt;&lt;/h2&gt;
+</code></pre>
+<hr />
+<h2 id="jsp-custom-tags-jstl">JSP Custom Tags (JSTL)</h2>
+<p>JSP Standard Tag Library (JSTL) simplifies JSP development.</p>
+<h3 id="adding-jstl-in-jsp">Adding JSTL in JSP</h3>
+<pre><code class="language-jsp">&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt;
+</code></pre>
+<h3 id="example-using-cforeach">Example: Using <code>c:forEach</code></h3>
+<pre><code class="language-jsp">&lt;c:forEach var=&quot;i&quot; begin=&quot;1&quot; end=&quot;5&quot;&gt;
+    &lt;p&gt;Number: ${i}&lt;/p&gt;
+&lt;/c:forEach&gt;
+</code></pre>
+<hr />
+<h2 id="deploying-a-jsp-application">Deploying a JSP Application</h2>
+<ol>
+<li>Place your JSP files inside <code>webapps/your_project/</code> in Tomcat.</li>
+<li>Start Tomcat and access the page at <code>http://localhost:8080/your_project/index.jsp</code>.</li>
+</ol>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>This guide covers the basics of JSP, including syntax, directives, scripting elements, and session management. With JSP, you can build dynamic web applications efficiently. 🚀</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Keycloak%20Implementation/" class="btn btn-neutral float-left" title="Keycloak"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../CorrelationId/" class="btn btn-neutral float-right" title="Correlation ID">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../SpringMVC/" class="btn btn-neutral float-left" title="Spring MVC"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Oauth/" class="btn btn-neutral float-right" title="OAuth2">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -358,10 +522,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../Keycloak%20Implementation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../SpringMVC/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../CorrelationId/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Oauth/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
