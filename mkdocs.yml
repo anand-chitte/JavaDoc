@@ -27,6 +27,8 @@ nav:
     - Hashmap: java/Hashmap.md
     - Comparable vs Compartor: java/Comparable vs Compartor.md
     - Iterator vs Iterable: java/Iterator & Iterable.md
+    - Design Pattern: java/DesignPattern.md
+    - Serialization: java/Serialization.md
     - Thread: java/Thread.md
     - Programming Questions: java/ProgrammingQuestions.md
   - Spring:

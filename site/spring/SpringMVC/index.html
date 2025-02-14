@@ -139,19 +139,19 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#without-maven-spring-mvc-hibernate-oracle-spring-security">Without Maven (Spring MVC + Hibernate + Oracle + Spring Security)</a>
+    <li class="toctree-l2"><a class="reference internal" href="#hibernate-implementation">Hibernate Implementation</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#1-download-dependencies-manually">1. Download Dependencies Manually:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#1-hibernate-configuration-hibernatecfgxml">1. Hibernate Configuration (hibernate.cfg.xml):</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#2-add-jars-to-classpath">2. Add JARs to Classpath:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#2-entity-class">2. Entity Class</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#3-hibernate-configuration-hibernatecfgxml">3. Hibernate Configuration (hibernate.cfg.xml):</a>
+    <li class="toctree-l3"><a class="reference internal" href="#3-dao-class-crud-operations">3. DAO Class (CRUD Operations)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-security-configuration-securityconfigjava">4. Security Configuration (SecurityConfig.java)</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#5-public-pages-handling">5. Public Pages Handling:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#4-service-layer">4. Service Layer</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#webxml-configuration">Web.xml Configuration</a>
     </li>
     </ul>
                   </li>
@@ -353,7 +353,7 @@ public class SecurityConfig {
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of(&quot;*&quot;);
+        config.setAllowedOrigins(List.of(&quot;*&quot;));
         config.setAllowedMethods(List.of(&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;));
         config.setAllowedHeaders(List.of(&quot;Authorization&quot;, &quot;Content-Type&quot;));
         source.registerCorsConfiguration(&quot;/**&quot;, config);
@@ -388,27 +388,122 @@ public class PublicController {
     }
 }
 </code></pre>
-<h2 id="without-maven-spring-mvc-hibernate-oracle-spring-security">Without Maven (Spring MVC + Hibernate + Oracle + Spring Security)</h2>
-<h3 id="1-download-dependencies-manually">1. Download Dependencies Manually:</h3>
-<p>Download the following JARs and add them to the <code>lib</code> folder:</p>
-<ul>
-<li><code>spring-webmvc-x.x.x.jar</code></li>
-<li><code>spring-jdbc-x.x.x.jar</code></li>
-<li><code>spring-orm-x.x.x.jar</code></li>
-<li><code>hibernate-core-x.x.x.jar</code></li>
-<li><code>ojdbc8.jar</code></li>
-<li><code>spring-security-config-x.x.x.jar</code></li>
-<li><code>spring-security-web-x.x.x.jar</code></li>
-</ul>
-<h3 id="2-add-jars-to-classpath">2. Add JARs to Classpath:</h3>
-<p>Ensure all downloaded JARs are included in your classpath.</p>
-<h3 id="3-hibernate-configuration-hibernatecfgxml">3. Hibernate Configuration (hibernate.cfg.xml):</h3>
-<p>Same as the Maven setup.</p>
-<h3 id="4-security-configuration-securityconfigjava">4. Security Configuration (SecurityConfig.java)</h3>
-<p>Use the same <code>SecurityConfig</code> as in the Maven setup.</p>
-<h3 id="5-public-pages-handling">5. Public Pages Handling:</h3>
-<p>Use the same <code>PublicController</code> setup as in the Maven configuration.</p>
-<p>This setup enables security, handles CSRF protection, cross-origin requests, and public page access in both Maven and non-Maven configurations.</p>
+<h2 id="hibernate-implementation">Hibernate Implementation</h2>
+<h3 id="1-hibernate-configuration-hibernatecfgxml">1. Hibernate Configuration (hibernate.cfg.xml):</h3>
+<pre><code class="language-xml">&lt;!DOCTYPE hibernate-configuration&gt;
+&lt;hibernate-configuration&gt;
+    &lt;session-factory&gt;
+        &lt;property name=&quot;hibernate.connection.driver_class&quot;&gt;oracle.jdbc.OracleDriver&lt;/property&gt;
+        &lt;property name=&quot;hibernate.connection.url&quot;&gt;jdbc:oracle:thin:@localhost:1521:xe&lt;/property&gt;
+        &lt;property name=&quot;hibernate.connection.username&quot;&gt;your_username&lt;/property&gt;
+        &lt;property name=&quot;hibernate.connection.password&quot;&gt;your_password&lt;/property&gt;
+        &lt;property name=&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.OracleDialect&lt;/property&gt;
+        &lt;property name=&quot;hibernate.hbm2ddl.auto&quot;&gt;update&lt;/property&gt;
+        &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt;
+    &lt;/session-factory&gt;
+&lt;/hibernate-configuration&gt;
+</code></pre>
+<h3 id="2-entity-class">2. Entity Class</h3>
+<pre><code class="language-java">@Entity
+@Table(name = &quot;users&quot;)
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private String email;
+
+    // Getters and Setters
+}
+</code></pre>
+<h3 id="3-dao-class-crud-operations">3. DAO Class (CRUD Operations)</h3>
+<pre><code class="language-java">@Repository
+public class UserDao {
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    public void saveUser(User user) {
+        sessionFactory.getCurrentSession().save(user);
+    }
+
+    public User getUserById(Long id) {
+        return sessionFactory.getCurrentSession().get(User.class, id);
+    }
+
+    public List&lt;User&gt; getAllUsers() {
+        return sessionFactory.getCurrentSession().createQuery(&quot;from User&quot;, User.class).list();
+    }
+
+    public void updateUser(User user) {
+        sessionFactory.getCurrentSession().update(user);
+    }
+
+    public void deleteUser(Long id) {
+        User user = getUserById(id);
+        if (user != null) {
+            sessionFactory.getCurrentSession().delete(user);
+        }
+    }
+}
+</code></pre>
+<h3 id="4-service-layer">4. Service Layer</h3>
+<pre><code class="language-java">@Service
+public class UserService {
+    @Autowired
+    private UserDao userDao;
+
+    @Transactional
+    public void saveUser(User user) {
+        userDao.saveUser(user);
+    }
+
+    @Transactional(readOnly = true)
+    public User getUserById(Long id) {
+        return userDao.getUserById(id);
+    }
+
+    @Transactional(readOnly = true)
+    public List&lt;User&gt; getAllUsers() {
+        return userDao.getAllUsers();
+    }
+
+    @Transactional
+    public void updateUser(User user) {
+        userDao.updateUser(user);
+    }
+
+    @Transactional
+    public void deleteUser(Long id) {
+        userDao.deleteUser(id);
+    }
+}
+</code></pre>
+<h2 id="webxml-configuration">Web.xml Configuration</h2>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee
+         http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd&quot;
+         version=&quot;3.1&quot;&gt;
+
+    &lt;display-name&gt;Spring MVC Application&lt;/display-name&gt;
+
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+            &lt;param-value&gt;/WEB-INF/spring-servlet.xml&lt;/param-value&gt;
+        &lt;/init-param&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt;
+
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+</code></pre>
               
             </div>
           </div><footer>
