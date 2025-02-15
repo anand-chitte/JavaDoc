@@ -1,10 +1,21 @@
-# Spring MVC + Hibernate + Oracle with and without Maven
+# Step-by-Step Guide: Configuring Spring MVC with Hibernate and Oracle (With & Without Maven)
 
-## With Maven (Spring MVC + Hibernate + Oracle + Spring Security)
+This guide walks you through setting up a **Spring MVC application** integrated with **Hibernate and Oracle**, both **with and without Maven**. The guide covers **Java and XML configurations** for Hibernate, Spring Security, Controller, DAO, and Service layers.
 
-### 1. Maven Dependencies (pom.xml)
-Add the following dependencies to your `pom.xml`:
+---
+## 1. Setting Up a Spring MVC Project
 
+### **Without Maven**
+1. Create a **Dynamic Web Project** in Eclipse/IntelliJ.
+2. Add **Spring and Hibernate JAR files** to the `WEB-INF/lib` directory.
+3. Create the required configuration files.
+
+### **With Maven**
+1. Create a **Maven Project**.
+2. Add the required dependencies in `pom.xml`.
+
+---
+## 2. Maven Dependencies (`pom.xml`)
 ```xml
 <dependencies>
     <!-- Spring MVC -->
@@ -34,110 +45,12 @@ Add the following dependencies to your `pom.xml`:
         <artifactId>ojdbc8</artifactId>
         <version>19.8.0.0</version>
     </dependency>
-
-    <!-- Spring ORM (for Hibernate integration) -->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-orm</artifactId>
-        <version>5.3.29</version>
-    </dependency>
-
-    <!-- Spring Context -->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-context</artifactId>
-        <version>5.3.29</version>
-    </dependency>
-
-    <!-- Spring Security -->
-    <dependency>
-        <groupId>org.springframework.security</groupId>
-        <artifactId>spring-security-config</artifactId>
-        <version>5.7.2</version>
-    </dependency>
-
-    <dependency>
-        <groupId>org.springframework.security</groupId>
-        <artifactId>spring-security-web</artifactId>
-        <version>5.7.2</version>
-    </dependency>
 </dependencies>
 ```
+---
+## 3. Hibernate Configuration
 
-### 2. Security Configuration (SecurityConfig.java)
-```java
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
-
-import java.util.List;
-
-@Configuration
-public class SecurityConfig {
-
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-            .csrf().disable()
-            .cors()
-            .and()
-            .authorizeRequests()
-            .antMatchers("/public/**").permitAll()
-            .anyRequest().authenticated()
-            .and()
-            .formLogin();
-        return http.build();
-    }
-
-    @Bean
-    public CorsFilter corsFilter() {
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("*"));
-        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
-        config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
-        source.registerCorsConfiguration("/**", config);
-        return new CorsFilter(source);
-    }
-}
-```
-
-### 3. Public Pages Handling
-Ensure the following pages are accessible without authentication:
-
-- `/public/home`
-- `/public/about`
-- `/public/contact`
-
-Modify your controller:
-```java
-@Controller
-public class PublicController {
-
-    @GetMapping("/public/home")
-    public String home() {
-        return "home";
-    }
-
-    @GetMapping("/public/about")
-    public String about() {
-        return "about";
-    }
-
-    @GetMapping("/public/contact")
-    public String contact() {
-        return "contact";
-    }
-}
-```
-
-## Hibernate Implementation
-
-### 1. Hibernate Configuration (hibernate.cfg.xml):
+### **Using XML (`hibernate.cfg.xml`)**
 ```xml
 <!DOCTYPE hibernate-configuration>
 <hibernate-configuration>
@@ -153,91 +66,46 @@ public class PublicController {
 </hibernate-configuration>
 ```
 
-### 2. Entity Class
+### **Using Java Configuration (`HibernateConfig.java`)**
 ```java
-@Entity
-@Table(name = "users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String email;
-
-    // Getters and Setters
-}
-```
-
-### 3. DAO Class (CRUD Operations)
-```java
-@Repository
-public class UserDao {
-    @Autowired
-    private SessionFactory sessionFactory;
-
-    public void saveUser(User user) {
-        sessionFactory.getCurrentSession().save(user);
+@Configuration
+@EnableTransactionManagement
+public class HibernateConfig {
+    @Bean
+    public LocalSessionFactoryBean sessionFactory() {
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        sessionFactory.setPackagesToScan("com.example.model");
+        sessionFactory.setDataSource(dataSource());
+        sessionFactory.setHibernateProperties(hibernateProperties());
+        return sessionFactory;
     }
 
-    public User getUserById(Long id) {
-        return sessionFactory.getCurrentSession().get(User.class, id);
+    @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
+        dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+        dataSource.setUsername("your_username");
+        dataSource.setPassword("your_password");
+        return dataSource;
     }
 
-    public List<User> getAllUsers() {
-        return sessionFactory.getCurrentSession().createQuery("from User", User.class).list();
-    }
-
-    public void updateUser(User user) {
-        sessionFactory.getCurrentSession().update(user);
-    }
-
-    public void deleteUser(Long id) {
-        User user = getUserById(id);
-        if (user != null) {
-            sessionFactory.getCurrentSession().delete(user);
-        }
+    private Properties hibernateProperties() {
+        Properties properties = new Properties();
+        properties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
+        properties.put("hibernate.hbm2ddl.auto", "update");
+        properties.put("hibernate.show_sql", "true");
+        return properties;
     }
 }
 ```
+---
+## 4. Web Configuration
 
-### 4. Service Layer
-```java
-@Service
-public class UserService {
-    @Autowired
-    private UserDao userDao;
-
-    @Transactional
-    public void saveUser(User user) {
-        userDao.saveUser(user);
-    }
-
-    @Transactional(readOnly = true)
-    public User getUserById(Long id) {
-        return userDao.getUserById(id);
-    }
-
-    @Transactional(readOnly = true)
-    public List<User> getAllUsers() {
-        return userDao.getAllUsers();
-    }
-
-    @Transactional
-    public void updateUser(User user) {
-        userDao.updateUser(user);
-    }
-
-    @Transactional
-    public void deleteUser(Long id) {
-        userDao.deleteUser(id);
-    }
-}
-```
-
-## Web.xml Configuration
-
+### **Using XML**
+1. Create `web.xml`
+This file is placed inside `WEB-INF/` and is used to configure the DispatcherServlet.
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
@@ -262,3 +130,130 @@ public class UserService {
     </servlet-mapping>
 </web-app>
 ```
+### 2. Create `spring-servlet.xml`
+This file is placed inside `WEB-INF/` and configures the Spring MVC components.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/mvc 
+           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- Enable Spring MVC -->
+    <mvc:annotation-driven/>
+
+    <!-- Component Scanning -->
+    <context:component-scan base-package="com.example" />
+
+    <!-- View Resolver -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+</beans>
+```
+
+### **Using Java Configuration (`MyWebAppInitializer & WebConfig.java`)**
+```java
+public class MyWebAppInitializer implements WebApplicationInitializer {
+
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
+        // Create the Spring application context
+        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+        context.register(AppConfig.class);
+
+        // Create and register the DispatcherServlet
+        ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher",
+                new DispatcherServlet(context));
+        dispatcher.setLoadOnStartup(1);
+        dispatcher.addMapping("/");
+    }
+}
+```
+```java
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = "com.example") // Change package as needed
+public class AppConfig {
+
+    @Bean
+    public ViewResolver viewResolver() {
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+        resolver.setPrefix("/WEB-INF/views/");
+        resolver.setSuffix(".jsp");
+        return resolver;
+    }
+}
+
+```
+---
+## 5. Security Configuration (`SecurityConfig.java`)
+```java
+@Configuration
+public class SecurityConfig {
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+            .authorizeRequests()
+            .antMatchers("/public/**").permitAll()
+            .anyRequest().authenticated()
+            .and()
+            .formLogin();
+        return http.build();
+    }
+}
+```
+---
+## 6. Controller Layer
+```java
+@Controller
+public class UserController {
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/users")
+    public String listUsers(Model model) {
+        model.addAttribute("users", userService.getAllUsers());
+        return "users";
+    }
+}
+```
+---
+## 7. DAO Layer
+```java
+@Repository
+public class UserDao {
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    public List<User> getAllUsers() {
+        return sessionFactory.getCurrentSession().createQuery("from User", User.class).list();
+    }
+}
+```
+---
+## 8. Service Layer
+```java
+@Service
+public class UserService {
+    @Autowired
+    private UserDao userDao;
+
+    @Transactional(readOnly = true)
+    public List<User> getAllUsers() {
+        return userDao.getAllUsers();
+    }
+}
+```
+---
+This guide provides a **step-by-step** implementation of a Spring MVC project **with and without Maven**. Let me know if you need any refinements! 🚀
+

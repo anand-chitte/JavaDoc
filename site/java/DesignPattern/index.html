@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/Interface/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/DesignPattern/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Interface - Java</title>
+    <title>Design Pattern - Java</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Interface";
-        var mkdocs_page_input_path = "java\\Interface.md";
-        var mkdocs_page_url = "/JavaDoc/java/Interface/";
+        var mkdocs_page_name = "Design Pattern";
+        var mkdocs_page_input_path = "java\\DesignPattern.md";
+        var mkdocs_page_url = "/JavaDoc/java/DesignPattern/";
       </script>
     
     <!--[if lt IE 9]>
@@ -74,17 +74,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../String/">String</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Interface</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#key-features-of-interfaces">Key Features of Interfaces:</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#limitations-of-interfaces">Limitations of Interfaces:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#example">Example:</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Interface/">Interface</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Exception%20in%20Java/">Exception in Java</a>
                   </li>
@@ -106,7 +96,29 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../DesignPattern/">Design Pattern</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Design Pattern</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-singleton-pattern">1. Singleton Pattern</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#definition">Definition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation">Implementation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-points">Key Points</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-factory-pattern">2. Factory Pattern</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#definition_1">Definition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation_1">Implementation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-points_1">Key Points</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Serialization/">Serialization</a>
                   </li>
@@ -239,7 +251,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Java</li>
-      <li class="breadcrumb-item active">Interface</li>
+      <li class="breadcrumb-item active">Design Pattern</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -248,43 +260,101 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="key-points-about-interfaces-in-java">Key Points About Interfaces in Java</h1>
-<p>An interface is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. Interfaces cannot contain instance fields or constructors.</p>
-<h2 id="key-features-of-interfaces">Key Features of Interfaces:</h2>
-<ul>
-<li><strong>No Implementation</strong>: Methods in an interface have no implementation, only method signatures.</li>
-<li><strong>Multiple Inheritance</strong>: A class can implement multiple interfaces, overcoming the limitation of multiple inheritance in Java classes.</li>
-<li><strong>Abstract Methods</strong>: All methods in an interface are abstract by default, except for default and static methods.</li>
-<li><strong>Default Methods</strong>: Introduced in Java 8, interfaces can have default methods that provide default implementations.</li>
-<li><strong>Static Methods</strong>: Interfaces can also have static methods.</li>
-</ul>
-<h3 id="limitations-of-interfaces">Limitations of Interfaces:</h3>
-<ul>
-<li>Cannot contain instance fields.</li>
-<li>Cannot have constructors</li>
-</ul>
-<h3 id="example">Example:</h3>
-<pre><code class="language-java">interface MyInterface {
-    int CONSTANT_VALUE = 100;  // Constant
-    void abstractMethod();     // Abstract method
+                <h1 id="singleton-and-factory-design-patterns-in-java">Singleton and Factory Design Patterns in Java</h1>
+<h2 id="1-singleton-pattern">1. Singleton Pattern</h2>
+<h3 id="definition">Definition</h3>
+<p>The Singleton pattern ensures that a class has only one instance and provides a global point of access to it.</p>
+<h3 id="implementation">Implementation</h3>
+<pre><code class="language-java">// Singleton using Lazy Initialization (Thread-Safe)
+class Singleton {
+    private static Singleton instance;
 
-    // Default method
-    default void defaultMethod() {
-        System.out.println(&quot;Default implementation&quot;);
+    private Singleton() { }
+
+    public static synchronized Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
     }
 
-    // Static method
-    static void staticMethod() {
-        System.out.println(&quot;Static method in interface&quot;);
+    public void showMessage() {
+        System.out.println(&quot;Hello from Singleton!&quot;);
+    }
+}
+
+public class SingletonDemo {
+    public static void main(String[] args) {
+        Singleton singleton = Singleton.getInstance();
+        singleton.showMessage();
     }
 }
 </code></pre>
+<h3 id="key-points">Key Points</h3>
+<ul>
+<li><strong>Private Constructor</strong> to prevent instantiation.</li>
+<li><strong>Static Method</strong> to provide a single access point.</li>
+<li><strong>Lazy Initialization with Synchronization</strong> for thread safety.</li>
+</ul>
+<hr />
+<h2 id="2-factory-pattern">2. Factory Pattern</h2>
+<h3 id="definition_1">Definition</h3>
+<p>The Factory pattern provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created.</p>
+<h3 id="implementation_1">Implementation</h3>
+<pre><code class="language-java">// Step 1: Create an interface
+interface Animal {
+    void speak();
+}
+
+// Step 2: Implement concrete classes
+class Dog implements Animal {
+    public void speak() {
+        System.out.println(&quot;Woof Woof!&quot;);
+    }
+}
+
+class Cat implements Animal {
+    public void speak() {
+        System.out.println(&quot;Meow Meow!&quot;);
+    }
+}
+
+// Step 3: Create Factory Class
+class AnimalFactory {
+    public static Animal getAnimal(String type) {
+        if (type.equalsIgnoreCase(&quot;DOG&quot;)) {
+            return new Dog();
+        } else if (type.equalsIgnoreCase(&quot;CAT&quot;)) {
+            return new Cat();
+        }
+        return null;
+    }
+}
+
+public class FactoryDemo {
+    public static void main(String[] args) {
+        Animal dog = AnimalFactory.getAnimal(&quot;DOG&quot;);
+        dog.speak();
+
+        Animal cat = AnimalFactory.getAnimal(&quot;CAT&quot;);
+        cat.speak();
+    }
+}
+</code></pre>
+<h3 id="key-points_1">Key Points</h3>
+<ul>
+<li><strong>Encapsulates Object Creation</strong> by delegating it to a separate factory class.</li>
+<li><strong>Improves Maintainability</strong> as new types can be added without modifying client code.</li>
+<li><strong>Hides Complexity</strong> by abstracting the instantiation logic.</li>
+</ul>
+<hr />
+<p>Both <strong>Singleton</strong> and <strong>Factory</strong> are widely used design patterns in Java. Singleton is useful for managing global shared resources, while Factory helps in object creation without exposing the instantiation logic.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../String/" class="btn btn-neutral float-left" title="String"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Exception%20in%20Java/" class="btn btn-neutral float-right" title="Exception in Java">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Iterator%20%26%20Iterable/" class="btn btn-neutral float-left" title="Iterator vs Iterable"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Serialization/" class="btn btn-neutral float-right" title="Serialization">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -307,10 +377,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../String/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Iterator%20%26%20Iterable/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Exception%20in%20Java/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Serialization/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

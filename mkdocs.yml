@@ -13,7 +13,7 @@ nav:
     - Casting: java/Casting.md
     - Object-Oriented Programming: java/Object-Oriented Programming.md
     - Constructor: java/Constructor.md
-    - Method overloading & overiding: java/Method overloading & overiding.md
+    - Method overloading & overriding: java/Method overloading & overiding.md
     - Static & Final Keyword: java/StaticFinalKeyword.md
     - String: java/String.md
     - Interface: java/Interface.md
