@@ -210,6 +210,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../RabbitMQ/">RabbitMQ</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../AWS/">AWS</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Agile/">Agile</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Fastag/">Fastag</a>
@@ -360,6 +362,177 @@
 <li><code>docker top &lt;container&gt;</code> - Display processes running in a container.  </li>
 <li><code>docker history &lt;image&gt;</code> - Show the history of an image.  </li>
 </ul>
+<h2 id="docker-compose-configuration">Docker Compose Configuration</h2>
+<h3 id="docker-composeyml"><code>docker-compose.yml</code></h3>
+<pre><code class="language-yaml">services:
+  redis:
+    image: redis
+    ports:
+      - &quot;6379:6379&quot;
+    healthcheck:
+      test: [ &quot;CMD-SHELL&quot;, &quot;redis-cli ping | grep PONG&quot; ]
+      timeout: 10s
+      retries: 10
+    extends:
+      file: common-config.yml
+      service: network-deploy-service
+
+  configserver:
+    image: &quot;eazybytes/configserver:s10&quot;
+    container_name: configserver-ms
+    ports:
+      - &quot;8071:8071&quot;
+    healthcheck:
+      test: &quot;curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1&quot;
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    extends:
+      file: common-config.yml
+      service: microservice-base-config
+
+  eurekaserver:
+    image: &quot;eazybytes/eurekaserver:s10&quot;
+    container_name: eurekaserver-ms
+    ports:
+      - &quot;8070:8070&quot;
+    depends_on:
+      configserver:
+        condition: service_healthy
+    healthcheck:
+      test: &quot;curl --fail --silent localhost:8070/actuator/health/readiness | grep UP || exit 1&quot;
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config
+    environment:
+      SPRING_APPLICATION_NAME: &quot;eurekaserver&quot;
+
+  accounts:
+    image: &quot;eazybytes/accounts:s10&quot;
+    container_name: accounts-ms
+    ports:
+      - &quot;8080:8080&quot;
+    depends_on:
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+    healthcheck:
+      test: &quot;curl --fail --silent localhost:8080/actuator/health/readiness | grep UP || exit 1&quot;
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    environment:
+      SPRING_APPLICATION_NAME: &quot;accounts&quot;
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
+
+  loans:
+    image: &quot;eazybytes/loans:s10&quot;
+    container_name: loans-ms
+    ports:
+      - &quot;8090:8090&quot;
+    depends_on:
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+    healthcheck:
+      test: &quot;curl --fail --silent localhost:8090/actuator/health/readiness | grep UP || exit 1&quot;
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    environment:
+      SPRING_APPLICATION_NAME: &quot;loans&quot;
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
+
+  cards:
+    image: &quot;eazybytes/cards:s10&quot;
+    container_name: cards-ms
+    ports:
+      - &quot;9000:9000&quot;
+    depends_on:
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+    healthcheck:
+      test: &quot;curl --fail --silent localhost:9000/actuator/health/readiness | grep UP || exit 1&quot;
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    environment:
+      SPRING_APPLICATION_NAME: &quot;cards&quot;
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
+
+  gatewayserver:
+    image: &quot;eazybytes/gatewayserver:s10&quot;
+    container_name: gatewayserver-ms
+    ports:
+      - &quot;8072:8072&quot;
+    depends_on:
+      accounts:
+        condition: service_healthy
+      loans:
+        condition: service_healthy
+      cards:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: &quot;gatewayserver&quot;
+      SPRING_DATA_REDIS_CONNECT-TIMEOUT: 2s
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
+      SPRING_DATA_REDIS_TIMEOUT: 1s
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
+
+networks:
+  eazybank:
+    driver: &quot;bridge&quot;
+</code></pre>
+<h3 id="common-configyml"><code>common-config.yml</code></h3>
+<pre><code class="language-yaml">services:
+  network-deploy-service:
+    networks:
+      - eazybank
+
+  microservice-base-config:
+    extends:
+      service: network-deploy-service
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+
+  microservice-configserver-config:
+    extends:
+      service: microservice-base-config
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+      SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
+
+  microservice-eureka-config:
+    extends:
+      service: microservice-configserver-config
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
+</code></pre>
               
             </div>
           </div><footer>
