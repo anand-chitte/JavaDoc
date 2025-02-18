@@ -13,6 +13,23 @@ A read-only template used to create containers. It contains the application and 
 ### 3. **Dockerfile**
 A script that contains instructions for Docker to create an image. It defines the application's environment, dependencies, and configuration settings.
 
+```dockerfile
+# Use an official Java runtime as a parent image
+FROM openjdk:17-jdk-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the jar file from the target directory to the container
+COPY target/my-spring-boot-app.jar app.jar
+
+# Expose the port the app will run on
+EXPOSE 8080
+
+# Run the Spring Boot application
+ENTRYPOINT ["java", "-jar", "app.jar"]
+```
+
 ### 4. **Docker Hub**
 A public repository where Docker images can be shared. It’s similar to GitHub, but for Docker images.
 
