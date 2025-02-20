@@ -64,7 +64,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../AccessModifier/">AccessModifier</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../AccessModifier/">Access Modifier</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
@@ -98,37 +98,85 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Thread/">Thread</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../MarkerInterface/">Marker Interface</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Design Pattern</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-singleton-pattern">1. Singleton Pattern</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-data-transfer-object-dto-pattern">1️⃣ Data Transfer Object (DTO) Pattern</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#definition">Definition</a>
+    <li class="toctree-l3"><a class="reference internal" href="#purpose">Purpose:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#implementation">Implementation</a>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits">Benefits:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#key-points">Key Points</a>
+    <li class="toctree-l3"><a class="reference internal" href="#example">Example:</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#dto-class">DTO Class</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#service-layer-converting-entity-to-dto">Service Layer Converting Entity to DTO</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#controller-returning-dto">Controller Returning DTO</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-factory-pattern">2. Factory Pattern</a>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-singleton-pattern">2️⃣ Singleton Pattern</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#definition_1">Definition</a>
+    <li class="toctree-l3"><a class="reference internal" href="#purpose_1">Purpose:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#implementation_1">Implementation</a>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits_1">Benefits:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#key-points_1">Key Points</a>
+    <li class="toctree-l3"><a class="reference internal" href="#example-in-spring-boot">Example in Spring Boot:</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#manually-implementing-singleton-in-java">Manually Implementing Singleton in Java:</a>
     </li>
         </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-factory-pattern">3️⃣ Factory Pattern</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#purpose_2">Purpose:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits_2">Benefits:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_1">Example:</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#factory-class">Factory Class</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-in-service-layer">Usage in Service Layer</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-strategy-pattern">4️⃣ Strategy Pattern</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#purpose_3">Purpose:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits_3">Benefits:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-different-discount-strategies">Example: Different Discount Strategies</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#strategy-interface">Strategy Interface</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#concrete-strategies">Concrete Strategies</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#context-class-using-strategy">Context Class Using Strategy</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example">Usage Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../DesignPatternSpringBoot/">Design Pattern Spring Boot</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Serialization/">Serialization</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Thread/">Thread</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../VariableArgument/">Variable Argument</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ProgrammingQuestions/">Programming Questions</a>
                   </li>
@@ -196,8 +244,10 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/DesignPattern/">Design Pattern</a>
+                  </li>
               </ul>
-              <p class="caption"><span class="caption-text">PostgeSQL</span></p>
+              <p class="caption"><span class="caption-text">PostgreSQL</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
                   </li>
@@ -268,101 +318,201 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="singleton-and-factory-design-patterns-in-java">Singleton and Factory Design Patterns in Java</h1>
-<h2 id="1-singleton-pattern">1. Singleton Pattern</h2>
-<h3 id="definition">Definition</h3>
-<p>The Singleton pattern ensures that a class has only one instance and provides a global point of access to it.</p>
-<h3 id="implementation">Implementation</h3>
-<pre><code class="language-java">// Singleton using Lazy Initialization (Thread-Safe)
-class Singleton {
+                <h1 id="design-patterns-in-spring-boot">Design Patterns in Spring Boot</h1>
+<h2 id="1-data-transfer-object-dto-pattern">1️⃣ Data Transfer Object (DTO) Pattern</h2>
+<h3 id="purpose"><strong>Purpose:</strong></h3>
+<p>The <strong>DTO (Data Transfer Object)</strong> pattern is used to transfer data between layers without exposing the internal entity structure.</p>
+<h3 id="benefits"><strong>Benefits:</strong></h3>
+<ul>
+<li><strong>Encapsulation:</strong> Hides entity details.</li>
+<li><strong>Performance:</strong> Transfers only required fields.</li>
+<li><strong>Security:</strong> Prevents unnecessary exposure of data.</li>
+</ul>
+<h3 id="example"><strong>Example:</strong></h3>
+<h4 id="dto-class"><strong>DTO Class</strong></h4>
+<pre><code class="language-java">public class UserDTO {
+    private String name;
+    private String email;
+
+    // Constructors
+    public UserDTO() {}
+
+    public UserDTO(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    // Getters and Setters
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+}
+</code></pre>
+<h4 id="service-layer-converting-entity-to-dto"><strong>Service Layer Converting Entity to DTO</strong></h4>
+<pre><code class="language-java">public class UserMapper {
+    public static UserDTO toDTO(User user) {
+        return new UserDTO(user.getName(), user.getEmail());
+    }
+}
+</code></pre>
+<h4 id="controller-returning-dto"><strong>Controller Returning DTO</strong></h4>
+<pre><code class="language-java">@RestController
+@RequestMapping(&quot;/users&quot;)
+public class UserController {
+    @Autowired
+    private UserService userService;
+
+    @GetMapping
+    public List&lt;UserDTO&gt; getUsers() {
+        return userService.getAllUsers().stream()
+                .map(UserMapper::toDTO)
+                .collect(Collectors.toList());
+    }
+}
+</code></pre>
+<hr />
+<h2 id="2-singleton-pattern">2️⃣ Singleton Pattern</h2>
+<h3 id="purpose_1"><strong>Purpose:</strong></h3>
+<p>The <strong>Singleton Pattern</strong> ensures that a class has only one instance throughout the application's lifecycle.</p>
+<h3 id="benefits_1"><strong>Benefits:</strong></h3>
+<ul>
+<li><strong>Resource Management:</strong> Ensures a single instance of a service or component.</li>
+<li><strong>Thread Safety:</strong> Prevents multiple conflicting instances.</li>
+</ul>
+<h3 id="example-in-spring-boot"><strong>Example in Spring Boot:</strong></h3>
+<pre><code class="language-java">@Service // Spring creates a single instance of this class
+public class UserService {
+    public String getUserData() {
+        return &quot;User Data&quot;;
+    }
+}
+</code></pre>
+<p>Since Spring beans are singletons by default, <code>@Service</code>, <code>@Repository</code>, and <code>@Controller</code> automatically implement this pattern.</p>
+<h4 id="manually-implementing-singleton-in-java"><strong>Manually Implementing Singleton in Java:</strong></h4>
+<pre><code class="language-java">public class Singleton {
     private static Singleton instance;
 
-    private Singleton() { }
+    private Singleton() {}
 
-    public static synchronized Singleton getInstance() {
+    public static Singleton getInstance() {
         if (instance == null) {
             instance = new Singleton();
         }
         return instance;
     }
-
-    public void showMessage() {
-        System.out.println(&quot;Hello from Singleton!&quot;);
-    }
-}
-
-public class SingletonDemo {
-    public static void main(String[] args) {
-        Singleton singleton = Singleton.getInstance();
-        singleton.showMessage();
-    }
 }
 </code></pre>
-<h3 id="key-points">Key Points</h3>
-<ul>
-<li><strong>Private Constructor</strong> to prevent instantiation.</li>
-<li><strong>Static Method</strong> to provide a single access point.</li>
-<li><strong>Lazy Initialization with Synchronization</strong> for thread safety.</li>
-</ul>
 <hr />
-<h2 id="2-factory-pattern">2. Factory Pattern</h2>
-<h3 id="definition_1">Definition</h3>
-<p>The Factory pattern provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created.</p>
-<h3 id="implementation_1">Implementation</h3>
-<pre><code class="language-java">// Step 1: Create an interface
-interface Animal {
-    void speak();
-}
-
-// Step 2: Implement concrete classes
-class Dog implements Animal {
-    public void speak() {
-        System.out.println(&quot;Woof Woof!&quot;);
-    }
-}
-
-class Cat implements Animal {
-    public void speak() {
-        System.out.println(&quot;Meow Meow!&quot;);
-    }
-}
-
-// Step 3: Create Factory Class
-class AnimalFactory {
-    public static Animal getAnimal(String type) {
-        if (type.equalsIgnoreCase(&quot;DOG&quot;)) {
-            return new Dog();
-        } else if (type.equalsIgnoreCase(&quot;CAT&quot;)) {
-            return new Cat();
+<h2 id="3-factory-pattern">3️⃣ Factory Pattern</h2>
+<h3 id="purpose_2"><strong>Purpose:</strong></h3>
+<p>The <strong>Factory Pattern</strong> provides a way to create objects dynamically without specifying the exact class.</p>
+<h3 id="benefits_2"><strong>Benefits:</strong></h3>
+<ul>
+<li><strong>Decouples object creation from implementation.</strong></li>
+<li><strong>Simplifies object instantiation logic.</strong></li>
+<li><strong>Supports different object types based on input.</strong></li>
+</ul>
+<h3 id="example_1"><strong>Example:</strong></h3>
+<h4 id="factory-class"><strong>Factory Class</strong></h4>
+<pre><code class="language-java">public class UserDTOFactory {
+    public static UserDTO createUserDTO(User user, boolean detailed) {
+        if (detailed) {
+            return new DetailedUserDTO(user.getName(), user.getEmail(), user.getAddress());
         }
-        return null;
-    }
-}
-
-public class FactoryDemo {
-    public static void main(String[] args) {
-        Animal dog = AnimalFactory.getAnimal(&quot;DOG&quot;);
-        dog.speak();
-
-        Animal cat = AnimalFactory.getAnimal(&quot;CAT&quot;);
-        cat.speak();
+        return new UserDTO(user.getName(), user.getEmail());
     }
 }
 </code></pre>
-<h3 id="key-points_1">Key Points</h3>
-<ul>
-<li><strong>Encapsulates Object Creation</strong> by delegating it to a separate factory class.</li>
-<li><strong>Improves Maintainability</strong> as new types can be added without modifying client code.</li>
-<li><strong>Hides Complexity</strong> by abstracting the instantiation logic.</li>
-</ul>
+<h4 id="usage-in-service-layer"><strong>Usage in Service Layer</strong></h4>
+<pre><code class="language-java">public class UserService {
+    public UserDTO getUserDTO(User user, boolean detailed) {
+        return UserDTOFactory.createUserDTO(user, detailed);
+    }
+}
+</code></pre>
 <hr />
-<p>Both <strong>Singleton</strong> and <strong>Factory</strong> are widely used design patterns in Java. Singleton is useful for managing global shared resources, while Factory helps in object creation without exposing the instantiation logic.</p>
+<h2 id="4-strategy-pattern">4️⃣ Strategy Pattern</h2>
+<h3 id="purpose_3"><strong>Purpose:</strong></h3>
+<p>The <strong>Strategy Pattern</strong> allows defining multiple algorithms and selecting one dynamically at runtime.</p>
+<h3 id="benefits_3"><strong>Benefits:</strong></h3>
+<ul>
+<li><strong>Flexibility:</strong> Switch strategies at runtime.</li>
+<li><strong>Open/Closed Principle:</strong> Easily extendable with new strategies.</li>
+<li><strong>Encapsulation:</strong> Encapsulates different behaviors into separate classes.</li>
+</ul>
+<h3 id="example-different-discount-strategies"><strong>Example: Different Discount Strategies</strong></h3>
+<h4 id="strategy-interface"><strong>Strategy Interface</strong></h4>
+<pre><code class="language-java">public interface DiscountStrategy {
+    double applyDiscount(double amount);
+}
+</code></pre>
+<h4 id="concrete-strategies"><strong>Concrete Strategies</strong></h4>
+<pre><code class="language-java">public class NewYearDiscount implements DiscountStrategy {
+    public double applyDiscount(double amount) {
+        return amount * 0.9; // 10% discount
+    }
+}
+
+public class RegularDiscount implements DiscountStrategy {
+    public double applyDiscount(double amount) {
+        return amount * 0.95; // 5% discount
+    }
+}
+</code></pre>
+<h4 id="context-class-using-strategy"><strong>Context Class Using Strategy</strong></h4>
+<pre><code class="language-java">public class DiscountService {
+    private DiscountStrategy discountStrategy;
+
+    public void setDiscountStrategy(DiscountStrategy discountStrategy) {
+        this.discountStrategy = discountStrategy;
+    }
+
+    public double getFinalPrice(double amount) {
+        return discountStrategy.applyDiscount(amount);
+    }
+}
+</code></pre>
+<h4 id="usage-example"><strong>Usage Example</strong></h4>
+<pre><code class="language-java">DiscountService discountService = new DiscountService();
+discountService.setDiscountStrategy(new NewYearDiscount());
+double price = discountService.getFinalPrice(1000);
+</code></pre>
+<hr />
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Design Pattern</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DTO</strong></td>
+<td>Transfers data between layers without exposing entity structure.</td>
+</tr>
+<tr>
+<td><strong>Singleton</strong></td>
+<td>Ensures a single instance of a class throughout the app.</td>
+</tr>
+<tr>
+<td><strong>Factory</strong></td>
+<td>Creates objects dynamically without specifying exact class.</td>
+</tr>
+<tr>
+<td><strong>Strategy</strong></td>
+<td>Allows selecting an algorithm dynamically at runtime.</td>
+</tr>
+</tbody>
+</table>
+<p>These patterns improve <strong>maintainability, scalability, and flexibility</strong> in your Spring Boot applications! 🚀</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../MarkerInterface/" class="btn btn-neutral float-left" title="Marker Interface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../DesignPatternSpringBoot/" class="btn btn-neutral float-right" title="Design Pattern Spring Boot">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../VariableArgument/" class="btn btn-neutral float-right" title="Variable Argument">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -388,7 +538,7 @@ public class FactoryDemo {
       <span><a href="../MarkerInterface/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../DesignPatternSpringBoot/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../VariableArgument/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -53,6 +53,29 @@ Microservices should be resilient to failures. Some key patterns include:
 - Timeouts prevent long waits for unresponsive services.
 - Rate limiting prevents excessive API calls from overloading services.
 
----
+## 5. API Gateway Pattern
+- A single entry point for all client requests to microservices.
+- Handles authentication, logging, request routing, and response aggregation.
+- Reduces direct client-to-microservice communication, improving security and performance.
+- Example: Netflix Zuul, Spring Cloud Gateway, Kong API Gateway.
 
+## 6. Gateway Routing Pattern
+- The API Gateway routes requests to the appropriate microservices based on predefined rules.
+- Enables better load balancing and service discovery.
+- Example: A request to `/users` is routed to the User Service, while `/orders` is routed to the Order Service.
+
+## 7. Gateway Offloading Pattern
+- The API Gateway offloads common tasks from microservices such as:
+  - Authentication and authorization.
+  - Request and response transformation.
+  - Rate limiting and caching.
+  - Logging and monitoring.
+- Helps microservices remain lightweight and focused on business logic.
+
+## 8. Backend for Frontend (BFF) Pattern
+- A specialized API Gateway tailored for different frontend clients (web, mobile, desktop, etc.).
+- Improves user experience by optimizing API responses based on client needs.
+- Example: A mobile BFF service returns lightweight JSON responses, while a web BFF service provides richer data.
+
+---
 This document provides an overview of key microservice design patterns that help in building scalable and resilient applications.
