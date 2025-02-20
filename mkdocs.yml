@@ -11,7 +11,7 @@ nav:
     - Data Type: java/DataType.md
     - Operators: java/Operators.md
     - Casting: java/Casting.md
-    - AccessModifier: java/AccessModifier.md
+    - Access Modifier: java/AccessModifier.md
     - Object-Oriented Programming: java/Object-Oriented Programming.md
     - Constructor: java/Constructor.md
     - Method overloading & overriding: java/Method overloading & overiding.md
@@ -28,11 +28,10 @@ nav:
     - Hashmap: java/Hashmap.md
     - Comparable vs Compartor: java/Comparable vs Compartor.md
     - Iterator vs Iterable: java/Iterator & Iterable.md
+    - Thread: java/Thread.md
     - Marker Interface: java/MarkerInterface.md
     - Design Pattern: java/DesignPattern.md
-    - Design Pattern Spring Boot: java/DesignPatternSpringBoot.md
-    - Serialization: java/Serialization.md
-    - Thread: java/Thread.md
+    - Variable Argument: java/VariableArgument.md
     - Programming Questions: java/ProgrammingQuestions.md
   - Spring:
       - Introduction: spring/Introduction.md
@@ -65,7 +64,8 @@ nav:
       - SpringCloudSleuth: microservices/SpringCloudSleuth.md
       - Spring Cloud Function: microservices/SpringCloudFunction.md
       - Spring Cloud Stream: microservices/SpringCloudStream.md
-  - PostgeSQL:
+      - Design Pattern: microservices/DesignPattern.md
+  - PostgreSQL:
       - Dataset: postgres/Dataset.md
       - Question: postgres/Question.md
       - Answer: postgres/Answer.md

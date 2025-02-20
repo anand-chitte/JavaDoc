@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/Operators/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/MarkerInterface/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Operators - Java</title>
+    <title>Marker Interface - Java</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Operators";
-        var mkdocs_page_input_path = "java\\Operators.md";
-        var mkdocs_page_url = "/JavaDoc/java/Operators/";
+        var mkdocs_page_name = "Marker Interface";
+        var mkdocs_page_input_path = "java\\MarkerInterface.md";
+        var mkdocs_page_url = "/JavaDoc/java/MarkerInterface/";
       </script>
     
     <!--[if lt IE 9]>
@@ -60,31 +60,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Operators</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-arithmetic-operators">1. Arithmetic Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-relational-comparison-operators">2. Relational (Comparison) Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-logical-operators">3. Logical Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-assignment-operators">4. Assignment Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#5-bitwise-operators">5. Bitwise Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#6-unary-operators">6. Unary Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#7-ternary-conditional-operator">7. Ternary (Conditional) Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#8-instanceof-operator">8. Instanceof Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#9-type-cast-operator">9. Type Cast Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#10-new-operator">10. New Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#11-dot-operator">11. Dot (.) Operator</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
@@ -122,7 +98,33 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../MarkerInterface/">Marker Interface</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Marker Interface</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-a-marker-interface">What is a Marker Interface?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples-of-marker-interfaces-in-java">Examples of Marker Interfaces in Java</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-using-the-serializable-marker-interface">Example: Using the Serializable Marker Interface</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#explanation">Explanation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-using-the-cloneable-marker-interface">Example: Using the Cloneable Marker Interface</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#explanation_1">Explanation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-custom-marker-interface">Creating a Custom Marker Interface</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#explanation_2">Explanation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-points">Key Points</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../DesignPattern/">Design Pattern</a>
                   </li>
@@ -261,7 +263,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Java</li>
-      <li class="breadcrumb-item active">Operators</li>
+      <li class="breadcrumb-item active">Marker Interface</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -270,95 +272,150 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="operators">Operators</h1>
-<p>In Java, operators are special symbols or keywords used to perform operations on variables and values. They can be classified into several types.</p>
-<h2 id="1-arithmetic-operators">1. Arithmetic Operators</h2>
-<p>These operators are used to perform basic arithmetic operations.</p>
+                <h1 id="marker-interface-in-java">Marker Interface in Java</h1>
+<h2 id="what-is-a-marker-interface">What is a Marker Interface?</h2>
+<p>A <strong>Marker Interface</strong> is an interface that <strong>does not contain any methods or fields</strong>. It is used to indicate that a class has a special property or behavior. The presence of a marker interface allows Java runtime or frameworks to treat objects of that class differently.</p>
+<h2 id="examples-of-marker-interfaces-in-java">Examples of Marker Interfaces in Java</h2>
+<p>Some built-in marker interfaces in Java include:</p>
+<table>
+<thead>
+<tr>
+<th>Marker Interface</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Serializable</code></td>
+<td>Marks a class as serializable (can be converted into a byte stream).</td>
+</tr>
+<tr>
+<td><code>Cloneable</code></td>
+<td>Marks a class as cloneable using the <code>clone()</code> method.</td>
+</tr>
+<tr>
+<td><code>Remote</code></td>
+<td>Indicates that a class can be used in Remote Method Invocation (RMI).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example-using-the-serializable-marker-interface">Example: Using the <code>Serializable</code> Marker Interface</h2>
+<pre><code class="language-java">import java.io.*;
+
+class Student implements Serializable {
+    private static final long serialVersionUID = 1L;
+    String name;
+    int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+public class SerializationExample {
+    public static void main(String[] args) {
+        try {
+            Student s = new Student(&quot;Aarav&quot;, 20);
+
+            // Serialization
+            FileOutputStream fileOut = new FileOutputStream(&quot;student.ser&quot;);
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(s);
+            out.close();
+            fileOut.close();
+            System.out.println(&quot;Object Serialized&quot;);
+
+            // Deserialization
+            FileInputStream fileIn = new FileInputStream(&quot;student.ser&quot;);
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            Student deserializedStudent = (Student) in.readObject();
+            in.close();
+            fileIn.close();
+
+            System.out.println(&quot;Deserialized Student: &quot; + deserializedStudent.name + &quot;, &quot; + deserializedStudent.age);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<h3 id="explanation">Explanation</h3>
 <ul>
-<li><code>+</code> : Addition</li>
-<li><code>-</code> : Subtraction</li>
-<li><code>*</code> : Multiplication</li>
-<li><code>/</code> : Division</li>
-<li><code>%</code> : Modulus (remainder)</li>
+<li>The <code>Student</code> class implements <code>Serializable</code>, allowing objects to be serialized and deserialized.</li>
+<li>No methods are defined in <code>Serializable</code>, but its presence enables serialization.</li>
 </ul>
-<h2 id="2-relational-comparison-operators">2. Relational (Comparison) Operators</h2>
-<p>These operators are used to compare two values.</p>
+<h2 id="example-using-the-cloneable-marker-interface">Example: Using the <code>Cloneable</code> Marker Interface</h2>
+<pre><code class="language-java">class Employee implements Cloneable {
+    String name;
+
+    Employee(String name) {
+        this.name = name;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+
+public class CloneExample {
+    public static void main(String[] args) {
+        try {
+            Employee e1 = new Employee(&quot;Rohan&quot;);
+            Employee e2 = (Employee) e1.clone();
+
+            System.out.println(&quot;Original: &quot; + e1.name);
+            System.out.println(&quot;Clone: &quot; + e2.name);
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<h3 id="explanation_1">Explanation</h3>
 <ul>
-<li><code>==</code> : Equal to</li>
-<li><code>!=</code> : Not equal to</li>
-<li><code>&gt;</code> : Greater than</li>
-<li><code>&lt;</code> : Less than</li>
-<li><code>&gt;=</code> : Greater than or equal to</li>
-<li><code>&lt;=</code> : Less than or equal to</li>
+<li>The <code>Employee</code> class implements <code>Cloneable</code>, allowing it to be cloned.</li>
+<li>The <code>clone()</code> method is overridden to enable object duplication.</li>
 </ul>
-<h2 id="3-logical-operators">3. Logical Operators</h2>
-<p>These operators are used to perform logical operations, typically used in control flow statements.</p>
+<h2 id="creating-a-custom-marker-interface">Creating a Custom Marker Interface</h2>
+<pre><code class="language-java">interface Permission {}
+
+class SecureFile implements Permission {
+    void accessFile() {
+        if (this instanceof Permission) {
+            System.out.println(&quot;Access granted!&quot;);
+        } else {
+            System.out.println(&quot;Access denied!&quot;);
+        }
+    }
+}
+
+public class MarkerInterfaceExample {
+    public static void main(String[] args) {
+        SecureFile file = new SecureFile();
+        file.accessFile(); // Prints: &quot;Access granted!&quot;
+    }
+}
+</code></pre>
+<h3 id="explanation_2">Explanation</h3>
 <ul>
-<li><code>&amp;&amp;</code> : Logical AND</li>
-<li><code>||</code> : Logical OR</li>
-<li><code>!</code> : Logical NOT</li>
+<li><code>Permission</code> is a marker interface.</li>
+<li><code>SecureFile</code> implements <code>Permission</code>, and we use <code>instanceof</code> to check permission.</li>
 </ul>
-<h2 id="4-assignment-operators">4. Assignment Operators</h2>
-<p>These operators are used to assign values to variables.</p>
+<h2 id="key-points">Key Points</h2>
 <ul>
-<li><code>=</code> : Simple assignment</li>
-<li><code>+=</code> : Addition assignment</li>
-<li><code>-=</code> : Subtraction assignment</li>
-<li><code>*=</code> : Multiplication assignment</li>
-<li><code>/=</code> : Division assignment</li>
-<li><code>%=</code> : Modulus assignment</li>
+<li>Marker interfaces <strong>do not contain methods</strong> but indicate special behavior.</li>
+<li>Java provides built-in marker interfaces like <code>Serializable</code>, <code>Cloneable</code>, and <code>Remote</code>.</li>
+<li>Custom marker interfaces can be created to assign special properties to a class.</li>
 </ul>
-<h2 id="5-bitwise-operators">5. Bitwise Operators</h2>
-<p>These operators are used to perform bit-level operations.</p>
-<ul>
-<li><code>&amp;</code> : Bitwise AND</li>
-<li><code>|</code> : Bitwise OR</li>
-<li><code>^</code> : Bitwise XOR</li>
-<li><code>~</code> : Bitwise NOT</li>
-<li><code>&lt;&lt;</code> : Left shift</li>
-<li><code>&gt;&gt;</code> : Right shift</li>
-<li><code>&gt;&gt;&gt;</code> : Unsigned right shift</li>
-</ul>
-<h2 id="6-unary-operators">6. Unary Operators</h2>
-<p>These operators operate on a single operand.</p>
-<ul>
-<li><code>+</code> : Unary plus (indicates a positive value)</li>
-<li><code>-</code> : Unary minus (negates the value)</li>
-<li><code>++</code> : Increment</li>
-<li><code>--</code> : Decrement</li>
-<li><code>!</code> : Logical NOT (negates a boolean value)</li>
-</ul>
-<h2 id="7-ternary-conditional-operator">7. Ternary (Conditional) Operator</h2>
-<p>This is a shorthand for the <code>if-else</code> statement.</p>
-<ul>
-<li><code>condition ? expr1 : expr2</code> : If <code>condition</code> is true, <code>expr1</code> is executed; otherwise, <code>expr2</code> is executed.</li>
-</ul>
-<h2 id="8-instanceof-operator">8. Instanceof Operator</h2>
-<p>This operator checks whether an object is an instance of a specified class or subclass.</p>
-<ul>
-<li><code>instanceof</code> : Checks if an object is an instance of a specific class or subclass.</li>
-</ul>
-<h2 id="9-type-cast-operator">9. Type Cast Operator</h2>
-<p>Used to convert one data type to another.</p>
-<ul>
-<li><code>(type)</code> : Type casting (e.g., <code>(int) 3.14</code>)</li>
-</ul>
-<h2 id="10-new-operator">10. New Operator</h2>
-<p>Used to create new objects.</p>
-<ul>
-<li><code>new</code> : Creates a new instance of a class.</li>
-</ul>
-<h2 id="11-dot-operator">11. Dot (.) Operator</h2>
-<p>Used to access members of a class or object.</p>
-<ul>
-<li><code>object.member</code> : Access fields, methods, or properties of an object.</li>
-</ul>
+<p>Marker interfaces were widely used before <strong>annotations</strong> were introduced in Java 5. Today, annotations are preferred for such use cases. 🚀</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../DataType/" class="btn btn-neutral float-left" title="Data Type"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Casting/" class="btn btn-neutral float-right" title="Casting">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Iterator%20%26%20Iterable/" class="btn btn-neutral float-left" title="Iterator vs Iterable"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../DesignPattern/" class="btn btn-neutral float-right" title="Design Pattern">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -381,10 +438,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../DataType/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Iterator%20%26%20Iterable/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Casting/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../DesignPattern/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

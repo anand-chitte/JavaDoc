@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/other/Agile/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/AccessModifier/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Agile - Java</title>
+    <title>AccessModifier - Java</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Agile";
-        var mkdocs_page_input_path = "other\\Agile.md";
-        var mkdocs_page_url = "/JavaDoc/other/Agile/";
+        var mkdocs_page_name = "AccessModifier";
+        var mkdocs_page_input_path = "java\\AccessModifier.md";
+        var mkdocs_page_url = "/JavaDoc/java/AccessModifier/";
       </script>
     
     <!--[if lt IE 9]>
@@ -49,66 +49,96 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/introduction/">Introduction</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Garbage%20Collector/">Garbage Collector</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Garbage%20Collector/">Garbage Collector</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/AccessModifier/">AccessModifier</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">AccessModifier</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-private">1. Private</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-default-package-private">2. Default (Package-Private)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_1">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-protected">3. Protected</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_2">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-public">4. Public</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_3">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#comparison-table">Comparison Table</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-takeaways">Key Takeaways</a>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Object-Oriented%20Programming/">Object-Oriented Programming</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Constructor/">Constructor</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Constructor/">Constructor</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overriding</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Method%20overloading%20%26%20overiding/">Method overloading & overriding</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/StaticFinalKeyword/">Static & Final Keyword</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../StaticFinalKeyword/">Static & Final Keyword</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/String/">String</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../String/">String</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Interface/">Interface</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Interface/">Interface</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Exception%20in%20Java/">Exception in Java</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exception%20in%20Java/">Exception in Java</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Generics/">Generics</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Generics/">Generics</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Collection%20Framework/">Collection Framework</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Collection Framework</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../StreamsLambdaFunctional/">StreamsLambdaFunctional</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Stream/">Stream</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Stream/">Stream</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/LambdaExpression/">Lambda Expression</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../LambdaExpression/">Lambda Expression</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/FunctionalInterface/">Functional Interface</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../FunctionalInterface/">Functional Interface</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Hashmap/">Hashmap</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hashmap/">Hashmap</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/MarkerInterface/">Marker Interface</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../MarkerInterface/">Marker Interface</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/DesignPattern/">Design Pattern</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../DesignPattern/">Design Pattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/DesignPatternSpringBoot/">Design Pattern Spring Boot</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../DesignPatternSpringBoot/">Design Pattern Spring Boot</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Serialization/">Serialization</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Serialization/">Serialization</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/Thread/">Thread</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Thread/">Thread</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/ProgrammingQuestions/">Programming Questions</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../ProgrammingQuestions/">Programming Questions</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Spring</span></p>
@@ -185,38 +215,28 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Maven/">Maven</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Maven/">Maven</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Git/">Git</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Git/">Git</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Docker/">Docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Docker/">Docker</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Redis/">Redis</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../RabbitMQ/">RabbitMQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../AWS/">AWS</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/AWS/">AWS</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Agile</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#epic">Epic</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#stories">Stories</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#tasks-for-the-wishlist-story">Tasks (for the Wishlist Story)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#sprint">Sprint</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Fastag/">Fastag</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Fastag/">Fastag</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ILMS/">ILMS</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/ILMS/">ILMS</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Flowchart/">Flowchart</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../IntroduceYourself/">IntroduceYourself</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/IntroduceYourself/">IntroduceYourself</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">CBS</span></p>
@@ -246,8 +266,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Other</li>
-      <li class="breadcrumb-item active">Agile</li>
+          <li class="breadcrumb-item">Java</li>
+      <li class="breadcrumb-item active">AccessModifier</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -256,56 +276,127 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="agile-workflow-example">Agile Workflow Example</h1>
-<h2 id="epic"><strong>Epic</strong></h2>
-<p><strong>Enhance the e-commerce shopping experience.</strong></p>
-<h2 id="stories"><strong>Stories</strong></h2>
-<ol>
-<li><strong>As a user, I want to add items to a wishlist so that I can purchase them later.</strong>  </li>
-<li><strong>As a user, I want personalized product recommendations so that I can find relevant items quickly.</strong></li>
-</ol>
-<h2 id="tasks-for-the-wishlist-story"><strong>Tasks (for the Wishlist Story)</strong></h2>
+                <h1 id="access-modifiers">Access Modifiers&#x20;</h1>
+<p>Access modifiers define the scope and accessibility of classes, methods, and variables. Java provides four types of access modifiers:</p>
+<h2 id="1-private">1. <strong>Private</strong></h2>
 <ul>
-<li><strong>Design the wishlist button.</strong>  </li>
-<li><strong>Develop backend API for wishlist management.</strong>  </li>
-<li><strong>Implement the wishlist page in the UI.</strong></li>
+<li>Scope: Within the same class only.</li>
+<li>Cannot be accessed from outside the class.</li>
+<li>Useful for encapsulation.</li>
 </ul>
-<hr />
-<h2 id="sprint"><strong>Sprint</strong></h2>
+<h3 id="example">Example:</h3>
+<pre><code class="language-java">class Example {
+    private int data = 40;
+
+    private void display() {
+        System.out.println(&quot;Data: &quot; + data);
+    }
+}
+</code></pre>
+<h2 id="2-default-package-private">2. <strong>Default (Package-Private)</strong></h2>
 <ul>
-<li>Stories and tasks are completed within a defined time frame.</li>
+<li>Scope: Within the same package.</li>
+<li>If no access modifier is specified, the default modifier is used.</li>
+<li>Cannot be accessed from outside the package.</li>
 </ul>
-<hr />
-<h1 id="story-estimation"><strong>Story Estimation</strong></h1>
-<h2 id="purpose"><strong>Purpose</strong></h2>
-<p>Determines the effort or complexity of completing a user story. This is the most common level for estimation.</p>
-<h2 id="when-to-estimate"><strong>When to Estimate</strong></h2>
+<h3 id="example_1">Example:</h3>
+<pre><code class="language-java">class Example {
+    int data = 40; // Default access
+
+    void display() {
+        System.out.println(&quot;Data: &quot; + data);
+    }
+}
+</code></pre>
+<h2 id="3-protected">3. <strong>Protected</strong></h2>
 <ul>
-<li>During <strong>Backlog Refinement</strong> or <strong>Sprint Planning</strong>.</li>
+<li>Scope: Within the same package and subclasses (even if in different packages).</li>
+<li>Allows inheritance.</li>
 </ul>
-<h2 id="how-to-estimate"><strong>How to Estimate</strong></h2>
+<h3 id="example_2">Example:</h3>
+<pre><code class="language-java">class Parent {
+    protected int data = 40;
+
+    protected void display() {
+        System.out.println(&quot;Data: &quot; + data);
+    }
+}
+
+class Child extends Parent {
+    void show() {
+        display();
+    }
+}
+</code></pre>
+<h2 id="4-public">4. <strong>Public</strong></h2>
 <ul>
-<li>Use <strong>story points</strong>, often based on <strong>Fibonacci numbers</strong> (1, 2, 3, 5, 8, etc.).</li>
-<li>Consider factors like:</li>
-<li><strong>Complexity</strong></li>
-<li><strong>Risk</strong></li>
-<li><strong>Effort required</strong></li>
+<li>Scope: Accessible from anywhere.</li>
+<li>No restrictions.</li>
 </ul>
-<h2 id="toolsmethods"><strong>Tools/Methods</strong></h2>
+<h3 id="example_3">Example:</h3>
+<pre><code class="language-java">public class Example {
+    public int data = 40;
+
+    public void display() {
+        System.out.println(&quot;Data: &quot; + data);
+    }
+}
+</code></pre>
+<h2 id="comparison-table"><strong>Comparison Table</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Modifier</th>
+<th>Same Class</th>
+<th>Same Package</th>
+<th>Subclass (Different Package)</th>
+<th>Other Packages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>private</code></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><em>default</em></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>public</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-takeaways"><strong>Key Takeaways</strong></h2>
 <ul>
-<li><strong>Planning Poker</strong>: Team members assign points, discuss, and agree on a final estimate.</li>
-</ul>
-<h2 id="example"><strong>Example</strong></h2>
-<ul>
-<li><strong>Story</strong>: "As a user, I want to filter products by category."</li>
-<li><strong>Estimate</strong>: <strong>5 story points</strong></li>
+<li>Use <code>private</code> for strict encapsulation.</li>
+<li>Use <code>default</code> when members should only be accessed within the same package.</li>
+<li>Use <code>protected</code> for inheritance when subclasses need access.</li>
+<li>Use <code>public</code> for global access when necessary.</li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../AWS/" class="btn btn-neutral float-left" title="AWS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Fastag/" class="btn btn-neutral float-right" title="Fastag">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Casting/" class="btn btn-neutral float-left" title="Casting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Object-Oriented%20Programming/" class="btn btn-neutral float-right" title="Object-Oriented Programming">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -328,10 +419,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../AWS/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Casting/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Fastag/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Object-Oriented%20Programming/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
