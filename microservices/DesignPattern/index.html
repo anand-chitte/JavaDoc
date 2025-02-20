@@ -194,6 +194,14 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-api-gateway-pattern">5. API Gateway Pattern</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-gateway-routing-pattern">6. Gateway Routing Pattern</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-gateway-offloading-pattern">7. Gateway Offloading Pattern</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-backend-for-frontend-bff-pattern">8. Backend for Frontend (BFF) Pattern</a>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -328,6 +336,34 @@
 <ul>
 <li>Timeouts prevent long waits for unresponsive services.</li>
 <li>Rate limiting prevents excessive API calls from overloading services.</li>
+</ul>
+<h2 id="5-api-gateway-pattern">5. API Gateway Pattern</h2>
+<ul>
+<li>A single entry point for all client requests to microservices.</li>
+<li>Handles authentication, logging, request routing, and response aggregation.</li>
+<li>Reduces direct client-to-microservice communication, improving security and performance.</li>
+<li>Example: Netflix Zuul, Spring Cloud Gateway, Kong API Gateway.</li>
+</ul>
+<h2 id="6-gateway-routing-pattern">6. Gateway Routing Pattern</h2>
+<ul>
+<li>The API Gateway routes requests to the appropriate microservices based on predefined rules.</li>
+<li>Enables better load balancing and service discovery.</li>
+<li>Example: A request to <code>/users</code> is routed to the User Service, while <code>/orders</code> is routed to the Order Service.</li>
+</ul>
+<h2 id="7-gateway-offloading-pattern">7. Gateway Offloading Pattern</h2>
+<ul>
+<li>The API Gateway offloads common tasks from microservices such as:</li>
+<li>Authentication and authorization.</li>
+<li>Request and response transformation.</li>
+<li>Rate limiting and caching.</li>
+<li>Logging and monitoring.</li>
+<li>Helps microservices remain lightweight and focused on business logic.</li>
+</ul>
+<h2 id="8-backend-for-frontend-bff-pattern">8. Backend for Frontend (BFF) Pattern</h2>
+<ul>
+<li>A specialized API Gateway tailored for different frontend clients (web, mobile, desktop, etc.).</li>
+<li>Improves user experience by optimizing API responses based on client needs.</li>
+<li>Example: A mobile BFF service returns lightweight JSON responses, while a web BFF service provides richer data.</li>
 </ul>
 <hr />
 <p>This document provides an overview of key microservice design patterns that help in building scalable and resilient applications.</p>
