@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/Operators/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/DesignPatternSpringBoot/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Operators - Java</title>
+    <title>Design Pattern Spring Boot - Java</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Operators";
-        var mkdocs_page_input_path = "java\\Operators.md";
-        var mkdocs_page_url = "/JavaDoc/java/Operators/";
+        var mkdocs_page_name = "Design Pattern Spring Boot";
+        var mkdocs_page_input_path = "java\\DesignPatternSpringBoot.md";
+        var mkdocs_page_url = "/JavaDoc/java/DesignPatternSpringBoot/";
       </script>
     
     <!--[if lt IE 9]>
@@ -60,31 +60,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../DataType/">Data Type</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Operators</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-arithmetic-operators">1. Arithmetic Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-relational-comparison-operators">2. Relational (Comparison) Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-logical-operators">3. Logical Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-assignment-operators">4. Assignment Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#5-bitwise-operators">5. Bitwise Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#6-unary-operators">6. Unary Operators</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#7-ternary-conditional-operator">7. Ternary (Conditional) Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#8-instanceof-operator">8. Instanceof Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#9-type-cast-operator">9. Type Cast Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#10-new-operator">10. New Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#11-dot-operator">11. Dot (.) Operator</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Operators/">Operators</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Casting/">Casting</a>
                   </li>
@@ -126,7 +102,79 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../DesignPattern/">Design Pattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../DesignPatternSpringBoot/">Design Pattern Spring Boot</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Design Pattern Spring Boot</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-data-transfer-object-dto-pattern">1️⃣ Data Transfer Object (DTO) Pattern</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#purpose">Purpose:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits">Benefits:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example">Example:</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#dto-class">DTO Class</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#service-layer-converting-entity-to-dto">Service Layer Converting Entity to DTO</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#controller-returning-dto">Controller Returning DTO</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-singleton-pattern">2️⃣ Singleton Pattern</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#purpose_1">Purpose:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits_1">Benefits:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-in-spring-boot">Example in Spring Boot:</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#manually-implementing-singleton-in-java">Manually Implementing Singleton in Java:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-factory-pattern">3️⃣ Factory Pattern</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#purpose_2">Purpose:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits_2">Benefits:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_1">Example:</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#factory-class">Factory Class</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-in-service-layer">Usage in Service Layer</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-strategy-pattern">4️⃣ Strategy Pattern</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#purpose_3">Purpose:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#benefits_3">Benefits:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-different-discount-strategies">Example: Different Discount Strategies</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#strategy-interface">Strategy Interface</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#concrete-strategies">Concrete Strategies</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#context-class-using-strategy">Context Class Using Strategy</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-example">Usage Example</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Serialization/">Serialization</a>
                   </li>
@@ -261,7 +309,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Java</li>
-      <li class="breadcrumb-item active">Operators</li>
+      <li class="breadcrumb-item active">Design Pattern Spring Boot</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -270,95 +318,201 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="operators">Operators</h1>
-<p>In Java, operators are special symbols or keywords used to perform operations on variables and values. They can be classified into several types.</p>
-<h2 id="1-arithmetic-operators">1. Arithmetic Operators</h2>
-<p>These operators are used to perform basic arithmetic operations.</p>
+                <h1 id="design-patterns-in-spring-boot">Design Patterns in Spring Boot</h1>
+<h2 id="1-data-transfer-object-dto-pattern">1️⃣ Data Transfer Object (DTO) Pattern</h2>
+<h3 id="purpose"><strong>Purpose:</strong></h3>
+<p>The <strong>DTO (Data Transfer Object)</strong> pattern is used to transfer data between layers without exposing the internal entity structure.</p>
+<h3 id="benefits"><strong>Benefits:</strong></h3>
 <ul>
-<li><code>+</code> : Addition</li>
-<li><code>-</code> : Subtraction</li>
-<li><code>*</code> : Multiplication</li>
-<li><code>/</code> : Division</li>
-<li><code>%</code> : Modulus (remainder)</li>
+<li><strong>Encapsulation:</strong> Hides entity details.</li>
+<li><strong>Performance:</strong> Transfers only required fields.</li>
+<li><strong>Security:</strong> Prevents unnecessary exposure of data.</li>
 </ul>
-<h2 id="2-relational-comparison-operators">2. Relational (Comparison) Operators</h2>
-<p>These operators are used to compare two values.</p>
+<h3 id="example"><strong>Example:</strong></h3>
+<h4 id="dto-class"><strong>DTO Class</strong></h4>
+<pre><code class="language-java">public class UserDTO {
+    private String name;
+    private String email;
+
+    // Constructors
+    public UserDTO() {}
+
+    public UserDTO(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    // Getters and Setters
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+}
+</code></pre>
+<h4 id="service-layer-converting-entity-to-dto"><strong>Service Layer Converting Entity to DTO</strong></h4>
+<pre><code class="language-java">public class UserMapper {
+    public static UserDTO toDTO(User user) {
+        return new UserDTO(user.getName(), user.getEmail());
+    }
+}
+</code></pre>
+<h4 id="controller-returning-dto"><strong>Controller Returning DTO</strong></h4>
+<pre><code class="language-java">@RestController
+@RequestMapping(&quot;/users&quot;)
+public class UserController {
+    @Autowired
+    private UserService userService;
+
+    @GetMapping
+    public List&lt;UserDTO&gt; getUsers() {
+        return userService.getAllUsers().stream()
+                .map(UserMapper::toDTO)
+                .collect(Collectors.toList());
+    }
+}
+</code></pre>
+<hr />
+<h2 id="2-singleton-pattern">2️⃣ Singleton Pattern</h2>
+<h3 id="purpose_1"><strong>Purpose:</strong></h3>
+<p>The <strong>Singleton Pattern</strong> ensures that a class has only one instance throughout the application's lifecycle.</p>
+<h3 id="benefits_1"><strong>Benefits:</strong></h3>
 <ul>
-<li><code>==</code> : Equal to</li>
-<li><code>!=</code> : Not equal to</li>
-<li><code>&gt;</code> : Greater than</li>
-<li><code>&lt;</code> : Less than</li>
-<li><code>&gt;=</code> : Greater than or equal to</li>
-<li><code>&lt;=</code> : Less than or equal to</li>
+<li><strong>Resource Management:</strong> Ensures a single instance of a service or component.</li>
+<li><strong>Thread Safety:</strong> Prevents multiple conflicting instances.</li>
 </ul>
-<h2 id="3-logical-operators">3. Logical Operators</h2>
-<p>These operators are used to perform logical operations, typically used in control flow statements.</p>
+<h3 id="example-in-spring-boot"><strong>Example in Spring Boot:</strong></h3>
+<pre><code class="language-java">@Service // Spring creates a single instance of this class
+public class UserService {
+    public String getUserData() {
+        return &quot;User Data&quot;;
+    }
+}
+</code></pre>
+<p>Since Spring beans are singletons by default, <code>@Service</code>, <code>@Repository</code>, and <code>@Controller</code> automatically implement this pattern.</p>
+<h4 id="manually-implementing-singleton-in-java"><strong>Manually Implementing Singleton in Java:</strong></h4>
+<pre><code class="language-java">public class Singleton {
+    private static Singleton instance;
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+}
+</code></pre>
+<hr />
+<h2 id="3-factory-pattern">3️⃣ Factory Pattern</h2>
+<h3 id="purpose_2"><strong>Purpose:</strong></h3>
+<p>The <strong>Factory Pattern</strong> provides a way to create objects dynamically without specifying the exact class.</p>
+<h3 id="benefits_2"><strong>Benefits:</strong></h3>
 <ul>
-<li><code>&amp;&amp;</code> : Logical AND</li>
-<li><code>||</code> : Logical OR</li>
-<li><code>!</code> : Logical NOT</li>
+<li><strong>Decouples object creation from implementation.</strong></li>
+<li><strong>Simplifies object instantiation logic.</strong></li>
+<li><strong>Supports different object types based on input.</strong></li>
 </ul>
-<h2 id="4-assignment-operators">4. Assignment Operators</h2>
-<p>These operators are used to assign values to variables.</p>
+<h3 id="example_1"><strong>Example:</strong></h3>
+<h4 id="factory-class"><strong>Factory Class</strong></h4>
+<pre><code class="language-java">public class UserDTOFactory {
+    public static UserDTO createUserDTO(User user, boolean detailed) {
+        if (detailed) {
+            return new DetailedUserDTO(user.getName(), user.getEmail(), user.getAddress());
+        }
+        return new UserDTO(user.getName(), user.getEmail());
+    }
+}
+</code></pre>
+<h4 id="usage-in-service-layer"><strong>Usage in Service Layer</strong></h4>
+<pre><code class="language-java">public class UserService {
+    public UserDTO getUserDTO(User user, boolean detailed) {
+        return UserDTOFactory.createUserDTO(user, detailed);
+    }
+}
+</code></pre>
+<hr />
+<h2 id="4-strategy-pattern">4️⃣ Strategy Pattern</h2>
+<h3 id="purpose_3"><strong>Purpose:</strong></h3>
+<p>The <strong>Strategy Pattern</strong> allows defining multiple algorithms and selecting one dynamically at runtime.</p>
+<h3 id="benefits_3"><strong>Benefits:</strong></h3>
 <ul>
-<li><code>=</code> : Simple assignment</li>
-<li><code>+=</code> : Addition assignment</li>
-<li><code>-=</code> : Subtraction assignment</li>
-<li><code>*=</code> : Multiplication assignment</li>
-<li><code>/=</code> : Division assignment</li>
-<li><code>%=</code> : Modulus assignment</li>
+<li><strong>Flexibility:</strong> Switch strategies at runtime.</li>
+<li><strong>Open/Closed Principle:</strong> Easily extendable with new strategies.</li>
+<li><strong>Encapsulation:</strong> Encapsulates different behaviors into separate classes.</li>
 </ul>
-<h2 id="5-bitwise-operators">5. Bitwise Operators</h2>
-<p>These operators are used to perform bit-level operations.</p>
-<ul>
-<li><code>&amp;</code> : Bitwise AND</li>
-<li><code>|</code> : Bitwise OR</li>
-<li><code>^</code> : Bitwise XOR</li>
-<li><code>~</code> : Bitwise NOT</li>
-<li><code>&lt;&lt;</code> : Left shift</li>
-<li><code>&gt;&gt;</code> : Right shift</li>
-<li><code>&gt;&gt;&gt;</code> : Unsigned right shift</li>
-</ul>
-<h2 id="6-unary-operators">6. Unary Operators</h2>
-<p>These operators operate on a single operand.</p>
-<ul>
-<li><code>+</code> : Unary plus (indicates a positive value)</li>
-<li><code>-</code> : Unary minus (negates the value)</li>
-<li><code>++</code> : Increment</li>
-<li><code>--</code> : Decrement</li>
-<li><code>!</code> : Logical NOT (negates a boolean value)</li>
-</ul>
-<h2 id="7-ternary-conditional-operator">7. Ternary (Conditional) Operator</h2>
-<p>This is a shorthand for the <code>if-else</code> statement.</p>
-<ul>
-<li><code>condition ? expr1 : expr2</code> : If <code>condition</code> is true, <code>expr1</code> is executed; otherwise, <code>expr2</code> is executed.</li>
-</ul>
-<h2 id="8-instanceof-operator">8. Instanceof Operator</h2>
-<p>This operator checks whether an object is an instance of a specified class or subclass.</p>
-<ul>
-<li><code>instanceof</code> : Checks if an object is an instance of a specific class or subclass.</li>
-</ul>
-<h2 id="9-type-cast-operator">9. Type Cast Operator</h2>
-<p>Used to convert one data type to another.</p>
-<ul>
-<li><code>(type)</code> : Type casting (e.g., <code>(int) 3.14</code>)</li>
-</ul>
-<h2 id="10-new-operator">10. New Operator</h2>
-<p>Used to create new objects.</p>
-<ul>
-<li><code>new</code> : Creates a new instance of a class.</li>
-</ul>
-<h2 id="11-dot-operator">11. Dot (.) Operator</h2>
-<p>Used to access members of a class or object.</p>
-<ul>
-<li><code>object.member</code> : Access fields, methods, or properties of an object.</li>
-</ul>
+<h3 id="example-different-discount-strategies"><strong>Example: Different Discount Strategies</strong></h3>
+<h4 id="strategy-interface"><strong>Strategy Interface</strong></h4>
+<pre><code class="language-java">public interface DiscountStrategy {
+    double applyDiscount(double amount);
+}
+</code></pre>
+<h4 id="concrete-strategies"><strong>Concrete Strategies</strong></h4>
+<pre><code class="language-java">public class NewYearDiscount implements DiscountStrategy {
+    public double applyDiscount(double amount) {
+        return amount * 0.9; // 10% discount
+    }
+}
+
+public class RegularDiscount implements DiscountStrategy {
+    public double applyDiscount(double amount) {
+        return amount * 0.95; // 5% discount
+    }
+}
+</code></pre>
+<h4 id="context-class-using-strategy"><strong>Context Class Using Strategy</strong></h4>
+<pre><code class="language-java">public class DiscountService {
+    private DiscountStrategy discountStrategy;
+
+    public void setDiscountStrategy(DiscountStrategy discountStrategy) {
+        this.discountStrategy = discountStrategy;
+    }
+
+    public double getFinalPrice(double amount) {
+        return discountStrategy.applyDiscount(amount);
+    }
+}
+</code></pre>
+<h4 id="usage-example"><strong>Usage Example</strong></h4>
+<pre><code class="language-java">DiscountService discountService = new DiscountService();
+discountService.setDiscountStrategy(new NewYearDiscount());
+double price = discountService.getFinalPrice(1000);
+</code></pre>
+<hr />
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Design Pattern</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DTO</strong></td>
+<td>Transfers data between layers without exposing entity structure.</td>
+</tr>
+<tr>
+<td><strong>Singleton</strong></td>
+<td>Ensures a single instance of a class throughout the app.</td>
+</tr>
+<tr>
+<td><strong>Factory</strong></td>
+<td>Creates objects dynamically without specifying exact class.</td>
+</tr>
+<tr>
+<td><strong>Strategy</strong></td>
+<td>Allows selecting an algorithm dynamically at runtime.</td>
+</tr>
+</tbody>
+</table>
+<p>These patterns improve <strong>maintainability, scalability, and flexibility</strong> in your Spring Boot applications! 🚀</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../DataType/" class="btn btn-neutral float-left" title="Data Type"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Casting/" class="btn btn-neutral float-right" title="Casting">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../DesignPattern/" class="btn btn-neutral float-left" title="Design Pattern"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Serialization/" class="btn btn-neutral float-right" title="Serialization">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -381,10 +535,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../DataType/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../DesignPattern/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Casting/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Serialization/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
