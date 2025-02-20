@@ -269,6 +269,21 @@
 <p>A read-only template used to create containers. It contains the application and its dependencies. Images are built from Dockerfiles, which are scripts containing instructions on how to build the image.</p>
 <h3 id="3-dockerfile">3. <strong>Dockerfile</strong></h3>
 <p>A script that contains instructions for Docker to create an image. It defines the application's environment, dependencies, and configuration settings.</p>
+<pre><code class="language-dockerfile"># Use an official Java runtime as a parent image
+FROM openjdk:17-jdk-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the jar file from the target directory to the container
+COPY target/my-spring-boot-app.jar app.jar
+
+# Expose the port the app will run on
+EXPOSE 8080
+
+# Run the Spring Boot application
+ENTRYPOINT [&quot;java&quot;, &quot;-jar&quot;, &quot;app.jar&quot;]
+</code></pre>
 <h3 id="4-docker-hub">4. <strong>Docker Hub</strong></h3>
 <p>A public repository where Docker images can be shared. It’s similar to GitHub, but for Docker images.</p>
 <h3 id="5-docker-compose">5. <strong>Docker Compose</strong></h3>
