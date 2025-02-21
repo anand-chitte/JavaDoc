@@ -17,7 +17,7 @@ flowchart TD
     Set["Set (Interface)"] -->|implements| TreeSet["TreeSet (Class)"]
     Queue["Queue (Interface)"] -->|implements| PriorityQueue["PriorityQueue (Class)"]
     Queue["Queue (Interface)"] -->|implements| Deque["Deque (Interface)"]
-    Deque["Deque (Interface)"] -->|implements| ArrayDeque["ArrayDeque (Class)"]```
+    Deque["Deque (Interface)"] -->|implements| ArrayDeque["ArrayDeque (Class)"]
 ```
 
 ### 1. **Collection Interface**

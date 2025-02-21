@@ -3,20 +3,20 @@
 An exception in Java is an event that disrupts the normal flow of the program's execution. It can occur due to a variety of reasons, such as invalid input, attempting to divide by zero, file errors, or network issues. When an exception occurs, Java creates an `Exception` object and throws it.
 
 ```mermaid
-flowchart TD
+ flowchart TD
     Throwable["Throwable (Interface)"]
-    Throwable --> Error["Error (Class)"]
-    Throwable --> Exception["Exception (Class)"]
-    Error --> VirtualMachineError["VirtualMachineError (Class)"]
-    Error --> OutOfMemoryError["OutOfMemoryError (Class)"]
-    Error --> StackOverflowError["StackOverflowError (Class)"]
-    Exception --> IOException["IOException (Class)"]
-    Exception --> RuntimeException["RuntimeException (Class)"]
-    IOException --> FileNotFoundException["FileNotFoundException (Class)"]
-    IOException --> EOFException["EOFException (Class)"]
-    RuntimeException --> NullPointerException["NullPointerException (Class)"]
-    RuntimeException --> IndexOutOfBoundsException["IndexOutOfBoundsException (Class)"]
-    RuntimeException --> ArithmeticException["ArithmeticException (Class)"]
+    Throwable -->|extends| Error["Error (Class)"]
+    Throwable -->|extends| Exception["Exception (Class)"]
+    Error -->|extends| VirtualMachineError["VirtualMachineError (Class)"]
+    Error -->|extends| OutOfMemoryError["OutOfMemoryError (Class)"]
+    Error -->|extends| StackOverflowError["StackOverflowError (Class)"]
+    Exception -->|extends| IOException["IOException (Class)"]
+    Exception -->|extends| RuntimeException["RuntimeException (Class)"]
+    IOException -->|extends| FileNotFoundException["FileNotFoundException (Class)"]
+    IOException -->|extends| EOFException["EOFException (Class)"]
+    RuntimeException -->|extends| NullPointerException["NullPointerException (Class)"]
+    RuntimeException -->|extends| IndexOutOfBoundsException["IndexOutOfBoundsException (Class)"]
+    RuntimeException -->|extends| ArithmeticException["ArithmeticException (Class)"]
 ```
 ## Types of Exceptions
 
