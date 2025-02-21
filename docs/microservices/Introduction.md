@@ -27,3 +27,45 @@ Microservices is an architectural style that structures an application as a coll
 3. **Database per Service**: Each service typically has its own database to ensure independence.
 4. **Message Brokers**: Used for communication between services, especially in event-driven architectures.
 
+# Microservices Boundaries
+
+## Key Considerations for Microservices Boundaries
+
+### 1. Business Capabilities (Domain-Driven Design - DDD)
+- Each microservice should align with a specific business capability.
+- Example: In an e-commerce system, separate services for `Order`, `Payment`, and `Inventory`.
+
+### 2. Single Responsibility Principle (SRP)
+- A microservice should handle a well-defined, singular function.
+- Avoid mixing unrelated concerns within a single service.
+
+### 3. Data Ownership and Autonomy
+- Each service should own its data (Database per Service pattern).
+- No direct database sharing between services to avoid tight coupling.
+
+### 4. Communication Boundaries
+- Use APIs (REST, gRPC, GraphQL) for inter-service communication.
+- Event-driven architecture (Kafka, RabbitMQ) helps in asynchronous processing.
+
+### 5. Scalability and Performance
+- Identify which services need independent scaling.
+- Example: `Authentication` service might need higher scaling than `Notification` service.
+
+### 6. Deployment Independence
+- Services should be deployable and upgradable independently.
+- CI/CD pipelines should ensure smooth deployments.
+
+### 7. Security and Compliance
+- Define proper authentication and authorization at the service level.
+- Use API gateways for centralized security policies.
+
+## Example: Microservices Boundaries in a Banking System
+
+| Microservice  | Responsibility            | Data Ownership       |
+|--------------|-------------------------|----------------------|
+| **Accounts**  | Manages customer accounts | Owns account details |
+| **Loans**     | Handles loan processing  | Owns loan records    |
+| **Cards**     | Manages credit/debit cards | Owns card details    |
+| **Payments**  | Handles transactions      | Owns transaction logs |
+
+By carefully defining microservice boundaries, we can ensure scalability, maintainability, and independent deployments while minimizing coupling and improving security.
