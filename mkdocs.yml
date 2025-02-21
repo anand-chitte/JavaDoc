@@ -54,7 +54,6 @@ nav:
       - Keycloak: spring/Keycloak Implementation.md
       - Scheduling: spring/Scheduling.md
       - Correlation ID: spring/CorrelationId.md
-      - References: spring/References.md
   - Microservices:
       - Introduction: microservices/Introduction.md
       - Eureka Server: microservices/EurekaServer.md
@@ -78,10 +77,9 @@ nav:
     - RabbitMQ: other/RabbitMQ.md
     - AWS: other/AWS.md
     - Agile: other/Agile.md
-    - Fastag: other/Fastag.md
-    - ILMS: other/ILMS.md
     - Flowchart: other/Flowchart.md
-    - IntroduceYourself: other/IntroduceYourself.md
+  - Introduce Yourself: references/IntroduceYourself.md
+  - References: references/References.md
   - CBS:
     - CBS: cbs/CBS.md
     - CBS Developer Document: cbs/CBSDevelopment.md

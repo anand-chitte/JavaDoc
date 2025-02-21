@@ -1,2 +1,0 @@
-- [Spring Boot Questions](files/Spring Boot Questions.pdf)
-- [Microservices](files/Master+Microservices+with+SpringBoot,Docker,Kubernetes.pdf)
