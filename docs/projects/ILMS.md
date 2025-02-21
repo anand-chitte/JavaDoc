@@ -122,3 +122,31 @@ ILMS provides the following services:
 - **Status:** *Declined*
 - Case returns to QC1 bucket
 - QC1 reassigns to another agency or internal investigator
+
+
+```mermaid
+flowchart TD
+    A[CLP Team Pushes Case] -->|"New Case"| B[Allocated to QC1]
+    B -->|"Pending for Allocation"| C{QC1 Decision}
+    C -->|"Internal Assignment"| D[Assigned - No Invoice]
+    C -->|"External Assignment"| E[Assigned - Invoice Generated]
+
+    D --> F[Investigator Accepts Case] --> G[Generate Report & Submit]
+    G -->|"Pending for Review by QC1"| H{QC1 Review}
+    
+    H -->|"Cashless (<=5Lakh)"| I[Pending for Invoice Approval by QC2]
+    H -->|"Cashless (>5Lakh)"| J[Pending for Report & Invoice Approval by QC2]
+    H -->|"Reimbursement (<=2.5Lakh)"| K[Pending for Invoice Approval by QC2]
+    H -->|"Reimbursement (>2.5Lakh and <10Lakh)"| L[Pending for Report & Invoice Approval by QC2]
+    H -->|"Reimbursement (>=10Lakh)"| M[Pending for QC2 Review]
+
+    I --> N[QC2 Review] -->|"Approve"| O[Closed]
+    J --> N
+    K --> N
+    L --> N
+    M --> P[Pending for QC3 Review] -->|"Approve"| O
+
+    E --> Q[AH Accepts Case] --> R[Allocate Investigator]
+    R --> S[Generate Report & Submit] -->|"Pending for Review by QC1"| H
+    Q -->|"Declines Case"| T[Case Returns to QC1] --> B
+```
