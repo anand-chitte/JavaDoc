@@ -287,6 +287,76 @@
 <li><strong>Database per Service</strong>: Each service typically has its own database to ensure independence.</li>
 <li><strong>Message Brokers</strong>: Used for communication between services, especially in event-driven architectures.</li>
 </ol>
+<h1 id="microservices-boundaries">Microservices Boundaries</h1>
+<h2 id="key-considerations-for-microservices-boundaries">Key Considerations for Microservices Boundaries</h2>
+<h3 id="1-business-capabilities-domain-driven-design-ddd">1. Business Capabilities (Domain-Driven Design - DDD)</h3>
+<ul>
+<li>Each microservice should align with a specific business capability.</li>
+<li>Example: In an e-commerce system, separate services for <code>Order</code>, <code>Payment</code>, and <code>Inventory</code>.</li>
+</ul>
+<h3 id="2-single-responsibility-principle-srp">2. Single Responsibility Principle (SRP)</h3>
+<ul>
+<li>A microservice should handle a well-defined, singular function.</li>
+<li>Avoid mixing unrelated concerns within a single service.</li>
+</ul>
+<h3 id="3-data-ownership-and-autonomy">3. Data Ownership and Autonomy</h3>
+<ul>
+<li>Each service should own its data (Database per Service pattern).</li>
+<li>No direct database sharing between services to avoid tight coupling.</li>
+</ul>
+<h3 id="4-communication-boundaries">4. Communication Boundaries</h3>
+<ul>
+<li>Use APIs (REST, gRPC, GraphQL) for inter-service communication.</li>
+<li>Event-driven architecture (Kafka, RabbitMQ) helps in asynchronous processing.</li>
+</ul>
+<h3 id="5-scalability-and-performance">5. Scalability and Performance</h3>
+<ul>
+<li>Identify which services need independent scaling.</li>
+<li>Example: <code>Authentication</code> service might need higher scaling than <code>Notification</code> service.</li>
+</ul>
+<h3 id="6-deployment-independence">6. Deployment Independence</h3>
+<ul>
+<li>Services should be deployable and upgradable independently.</li>
+<li>CI/CD pipelines should ensure smooth deployments.</li>
+</ul>
+<h3 id="7-security-and-compliance">7. Security and Compliance</h3>
+<ul>
+<li>Define proper authentication and authorization at the service level.</li>
+<li>Use API gateways for centralized security policies.</li>
+</ul>
+<h2 id="example-microservices-boundaries-in-a-banking-system">Example: Microservices Boundaries in a Banking System</h2>
+<table>
+<thead>
+<tr>
+<th>Microservice</th>
+<th>Responsibility</th>
+<th>Data Ownership</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Accounts</strong></td>
+<td>Manages customer accounts</td>
+<td>Owns account details</td>
+</tr>
+<tr>
+<td><strong>Loans</strong></td>
+<td>Handles loan processing</td>
+<td>Owns loan records</td>
+</tr>
+<tr>
+<td><strong>Cards</strong></td>
+<td>Manages credit/debit cards</td>
+<td>Owns card details</td>
+</tr>
+<tr>
+<td><strong>Payments</strong></td>
+<td>Handles transactions</td>
+<td>Owns transaction logs</td>
+</tr>
+</tbody>
+</table>
+<p>By carefully defining microservice boundaries, we can ensure scalability, maintainability, and independent deployments while minimizing coupling and improving security.</p>
               
             </div>
           </div><footer>
