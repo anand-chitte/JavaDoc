@@ -31,8 +31,6 @@ nav:
     - Thread: java/Thread.md
     - Marker Interface: java/MarkerInterface.md
     - Design Pattern: java/DesignPattern.md
-    - Variable Argument: java/VariableArgument.md
-    - Programming Questions: java/ProgrammingQuestions.md
     - Java Versions: java/Versions.md
   - Spring:
       - Introduction: spring/Introduction.md
@@ -78,8 +76,11 @@ nav:
     - AWS: other/AWS.md
     - Agile: other/Agile.md
     - Flowchart: other/Flowchart.md
-  - Introduce Yourself: references/IntroduceYourself.md
-  - References: references/References.md
+  - Interview:
+    - Introduce Yourself: interview/IntroduceYourself.md
+    - Question: interview/Question.md
+    - Programs: interview/Programs.md
+    - References: interview/References.md
   - CBS:
     - CBS: cbs/CBS.md
     - CBS Developer Document: cbs/CBSDevelopment.md
