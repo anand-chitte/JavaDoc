@@ -4,6 +4,22 @@ The Java **Collection Framework** is a unified architecture for representing and
 
 ## Core Interfaces in the Collection Framework
 
+```mermaid
+flowchart TD
+    Collection["Collection (Interface)"] -->|extends| List["List (Interface)"]
+    Collection["Collection (Interface)"] -->|extends| Set["Set (Interface)"]
+    Collection["Collection (Interface)"] -->|extends| Queue["Queue (Interface)"]
+    List["List (Interface)"] -->|implements| ArrayList["ArrayList (Class)"]
+    List["List (Interface)"] -->|implements| LinkedList["LinkedList (Class)"]
+    List["List (Interface)"] -->|implements| Vector["Vector (Class)"]
+    Set["Set (Interface)"] -->|implements| HashSet["HashSet (Class)"]
+    Set["Set (Interface)"] -->|implements| LinkedHashSet["LinkedHashSet (Class)"]
+    Set["Set (Interface)"] -->|implements| TreeSet["TreeSet (Class)"]
+    Queue["Queue (Interface)"] -->|implements| PriorityQueue["PriorityQueue (Class)"]
+    Queue["Queue (Interface)"] -->|implements| Deque["Deque (Interface)"]
+    Deque["Deque (Interface)"] -->|implements| ArrayDeque["ArrayDeque (Class)"]```
+```
+
 ### 1. **Collection Interface**
 The root interface of the framework. It defines basic methods for adding, removing, and querying elements.
 

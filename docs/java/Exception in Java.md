@@ -2,8 +2,22 @@
 
 An exception in Java is an event that disrupts the normal flow of the program's execution. It can occur due to a variety of reasons, such as invalid input, attempting to divide by zero, file errors, or network issues. When an exception occurs, Java creates an `Exception` object and throws it.
 
-[![](https://mermaid.ink/img/pako:eNqNlN9vgjAQx_8Vck9bgkZQK_KwZJsz8cGxTLOHjT10cEqz0prabjrj_z7QYKq4H7xw9-W-H7gr7QYSmSKEMOPyM8mo0s50EAunuKaZkp_0jeNLDIfYuRgJjWpGE7yM4fWk0mk0rpw7paQqPLu7c3HL6XL5Y-0qwYVmUpT1VVzz7Ell_RNT2lA-pknGBFZvOqP-woiMjmZjzKVaV4BT6Rf3RNPkPfooRlAMrPLXxTrh0F1JGUV251b2h-_RCM1ytM2nUo1g00vGkHG8l3oojUht0Fn9T9pdNDxaRCuteWufWgLuDecPkpV_lQ06J_8POBIprnYrelO2sjya9E_P_oe-VkxnOWqW2NAz6hEOXMhR5ZSlxT7blPgYdIY5xhAWIWfzTMcQi21RSI2Wk7VIINTKoAtKmnkG4YzyZZGZRUo1DhidK5pXJQsqnqW0Uwg3sIKw4QWk2Q88r9MN-l2_7bmwhtAjvSbxiR-QVisgXeL1ti587QBekwS9jt8hnVbb9_xW4AKmTEs13p8Ru6Ni-w0Ee2md?type=png)](https://mermaid.live/edit#pako:eNqNlN9vgjAQx_8Vck9bgkZQK_KwZJsz8cGxTLOHjT10cEqz0prabjrj_z7QYKq4H7xw9-W-H7gr7QYSmSKEMOPyM8mo0s50EAunuKaZkp_0jeNLDIfYuRgJjWpGE7yM4fWk0mk0rpw7paQqPLu7c3HL6XL5Y-0qwYVmUpT1VVzz7Ell_RNT2lA-pknGBFZvOqP-woiMjmZjzKVaV4BT6Rf3RNPkPfooRlAMrPLXxTrh0F1JGUV251b2h-_RCM1ytM2nUo1g00vGkHG8l3oojUht0Fn9T9pdNDxaRCuteWufWgLuDecPkpV_lQ06J_8POBIprnYrelO2sjya9E_P_oe-VkxnOWqW2NAz6hEOXMhR5ZSlxT7blPgYdIY5xhAWIWfzTMcQi21RSI2Wk7VIINTKoAtKmnkG4YzyZZGZRUo1DhidK5pXJQsqnqW0Uwg3sIKw4QWk2Q88r9MN-l2_7bmwhtAjvSbxiR-QVisgXeL1ti587QBekwS9jt8hnVbb9_xW4AKmTEs13p8Ru6Ni-w0Ee2md)
-
+```mermaid
+flowchart TD
+    Throwable["Throwable (Interface)"]
+    Throwable --> Error["Error (Class)"]
+    Throwable --> Exception["Exception (Class)"]
+    Error --> VirtualMachineError["VirtualMachineError (Class)"]
+    Error --> OutOfMemoryError["OutOfMemoryError (Class)"]
+    Error --> StackOverflowError["StackOverflowError (Class)"]
+    Exception --> IOException["IOException (Class)"]
+    Exception --> RuntimeException["RuntimeException (Class)"]
+    IOException --> FileNotFoundException["FileNotFoundException (Class)"]
+    IOException --> EOFException["EOFException (Class)"]
+    RuntimeException --> NullPointerException["NullPointerException (Class)"]
+    RuntimeException --> IndexOutOfBoundsException["IndexOutOfBoundsException (Class)"]
+    RuntimeException --> ArithmeticException["ArithmeticException (Class)"]
+```
 ## Types of Exceptions
 
 ### 1. **Checked Exceptions**
@@ -48,3 +62,4 @@ public void readFile() throws IOException {
     // Code that may throw IOException
 }
 ```
+

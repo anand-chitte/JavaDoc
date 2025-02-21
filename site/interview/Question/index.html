@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/references/References/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/interview/Question/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>References - Java</title>
+    <title>Question - Java</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "References";
-        var mkdocs_page_input_path = "references\\References.md";
-        var mkdocs_page_url = "/JavaDoc/references/References/";
+        var mkdocs_page_name = "Question";
+        var mkdocs_page_input_path = "interview\\Question.md";
+        var mkdocs_page_url = "/JavaDoc/interview/Question/";
       </script>
     
     <!--[if lt IE 9]>
@@ -103,10 +103,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../java/MarkerInterface/">Marker Interface</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/DesignPattern/">Design Pattern</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/VariableArgument/">Variable Argument</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../java/ProgrammingQuestions/">Programming Questions</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Versions/">Java Versions</a>
                   </li>
@@ -203,13 +199,88 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
                   </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../IntroduceYourself/">Introduce Yourself</a>
-                </li>
-              </ul>
+              <p class="caption"><span class="caption-text">Interview</span></p>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">References</a>
-                </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../IntroduceYourself/">Introduce Yourself</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Question</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#use-of-optional">Use of Optional</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#equals-and-hashcode-do-we-need-to-use-them-together">equals() and hashCode(), Do We Need to Use Them Together?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_1">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#multiple-static-blocks-execution-order">Multiple Static Blocks Execution Order</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_2">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#can-we-change-the-exception-in-an-overridden-method">Can We Change the Exception in an Overridden Method?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_3">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#class-implementing-two-interfaces-with-same-default-method">Class Implementing Two Interfaces with Same Default Method</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_4">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-were-private-methods-introduced-in-interfaces">Why Were Private Methods Introduced in Interfaces?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_5">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#completablefuture">CompletableFuture</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_6">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#can-we-override-or-overload-main-method">Can We Override or Overload main Method?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_7">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#can-we-change-string-args-to-string-args-in-main-method">Can We Change String[] args to String args in main Method?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hashmap-vs-hashtable">HashMap vs Hashtable</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stringbuilder-vs-stringbuffer">StringBuilder vs StringBuffer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#when-to-use-arraylist-or-linkedlist">When to Use ArrayList or LinkedList?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-variable-arguments">What is variable arguments?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parallel-streams-for-large-data-processing">Parallel Streams for Large Data Processing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_8">Example:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#custom-exception-class">Custom Exception Class</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_9">Example:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Programs/">Programs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../References/">References</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">CBS</span></p>
               <ul>
@@ -238,7 +309,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">References</li>
+          <li class="breadcrumb-item">Interview</li>
+      <li class="breadcrumb-item active">Question</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -247,18 +319,272 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <ul>
-<li><a href="../files/Spring%20Boot%20Questions.pdf">Spring Boot Questions</a></li>
-<li><a href="../files/Master%2BMicroservices%2Bwith%2BSpringBoot%2CDocker%2CKubernetes.pdf">Microservices</a></li>
-<li><a href="../files/ILMS.pdf">Project 1</a></li>
-<li><a href="../files/Fastag.pdf">Project 2</a></li>
+                <h2 id="core-java">Core Java</h2>
+<h3 id="use-of-optional">Use of <code>Optional</code></h3>
+<p><code>Optional</code> is a container object used to avoid <code>NullPointerException</code> and handle missing values gracefully.</p>
+<h4 id="example">Example:</h4>
+<pre><code class="language-java">import java.util.Optional;
+
+public class OptionalExample {
+    public static void main(String[] args) {
+        Optional&lt;String&gt; name = Optional.ofNullable(null);
+        System.out.println(name.orElse(&quot;Default Name&quot;));
+    }
+}
+</code></pre>
+<hr />
+<h3 id="equals-and-hashcode-do-we-need-to-use-them-together"><code>equals()</code> and <code>hashCode()</code>, Do We Need to Use Them Together?</h3>
+<p>Yes, when overriding <code>equals()</code>, we must override <code>hashCode()</code> to maintain consistency in collections like <code>HashSet</code>, <code>HashMap</code>, and <code>HashTable</code>. The contract states that:
+- If two objects are equal (<code>equals()</code> returns <code>true</code>), they must have the same <code>hashCode()</code>.
+- If <code>hashCode()</code> is not overridden, it may break collections that rely on hashing.</p>
+<h4 id="example_1">Example:</h4>
+<pre><code class="language-java">class Employee {
+    int id;
+    String name;
+
+    Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Employee employee = (Employee) obj;
+        return id == employee.id &amp;&amp; name.equals(employee.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return id * 31 + name.hashCode();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="multiple-static-blocks-execution-order">Multiple Static Blocks Execution Order</h3>
+<p>Static blocks execute in the order they are defined in the class <strong>before the constructor</strong> and <strong>only once</strong> when the class is loaded.</p>
+<h4 id="example_2">Example:</h4>
+<pre><code class="language-java">class Test {
+    static {
+        System.out.println(&quot;Static Block 1&quot;);
+    }
+    static {
+        System.out.println(&quot;Static Block 2&quot;);
+    }
+    public static void main(String[] args) {
+        System.out.println(&quot;Main method&quot;);
+    }
+}
+</code></pre>
+<p><strong>Output:</strong></p>
+<pre><code>Static Block 1  
+Static Block 2  
+Main method  
+</code></pre>
+<hr />
+<h3 id="can-we-change-the-exception-in-an-overridden-method">Can We Change the Exception in an Overridden Method?</h3>
+<ul>
+<li><strong>Yes (for unchecked exceptions)</strong>: A subclass can throw the same, a new unchecked exception, or no exception.</li>
+<li><strong>No (for checked exceptions)</strong>: A subclass can throw the same or a subclass of the checked exception but not a new broader exception.</li>
 </ul>
+<h4 id="example_3">Example:</h4>
+<pre><code class="language-java">class Parent {
+    void show() throws IOException {  // Checked Exception
+        System.out.println(&quot;Parent&quot;);
+    }
+}
+
+class Child extends Parent {
+    @Override
+    void show() throws FileNotFoundException {  // Allowed (subclass of IOException)
+        System.out.println(&quot;Child&quot;);
+    }
+}
+</code></pre>
+<hr />
+<h3 id="class-implementing-two-interfaces-with-same-default-method">Class Implementing Two Interfaces with Same Default Method</h3>
+<p>We must override the method explicitly to avoid ambiguity.</p>
+<h4 id="example_4">Example:</h4>
+<pre><code class="language-java">interface A {
+    default void show() {
+        System.out.println(&quot;A&quot;);
+    }
+}
+interface B {
+    default void show() {
+        System.out.println(&quot;B&quot;);
+    }
+}
+
+class C implements A, B {
+    @Override
+    public void show() {
+        A.super.show();  // Explicitly calling A's method
+    }
+
+    public static void main(String[] args) {
+        new C().show();  // Output: A
+    }
+}
+</code></pre>
+<hr />
+<h3 id="why-were-private-methods-introduced-in-interfaces">Why Were Private Methods Introduced in Interfaces?</h3>
+<p>Private methods in interfaces (introduced in Java 9) allow code reusability within the interface itself, preventing duplication in multiple default methods.</p>
+<h4 id="example_5">Example:</h4>
+<pre><code class="language-java">interface MyInterface {
+    private void commonMethod() {
+        System.out.println(&quot;Common logic&quot;);
+    }
+
+    default void method1() {
+        commonMethod();
+        System.out.println(&quot;Method 1&quot;);
+    }
+
+    default void method2() {
+        commonMethod();
+        System.out.println(&quot;Method 2&quot;);
+    }
+}
+
+public class InterfaceTest implements MyInterface {
+    public static void main(String[] args) {
+        new InterfaceTest().method1();
+        new InterfaceTest().method2();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="completablefuture">CompletableFuture</h3>
+<p><code>CompletableFuture</code> is used for asynchronous programming in Java.</p>
+<h4 id="example_6">Example:</h4>
+<pre><code class="language-java">import java.util.concurrent.CompletableFuture;
+
+public class CompletableFutureExample {
+    public static void main(String[] args) {
+        CompletableFuture&lt;Void&gt; future = CompletableFuture.runAsync(() -&gt; 
+            System.out.println(&quot;Executing asynchronously&quot;)
+        );
+        future.join();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="can-we-override-or-overload-main-method">Can We Override or Overload <code>main</code> Method?</h3>
+<ul>
+<li><strong>Yes, we can overload <code>main()</code></strong> by changing parameters.</li>
+<li><strong>No, we cannot override <code>main()</code></strong> because it is static.</li>
+</ul>
+<h4 id="example_7">Example:</h4>
+<pre><code class="language-java">public class MainMethodExample {
+    public static void main(String[] args) {
+        System.out.println(&quot;Main method&quot;);
+    }
+    public static void main(int a) {
+        System.out.println(&quot;Overloaded main method&quot;);
+    }
+}
+</code></pre>
+<hr />
+<h3 id="can-we-change-string-args-to-string-args-in-main-method">Can We Change <code>String[] args</code> to <code>String args</code> in <code>main</code> Method?</h3>
+<p>No, the method signature must be <code>String[] args</code>.</p>
+<hr />
+<h3 id="hashmap-vs-hashtable">HashMap vs Hashtable</h3>
+<ul>
+<li><code>HashMap</code> is non-synchronized, allows <code>null</code> keys, and is faster.</li>
+<li><code>Hashtable</code> is synchronized and does not allow <code>null</code> keys.</li>
+</ul>
+<hr />
+<h3 id="stringbuilder-vs-stringbuffer">StringBuilder vs StringBuffer</h3>
+<ul>
+<li><code>StringBuilder</code> is not thread-safe but faster.</li>
+<li><code>StringBuffer</code> is synchronized and thread-safe.</li>
+</ul>
+<hr />
+<h3 id="when-to-use-arraylist-or-linkedlist">When to Use <code>ArrayList</code> or <code>LinkedList</code>?</h3>
+<ul>
+<li><code>ArrayList</code> is better for fast random access.</li>
+<li><code>LinkedList</code> is better for frequent insertions/deletions.</li>
+</ul>
+<hr />
+<h3 id="what-is-variable-arguments">What is variable arguments?</h3>
+<p>In Java, variable arguments are specified using an ellipsis (<code>...</code>).</p>
+<pre><code class="language-java">public class VarArgsExample {
+    public static void printNumbers(int... numbers) {
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+    }
+
+    public static void main(String[] args) {
+        printNumbers(1, 2, 3, 4, 5);
+    }
+}
+</code></pre>
+<hr />
+<h3 id="parallel-streams-for-large-data-processing">Parallel Streams for Large Data Processing</h3>
+<p>Parallel streams help process large datasets faster by utilizing multiple CPU cores.</p>
+<h4 id="example_8">Example:</h4>
+<pre><code class="language-java">import java.util.List;
+import java.util.stream.IntStream;
+
+public class ParallelStreamExample {
+    public static void main(String[] args) {
+        List&lt;Integer&gt; numbers = IntStream.rangeClosed(1, 10000).boxed().toList();
+        numbers.parallelStream().forEach(System.out::println);
+    }
+}
+</code></pre>
+<hr />
+<h3 id="custom-exception-class">Custom Exception Class</h3>
+<p>We can create our own custom exception by extending <code>Exception</code> (checked) or <code>RuntimeException</code> (unchecked).</p>
+<h4 id="example_9">Example:</h4>
+<pre><code class="language-java">class CustomException extends Exception {
+    public CustomException(String message) {
+        super(message);
+    }
+}
+
+public class TestException {
+    public static void main(String[] args) {
+        try {
+            throw new CustomException(&quot;This is a custom exception&quot;);
+        } catch (CustomException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+</code></pre>
+<hr />
+<h2 id="spring-boot">Spring Boot</h2>
+<h3 id="can-we-exclude-dependency-from-enableautoconfiguration">Can We Exclude Dependency from <code>@EnableAutoConfiguration</code>?</h3>
+<p>Yes, we can exclude dependencies using <code>exclude</code> or <code>excludeName</code> attributes of <code>@EnableAutoConfiguration</code>.</p>
+<h4 id="example_10">Example:</h4>
+<pre><code class="language-java">@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+</code></pre>
+<hr />
+<h3 id="can-we-change-tomcat-server">Can We Change Tomcat Server?</h3>
+<p>Yes, we can change Tomcat to another embedded server like Jetty or Undertow by excluding Tomcat and adding the desired server dependency.</p>
+<h4 id="example_11">Example:</h4>
+<pre><code class="language-xml">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-jetty&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../IntroduceYourself/" class="btn btn-neutral float-left" title="Introduce Yourself"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../cbs/CBS/" class="btn btn-neutral float-right" title="CBS">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Programs/" class="btn btn-neutral float-right" title="Programs">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -284,7 +610,7 @@
       <span><a href="../IntroduceYourself/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../cbs/CBS/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Programs/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
