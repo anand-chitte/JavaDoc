@@ -258,20 +258,20 @@
 <div class="section" itemprop="articleBody">
 <h1 id="exception-in-java">Exception in Java</h1>
 <p>An exception in Java is an event that disrupts the normal flow of the program's execution. It can occur due to a variety of reasons, such as invalid input, attempting to divide by zero, file errors, or network issues. When an exception occurs, Java creates an <code>Exception</code> object and throws it.</p>
-<div class="mermaid">flowchart TD
+<div class="mermaid"> flowchart TD
     Throwable["Throwable (Interface)"]
-    Throwable --&gt; Error["Error (Class)"]
-    Throwable --&gt; Exception["Exception (Class)"]
-    Error --&gt; VirtualMachineError["VirtualMachineError (Class)"]
-    Error --&gt; OutOfMemoryError["OutOfMemoryError (Class)"]
-    Error --&gt; StackOverflowError["StackOverflowError (Class)"]
-    Exception --&gt; IOException["IOException (Class)"]
-    Exception --&gt; RuntimeException["RuntimeException (Class)"]
-    IOException --&gt; FileNotFoundException["FileNotFoundException (Class)"]
-    IOException --&gt; EOFException["EOFException (Class)"]
-    RuntimeException --&gt; NullPointerException["NullPointerException (Class)"]
-    RuntimeException --&gt; IndexOutOfBoundsException["IndexOutOfBoundsException (Class)"]
-    RuntimeException --&gt; ArithmeticException["ArithmeticException (Class)"]
+    Throwable --&gt;|extends| Error["Error (Class)"]
+    Throwable --&gt;|extends| Exception["Exception (Class)"]
+    Error --&gt;|extends| VirtualMachineError["VirtualMachineError (Class)"]
+    Error --&gt;|extends| OutOfMemoryError["OutOfMemoryError (Class)"]
+    Error --&gt;|extends| StackOverflowError["StackOverflowError (Class)"]
+    Exception --&gt;|extends| IOException["IOException (Class)"]
+    Exception --&gt;|extends| RuntimeException["RuntimeException (Class)"]
+    IOException --&gt;|extends| FileNotFoundException["FileNotFoundException (Class)"]
+    IOException --&gt;|extends| EOFException["EOFException (Class)"]
+    RuntimeException --&gt;|extends| NullPointerException["NullPointerException (Class)"]
+    RuntimeException --&gt;|extends| IndexOutOfBoundsException["IndexOutOfBoundsException (Class)"]
+    RuntimeException --&gt;|extends| ArithmeticException["ArithmeticException (Class)"]
 </div>
 <h2 id="types-of-exceptions">Types of Exceptions</h2>
 <h3 id="1-checked-exceptions">1. <strong>Checked Exceptions</strong></h3>
