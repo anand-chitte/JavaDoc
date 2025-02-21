@@ -33,6 +33,7 @@ nav:
     - Design Pattern: java/DesignPattern.md
     - Variable Argument: java/VariableArgument.md
     - Programming Questions: java/ProgrammingQuestions.md
+    - Java Versions: java/Versions.md
   - Spring:
       - Introduction: spring/Introduction.md
       - Spring Container: spring/Spring Container.md
