@@ -77,5 +77,18 @@ Microservices should be resilient to failures. Some key patterns include:
 - Improves user experience by optimizing API responses based on client needs.
 - Example: A mobile BFF service returns lightweight JSON responses, while a web BFF service provides richer data.
 
+## 9. Saga Pattern
+- Ensures data consistency in a distributed system where multiple microservices participate in a transaction.
+- Instead of a traditional database transaction, a saga consists of multiple steps, each with a compensating action if a failure occurs.
+- **Types of Saga:**
+  - **Choreography-Based Saga**: Each service listens for events and responds accordingly.
+  - **Orchestration-Based Saga**: A central orchestrator coordinates the workflow by invoking services.
+- **Example:**
+  1. An **Order Service** creates an order and sends an event.
+  2. A **Payment Service** processes the payment.
+  3. An **Inventory Service** checks and reserves stock.
+  4. If any step fails, compensating transactions (refund, stock release, etc.) are triggered to maintain consistency.
+
 ---
 This document provides an overview of key microservice design patterns that help in building scalable and resilient applications.
+

@@ -211,6 +211,24 @@ No, the method signature must be `String[] args`.
 
 ---
 
+### `==` vs equals
+- `==` checks whether two references point to the same object in memory.
+- `==` does not compare the actual content of the objects.
+#### Example:
+```java
+String s1 = new String("Hello");
+String s2 = new String("Hello");
+System.out.println(s1 == s2); // false (different objects in memory)
+```
+- `equals` checks whether the values inside two objects are the same.
+#### Example:
+```java
+String s1 = new String("Hello");
+String s2 = new String("Hello");
+System.out.println(s1.equals(s2)); // true (same content)
+```
+---
+
 ### When to Use `ArrayList` or `LinkedList`?
 - `ArrayList` is better for fast random access.
 - `LinkedList` is better for frequent insertions/deletions.
@@ -273,6 +291,10 @@ public class TestException {
     }
 }
 ```
+---
+
+### `synchronized`
+- It ensures that only one thread can execute a synchronized method or block at a time, preventing race conditions and ensuring data consistency.
 
 ---
 
@@ -290,6 +312,11 @@ public class Application {
     }
 }
 ```
+---
+
+### `constructor` vs `setter` injection
+- Use Constructor Injection When dependencies are mandatory and for better testability and immutability.
+- Use Setter Injection When dependencies are optional or might change dynamically.
 
 ---
 
