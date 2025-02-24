@@ -298,6 +298,32 @@ public class TestException {
 
 ---
 
+### `synchronized hashmap`
+- `HashMap` can be synchronized manually using `Collections.synchronizedMap()`
+```java
+Map<String, String> syncMap = Collections.synchronizedMap(new HashMap<>());
+```
+- Entire map is locked for every read/write operation.
+
+---
+
+### `concurrent hashmap`
+- `ConcurrentHashMap` is a thread-safe implementation of `HashMap` designed for high performance.
+```java
+Map<String, String> concurrentMap = new ConcurrentHashMap<>();
+```
+- Uses finer-grained locking (bucket-level locking).
+
+---
+
+### `Hashtable` vs `Hashmap`
+| Feature            | Hashtable                      | HashMap                          |
+|--------------------|--------------------------------|----------------------------------|
+| **Synchronization** | Synchronized (Thread-Safe)    | Not Synchronized (Not Thread-Safe) |
+| **Performance**    | Slower due to synchronization | Faster                           |
+| **Null Keys & Values** | ❌ Does not allow null keys/values | ✅ Allows one null key and multiple null values |
+| **Iteration Order** | Unpredictable                | Unpredictable                    |
+
 ## Spring Boot
 
 ### Can We Exclude Dependency from `@EnableAutoConfiguration`?
