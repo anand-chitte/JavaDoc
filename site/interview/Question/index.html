@@ -287,6 +287,12 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#synchronized">synchronized</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#synchronized-hashmap">synchronized hashmap</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#concurrent-hashmap">concurrent hashmap</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hashtable-vs-hashmap">Hashtable vs Hashmap</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Programs/">Programs</a>
@@ -593,6 +599,58 @@ public class TestException {
 <li>It ensures that only one thread can execute a synchronized method or block at a time, preventing race conditions and ensuring data consistency.</li>
 </ul>
 <hr />
+<h3 id="synchronized-hashmap"><code>synchronized hashmap</code></h3>
+<ul>
+<li><code>HashMap</code> can be synchronized manually using <code>Collections.synchronizedMap()</code></li>
+</ul>
+<pre><code class="language-java">Map&lt;String, String&gt; syncMap = Collections.synchronizedMap(new HashMap&lt;&gt;());
+</code></pre>
+<ul>
+<li>Entire map is locked for every read/write operation.</li>
+</ul>
+<hr />
+<h3 id="concurrent-hashmap"><code>concurrent hashmap</code></h3>
+<ul>
+<li><code>ConcurrentHashMap</code> is a thread-safe implementation of <code>HashMap</code> designed for high performance.</li>
+</ul>
+<pre><code class="language-java">Map&lt;String, String&gt; concurrentMap = new ConcurrentHashMap&lt;&gt;();
+</code></pre>
+<ul>
+<li>Uses finer-grained locking (bucket-level locking).</li>
+</ul>
+<hr />
+<h3 id="hashtable-vs-hashmap"><code>Hashtable</code> vs <code>Hashmap</code></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Hashtable</th>
+<th>HashMap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Synchronization</strong></td>
+<td>Synchronized (Thread-Safe)</td>
+<td>Not Synchronized (Not Thread-Safe)</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Slower due to synchronization</td>
+<td>Faster</td>
+</tr>
+<tr>
+<td><strong>Null Keys &amp; Values</strong></td>
+<td>❌ Does not allow null keys/values</td>
+<td>✅ Allows one null key and multiple null values</td>
+</tr>
+<tr>
+<td><strong>Iteration Order</strong></td>
+<td>Unpredictable</td>
+<td>Unpredictable</td>
+</tr>
+</tbody>
+</table>
 <h2 id="spring-boot">Spring Boot</h2>
 <h3 id="can-we-exclude-dependency-from-enableautoconfiguration">Can We Exclude Dependency from <code>@EnableAutoConfiguration</code>?</h3>
 <p>Yes, we can exclude dependencies using <code>exclude</code> or <code>excludeName</code> attributes of <code>@EnableAutoConfiguration</code>.</p>

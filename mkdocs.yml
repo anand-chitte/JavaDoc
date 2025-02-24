@@ -71,6 +71,7 @@ nav:
       - Question: postgres/Question.md
       - Answer: postgres/Answer.md
   - Other:
+    - HTTP: other/HTTP.md
     - Maven: other/Maven.md
     - Git: other/Git.md
     - Docker: other/Docker.md
