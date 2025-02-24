@@ -98,9 +98,15 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/MarkerInterface/">Marker Interface</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Solid/">SOLID</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/ReflectionAPI/">Reflection API</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/DesignPattern/">Design Pattern</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Versions/">Java Versions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/FlightRecorder/">Flight Recorder</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Spring</span></p>
@@ -255,21 +261,31 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#stringbuilder-vs-stringbuffer">StringBuilder vs StringBuffer</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vs-equals">== vs equals</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example_8">Example:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_9">Example:</a>
+    </li>
+        </ul>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#when-to-use-arraylist-or-linkedlist">When to Use ArrayList or LinkedList?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#what-is-variable-arguments">What is variable arguments?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#parallel-streams-for-large-data-processing">Parallel Streams for Large Data Processing</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#example_8">Example:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#example_10">Example:</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#custom-exception-class">Custom Exception Class</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#example_9">Example:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#example_11">Example:</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#synchronized">synchronized</a>
     </li>
     </ul>
                   </li>
@@ -498,6 +514,25 @@ public class CompletableFutureExample {
 <li><code>StringBuffer</code> is synchronized and thread-safe.</li>
 </ul>
 <hr />
+<h3 id="vs-equals"><code>==</code> vs equals</h3>
+<ul>
+<li><code>==</code> checks whether two references point to the same object in memory.</li>
+<li><code>==</code> does not compare the actual content of the objects.</li>
+</ul>
+<h4 id="example_8">Example:</h4>
+<pre><code class="language-java">String s1 = new String(&quot;Hello&quot;);
+String s2 = new String(&quot;Hello&quot;);
+System.out.println(s1 == s2); // false (different objects in memory)
+</code></pre>
+<ul>
+<li><code>equals</code> checks whether the values inside two objects are the same.</li>
+</ul>
+<h4 id="example_9">Example:</h4>
+<pre><code class="language-java">String s1 = new String(&quot;Hello&quot;);
+String s2 = new String(&quot;Hello&quot;);
+System.out.println(s1.equals(s2)); // true (same content)
+</code></pre>
+<hr />
 <h3 id="when-to-use-arraylist-or-linkedlist">When to Use <code>ArrayList</code> or <code>LinkedList</code>?</h3>
 <ul>
 <li><code>ArrayList</code> is better for fast random access.</li>
@@ -521,7 +556,7 @@ public class CompletableFutureExample {
 <hr />
 <h3 id="parallel-streams-for-large-data-processing">Parallel Streams for Large Data Processing</h3>
 <p>Parallel streams help process large datasets faster by utilizing multiple CPU cores.</p>
-<h4 id="example_8">Example:</h4>
+<h4 id="example_10">Example:</h4>
 <pre><code class="language-java">import java.util.List;
 import java.util.stream.IntStream;
 
@@ -535,7 +570,7 @@ public class ParallelStreamExample {
 <hr />
 <h3 id="custom-exception-class">Custom Exception Class</h3>
 <p>We can create our own custom exception by extending <code>Exception</code> (checked) or <code>RuntimeException</code> (unchecked).</p>
-<h4 id="example_9">Example:</h4>
+<h4 id="example_11">Example:</h4>
 <pre><code class="language-java">class CustomException extends Exception {
     public CustomException(String message) {
         super(message);
@@ -553,10 +588,15 @@ public class TestException {
 }
 </code></pre>
 <hr />
+<h3 id="synchronized"><code>synchronized</code></h3>
+<ul>
+<li>It ensures that only one thread can execute a synchronized method or block at a time, preventing race conditions and ensuring data consistency.</li>
+</ul>
+<hr />
 <h2 id="spring-boot">Spring Boot</h2>
 <h3 id="can-we-exclude-dependency-from-enableautoconfiguration">Can We Exclude Dependency from <code>@EnableAutoConfiguration</code>?</h3>
 <p>Yes, we can exclude dependencies using <code>exclude</code> or <code>excludeName</code> attributes of <code>@EnableAutoConfiguration</code>.</p>
-<h4 id="example_10">Example:</h4>
+<h4 id="example_12">Example:</h4>
 <pre><code class="language-java">@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class Application {
     public static void main(String[] args) {
@@ -565,9 +605,15 @@ public class Application {
 }
 </code></pre>
 <hr />
+<h3 id="constructor-vs-setter-injection"><code>constructor</code> vs <code>setter</code> injection</h3>
+<ul>
+<li>Use Constructor Injection When dependencies are mandatory and for better testability and immutability.</li>
+<li>Use Setter Injection When dependencies are optional or might change dynamically.</li>
+</ul>
+<hr />
 <h3 id="can-we-change-tomcat-server">Can We Change Tomcat Server?</h3>
 <p>Yes, we can change Tomcat to another embedded server like Jetty or Undertow by excluding Tomcat and adding the desired server dependency.</p>
-<h4 id="example_11">Example:</h4>
+<h4 id="example_13">Example:</h4>
 <pre><code class="language-xml">&lt;dependencies&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;

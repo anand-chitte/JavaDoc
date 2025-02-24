@@ -98,6 +98,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#2-iterator">2. Iterator</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-listiterator">3. ListIterator</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#key-differences">Key Differences</a>
     </li>
     </ul>
@@ -106,9 +108,15 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../MarkerInterface/">Marker Interface</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Solid/">SOLID</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ReflectionAPI/">Reflection API</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../DesignPattern/">Design Pattern</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Versions/">Java Versions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../FlightRecorder/">Flight Recorder</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Spring</span></p>
@@ -274,7 +282,7 @@ for (String s : list) {
 <h2 id="2-iterator">2. Iterator</h2>
 <ul>
 <li>
-<p>Iterator is an interface in Java that allows you to traverse (iterate) through a collection, element by element, and optionally remove elements from the collection.</p>
+<p><strong>Iterator</strong> is an interface in Java that allows you to traverse (iterate) through a collection, element by element, and optionally remove elements from the collection.</p>
 </li>
 <li>
 <p>The Iterator interface provides three primary methods:</p>
@@ -291,10 +299,35 @@ while (iterator.hasNext()) {
     System.out.println(element);
 }
 </code></pre>
+<h2 id="3-listiterator">3. ListIterator</h2>
+<ul>
+<li><strong>ListIterator</strong> is a specialized iterator for lists that allows traversal in both forward and backward directions.</li>
+<li>It extends the <strong>Iterator</strong> interface and provides additional methods:</li>
+<li><strong>hasPrevious():</strong> Checks if there is a previous element.</li>
+<li><strong>previous():</strong> Returns the previous element.</li>
+<li><strong>add(E e):</strong> Inserts an element at the current position.</li>
+<li><strong>set(E e):</strong> Replaces the last element returned by <code>next()</code> or <code>previous()</code>.</li>
+</ul>
+<p>Example usage:</p>
+<pre><code class="language-java">List&lt;String&gt; list = new ArrayList&lt;&gt;(Arrays.asList(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;));
+ListIterator&lt;String&gt; listIterator = list.listIterator();
+
+// Forward Traversal
+while (listIterator.hasNext()) {
+    System.out.println(listIterator.next());
+}
+
+// Backward Traversal
+while (listIterator.hasPrevious()) {
+    System.out.println(listIterator.previous());
+}
+</code></pre>
 <h2 id="key-differences">Key Differences</h2>
 <ul>
-<li>Iterable is used to represent collections that can be traversed, while Iterator provides the mechanism for iterating over those collections.</li>
-<li>Iterable has the iterator() method that returns an Iterator, and Iterator has methods for accessing and removing elements.</li>
+<li><strong>Iterable</strong> is used to represent collections that can be traversed, while <strong>Iterator</strong> provides the mechanism for iterating over those collections.</li>
+<li><strong>Iterable</strong> has the iterator() method that returns an Iterator, and Iterator has methods for accessing and removing elements.</li>
+<li><strong>Iterator</strong> allows only forward traversal, whereas <strong>ListIterator</strong> supports both forward and backward traversal.</li>
+<li><strong>ListIterator</strong> provides additional methods to modify the list, unlike <strong>Iterator</strong>.</li>
 </ul>
               
             </div>

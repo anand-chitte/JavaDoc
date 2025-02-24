@@ -98,9 +98,15 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/MarkerInterface/">Marker Interface</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Solid/">SOLID</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/ReflectionAPI/">Reflection API</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/DesignPattern/">Design Pattern</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../java/Versions/">Java Versions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/FlightRecorder/">Flight Recorder</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Spring</span></p>
@@ -193,6 +199,8 @@
     <li class="toctree-l2"><a class="reference internal" href="#7-gateway-offloading-pattern">7. Gateway Offloading Pattern</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#8-backend-for-frontend-bff-pattern">8. Backend for Frontend (BFF) Pattern</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-saga-pattern">9. Saga Pattern</a>
     </li>
     </ul>
                   </li>
@@ -361,6 +369,19 @@
 <li>A specialized API Gateway tailored for different frontend clients (web, mobile, desktop, etc.).</li>
 <li>Improves user experience by optimizing API responses based on client needs.</li>
 <li>Example: A mobile BFF service returns lightweight JSON responses, while a web BFF service provides richer data.</li>
+</ul>
+<h2 id="9-saga-pattern">9. Saga Pattern</h2>
+<ul>
+<li>Ensures data consistency in a distributed system where multiple microservices participate in a transaction.</li>
+<li>Instead of a traditional database transaction, a saga consists of multiple steps, each with a compensating action if a failure occurs.</li>
+<li><strong>Types of Saga:</strong></li>
+<li><strong>Choreography-Based Saga</strong>: Each service listens for events and responds accordingly.</li>
+<li><strong>Orchestration-Based Saga</strong>: A central orchestrator coordinates the workflow by invoking services.</li>
+<li><strong>Example:</strong></li>
+<li>An <strong>Order Service</strong> creates an order and sends an event.</li>
+<li>A <strong>Payment Service</strong> processes the payment.</li>
+<li>An <strong>Inventory Service</strong> checks and reserves stock.</li>
+<li>If any step fails, compensating transactions (refund, stock release, etc.) are triggered to maintain consistency.</li>
 </ul>
 <hr />
 <p>This document provides an overview of key microservice design patterns that help in building scalable and resilient applications.</p>
