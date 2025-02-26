@@ -1,9 +1,16 @@
-# Introduction
+## Tell me about yourself
 
-Hi, I am ABC, Software Engineer with **years of experience** in developing **microservice-based applications** using **Java** and **Spring Boot**. My focus has always been on creating robust, scalable, and efficient backend solutions that address client requirements and align with business goals.
+**Hello, my name is [Your Name], and I have been working as a Java Spring Boot Developer for the past [X] years.**
 
-I have hands-on experience in designing and implementing **RESTful APIs**, integrating databases like **PostgreSQL** and **MySQL**, and ensuring the applications align with business goals. My expertise also includes debugging and resolving issues reported by QA teams, collaborating with cross-functional teams, and actively participating in **Agile methodologies** such as daily stand-ups.
-## Key Projects
-## Passion and Vision
+I specialize in designing and developing **scalable microservices-based applications** using **Spring Boot, Spring Cloud, and PostgreSQL**.
 
-I am passionate about solving complex problems, building scalable and modular backend systems, and staying updated with the latest advancements in microservices and Java technologies.
+### Current Role & Responsibilities:
+- Developing **RESTful APIs** and implementing business logic.
+- Ensuring seamless communication between microservices.
+- Working with **Docker, Kubernetes, and CI/CD pipelines** to streamline deployments.
+- Implementing **Kafka, RabbitMQ, and Redis** for event-driven architecture.
+- Configuring **service discovery, API gateways, and config servers**.
+
+I enjoy collaborating with cross-functional teams, analyzing business requirements, and delivering high-quality software solutions. I am excited about this opportunity because it aligns with my experience and interest in building efficient and scalable microservices. 
+
+Would you like me to elaborate on any specific experience or project?
