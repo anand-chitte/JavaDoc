@@ -61,7 +61,7 @@ ILMS provides the following services:
 2. **Vendor Onboarding** – Develop a structured process for onboarding vendors.
 3. **Migration Service** – Enhance migration functionality for seamless data transfer.
 
-# **ILMS Case Workflow**
+# **ILMS Case Workflow(Motor OD & TP)**
 
 ## **1. CLP Team Pushes Case into ILMS System**
 - **Case Status:** **New** → Allocated to **QC1** → **Status:** *Pending for Allocation*
