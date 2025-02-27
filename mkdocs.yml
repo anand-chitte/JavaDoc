@@ -33,6 +33,7 @@ nav:
     - SOLID: java/Solid.md
     - Reflection API: java/ReflectionAPI.md
     - Design Pattern: java/DesignPattern.md
+    - Functional Programming: java/FunctionalProgramming.md
     - Java Versions: java/Versions.md
     - Flight Recorder: java/FlightRecorder.md
   - Spring:
