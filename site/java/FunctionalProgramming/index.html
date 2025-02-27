@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/FunctionaProgramming/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/FunctionalProgramming/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Functional Programming in Software Development - Java</title>
+    <title>Functional Programming - Java</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Functional Programming in Software Development";
-        var mkdocs_page_input_path = "java\\FunctionaProgramming.md";
-        var mkdocs_page_url = "/JavaDoc/java/FunctionaProgramming/";
+        var mkdocs_page_name = "Functional Programming";
+        var mkdocs_page_input_path = "java\\FunctionalProgramming.md";
+        var mkdocs_page_url = "/JavaDoc/java/FunctionalProgramming/";
       </script>
     
     <!--[if lt IE 9]>
@@ -45,7 +45,7 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Java</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../How%20Java%20Works/">How Java Works</a>
@@ -104,7 +104,27 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../DesignPattern/">Design Pattern</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../FunctionalProgramming.md">Functional Programming</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Functional Programming</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#key-concepts-of-functional-programming-in-java">Key Concepts of Functional Programming in Java</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-pure-functions">1. Pure Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-immutability">2. Immutability</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-first-class-and-higher-order-functions">3. First-Class and Higher-Order Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-function-composition">4. Function Composition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-recursion">5. Recursion</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#benefits-of-functional-programming-in-java">Benefits of Functional Programming in Java</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#where-functional-programming-is-used-in-java">Where Functional Programming is Used in Java</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Versions/">Java Versions</a>
                   </li>
@@ -243,7 +263,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Functional Programming in Software Development</li>
+          <li class="breadcrumb-item">Java</li>
+      <li class="breadcrumb-item active">Functional Programming</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -252,55 +273,90 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="functional-programming-in-software-development">Functional Programming in Software Development</h1>
-<p>Functional programming (FP) is a paradigm that treats computation as the evaluation of mathematical functions while avoiding changing state and mutable data. It provides several advantages in software development, particularly for building reliable, scalable, and maintainable applications.</p>
+                <h1 id="functional-programming-in-java">Functional Programming in Java</h1>
+<p>Functional programming (FP) in Java revolves around writing concise, maintainable, and immutable code using functional constructs introduced in Java 8 and beyond. It focuses on declarative programming using functions as first-class citizens.</p>
 <hr />
-<h2 id="key-concepts-of-functional-programming">Key Concepts of Functional Programming</h2>
+<h2 id="key-concepts-of-functional-programming-in-java">Key Concepts of Functional Programming in Java</h2>
 <h3 id="1-pure-functions">1. Pure Functions</h3>
 <ul>
 <li>A function always produces the same output for the same input without side effects.</li>
 <li>Example:</li>
 </ul>
-<p><code>javascript
-  const add = (a, b) =&gt; a + b;
-  console.log(add(2, 3)); // Always returns 5</code></p>
+<p>```java
+  import java.util.function.BiFunction;</p>
+<p>public class PureFunctionExample {
+      public static void main(String[] args) {
+          BiFunction<Integer, Integer, Integer> add = (a, b) -&gt; a + b;
+          System.out.println(add.apply(2, 3)); // Always returns 5
+      }
+  }
+  ```</p>
 <h3 id="2-immutability">2. Immutability</h3>
 <ul>
 <li>Data should not be changed once created; instead, new copies should be made.</li>
 <li>Example:</li>
 </ul>
-<p><code>javascript
-  const arr = [1, 2, 3];
-  const newArr = [...arr, 4]; // Creates a new array instead of modifying the original</code></p>
+<p>```java
+  import java.util.Arrays;
+  import java.util.List;
+  import java.util.stream.Collectors;</p>
+<p>public class ImmutabilityExample {
+      public static void main(String[] args) {
+          List<Integer> list = Arrays.asList(1, 2, 3);
+          List<Integer> newList = list.stream().map(n -&gt; n * 2).collect(Collectors.toList());
+          System.out.println(newList); // [2, 4, 6]
+      }
+  }
+  ```</p>
 <h3 id="3-first-class-and-higher-order-functions">3. First-Class and Higher-Order Functions</h3>
 <ul>
-<li>Functions are treated as values, meaning they can be assigned to variables, passed as arguments, and returned from other functions.</li>
+<li>Functions can be assigned to variables, passed as arguments, and returned from other functions.</li>
 <li>Example:</li>
 </ul>
-<p><code>javascript
-  const multiplyBy = (x) =&gt; (y) =&gt; x * y;
-  const double = multiplyBy(2);
-  console.log(double(5)); // 10</code></p>
+<p>```java
+  import java.util.function.Function;</p>
+<p>public class HigherOrderFunctionExample {
+      public static void main(String[] args) {
+          Function<Integer, Function\<Integer, Integer>> multiplyBy = x -&gt; y -&gt; x * y;
+          Function<Integer, Integer> doubleValue = multiplyBy.apply(2);
+          System.out.println(doubleValue.apply(5)); // 10
+      }
+  }
+  ```</p>
 <h3 id="4-function-composition">4. Function Composition</h3>
 <ul>
 <li>Combining small functions to build more complex ones.</li>
 <li>Example:</li>
 </ul>
-<p><code>javascript
-  const toUpperCase = (str) =&gt; str.toUpperCase();
-  const exclaim = (str) =&gt; str + "!";
-  const shout = (str) =&gt; exclaim(toUpperCase(str));
-  console.log(shout("hello")); // "HELLO!"</code></p>
+<p>```java
+  import java.util.function.Function;</p>
+<p>public class FunctionCompositionExample {
+      public static void main(String[] args) {
+          Function<String, String> toUpperCase = String::toUpperCase;
+          Function<String, String> exclaim = str -&gt; str + "!";
+          Function<String, String> shout = toUpperCase.andThen(exclaim);
+          System.out.println(shout.apply("hello")); // "HELLO!"
+      }
+  }
+  ```</p>
 <h3 id="5-recursion">5. Recursion</h3>
 <ul>
 <li>Instead of loops, FP relies on recursive functions.</li>
 <li>Example:</li>
 </ul>
-<p><code>javascript
-  const factorial = (n) =&gt; (n === 0 ? 1 : n * factorial(n - 1));
-  console.log(factorial(5)); // 120</code></p>
+<p>```java
+  public class RecursionExample {
+      public static int factorial(int n) {
+          return (n == 0) ? 1 : n * factorial(n - 1);
+      }</p>
+<pre><code>  public static void main(String[] args) {
+      System.out.println(factorial(5)); // 120
+  }
+</code></pre>
+<p>}
+  ```</p>
 <hr />
-<h2 id="benefits-of-functional-programming">Benefits of Functional Programming</h2>
+<h2 id="benefits-of-functional-programming-in-java">Benefits of Functional Programming in Java</h2>
 <ul>
 <li>✅ <strong>Improved Readability &amp; Maintainability</strong> – Code is more predictable and easier to debug.</li>
 <li>✅ <strong>Easier Testing &amp; Debugging</strong> – Pure functions with no side effects make unit testing straightforward.</li>
@@ -308,17 +364,23 @@
 <li>✅ <strong>Concurrency &amp; Parallelism</strong> – Avoiding shared mutable state makes FP well-suited for concurrent applications.</li>
 </ul>
 <hr />
-<h2 id="where-functional-programming-is-used">Where Functional Programming is Used</h2>
+<h2 id="where-functional-programming-is-used-in-java">Where Functional Programming is Used in Java</h2>
 <ul>
-<li><strong>Frontend Development</strong> (React, Redux)</li>
-<li><strong>Backend Development</strong> (Node.js, Elixir)</li>
-<li><strong>Data Science &amp; Machine Learning</strong> (Haskell, Scala)</li>
-<li><strong>Concurrency &amp; Distributed Systems</strong> (Erlang, Clojure)</li>
+<li><strong>Stream API</strong> (Processing collections efficiently)</li>
+<li><strong>Lambda Expressions</strong> (Simplified anonymous functions)</li>
+<li><strong>Method References</strong> (More concise function calls)</li>
+<li><strong>Optional API</strong> (Handling null values safely)</li>
+<li><strong>CompletableFuture</strong> (Asynchronous programming)</li>
 </ul>
 <hr />
+<p>Would you like a comparison with object-oriented programming (OOP) in Java or more advanced topics like functional reactive programming? 🚀</p>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../DesignPattern/" class="btn btn-neutral float-left" title="Design Pattern"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Versions/" class="btn btn-neutral float-right" title="Java Versions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -340,6 +402,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../DesignPattern/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Versions/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -10,83 +10,83 @@ Functional programming (FP) in Java revolves around writing concise, maintainabl
 - A function always produces the same output for the same input without side effects.
 - Example:
   
-  ```java
-  import java.util.function.BiFunction;
-  
-  public class PureFunctionExample {
-      public static void main(String[] args) {
-          BiFunction<Integer, Integer, Integer> add = (a, b) -> a + b;
-          System.out.println(add.apply(2, 3)); // Always returns 5
-      }
-  }
-  ```
+```java
+import java.util.function.BiFunction;
+
+public class PureFunctionExample {
+    public static void main(String[] args) {
+        BiFunction<Integer, Integer, Integer> add = (a, b) -> a + b;
+        System.out.println(add.apply(2, 3)); // Always returns 5
+    }
+}
+```
 
 ### 2. Immutability
 - Data should not be changed once created; instead, new copies should be made.
 - Example:
   
-  ```java
-  import java.util.Arrays;
-  import java.util.List;
-  import java.util.stream.Collectors;
-  
-  public class ImmutabilityExample {
-      public static void main(String[] args) {
-          List<Integer> list = Arrays.asList(1, 2, 3);
-          List<Integer> newList = list.stream().map(n -> n * 2).collect(Collectors.toList());
-          System.out.println(newList); // [2, 4, 6]
-      }
-  }
-  ```
+```java
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class ImmutabilityExample {
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(1, 2, 3);
+        List<Integer> newList = list.stream().map(n -> n * 2).collect(Collectors.toList());
+        System.out.println(newList); // [2, 4, 6]
+    }
+}
+```
 
 ### 3. First-Class and Higher-Order Functions
 - Functions can be assigned to variables, passed as arguments, and returned from other functions.
 - Example:
   
-  ```java
-  import java.util.function.Function;
-  
-  public class HigherOrderFunctionExample {
-      public static void main(String[] args) {
-          Function<Integer, Function<Integer, Integer>> multiplyBy = x -> y -> x * y;
-          Function<Integer, Integer> doubleValue = multiplyBy.apply(2);
-          System.out.println(doubleValue.apply(5)); // 10
-      }
-  }
-  ```
+```java
+import java.util.function.Function;
+
+public class HigherOrderFunctionExample {
+    public static void main(String[] args) {
+        Function<Integer, Function<Integer, Integer>> multiplyBy = x -> y -> x * y;
+        Function<Integer, Integer> doubleValue = multiplyBy.apply(2);
+        System.out.println(doubleValue.apply(5)); // 10
+    }
+}
+```
 
 ### 4. Function Composition
 - Combining small functions to build more complex ones.
 - Example:
   
-  ```java
-  import java.util.function.Function;
-  
-  public class FunctionCompositionExample {
-      public static void main(String[] args) {
-          Function<String, String> toUpperCase = String::toUpperCase;
-          Function<String, String> exclaim = str -> str + "!";
-          Function<String, String> shout = toUpperCase.andThen(exclaim);
-          System.out.println(shout.apply("hello")); // "HELLO!"
-      }
-  }
-  ```
+```java
+import java.util.function.Function;
+
+public class FunctionCompositionExample {
+    public static void main(String[] args) {
+        Function<String, String> toUpperCase = String::toUpperCase;
+        Function<String, String> exclaim = str -> str + "!";
+        Function<String, String> shout = toUpperCase.andThen(exclaim);
+        System.out.println(shout.apply("hello")); // "HELLO!"
+    }
+}
+```
 
 ### 5. Recursion
 - Instead of loops, FP relies on recursive functions.
 - Example:
   
-  ```java
-  public class RecursionExample {
-      public static int factorial(int n) {
-          return (n == 0) ? 1 : n * factorial(n - 1);
-      }
-      
-      public static void main(String[] args) {
-          System.out.println(factorial(5)); // 120
-      }
-  }
-  ```
+```java
+public class RecursionExample {
+    public static int factorial(int n) {
+        return (n == 0) ? 1 : n * factorial(n - 1);
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(factorial(5)); // 120
+    }
+}
+```
 
 ---
 
