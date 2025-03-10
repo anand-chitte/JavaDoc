@@ -86,6 +86,7 @@ nav:
     - Question: interview/Question.md
     - Programs: interview/Programs.md
     - Practice: interview/Practice.md
+    - SQLSchema: interview/SQLSchema.md
     - References: interview/References.md
 #  - Project:
 #    - ILMS: projects/ILMS.md
