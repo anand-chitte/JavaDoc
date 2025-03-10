@@ -1,16 +1,18 @@
 ## Tell me about yourself
 
-**Hello, my name is [Your Name], and I have been working as a Java Spring Boot Developer for the past [X] years.**
+**Hello, my name is [Your Name], and I have been working as a Java Spring Boot Developer for the past [X] years.**  
 
-I specialize in designing and developing **scalable microservices-based applications** using **Spring Boot, Spring Cloud, and PostgreSQL**.
+I have experience in designing and developing backend applications using Java, Spring Boot, Spring Cloud, and PostgreSQL.  
 
 ### Current Role & Responsibilities:
-- Developing **RESTful APIs** and implementing business logic.
-- Ensuring seamless communication between microservices.
-- Working with **Docker, Kubernetes, and CI/CD pipelines** to streamline deployments.
-- Implementing **Kafka, RabbitMQ, and Redis** for event-driven architecture.
-- Configuring **service discovery, API gateways, and config servers**.
+- Developing **RESTful APIs** and implementing business logic.  
+- Configuring **service discovery, API gateways, and config servers**.  
+- Implementing **RabbitMQ** for event-driven architecture.  
+- Working with **Docker and CI/CD pipelines** to streamline deployments.  
 
-I enjoy collaborating with cross-functional teams, analyzing business requirements, and delivering high-quality software solutions. I am excited about this opportunity because it aligns with my experience and interest in building efficient and scalable microservices. 
+### Project Description:  
+Recently, I have worked on the **Investigation and Loss Mitigation System (ILMS)**, a standalone platform designed to assist the investigation team in conducting systematic and efficient investigations.  
 
-Would you like me to elaborate on any specific experience or project?
+In this project, I developed backend services using **Spring Boot** and **PostgreSQL**, ensuring seamless data management and high system performance. I also integrated **RabbitMQ** for real-time updates and notifications, enhancing communication within the investigation team. Additionally, I worked with **Docker and CI/CD pipelines** to automate deployments and improve system scalability.  
+
+The ILMS platform enables investigators to manage cases efficiently, track progress, and ensure proper documentation, ultimately helping organizations mitigate losses effectively.  
