@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/collection/Hashmap/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/stream/StreamWithPrimitiveDataType/" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Hashmap - Java</title>
+    <title>Stream API With Primitive Data Types - Java</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Hashmap";
-        var mkdocs_page_input_path = "java\\collection\\Hashmap.md";
-        var mkdocs_page_url = "/JavaDoc/java/collection/Hashmap/";
+        var mkdocs_page_name = "Stream API With Primitive Data Types";
+        var mkdocs_page_input_path = "java\\stream\\StreamWithPrimitiveDataType.md";
+        var mkdocs_page_url = "/JavaDoc/java/stream/StreamWithPrimitiveDataType/";
       </script>
     
     <!--[if lt IE 9]>
@@ -95,49 +95,85 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Collection Framework</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../Collection%20Framework/">Introduction</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../collection/Collection%20Framework/">Introduction</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Hashmap</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#key-concepts-of-hashmap">Key Concepts of HashMap</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#1-buckets">1. Buckets</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#2-hashing">2. Hashing</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#3-collisions">3. Collisions</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-insertion">4. Insertion</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#5-retrieving">5. Retrieving</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#6-removing">6. Removing</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#7-resize-rehashing">7. Resize (Rehashing)</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#example">Example</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../collection/Hashmap/">Hashmap</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../collection/Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../collection/Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Stream</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../stream/Stream/">Introduction</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Stream/">Introduction</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../stream/CreatingStream/">Creating Stream</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../CreatingStream/">Creating Stream</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../stream/IntermediateOperation/">Intermediate Operation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../IntermediateOperation/">Intermediate Operation</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../stream/TerminalOperation/">Terminal Operation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../TerminalOperation/">Terminal Operation</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../stream/StreamWithPrimitiveDataType/">Stream API With Primitive Data Types</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Stream API With Primitive Data Types</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-stream-api-with-primitive-data-types">1. Stream API with Primitive Data Types</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-primitive-streams">Creating Primitive Streams</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#from-an-array">From an Array</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#using-range-and-rangeclosed">Using range() and rangeClosed()</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#using-of">Using of()</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#using-generate-and-iterate">Using generate() and iterate()</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-stream-api-with-a-single-string">2. Stream API with a Single String</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#convert-string-to-intstream-character-stream">Convert String to IntStream (Character Stream)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#convert-string-to-stream-of-words">Convert String to Stream of Words</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-stream-api-with-an-array-of-strings">3. Stream API with an Array of Strings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#using-streamof">Using Stream.of()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#using-arraysstream">Using Arrays.stream()</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-convert-string-arrays-to-primitive-streams">4. Convert String Arrays to Primitive Streams</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#convert-string-array-to-intstream">Convert String Array to IntStream</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#convert-string-array-to-doublestream">Convert String Array to DoubleStream</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-filtering-mapping-and-reducing-with-stream-api">5. Filtering, Mapping, and Reducing with Stream API</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#filtering-words-based-on-length">Filtering Words Based on Length</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#finding-the-longest-word">Finding the Longest Word</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reduce-to-concatenate-strings">Reduce to Concatenate Strings</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-summary">6. Summary</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -295,8 +331,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Collection Framework</li>
-      <li class="breadcrumb-item active">Hashmap</li>
+          <li class="breadcrumb-item">Stream</li>
+      <li class="breadcrumb-item active">Stream API With Primitive Data Types</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -305,82 +341,168 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="working-of-hashmap-in-java">Working of HashMap in Java</h1>
-<p>A <strong>HashMap</strong> in Java is a data structure that stores key-value pairs. Each key in the HashMap is unique, and it is associated with a specific value. It is part of the <code>java.util</code> package and implements the <code>Map</code> interface.</p>
-<h2 id="key-concepts-of-hashmap">Key Concepts of HashMap</h2>
-<h3 id="1-buckets">1. Buckets</h3>
+                <h1 id="stream-api-with-primitive-data-types-and-strings-in-java">Stream API with Primitive Data Types and Strings in Java</h1>
+<p>The <strong>Stream API</strong> in Java allows efficient processing of sequences of data. When dealing with <strong>primitive data types</strong>, Java provides specialized streams to avoid unnecessary boxing and unboxing. These include:</p>
 <ul>
-<li>Internally, a <strong>HashMap</strong> uses an array of <strong>buckets</strong> (also known as "bins" or "slots"). These buckets are used to store the key-value pairs. The <strong>bucket size</strong> refers to the number of available buckets in the underlying array.</li>
-<li>When a key-value pair is inserted into the HashMap, the <strong>bucket index</strong> is determined based on the <strong>hash code</strong> of the key, which is calculated by the <code>hashCode()</code> method. The bucket index is then computed as:<br />
-<code>bucket index = hashCode(key) % bucket size</code>.</li>
-<li><strong>Bucket size</strong> is an internal property that can be configured but typically defaults to 16 in many implementations of HashMap. When the number of entries in the HashMap exceeds the load factor multiplied by the current bucket size, the bucket size will increase, typically doubling.</li>
+<li><strong>IntStream</strong> → for <code>int</code></li>
+<li><strong>LongStream</strong> → for <code>long</code></li>
+<li><strong>DoubleStream</strong> → for <code>double</code></li>
 </ul>
-<h3 id="2-hashing">2. Hashing</h3>
-<ul>
-<li><strong>Hash Code Calculation</strong>: When you insert a key-value pair into the HashMap, the hash code of the key is computed. The hash code is a number that is used to determine which bucket the key-value pair should be stored in.</li>
-<li>The hash code is then mapped to an index in the array of buckets. The formula used is:<br />
-<code>bucket index = hashCode(key) % bucket size</code>.</li>
-<li>For example, if the hash code of a key is <code>123</code> and the bucket size is <code>16</code>, the index will be:<br />
-<code>bucket index = 123 % 16 = 11</code>. This means the key-value pair will be stored in bucket 11.</li>
-</ul>
-<h3 id="3-collisions">3. Collisions</h3>
-<ul>
-<li><strong>Collision Handling</strong>: If two or more keys have the same hash code (i.e., they map to the same bucket), it leads to a <strong>collision</strong>. In this case, the HashMap stores these key-value pairs in a linked list (or tree if the collisions are high) at the same bucket index.</li>
-<li>When retrieving or updating values, HashMap traverses the linked list or tree to find the correct key-value pair.</li>
-</ul>
-<h3 id="4-insertion">4. Insertion</h3>
-<ul>
-<li><strong>put(key, value)</strong>: When you add a key-value pair, the key’s hash code is calculated, and the pair is stored in the appropriate bucket based on the index derived from the hash code.</li>
-<li>If the key already exists, the value is updated with the new one. If it's a new key, the pair is added to the HashMap.</li>
-</ul>
-<h3 id="5-retrieving">5. Retrieving</h3>
-<ul>
-<li><strong>get(key)</strong>: To retrieve a value, the HashMap calculates the hash code of the key, finds the appropriate bucket, and searches for the key in that bucket (either in the linked list or tree).</li>
-<li>If the key is found, the corresponding value is returned.</li>
-</ul>
-<h3 id="6-removing">6. Removing</h3>
-<ul>
-<li><strong>remove(key)</strong>: To remove a key-value pair, the HashMap calculates the hash code for the key, finds the appropriate bucket, and removes the pair from the linked list or tree at that bucket index.</li>
-</ul>
-<h3 id="7-resize-rehashing">7. Resize (Rehashing)</h3>
-<ul>
-<li><strong>Load Factor</strong>: A <strong>load factor</strong> determines when the HashMap should resize (rehash) the buckets. The default load factor is 0.75, meaning when 75% of the current bucket size is filled, the HashMap will resize the array of buckets.</li>
-<li><strong>Rehashing</strong>: When the bucket size exceeds the threshold (load factor * current bucket size), the <strong>HashMap resizes</strong> the array, typically doubling the bucket size. All existing key-value pairs are rehashed and redistributed into the new array of buckets, ensuring even distribution and avoiding too many collisions.</li>
-</ul>
-<h2 id="example">Example</h2>
-<pre><code class="language-java">import java.util.HashMap;
-
-public class HashMapExample {
-    public static void main(String[] args) {
-        // Create a HashMap instance with a default initial capacity of 16 buckets
-        HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
-
-        // Insert key-value pairs
-        map.put(&quot;Apple&quot;, 5);
-        map.put(&quot;Banana&quot;, 7);
-        map.put(&quot;Orange&quot;, 3);
-
-        // Retrieve a value based on key
-        System.out.println(&quot;Apple's count: &quot; + map.get(&quot;Apple&quot;)); // Output: 5
-
-        // Update a value
-        map.put(&quot;Apple&quot;, 10);
-        System.out.println(&quot;Updated Apple's count: &quot; + map.get(&quot;Apple&quot;)); // Output: 10
-
-        // Remove a key-value pair
-        map.remove(&quot;Banana&quot;);
-
-        // Check if a key exists
-        System.out.println(&quot;Contains 'Banana'? &quot; + map.containsKey(&quot;Banana&quot;)); // Output: false
-    }
-}
+<p>Additionally, we can work with <strong>String and String arrays</strong> using Stream API.</p>
+<hr />
+<h2 id="1-stream-api-with-primitive-data-types">1. Stream API with Primitive Data Types</h2>
+<h3 id="creating-primitive-streams">Creating Primitive Streams</h3>
+<h4 id="from-an-array">From an <code>Array</code></h4>
+<pre><code class="language-java">int[] numbers = {1, 2, 3, 4, 5};
+IntStream intStream = Arrays.stream(numbers);
 </code></pre>
+<h4 id="using-range-and-rangeclosed">Using <code>range()</code> and <code>rangeClosed()</code></h4>
+<pre><code class="language-java">IntStream.range(1, 5).forEach(System.out::println);  // Output: 1 2 3 4
+IntStream.rangeClosed(1, 5).forEach(System.out::println); // Output: 1 2 3 4 5
+</code></pre>
+<h4 id="using-of">Using <code>of()</code></h4>
+<pre><code class="language-java">IntStream.of(10, 20, 30).forEach(System.out::println);
+</code></pre>
+<h4 id="using-generate-and-iterate">Using <code>generate()</code> and <code>iterate()</code></h4>
+<pre><code class="language-java">IntStream.generate(() -&gt; (int) (Math.random() * 100)).limit(5).forEach(System.out::println);
+IntStream.iterate(1, n -&gt; n + 2).limit(5).forEach(System.out::println); // 1 3 5 7 9
+</code></pre>
+<hr />
+<h2 id="2-stream-api-with-a-single-string">2. Stream API with a Single String</h2>
+<h3 id="convert-string-to-intstream-character-stream">Convert String to <code>IntStream</code> (Character Stream)</h3>
+<pre><code class="language-java">String str = &quot;hello&quot;;
+IntStream charStream = str.chars();
+
+charStream.mapToObj(c -&gt; (char) c)
+          .forEach(System.out::print);  // Output: hello
+</code></pre>
+<h3 id="convert-string-to-stream-of-words">Convert String to Stream of Words</h3>
+<pre><code class="language-java">String sentence = &quot;Java is fun&quot;;
+Stream&lt;String&gt; wordStream = Arrays.stream(sentence.split(&quot; &quot;));
+wordStream.forEach(System.out::println);
+// Output:
+// Java
+// is
+// fun
+</code></pre>
+<hr />
+<h2 id="3-stream-api-with-an-array-of-strings">3. Stream API with an Array of Strings</h2>
+<h3 id="using-streamof">Using <code>Stream.of()</code></h3>
+<pre><code class="language-java">String[] names = {&quot;Aarav&quot;, &quot;Vikram&quot;, &quot;Neha&quot;, &quot;Raj&quot;};
+Stream&lt;String&gt; nameStream = Stream.of(names);
+nameStream.forEach(System.out::println);
+</code></pre>
+<h3 id="using-arraysstream">Using <code>Arrays.stream()</code></h3>
+<pre><code class="language-java">String[] fruits = {&quot;Apple&quot;, &quot;Banana&quot;, &quot;Mango&quot;};
+Arrays.stream(fruits)
+      .map(String::toUpperCase)
+      .forEach(System.out::println);
+// Output:
+// APPLE
+// BANANA
+// MANGO
+</code></pre>
+<hr />
+<h2 id="4-convert-string-arrays-to-primitive-streams">4. Convert String Arrays to Primitive Streams</h2>
+<h3 id="convert-string-array-to-intstream">Convert String Array to <code>IntStream</code></h3>
+<pre><code class="language-java">String[] numbers = {&quot;10&quot;, &quot;20&quot;, &quot;30&quot;, &quot;40&quot;};
+IntStream intStream = Arrays.stream(numbers)
+                            .mapToInt(Integer::parseInt);
+intStream.forEach(System.out::println);
+// Output: 10 20 30 40
+</code></pre>
+<h3 id="convert-string-array-to-doublestream">Convert String Array to <code>DoubleStream</code></h3>
+<pre><code class="language-java">String[] decimalNumbers = {&quot;1.5&quot;, &quot;2.8&quot;, &quot;3.6&quot;};
+DoubleStream doubleStream = Arrays.stream(decimalNumbers)
+                                  .mapToDouble(Double::parseDouble);
+doubleStream.forEach(System.out::println);
+</code></pre>
+<hr />
+<h2 id="5-filtering-mapping-and-reducing-with-stream-api">5. Filtering, Mapping, and Reducing with Stream API</h2>
+<h3 id="filtering-words-based-on-length">Filtering Words Based on Length</h3>
+<pre><code class="language-java">String[] words = {&quot;Java&quot;, &quot;Spring&quot;, &quot;Boot&quot;, &quot;API&quot;};
+Arrays.stream(words)
+      .filter(w -&gt; w.length() &gt; 3)
+      .forEach(System.out::println);
+// Output: Java, Spring
+</code></pre>
+<h3 id="finding-the-longest-word">Finding the Longest Word</h3>
+<pre><code class="language-java">String[] words = {&quot;Java&quot;, &quot;SpringBoot&quot;, &quot;API&quot;, &quot;Stream&quot;};
+String longestWord = Arrays.stream(words)
+                           .max(Comparator.comparingInt(String::length))
+                           .orElse(&quot;&quot;);
+System.out.println(longestWord);
+// Output: SpringBoot
+</code></pre>
+<h3 id="reduce-to-concatenate-strings">Reduce to Concatenate Strings</h3>
+<pre><code class="language-java">String[] words = {&quot;Java&quot;, &quot;is&quot;, &quot;powerful&quot;};
+String sentence = Arrays.stream(words)
+                        .reduce(&quot;&quot;, (a, b) -&gt; a + &quot; &quot; + b);
+System.out.println(sentence.trim());
+// Output: Java is powerful
+</code></pre>
+<hr />
+<h2 id="6-summary">6. Summary</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Operation</strong></th>
+<th><strong>Single String</strong></th>
+<th><strong>Array of Strings</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Convert to Stream</td>
+<td><code>str.chars()</code> (IntStream)</td>
+<td><code>Stream.of(array)</code> or <code>Arrays.stream(array)</code></td>
+</tr>
+<tr>
+<td>Convert to Word Stream</td>
+<td><code>split(" ")</code></td>
+<td>Already an array</td>
+</tr>
+<tr>
+<td>Convert to IntStream</td>
+<td>Not applicable</td>
+<td><code>mapToInt(Integer::parseInt)</code></td>
+</tr>
+<tr>
+<td>Convert to DoubleStream</td>
+<td>Not applicable</td>
+<td><code>mapToDouble(Double::parseDouble)</code></td>
+</tr>
+<tr>
+<td>Filter</td>
+<td><code>filter(c -&gt; c &gt; 'a')</code></td>
+<td><code>filter(s -&gt; s.length() &gt; 3)</code></td>
+</tr>
+<tr>
+<td>Mapping</td>
+<td><code>mapToObj(c -&gt; (char) c)</code></td>
+<td><code>map(String::toUpperCase)</code></td>
+</tr>
+<tr>
+<td>Reduce (Concatenation)</td>
+<td>Not common</td>
+<td><code>reduce("", (a, b) -&gt; a + " " + b)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="conclusion">Conclusion</h3>
+<ul>
+<li>Use <strong>IntStream, LongStream, DoubleStream</strong> for efficiency.</li>
+<li>Methods like <code>sum()</code>, <code>average()</code>, <code>map()</code>, <code>filter()</code>, and <code>reduce()</code> simplify operations.</li>
+<li>Convert between primitive and object streams using <code>boxed()</code> and <code>asDoubleStream()</code>.</li>
+</ul>
+<p>Let me know if you need any modifications! 🚀</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Collection%20Framework/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Comparable%20vs%20Compartor/" class="btn btn-neutral float-right" title="Comparable vs Compartor">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../TerminalOperation/" class="btn btn-neutral float-left" title="Terminal Operation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../other/MarkerInterface/" class="btn btn-neutral float-right" title="Marker Interface">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -403,10 +525,10 @@ public class HashMapExample {
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../Collection%20Framework/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../TerminalOperation/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Comparable%20vs%20Compartor/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../other/MarkerInterface/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
