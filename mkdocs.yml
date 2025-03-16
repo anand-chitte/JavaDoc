@@ -37,6 +37,7 @@ nav:
       - Creating Stream: java/stream/CreatingStream.md
       - Intermediate Operation: java/stream/IntermediateOperation.md
       - Terminal Operation: java/stream/TerminalOperation.md
+      - Stream API With Primitive Data Types: java/stream/StreamWithPrimitiveDataType.md
   - Other:
        - Marker Interface: java/other/MarkerInterface.md
        - SOLID: java/other/Solid.md
