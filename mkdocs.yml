@@ -28,23 +28,23 @@ nav:
       - Locks: java/thread/Locks.md
       - Executor Frameworks: java/thread/ExecutorFramework.md
   - Collection Framework:
-      - Introduction: java/Collection Framework.md
-      - Hashmap: java/Hashmap.md
-      - Comparable vs Compartor: java/Comparable vs Compartor.md
-      - Iterator vs Iterable: java/Iterator & Iterable.md
+      - Introduction: java/collection/Collection Framework.md
+      - Hashmap: java/collection/Hashmap.md
+      - Comparable vs Compartor: java/collection/Comparable vs Compartor.md
+      - Iterator vs Iterable: java/collection/Iterator & Iterable.md
   - Stream:
-      - Introduction: java/Stream.md
-      - Creating Stream: java/CreatingStream.md
-      - Intermediate Operation: java/IntermediateOperation.md
-      - Terminal Operation: java/TerminalOperation.md
+      - Introduction: java/stream/Stream.md
+      - Creating Stream: java/stream/CreatingStream.md
+      - Intermediate Operation: java/stream/IntermediateOperation.md
+      - Terminal Operation: java/stream/TerminalOperation.md
   - Other:
-       - Marker Interface: java/MarkerInterface.md
-       - SOLID: java/Solid.md
-       - Reflection API: java/ReflectionAPI.md
-       - Design Pattern: java/DesignPattern.md
-       - Functional Programming: java/FunctionalProgramming.md
-       - Java Versions: java/Versions.md
-       - Flight Recorder: java/FlightRecorder.md
+       - Marker Interface: java/other/MarkerInterface.md
+       - SOLID: java/other/Solid.md
+       - Reflection API: java/other/ReflectionAPI.md
+       - Design Pattern: java/other/DesignPattern.md
+       - Functional Programming: java/other/FunctionalProgramming.md
+       - Java Versions: java/other/Versions.md
+       - Flight Recorder: java/other/FlightRecorder.md
   - Spring:
       - Introduction: spring/Introduction.md
       - Spring Container: spring/Spring Container.md

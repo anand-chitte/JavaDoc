@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/spring/MultithreadingSpringBoot/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Multithreading - Java</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Java</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Java</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../java/introduction/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../java/How%20Java%20Works/" class="dropdown-item">How Java Works</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Java%20Virtual%20Machine%20%28JVM%29/" class="dropdown-item">JVM</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Garbage%20Collector/" class="dropdown-item">Garbage Collector</a>
+</li>
+                                    
+<li>
+    <a href="../../java/DataType/" class="dropdown-item">Data Type</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Operators/" class="dropdown-item">Operators</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Casting/" class="dropdown-item">Casting</a>
+</li>
+                                    
+<li>
+    <a href="../../java/AccessModifier/" class="dropdown-item">Access Modifier</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Object-Oriented%20Programming/" class="dropdown-item">Object-Oriented Programming</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Constructor/" class="dropdown-item">Constructor</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Method%20overloading%20%26%20overiding/" class="dropdown-item">Method overloading & overriding</a>
+</li>
+                                    
+<li>
+    <a href="../../java/StaticFinalKeyword/" class="dropdown-item">Static & Final Keyword</a>
+</li>
+                                    
+<li>
+    <a href="../../java/String/" class="dropdown-item">String</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Interface/" class="dropdown-item">Interface</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Exception%20in%20Java/" class="dropdown-item">Exception</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Generics/" class="dropdown-item">Generics</a>
+</li>
+                                    
+<li>
+    <a href="../../java/FunctionalInterface/" class="dropdown-item">Functional Interface</a>
+</li>
+                                    
+<li>
+    <a href="../../java/LambdaExpression/" class="dropdown-item">Lambda Expression</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Thread</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../java/thread/Thread/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../java/thread/Synchronization/" class="dropdown-item">Synchronization</a>
+</li>
+                                    
+<li>
+    <a href="../../java/thread/Locks/" class="dropdown-item">Locks</a>
+</li>
+                                    
+<li>
+    <a href="../../java/thread/ExecutorFramework/" class="dropdown-item">Executor Frameworks</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Collection Framework</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../java/Collection%20Framework/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Hashmap/" class="dropdown-item">Hashmap</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Comparable%20vs%20Compartor/" class="dropdown-item">Comparable vs Compartor</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Iterator%20%26%20Iterable/" class="dropdown-item">Iterator vs Iterable</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Stream</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../java/Stream/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../java/CreatingStream/" class="dropdown-item">Creating Stream</a>
+</li>
+                                    
+<li>
+    <a href="../../java/IntermediateOperation/" class="dropdown-item">Intermediate Operation</a>
+</li>
+                                    
+<li>
+    <a href="../../java/TerminalOperation/" class="dropdown-item">Terminal Operation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Other</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../java/MarkerInterface/" class="dropdown-item">Marker Interface</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Solid/" class="dropdown-item">SOLID</a>
+</li>
+                                    
+<li>
+    <a href="../../java/ReflectionAPI/" class="dropdown-item">Reflection API</a>
+</li>
+                                    
+<li>
+    <a href="../../java/DesignPattern/" class="dropdown-item">Design Pattern</a>
+</li>
+                                    
+<li>
+    <a href="../../java/FunctionalProgramming/" class="dropdown-item">Functional Programming</a>
+</li>
+                                    
+<li>
+    <a href="../../java/Versions/" class="dropdown-item">Java Versions</a>
+</li>
+                                    
+<li>
+    <a href="../../java/FlightRecorder/" class="dropdown-item">Flight Recorder</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Spring</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Introduction/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../Spring%20Container/" class="dropdown-item">Spring Container</a>
+</li>
+                                    
+<li>
+    <a href="../Bean/" class="dropdown-item">Bean</a>
+</li>
+                                    
+<li>
+    <a href="../Spring%20Boot/" class="dropdown-item">Spring Boot</a>
+</li>
+                                    
+<li>
+    <a href="../Spring%20Profiles/" class="dropdown-item">Spring Profiles</a>
+</li>
+                                    
+<li>
+    <a href="../Actuator/" class="dropdown-item">Spring Actuator</a>
+</li>
+                                    
+<li>
+    <a href="../ORM/" class="dropdown-item">ORM</a>
+</li>
+                                    
+<li>
+    <a href="../JPA/" class="dropdown-item">JPA</a>
+</li>
+                                    
+<li>
+    <a href="../RestTemplate/" class="dropdown-item">RestTemplate</a>
+</li>
+                                    
+<li>
+    <a href="../WebClient/" class="dropdown-item">WebClient</a>
+</li>
+                                    
+<li>
+    <a href="../Spring%20boot%20annotations/" class="dropdown-item">Spring boot annotations</a>
+</li>
+                                    
+<li>
+    <a href="../Spring%20Security/" class="dropdown-item">Spring Security</a>
+</li>
+                                    
+<li>
+    <a href="../SpringMVC/" class="dropdown-item">Spring MVC</a>
+</li>
+                                    
+<li>
+    <a href="../JSP/" class="dropdown-item">JSP</a>
+</li>
+                                    
+<li>
+    <a href="../Oauth/" class="dropdown-item">OAuth2</a>
+</li>
+                                    
+<li>
+    <a href="../JWT/" class="dropdown-item">JWT</a>
+</li>
+                                    
+<li>
+    <a href="../Keycloak%20Implementation/" class="dropdown-item">Keycloak</a>
+</li>
+                                    
+<li>
+    <a href="../Scheduling/" class="dropdown-item">Scheduling</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Multithreading</a>
+</li>
+                                    
+<li>
+    <a href="../CorrelationId/" class="dropdown-item">Correlation ID</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Microservices</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../microservices/Introduction/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../microservices/EurekaServer/" class="dropdown-item">Eureka Server</a>
+</li>
+                                    
+<li>
+    <a href="../../microservices/ConfigServer/" class="dropdown-item">Configserver</a>
+</li>
+                                    
+<li>
+    <a href="../../microservices/Resiliency/" class="dropdown-item">Resiliency</a>
+</li>
+                                    
+<li>
+    <a href="../../microservices/Gateway/" class="dropdown-item">Spring Cloud Gateway</a>
+</li>
+                                    
+<li>
+    <a href="../../microservices/FeignClient/" class="dropdown-item">FeignClient</a>
+</li>
+                                    
+<li>
+    <a href="../../microservices/SpringCloudSleuth/" class="dropdown-item">SpringCloudSleuth</a>
+</li>
+                                    
+<li>
+    <a href="../../microservices/SpringCloudFunction/" class="dropdown-item">Spring Cloud Function</a>
+</li>
+                                    
+<li>
+    <a href="../../microservices/SpringCloudStream/" class="dropdown-item">Spring Cloud Stream</a>
+</li>
+                                    
+<li>
+    <a href="../../microservices/DesignPattern/" class="dropdown-item">Design Pattern</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PostgreSQL</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../postgres/Dataset/" class="dropdown-item">Dataset</a>
+</li>
+                                    
+<li>
+    <a href="../../postgres/Question/" class="dropdown-item">Question</a>
+</li>
+                                    
+<li>
+    <a href="../../postgres/Answer/" class="dropdown-item">Answer</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Other</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../other/HTTP/" class="dropdown-item">HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../../other/Maven/" class="dropdown-item">Maven</a>
+</li>
+                                    
+<li>
+    <a href="../../other/Git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../other/Docker/" class="dropdown-item">Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../other/Redis/" class="dropdown-item">Redis</a>
+</li>
+                                    
+<li>
+    <a href="../../other/RabbitMQ/" class="dropdown-item">RabbitMQ</a>
+</li>
+                                    
+<li>
+    <a href="../../other/AWS/" class="dropdown-item">AWS</a>
+</li>
+                                    
+<li>
+    <a href="../../other/Agile/" class="dropdown-item">Agile</a>
+</li>
+                                    
+<li>
+    <a href="../../other/Flowchart/" class="dropdown-item">Flowchart</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Interview</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../interview/IntroduceYourself/" class="dropdown-item">Introduce Yourself</a>
+</li>
+                                    
+<li>
+    <a href="../../interview/Question/" class="dropdown-item">Question</a>
+</li>
+                                    
+<li>
+    <a href="../../interview/Programs/" class="dropdown-item">Programs</a>
+</li>
+                                    
+<li>
+    <a href="../../interview/Practice/" class="dropdown-item">Practice</a>
+</li>
+                                    
+<li>
+    <a href="../../interview/SQLSchema/" class="dropdown-item">SQLSchema</a>
+</li>
+                                    
+<li>
+    <a href="../../interview/References/" class="dropdown-item">References</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">CBS</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../cbs/CBS/" class="dropdown-item">CBS</a>
+</li>
+                                    
+<li>
+    <a href="../../cbs/CBSDevelopment/" class="dropdown-item">CBS Developer Document</a>
+</li>
+                                    
+<li>
+    <a href="../../cbs/HLD/" class="dropdown-item">HLD</a>
+</li>
+                                    
+<li>
+    <a href="../../cbs/LLD/" class="dropdown-item">LLD</a>
+</li>
+                                    
+<li>
+    <a href="../../cbs/CBSDevelopmentBlockchain/" class="dropdown-item">CBS Developer Document(Blockchain)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../Scheduling/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../CorrelationId/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#multithreading-in-spring-boot" class="nav-link">Multithreading in Spring Boot</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-using-async-asynchronous-methods" class="nav-link">1. Using @Async (Asynchronous Methods)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-using-executor-for-custom-thread-pool" class="nav-link">2. Using Executor for Custom Thread Pool</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-using-completablefuture-for-asynchronous-processing" class="nav-link">3. Using CompletableFuture for Asynchronous Processing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-using-executorservice-manually" class="nav-link">4. Using ExecutorService Manually</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#which-one-should-you-use" class="nav-link">Which One Should You Use?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="multithreading-in-spring-boot">Multithreading in Spring Boot</h1>
+<p>Multithreading in <strong>Spring Boot</strong> allows you to execute multiple tasks concurrently, improving performance and responsiveness. Spring Boot provides various ways to implement multithreading.</p>
+<h2 id="1-using-async-asynchronous-methods">1. Using <code>@Async</code> (Asynchronous Methods)</h2>
+<p>Spring provides the <code>@Async</code> annotation to run methods asynchronously in a separate thread.</p>
+<h3 id="steps-to-use-async">Steps to Use <code>@Async</code></h3>
+<ol>
+<li><strong>Enable Async Support</strong>: Add <code>@EnableAsync</code> in your main class or a configuration class.</li>
+<li><strong>Use <code>@Async</code> on Methods</strong>: Mark the method you want to run asynchronously.</li>
+</ol>
+<h3 id="example">Example</h3>
+<h4 id="1-enable-async-support">1. Enable Async Support</h4>
+<pre><code class="language-java">import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
+
+@SpringBootApplication
+@EnableAsync // Enable async support
+public class MultithreadingApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(MultithreadingApplication.class, args);
+    }
+}
+</code></pre>
+<h4 id="2-create-an-async-service">2. Create an Async Service</h4>
+<pre><code class="language-java">import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AsyncService {
+    private static final Logger logger = LoggerFactory.getLogger(AsyncService.class);
+
+    @Async
+    public void asyncMethod() {
+        logger.info(&quot;Executing async method in thread: &quot; + Thread.currentThread().getName());
+        try {
+            Thread.sleep(3000); // Simulate long-running task
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        logger.info(&quot;Async method completed&quot;);
+    }
+}
+</code></pre>
+<h4 id="3-call-the-async-method">3. Call the Async Method</h4>
+<pre><code class="language-java">import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(&quot;/async&quot;)
+public class AsyncController {
+    private final AsyncService asyncService;
+
+    public AsyncController(AsyncService asyncService) {
+        this.asyncService = asyncService;
+    }
+
+    @GetMapping(&quot;/run&quot;)
+    public String runAsyncTask() {
+        asyncService.asyncMethod(); // This will execute asynchronously
+        return &quot;Async task started!&quot;;
+    }
+}
+</code></pre>
+<h2 id="2-using-executor-for-custom-thread-pool">2. Using <code>Executor</code> for Custom Thread Pool</h2>
+<p>For more control over thread management, use <code>ExecutorService</code> with a thread pool.</p>
+<h3 id="example_1">Example</h3>
+<h4 id="1-create-a-thread-pool-configuration">1. Create a Thread Pool Configuration</h4>
+<pre><code class="language-java">import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+
+import java.util.concurrent.Executor;
+
+@Configuration
+public class AsyncConfig {
+    @Bean
+    public Executor taskExecutor() {
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        executor.setCorePoolSize(5);
+        executor.setMaxPoolSize(10);
+        executor.setQueueCapacity(100);
+        executor.setThreadNamePrefix(&quot;AsyncThread-&quot;);
+        executor.initialize();
+        return executor;
+    }
+}
+</code></pre>
+<h4 id="2-use-custom-executor-in-async-service">2. Use Custom Executor in Async Service</h4>
+<pre><code class="language-java">import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CustomAsyncService {
+    private static final Logger logger = LoggerFactory.getLogger(CustomAsyncService.class);
+
+    @Async(&quot;taskExecutor&quot;) // Use the custom executor
+    public void runTask() {
+        logger.info(&quot;Executing task in thread: &quot; + Thread.currentThread().getName());
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        logger.info(&quot;Task completed&quot;);
+    }
+}
+</code></pre>
+<h2 id="3-using-completablefuture-for-asynchronous-processing">3. Using <code>CompletableFuture</code> for Asynchronous Processing</h2>
+<p><code>CompletableFuture</code> allows better control over asynchronous computations.</p>
+<h3 id="example_2">Example</h3>
+<pre><code class="language-java">import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
+
+import java.util.concurrent.CompletableFuture;
+
+@Service
+public class FutureService {
+    private static final Logger logger = LoggerFactory.getLogger(FutureService.class);
+
+    @Async
+    public CompletableFuture&lt;String&gt; processAsync() {
+        logger.info(&quot;Executing async task in thread: &quot; + Thread.currentThread().getName());
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        return CompletableFuture.completedFuture(&quot;Task Completed&quot;);
+    }
+}
+</code></pre>
+<h2 id="4-using-executorservice-manually">4. Using <code>ExecutorService</code> Manually</h2>
+<p>For direct thread pool management, use Java’s <code>ExecutorService</code>.</p>
+<h3 id="example_3">Example</h3>
+<pre><code class="language-java">import org.springframework.stereotype.Service;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+@Service
+public class ManualThreadService {
+    private final ExecutorService executorService = Executors.newFixedThreadPool(5);
+
+    public void executeTask() {
+        executorService.submit(() -&gt; {
+            System.out.println(&quot;Task running in thread: &quot; + Thread.currentThread().getName());
+        });
+    }
+}
+</code></pre>
+<h2 id="which-one-should-you-use">Which One Should You Use?</h2>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@Async</code></td>
+<td>Simple async tasks with minimal configuration.</td>
+</tr>
+<tr>
+<td><code>ExecutorService</code></td>
+<td>When you need control over the thread pool size and behavior.</td>
+</tr>
+<tr>
+<td><code>ThreadPoolTaskExecutor</code></td>
+<td>When you want Spring to manage the thread pool with better flexibility.</td>
+</tr>
+<tr>
+<td><code>CompletableFuture</code></td>
+<td>When dealing with complex asynchronous workflows with chaining and combining futures.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusion">Conclusion</h2>
+<p>Spring Boot provides multiple ways to implement multithreading, from simple <code>@Async</code> annotation to full-fledged <code>ExecutorService</code> or <code>CompletableFuture</code>. Choose the best approach based on your use case. 🚀</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
