@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/java/other/FunctionalProgramming/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Functional Programming - Java</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Java</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Java</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../introduction/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../How%20Java%20Works/" class="dropdown-item">How Java Works</a>
+</li>
+                                    
+<li>
+    <a href="../../Java%20Virtual%20Machine%20%28JVM%29/" class="dropdown-item">JVM</a>
+</li>
+                                    
+<li>
+    <a href="../../Garbage%20Collector/" class="dropdown-item">Garbage Collector</a>
+</li>
+                                    
+<li>
+    <a href="../../DataType/" class="dropdown-item">Data Type</a>
+</li>
+                                    
+<li>
+    <a href="../../Operators/" class="dropdown-item">Operators</a>
+</li>
+                                    
+<li>
+    <a href="../../Casting/" class="dropdown-item">Casting</a>
+</li>
+                                    
+<li>
+    <a href="../../AccessModifier/" class="dropdown-item">Access Modifier</a>
+</li>
+                                    
+<li>
+    <a href="../../Object-Oriented%20Programming/" class="dropdown-item">Object-Oriented Programming</a>
+</li>
+                                    
+<li>
+    <a href="../../Constructor/" class="dropdown-item">Constructor</a>
+</li>
+                                    
+<li>
+    <a href="../../Method%20overloading%20%26%20overiding/" class="dropdown-item">Method overloading & overriding</a>
+</li>
+                                    
+<li>
+    <a href="../../StaticFinalKeyword/" class="dropdown-item">Static & Final Keyword</a>
+</li>
+                                    
+<li>
+    <a href="../../String/" class="dropdown-item">String</a>
+</li>
+                                    
+<li>
+    <a href="../../Interface/" class="dropdown-item">Interface</a>
+</li>
+                                    
+<li>
+    <a href="../../Exception%20in%20Java/" class="dropdown-item">Exception</a>
+</li>
+                                    
+<li>
+    <a href="../../Generics/" class="dropdown-item">Generics</a>
+</li>
+                                    
+<li>
+    <a href="../../FunctionalInterface/" class="dropdown-item">Functional Interface</a>
+</li>
+                                    
+<li>
+    <a href="../../LambdaExpression/" class="dropdown-item">Lambda Expression</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Thread</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../thread/Thread/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../thread/Synchronization/" class="dropdown-item">Synchronization</a>
+</li>
+                                    
+<li>
+    <a href="../../thread/Locks/" class="dropdown-item">Locks</a>
+</li>
+                                    
+<li>
+    <a href="../../thread/ExecutorFramework/" class="dropdown-item">Executor Frameworks</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Collection Framework</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../collection/Collection%20Framework/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../collection/Hashmap/" class="dropdown-item">Hashmap</a>
+</li>
+                                    
+<li>
+    <a href="../../collection/Comparable%20vs%20Compartor/" class="dropdown-item">Comparable vs Compartor</a>
+</li>
+                                    
+<li>
+    <a href="../../collection/Iterator%20%26%20Iterable/" class="dropdown-item">Iterator vs Iterable</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Stream</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../stream/Stream/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../stream/CreatingStream/" class="dropdown-item">Creating Stream</a>
+</li>
+                                    
+<li>
+    <a href="../../stream/IntermediateOperation/" class="dropdown-item">Intermediate Operation</a>
+</li>
+                                    
+<li>
+    <a href="../../stream/TerminalOperation/" class="dropdown-item">Terminal Operation</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Other</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../MarkerInterface/" class="dropdown-item">Marker Interface</a>
+</li>
+                                    
+<li>
+    <a href="../Solid/" class="dropdown-item">SOLID</a>
+</li>
+                                    
+<li>
+    <a href="../ReflectionAPI/" class="dropdown-item">Reflection API</a>
+</li>
+                                    
+<li>
+    <a href="../DesignPattern/" class="dropdown-item">Design Pattern</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Functional Programming</a>
+</li>
+                                    
+<li>
+    <a href="../Versions/" class="dropdown-item">Java Versions</a>
+</li>
+                                    
+<li>
+    <a href="../FlightRecorder/" class="dropdown-item">Flight Recorder</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Spring</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../spring/Introduction/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/Spring%20Container/" class="dropdown-item">Spring Container</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/Bean/" class="dropdown-item">Bean</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/Spring%20Boot/" class="dropdown-item">Spring Boot</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/Spring%20Profiles/" class="dropdown-item">Spring Profiles</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/Actuator/" class="dropdown-item">Spring Actuator</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/ORM/" class="dropdown-item">ORM</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/JPA/" class="dropdown-item">JPA</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/RestTemplate/" class="dropdown-item">RestTemplate</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/WebClient/" class="dropdown-item">WebClient</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/Spring%20boot%20annotations/" class="dropdown-item">Spring boot annotations</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/Spring%20Security/" class="dropdown-item">Spring Security</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/SpringMVC/" class="dropdown-item">Spring MVC</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/JSP/" class="dropdown-item">JSP</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/Oauth/" class="dropdown-item">OAuth2</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/JWT/" class="dropdown-item">JWT</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/Keycloak%20Implementation/" class="dropdown-item">Keycloak</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/Scheduling/" class="dropdown-item">Scheduling</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/MultithreadingSpringBoot/" class="dropdown-item">Multithreading</a>
+</li>
+                                    
+<li>
+    <a href="../../../spring/CorrelationId/" class="dropdown-item">Correlation ID</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Microservices</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../microservices/Introduction/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../../microservices/EurekaServer/" class="dropdown-item">Eureka Server</a>
+</li>
+                                    
+<li>
+    <a href="../../../microservices/ConfigServer/" class="dropdown-item">Configserver</a>
+</li>
+                                    
+<li>
+    <a href="../../../microservices/Resiliency/" class="dropdown-item">Resiliency</a>
+</li>
+                                    
+<li>
+    <a href="../../../microservices/Gateway/" class="dropdown-item">Spring Cloud Gateway</a>
+</li>
+                                    
+<li>
+    <a href="../../../microservices/FeignClient/" class="dropdown-item">FeignClient</a>
+</li>
+                                    
+<li>
+    <a href="../../../microservices/SpringCloudSleuth/" class="dropdown-item">SpringCloudSleuth</a>
+</li>
+                                    
+<li>
+    <a href="../../../microservices/SpringCloudFunction/" class="dropdown-item">Spring Cloud Function</a>
+</li>
+                                    
+<li>
+    <a href="../../../microservices/SpringCloudStream/" class="dropdown-item">Spring Cloud Stream</a>
+</li>
+                                    
+<li>
+    <a href="../../../microservices/DesignPattern/" class="dropdown-item">Design Pattern</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">PostgreSQL</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../postgres/Dataset/" class="dropdown-item">Dataset</a>
+</li>
+                                    
+<li>
+    <a href="../../../postgres/Question/" class="dropdown-item">Question</a>
+</li>
+                                    
+<li>
+    <a href="../../../postgres/Answer/" class="dropdown-item">Answer</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Other</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../other/HTTP/" class="dropdown-item">HTTP</a>
+</li>
+                                    
+<li>
+    <a href="../../../other/Maven/" class="dropdown-item">Maven</a>
+</li>
+                                    
+<li>
+    <a href="../../../other/Git/" class="dropdown-item">Git</a>
+</li>
+                                    
+<li>
+    <a href="../../../other/Docker/" class="dropdown-item">Docker</a>
+</li>
+                                    
+<li>
+    <a href="../../../other/Redis/" class="dropdown-item">Redis</a>
+</li>
+                                    
+<li>
+    <a href="../../../other/RabbitMQ/" class="dropdown-item">RabbitMQ</a>
+</li>
+                                    
+<li>
+    <a href="../../../other/AWS/" class="dropdown-item">AWS</a>
+</li>
+                                    
+<li>
+    <a href="../../../other/Agile/" class="dropdown-item">Agile</a>
+</li>
+                                    
+<li>
+    <a href="../../../other/Flowchart/" class="dropdown-item">Flowchart</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Interview</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../interview/IntroduceYourself/" class="dropdown-item">Introduce Yourself</a>
+</li>
+                                    
+<li>
+    <a href="../../../interview/Question/" class="dropdown-item">Question</a>
+</li>
+                                    
+<li>
+    <a href="../../../interview/Programs/" class="dropdown-item">Programs</a>
+</li>
+                                    
+<li>
+    <a href="../../../interview/Practice/" class="dropdown-item">Practice</a>
+</li>
+                                    
+<li>
+    <a href="../../../interview/SQLSchema/" class="dropdown-item">SQLSchema</a>
+</li>
+                                    
+<li>
+    <a href="../../../interview/References/" class="dropdown-item">References</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">CBS</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../cbs/CBS/" class="dropdown-item">CBS</a>
+</li>
+                                    
+<li>
+    <a href="../../../cbs/CBSDevelopment/" class="dropdown-item">CBS Developer Document</a>
+</li>
+                                    
+<li>
+    <a href="../../../cbs/HLD/" class="dropdown-item">HLD</a>
+</li>
+                                    
+<li>
+    <a href="../../../cbs/LLD/" class="dropdown-item">LLD</a>
+</li>
+                                    
+<li>
+    <a href="../../../cbs/CBSDevelopmentBlockchain/" class="dropdown-item">CBS Developer Document(Blockchain)</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../DesignPattern/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Versions/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#functional-programming-in-java" class="nav-link">Functional Programming in Java</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#key-concepts-of-functional-programming-in-java" class="nav-link">Key Concepts of Functional Programming in Java</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#benefits-of-functional-programming-in-java" class="nav-link">Benefits of Functional Programming in Java</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#where-functional-programming-is-used-in-java" class="nav-link">Where Functional Programming is Used in Java</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="functional-programming-in-java">Functional Programming in Java</h1>
+<p>Functional programming (FP) in Java revolves around writing concise, maintainable, and immutable code using functional constructs introduced in Java 8 and beyond. It focuses on declarative programming using functions as first-class citizens.</p>
+<hr />
+<h2 id="key-concepts-of-functional-programming-in-java">Key Concepts of Functional Programming in Java</h2>
+<h3 id="1-pure-functions">1. Pure Functions</h3>
+<ul>
+<li>A function always produces the same output for the same input without side effects.</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-java">import java.util.function.BiFunction;
+
+public class PureFunctionExample {
+    public static void main(String[] args) {
+        BiFunction&lt;Integer, Integer, Integer&gt; add = (a, b) -&gt; a + b;
+        System.out.println(add.apply(2, 3)); // Always returns 5
+    }
+}
+</code></pre>
+<h3 id="2-immutability">2. Immutability</h3>
+<ul>
+<li>Data should not be changed once created; instead, new copies should be made.</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-java">import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class ImmutabilityExample {
+    public static void main(String[] args) {
+        List&lt;Integer&gt; list = Arrays.asList(1, 2, 3);
+        List&lt;Integer&gt; newList = list.stream().map(n -&gt; n * 2).collect(Collectors.toList());
+        System.out.println(newList); // [2, 4, 6]
+    }
+}
+</code></pre>
+<h3 id="3-first-class-and-higher-order-functions">3. First-Class and Higher-Order Functions</h3>
+<ul>
+<li>Functions can be assigned to variables, passed as arguments, and returned from other functions.</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-java">import java.util.function.Function;
+
+public class HigherOrderFunctionExample {
+    public static void main(String[] args) {
+        Function&lt;Integer, Function&lt;Integer, Integer&gt;&gt; multiplyBy = x -&gt; y -&gt; x * y;
+        Function&lt;Integer, Integer&gt; doubleValue = multiplyBy.apply(2);
+        System.out.println(doubleValue.apply(5)); // 10
+    }
+}
+</code></pre>
+<h3 id="4-function-composition">4. Function Composition</h3>
+<ul>
+<li>Combining small functions to build more complex ones.</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-java">import java.util.function.Function;
+
+public class FunctionCompositionExample {
+    public static void main(String[] args) {
+        Function&lt;String, String&gt; toUpperCase = String::toUpperCase;
+        Function&lt;String, String&gt; exclaim = str -&gt; str + &quot;!&quot;;
+        Function&lt;String, String&gt; shout = toUpperCase.andThen(exclaim);
+        System.out.println(shout.apply(&quot;hello&quot;)); // &quot;HELLO!&quot;
+    }
+}
+</code></pre>
+<h3 id="5-recursion">5. Recursion</h3>
+<ul>
+<li>Instead of loops, FP relies on recursive functions.</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-java">public class RecursionExample {
+    public static int factorial(int n) {
+        return (n == 0) ? 1 : n * factorial(n - 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(factorial(5)); // 120
+    }
+}
+</code></pre>
+<hr />
+<h2 id="benefits-of-functional-programming-in-java">Benefits of Functional Programming in Java</h2>
+<ul>
+<li>✅ <strong>Improved Readability &amp; Maintainability</strong> – Code is more predictable and easier to debug.</li>
+<li>✅ <strong>Easier Testing &amp; Debugging</strong> – Pure functions with no side effects make unit testing straightforward.</li>
+<li>✅ <strong>Better Modularity &amp; Reusability</strong> – Functions can be composed and reused efficiently.</li>
+<li>✅ <strong>Concurrency &amp; Parallelism</strong> – Avoiding shared mutable state makes FP well-suited for concurrent applications.</li>
+</ul>
+<hr />
+<h2 id="where-functional-programming-is-used-in-java">Where Functional Programming is Used in Java</h2>
+<ul>
+<li><strong>Stream API</strong> (Processing collections efficiently)</li>
+<li><strong>Lambda Expressions</strong> (Simplified anonymous functions)</li>
+<li><strong>Method References</strong> (More concise function calls)</li>
+<li><strong>Optional API</strong> (Handling null values safely)</li>
+<li><strong>CompletableFuture</strong> (Asynchronous programming)</li>
+</ul>
+<hr />
+<p>Would you like a comparison with object-oriented programming (OOP) in Java or more advanced topics like functional reactive programming? 🚀</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
