@@ -57,19 +57,7 @@
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/Collection%20Framework/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/Comparable%20vs%20Compartor/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
          <loc>https://anand-chitte.github.io/JavaDoc/java/Constructor/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/CreatingStream/</loc>
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
@@ -77,23 +65,11 @@
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/DesignPattern/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
          <loc>https://anand-chitte.github.io/JavaDoc/java/Exception%20in%20Java/</loc>
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/FlightRecorder/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
          <loc>https://anand-chitte.github.io/JavaDoc/java/FunctionalInterface/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/FunctionalProgramming/</loc>
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
@@ -105,10 +81,6 @@
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/Hashmap/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
          <loc>https://anand-chitte.github.io/JavaDoc/java/How%20Java%20Works/</loc>
          <lastmod>2025-03-16</lastmod>
     </url>
@@ -117,23 +89,11 @@
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/IntermediateOperation/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/Iterator%20%26%20Iterable/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
          <loc>https://anand-chitte.github.io/JavaDoc/java/Java%20Virtual%20Machine%20%28JVM%29/</loc>
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
          <loc>https://anand-chitte.github.io/JavaDoc/java/LambdaExpression/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/MarkerInterface/</loc>
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
@@ -149,19 +109,7 @@
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/ReflectionAPI/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/Solid/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
          <loc>https://anand-chitte.github.io/JavaDoc/java/StaticFinalKeyword/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/Stream/</loc>
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
@@ -173,15 +121,67 @@
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/TerminalOperation/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
-         <loc>https://anand-chitte.github.io/JavaDoc/java/Versions/</loc>
-         <lastmod>2025-03-16</lastmod>
-    </url>
-    <url>
          <loc>https://anand-chitte.github.io/JavaDoc/java/introduction/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/collection/Collection%20Framework/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/collection/Comparable%20vs%20Compartor/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/collection/Hashmap/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/collection/Iterator%20%26%20Iterable/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/other/DesignPattern/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/other/FlightRecorder/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/other/FunctionalProgramming/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/other/MarkerInterface/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/other/ReflectionAPI/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/other/Solid/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/other/Versions/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/stream/CreatingStream/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/stream/IntermediateOperation/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/stream/Stream/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://anand-chitte.github.io/JavaDoc/java/stream/TerminalOperation/</loc>
          <lastmod>2025-03-16</lastmod>
     </url>
     <url>
