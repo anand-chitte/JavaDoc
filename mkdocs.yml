@@ -18,24 +18,33 @@ nav:
     - Static & Final Keyword: java/StaticFinalKeyword.md
     - String: java/String.md
     - Interface: java/Interface.md
-    - Exception in Java: java/Exception in Java.md
+    - Exception: java/Exception in Java.md
     - Generics: java/Generics.md
-    - Collection Framework: java/Collection Framework.md
-    - StreamsLambdaFunctional: java/StreamsLambdaFunctional.md
-    - Stream: java/Stream.md
-    - Lambda Expression: java/LambdaExpression.md
     - Functional Interface: java/FunctionalInterface.md
-    - Hashmap: java/Hashmap.md
-    - Comparable vs Compartor: java/Comparable vs Compartor.md
-    - Iterator vs Iterable: java/Iterator & Iterable.md
-    - Thread: java/Thread.md
-    - Marker Interface: java/MarkerInterface.md
-    - SOLID: java/Solid.md
-    - Reflection API: java/ReflectionAPI.md
-    - Design Pattern: java/DesignPattern.md
-    - Functional Programming: java/FunctionalProgramming.md
-    - Java Versions: java/Versions.md
-    - Flight Recorder: java/FlightRecorder.md
+    - Lambda Expression: java/LambdaExpression.md
+  - Thread:
+      - Introduction: java/thread/Thread.md
+      - Synchronization: java/thread/Synchronization.md
+      - Locks: java/thread/Locks.md
+      - Executor Frameworks: java/thread/ExecutorFramework.md
+  - Collection Framework:
+      - Introduction: java/Collection Framework.md
+      - Hashmap: java/Hashmap.md
+      - Comparable vs Compartor: java/Comparable vs Compartor.md
+      - Iterator vs Iterable: java/Iterator & Iterable.md
+  - Stream:
+      - Introduction: java/Stream.md
+      - Creating Stream: java/CreatingStream.md
+      - Intermediate Operation: java/IntermediateOperation.md
+      - Terminal Operation: java/TerminalOperation.md
+  - Other:
+       - Marker Interface: java/MarkerInterface.md
+       - SOLID: java/Solid.md
+       - Reflection API: java/ReflectionAPI.md
+       - Design Pattern: java/DesignPattern.md
+       - Functional Programming: java/FunctionalProgramming.md
+       - Java Versions: java/Versions.md
+       - Flight Recorder: java/FlightRecorder.md
   - Spring:
       - Introduction: spring/Introduction.md
       - Spring Container: spring/Spring Container.md
@@ -55,6 +64,7 @@ nav:
       - JWT: spring/JWT.md
       - Keycloak: spring/Keycloak Implementation.md
       - Scheduling: spring/Scheduling.md
+      - Multithreading: spring/MultithreadingSpringBoot.md
       - Correlation ID: spring/CorrelationId.md
   - Microservices:
       - Introduction: microservices/Introduction.md
@@ -102,9 +112,9 @@ extra_css:
 extra:
   manifest_file: "manifest.json"
 theme:
-  name: readthedocs
-#  color_mode: auto
-#  user_color_mode_toggle: true
+  name: mkdocs
+  color_mode: auto
+  user_color_mode_toggle: true
   highlightjs: true
   hljs_languages:
     - java
