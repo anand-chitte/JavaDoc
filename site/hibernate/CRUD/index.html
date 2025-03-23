@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/interview/IntroduceYourself/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/hibernate/CRUD/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Introduce Yourself - Java</title>
+    <title>CRUD - Java</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Introduce Yourself";
-        var mkdocs_page_input_path = "interview\\IntroduceYourself.md";
-        var mkdocs_page_url = "/JavaDoc/interview/IntroduceYourself/";
+        var mkdocs_page_name = "CRUD";
+        var mkdocs_page_input_path = "hibernate\\CRUD.md";
+        var mkdocs_page_url = "/JavaDoc/hibernate/CRUD/";
       </script>
     
     <!--[if lt IE 9]>
@@ -136,14 +136,74 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Hibernate</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../hibernate/Introduction/">Introduction</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Introduction/">Introduction</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../hibernate/Configuration/">Configuration</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Configuration/">Configuration</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../hibernate/CRUD/">CRUD</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">CRUD</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-insert-methods">Create (Insert) Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#saveobject-entity">save(Object entity)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#persistobject-entity-jpa-standard">persist(Object entity) (JPA Standard)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#retrieve-read-methods">Retrieve (Read) Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#getclasst-clazz-serializable-id">get(Class&lt;T&gt; clazz, Serializable id)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#loadclasst-clazz-serializable-id">load(Class&lt;T&gt; clazz, Serializable id)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#findclasst-clazz-serializable-id-jpa-standard">find(Class&lt;T&gt; clazz, Serializable id) (JPA Standard)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hql-querying">HQL Querying</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#criteria-api">Criteria API</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update-methods">Update Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#updateobject-entity">update(Object entity)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mergeobject-entity">merge(Object entity)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#saveorupdateobject-entity">saveOrUpdate(Object entity)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hql-update-query">HQL Update Query</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delete-methods">Delete Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#deleteobject-entity">delete(Object entity)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hql-delete-query">HQL Delete Query</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#removeobject-entity-jpa-standard">remove(Object entity) (JPA Standard)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#batch-processing-methods">Batch Processing Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sessionflush">session.flush()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sessionclear">session.clear()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sessionevictobject-entity">session.evict(Object entity)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#difference-between-get-and-load">Difference Between get() and load()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#difference-between-save-and-saveorupdate">Difference Between save() and saveOrUpdate()</a>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../hibernate/Relationship/">Relationship</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Relationship/">Relationship</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Spring</span></p>
@@ -243,24 +303,18 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Interview</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduce Yourself</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#current-role-responsibilities">Current Role &amp; Responsibilities:</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#project-description">Project Description:</a>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../interview/IntroduceYourself/">Introduce Yourself</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Question/">Question</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../interview/Question/">Question</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Programs/">Programs</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../interview/Programs/">Programs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Practice/">Practice</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../interview/Practice/">Practice</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../SQLSchema/">SQLSchema</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../interview/SQLSchema/">SQLSchema</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../References/">References</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../interview/References/">References</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">CBS</span></p>
@@ -290,8 +344,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Interview</li>
-      <li class="breadcrumb-item active">Introduce Yourself</li>
+          <li class="breadcrumb-item">Hibernate</li>
+      <li class="breadcrumb-item active">CRUD</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -300,26 +354,210 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="tell-me-about-yourself">Tell me about yourself</h2>
-<p><strong>Hello, my name is [Your Name], and I have been working as a Java Spring Boot Developer for the past [X] years.</strong>  </p>
-<p>I have experience in designing and developing backend applications using Java, Spring Boot, Spring Cloud, and PostgreSQL.  </p>
-<h3 id="current-role-responsibilities">Current Role &amp; Responsibilities:</h3>
+                <h1 id="hibernate-crud-operations-in-detail">Hibernate - CRUD Operations in Detail</h1>
+<h2 id="create-insert-methods">Create (Insert) Methods</h2>
+<h3 id="saveobject-entity"><code>save(Object entity)</code></h3>
 <ul>
-<li>Developing <strong>RESTful APIs</strong> and implementing business logic.  </li>
-<li>Configuring <strong>service discovery, API gateways, and config servers</strong>.  </li>
-<li>Implementing <strong>RabbitMQ</strong> for event-driven architecture.  </li>
-<li>Working with <strong>Docker and CI/CD pipelines</strong> to streamline deployments.  </li>
+<li>Saves a new entity and returns the generated identifier.</li>
+<li>Works only for transient (new) objects.</li>
+<li>The saved entity gets an identifier immediately.</li>
+<li>Example:
+  <code>java
+  Long id = (Long) session.save(employee);</code></li>
 </ul>
-<h3 id="project-description">Project Description:</h3>
-<p>Recently, I have worked on the <strong>Investigation and Loss Mitigation System (ILMS)</strong>, a standalone platform designed to assist the investigation team in conducting systematic and efficient investigations.  </p>
-<p>In this project, I developed backend services using <strong>Spring Boot</strong> and <strong>PostgreSQL</strong>, ensuring seamless data management and high system performance. I also integrated <strong>RabbitMQ</strong> for real-time updates and notifications, enhancing communication within the investigation team. Additionally, I worked with <strong>Docker and CI/CD pipelines</strong> to automate deployments and improve system scalability.  </p>
-<p>The ILMS platform enables investigators to manage cases efficiently, track progress, and ensure proper documentation, ultimately helping organizations mitigate losses effectively.  </p>
+<h3 id="persistobject-entity-jpa-standard"><code>persist(Object entity)</code> <em>(JPA Standard)</em></h3>
+<ul>
+<li>Similar to <code>save()</code>, but does not return an identifier.</li>
+<li>Recommended for managed entities.</li>
+<li>Example:
+  <code>java
+  session.persist(employee);</code></li>
+</ul>
+<h2 id="retrieve-read-methods">Retrieve (Read) Methods</h2>
+<h3 id="getclasst-clazz-serializable-id"><code>get(Class&lt;T&gt; clazz, Serializable id)</code></h3>
+<ul>
+<li>Fetches the entity <strong>immediately</strong> (Eager loading).</li>
+<li>Returns <code>null</code> if the entity is not found.</li>
+<li>Example:
+  <code>java
+  Employee emp = session.get(Employee.class, 1L);</code></li>
+</ul>
+<h3 id="loadclasst-clazz-serializable-id"><code>load(Class&lt;T&gt; clazz, Serializable id)</code></h3>
+<ul>
+<li>Returns a <strong>proxy</strong> object (Lazy loading).</li>
+<li>Throws <code>ObjectNotFoundException</code> if the entity is not found.</li>
+<li>Example:
+  <code>java
+  Employee emp = session.load(Employee.class, 1L);</code></li>
+</ul>
+<h3 id="findclasst-clazz-serializable-id-jpa-standard"><code>find(Class&lt;T&gt; clazz, Serializable id)</code> <em>(JPA Standard)</em></h3>
+<ul>
+<li>Similar to <code>get()</code>, but used in <code>EntityManager</code> (JPA).</li>
+<li>Example:
+  <code>java
+  Employee emp = entityManager.find(Employee.class, 1L);</code></li>
+</ul>
+<h3 id="hql-querying">HQL Querying</h3>
+<ul>
+<li>Example:
+  <code>java
+  Query&lt;Employee&gt; query = session.createQuery("FROM Employee WHERE salary &gt; :salary", Employee.class);
+  query.setParameter("salary", 50000);
+  List&lt;Employee&gt; employees = query.list();</code></li>
+</ul>
+<h3 id="criteria-api">Criteria API</h3>
+<ul>
+<li>Example:
+  <code>java
+  CriteriaBuilder cb = session.getCriteriaBuilder();
+  CriteriaQuery&lt;Employee&gt; cq = cb.createQuery(Employee.class);
+  Root&lt;Employee&gt; root = cq.from(Employee.class);
+  cq.select(root).where(cb.gt(root.get("salary"), 50000));
+  List&lt;Employee&gt; employees = session.createQuery(cq).getResultList();</code></li>
+</ul>
+<h2 id="update-methods">Update Methods</h2>
+<h3 id="updateobject-entity"><code>update(Object entity)</code></h3>
+<ul>
+<li>Updates an existing entity.</li>
+<li>Fails if the entity is detached (not in session scope).</li>
+<li>Example:
+  <code>java
+  session.update(employee);</code></li>
+</ul>
+<h3 id="mergeobject-entity"><code>merge(Object entity)</code></h3>
+<ul>
+<li>Merges a detached entity into the persistence context.</li>
+<li>Example:
+  <code>java
+  session.merge(employee);</code></li>
+</ul>
+<h3 id="saveorupdateobject-entity"><code>saveOrUpdate(Object entity)</code></h3>
+<ul>
+<li>Saves a new entity or updates an existing one.</li>
+<li>Example:
+  <code>java
+  session.saveOrUpdate(employee);</code></li>
+</ul>
+<h3 id="hql-update-query">HQL Update Query</h3>
+<ul>
+<li>Example:
+  <code>java
+  Query query = session.createQuery("UPDATE Employee SET salary = :salary WHERE id = :id");
+  query.setParameter("salary", 75000);
+  query.setParameter("id", 1L);
+  query.executeUpdate();</code></li>
+</ul>
+<h2 id="delete-methods">Delete Methods</h2>
+<h3 id="deleteobject-entity"><code>delete(Object entity)</code></h3>
+<ul>
+<li>Deletes an entity from the database.</li>
+<li>Example:
+  <code>java
+  session.delete(employee);</code></li>
+</ul>
+<h3 id="hql-delete-query">HQL Delete Query</h3>
+<ul>
+<li>Example:
+  <code>java
+  Query query = session.createQuery("DELETE FROM Employee WHERE id = :id");
+  query.setParameter("id", 1L);
+  query.executeUpdate();</code></li>
+</ul>
+<h3 id="removeobject-entity-jpa-standard"><code>remove(Object entity)</code> <em>(JPA Standard)</em></h3>
+<ul>
+<li>Example:
+  <code>java
+  entityManager.remove(employee);</code></li>
+</ul>
+<h2 id="batch-processing-methods">Batch Processing Methods</h2>
+<h3 id="sessionflush"><code>session.flush()</code></h3>
+<ul>
+<li>Forces Hibernate to synchronize session state with the database.</li>
+</ul>
+<h3 id="sessionclear"><code>session.clear()</code></h3>
+<ul>
+<li>Clears the persistence context and detaches all entities.</li>
+</ul>
+<h3 id="sessionevictobject-entity"><code>session.evict(Object entity)</code></h3>
+<ul>
+<li>Removes a specific entity from the session cache.</li>
+</ul>
+<h2 id="difference-between-get-and-load">Difference Between <code>get()</code> and <code>load()</code></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><code>get()</code></th>
+<th><code>load()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fetching Type</td>
+<td>Eager</td>
+<td>Lazy (proxy object)</td>
+</tr>
+<tr>
+<td>Return Type</td>
+<td>Actual entity object</td>
+<td>Proxy object</td>
+</tr>
+<tr>
+<td>If Not Found</td>
+<td>Returns <code>null</code></td>
+<td>Throws <code>ObjectNotFoundException</code></td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Slower (hits DB immediately)</td>
+<td>Faster (only fetches when accessed)</td>
+</tr>
+<tr>
+<td>Use Case</td>
+<td>When you need the full entity</td>
+<td>When you want a reference without fetching immediately</td>
+</tr>
+</tbody>
+</table>
+<h2 id="difference-between-save-and-saveorupdate">Difference Between <code>save()</code> and <code>saveOrUpdate()</code></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><code>save()</code></th>
+<th><code>saveOrUpdate()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Case</td>
+<td>Saves new entity</td>
+<td>Saves new or updates existing</td>
+</tr>
+<tr>
+<td>Identifier Handling</td>
+<td>Returns generated ID</td>
+<td>Does not return ID</td>
+</tr>
+<tr>
+<td>When to Use</td>
+<td>For new objects only</td>
+<td>For both new and existing entities</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Slightly faster</td>
+<td>More overhead (checks entity state)</td>
+</tr>
+</tbody>
+</table>
+<p>These methods provide flexibility when working with Hibernate. Let me know if you need more details! 🚀</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../other/Flowchart/" class="btn btn-neutral float-left" title="Flowchart"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Question/" class="btn btn-neutral float-right" title="Question">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Configuration/" class="btn btn-neutral float-left" title="Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Relationship/" class="btn btn-neutral float-right" title="Relationship">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -342,10 +580,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../other/Flowchart/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Configuration/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Question/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Relationship/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
