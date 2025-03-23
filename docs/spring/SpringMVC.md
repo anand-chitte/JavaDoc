@@ -32,7 +32,7 @@ This guide walks you through setting up a **Spring MVC application** integrated 
         <version>5.3.29</version>
     </dependency>
 
-    <!-- Hibernate Core -->
+    <!-- hibernate Core -->
     <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-core</artifactId>

@@ -46,8 +46,13 @@ nav:
        - Functional Programming: java/other/FunctionalProgramming.md
        - Java Versions: java/other/Versions.md
        - Flight Recorder: java/other/FlightRecorder.md
+  - Hibernate:
+      - Introduction: hibernate/Introduction.md
+      - Configuration: hibernate/Configuration.md
+      - CRUD: hibernate/CRUD.md
+      - Relationship: hibernate/Relationship.md
   - Spring:
-      - Introduction: spring/Introduction.md
+      - Introduction: spring/Introduction.md.md
       - Spring Container: spring/Spring Container.md
       - Bean: spring/Bean.md
       - Spring Boot: spring/Spring Boot.md
@@ -68,7 +73,7 @@ nav:
       - Multithreading: spring/MultithreadingSpringBoot.md
       - Correlation ID: spring/CorrelationId.md
   - Microservices:
-      - Introduction: microservices/Introduction.md
+      - Introduction: microservices/Introduction.md.md
       - Eureka Server: microservices/EurekaServer.md
       - Configserver: microservices/ConfigServer.md
       - Resiliency: microservices/Resiliency.md
