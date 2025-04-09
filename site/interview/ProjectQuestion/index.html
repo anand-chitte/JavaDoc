@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://anand-chitte.github.io/JavaDoc/interview/ProjectQuestion/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Investigation and Loss Mitigation System (ILMS) - Java</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Investigation and Loss Mitigation System (ILMS)";
+        var mkdocs_page_input_path = "interview\\ProjectQuestion.md";
+        var mkdocs_page_url = "/JavaDoc/interview/ProjectQuestion/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/properties.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/shell.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Java
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Java</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/How%20Java%20Works/">How Java Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Java%20Virtual%20Machine%20%28JVM%29/">JVM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Garbage%20Collector/">Garbage Collector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/DataType/">Data Type</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Casting/">Casting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/AccessModifier/">Access Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Object-Oriented%20Programming/">Object-Oriented Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Constructor/">Constructor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Method%20overloading%20%26%20overiding/">Method overloading & overriding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/StaticFinalKeyword/">Static & Final Keyword</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/String/">String</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Interface/">Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Exception%20in%20Java/">Exception</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/Generics/">Generics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/FunctionalInterface/">Functional Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/LambdaExpression/">Lambda Expression</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Thread</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/thread/Thread/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/thread/Synchronization/">Synchronization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/thread/Locks/">Locks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/thread/ExecutorFramework/">Executor Frameworks</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Collection Framework</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/collection/Collection%20Framework/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/collection/Hashmap/">Hashmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/collection/Comparable%20vs%20Compartor/">Comparable vs Compartor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/collection/Iterator%20%26%20Iterable/">Iterator vs Iterable</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stream</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/stream/Stream/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/stream/CreatingStream/">Creating Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/stream/IntermediateOperation/">Intermediate Operation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/stream/TerminalOperation/">Terminal Operation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/stream/StreamWithPrimitiveDataType/">Stream API With Primitive Data Types</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/other/MarkerInterface/">Marker Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/other/Solid/">SOLID</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/other/ReflectionAPI/">Reflection API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/other/DesignPattern/">Design Pattern</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/other/FunctionalProgramming/">Functional Programming</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/other/Versions/">Java Versions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../java/other/FlightRecorder/">Flight Recorder</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hibernate</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hibernate/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hibernate/Configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hibernate/CRUD/">CRUD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hibernate/Relationship/">Relationship</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Spring</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Container/">Spring Container</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Bean/">Bean</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Boot/">Spring Boot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Profiles/">Spring Profiles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Actuator/">Spring Actuator</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/ORM/">ORM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JPA/">JPA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/RestTemplate/">RestTemplate</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/WebClient/">WebClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20boot%20annotations/">Spring boot annotations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Spring%20Security/">Spring Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/SpringMVC/">Spring MVC</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JSP/">JSP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Oauth/">OAuth2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/JWT/">JWT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Keycloak%20Implementation/">Keycloak</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/Scheduling/">Scheduling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/MultithreadingSpringBoot/">Multithreading</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../spring/CorrelationId/">Correlation ID</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Microservices</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/EurekaServer/">Eureka Server</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/ConfigServer/">Configserver</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Resiliency/">Resiliency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/Gateway/">Spring Cloud Gateway</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/FeignClient/">FeignClient</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudSleuth/">SpringCloudSleuth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudFunction/">Spring Cloud Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/SpringCloudStream/">Spring Cloud Stream</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../microservices/DesignPattern/">Design Pattern</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">PostgreSQL</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Dataset/">Dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../postgres/Answer/">Answer</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/HTTP/">HTTP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Maven/">Maven</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Git/">Git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Docker/">Docker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Redis/">Redis</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/RabbitMQ/">RabbitMQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/AWS/">AWS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Agile/">Agile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/Flowchart/">Flowchart</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Interview</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../IntroduceYourself/">Introduce Yourself</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Question/">Question</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Programs/">Programs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Practice/">Practice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SQLSchema/">SQLSchema</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../References/">References</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">CBS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../cbs/CBS/">CBS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../cbs/CBSDevelopment/">CBS Developer Document</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../cbs/HLD/">HLD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../cbs/LLD/">LLD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../cbs/CBSDevelopmentBlockchain/">CBS Developer Document(Blockchain)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Java</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Investigation and Loss Mitigation System (ILMS)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="investigation-and-loss-mitigation-system-ilms">Investigation and Loss Mitigation System (ILMS)</h1>
+<h2 id="overview">Overview</h2>
+<p>The <strong>Investigation and Loss Mitigation System (ILMS)</strong> is an insurance domain project designed to track, investigate, and mitigate financial losses due to fraud, discrepancies, or policy violations.</p>
+<h2 id="key-users">Key Users</h2>
+<p>The main users of the system include:
+- <strong>Location State Owner</strong>
+- <strong>Regional Manager</strong>
+- <strong>Central Coordinator</strong>
+- <strong>Vertical Head</strong>
+- <strong>Admin Controller</strong>
+- <strong>Agency &amp; Agency Head</strong>
+- <strong>Investigator</strong></p>
+<h2 id="tech-stack">Tech Stack</h2>
+<ul>
+<li><strong>Backend:</strong> Java, Spring Boot</li>
+<li><strong>Database:</strong> PostgreSQL</li>
+<li><strong>Caching:</strong> Redis</li>
+<li><strong>Messaging Queue:</strong> RabbitMQ</li>
+</ul>
+<hr />
+<h1 id="project-architecture">Project Architecture</h1>
+<h2 id="1-authentication-authorization">1. Authentication &amp; Authorization</h2>
+<ul>
+<li>We use <strong>Keycloak</strong> as the Authentication Server.</li>
+<li>The <strong>API Gateway</strong> acts as a Resource Server and serves as the single entry point to the ILMS system.</li>
+<li>When a request comes from the frontend, the API Gateway validates the access token by communicating with <strong>Keycloak</strong>.</li>
+<li>If the token is valid, the request is forwarded to the appropriate microservice.</li>
+</ul>
+<h2 id="2-microservices-architecture">2. Microservices Architecture</h2>
+<ul>
+<li>The system follows a <strong>microservices-based architecture</strong>.</li>
+<li><strong>Eureka Server</strong> is used for service discovery, ensuring dynamic service registration and load balancing.</li>
+<li>Each microservice handles a specific module, such as:</li>
+<li>Case Management</li>
+<li>User Management</li>
+<li>Reporting, etc.</li>
+</ul>
+<h2 id="3-database-caching">3. Database &amp; Caching</h2>
+<ul>
+<li><strong>PostgreSQL</strong> is used as the primary relational database for structured data.</li>
+<li><strong>Redis</strong> is used for caching frequently accessed data to improve performance.</li>
+</ul>
+<h2 id="4-asynchronous-messaging">4. Asynchronous Messaging</h2>
+<ul>
+<li><strong>RabbitMQ</strong> is used for event-driven communication between microservices, ensuring smooth data processing without direct dependencies.</li>
+</ul>
+<hr />
+<h1 id="modulesservices">Modules/Services</h1>
+<p>The project consists of the following microservices:
+1. <strong>Health Investigation Service</strong>
+2. <strong>Motor TP (Third Party) Service</strong>
+3. <strong>Motor OD (Own Damage) Service</strong>
+4. <strong>Workflow Service</strong>
+5. <strong>Vendor Service</strong>
+6. <strong>Migration Service</strong>
+7. <strong>Report Service</strong>
+8. <strong>Message Service</strong></p>
+<hr />
+<h1 id="database-tables">Database Tables</h1>
+<h2 id="key-tables">Key Tables</h2>
+<ul>
+<li><strong>User Table</strong> – Stores user details and roles.</li>
+<li><strong>Case Table</strong> – Tracks investigation cases.</li>
+<li><strong>Risk Assessment Table</strong> – Stores risk factors for fraud detection.</li>
+<li><strong>Action Log Table</strong> – Logs all actions taken on a case.</li>
+<li><strong>Reports Table</strong> – Stores generated reports for analysis.</li>
+<li><strong>Audit Logs Table</strong> – Maintains system audit history.</li>
+</ul>
+<h3 id="most-significant-table">Most Significant Table</h3>
+<ul>
+<li><strong>Case Table</strong> – Tracks investigation cases.</li>
+</ul>
+<hr />
+<h1 id="rest-apis">REST APIs</h1>
+<p>We have developed approximately <strong>350-400 REST APIs</strong>, distributed across different services.</p>
+<h2 id="sample-apis">Sample APIs</h2>
+<h3 id="case-management-apis">Case Management APIs</h3>
+<ul>
+<li><strong>POST /cases</strong> - Create a new case</li>
+<li><strong>GET /cases/{id}</strong> - Retrieve case details by ID</li>
+<li><strong>PUT /cases/{id}</strong> - Update case information</li>
+<li><strong>DELETE /cases/{id}</strong> - Delete a case</li>
+<li><strong>GET /cases</strong> - List all cases</li>
+</ul>
+<h3 id="user-management-apis">User Management APIs</h3>
+<ul>
+<li><strong>POST /users</strong> - Create a new user</li>
+<li><strong>GET /users/{id}</strong> - Retrieve user details by ID</li>
+<li><strong>PUT /users/{id}</strong> - Update user information</li>
+<li><strong>DELETE /users/{id}</strong> - Delete a user</li>
+<li><strong>GET /users</strong> - List all users</li>
+</ul>
+<h3 id="risk-assessment-apis">Risk Assessment APIs</h3>
+<ul>
+<li><strong>POST /risk-assessment</strong> - Create a risk assessment entry</li>
+<li><strong>GET /risk-assessment/{id}</strong> - Retrieve risk assessment details</li>
+<li><strong>PUT /risk-assessment/{id}</strong> - Update risk assessment entry</li>
+<li><strong>DELETE /risk-assessment/{id}</strong> - Delete a risk assessment</li>
+</ul>
+<h3 id="report-apis">Report APIs</h3>
+<ul>
+<li><strong>POST /reports</strong> - Generate a new report</li>
+<li><strong>GET /reports/{id}</strong> - Retrieve a report</li>
+<li><strong>GET /reports</strong> - List all reports</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>ILMS is a robust and scalable insurance investigation platform built with a microservices architecture, ensuring efficient fraud detection, case tracking, and loss mitigation.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
