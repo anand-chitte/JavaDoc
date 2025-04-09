@@ -84,6 +84,7 @@ nav:
       - Spring Cloud Stream: microservices/SpringCloudStream.md
       - Design Pattern: microservices/DesignPattern.md
   - PostgreSQL:
+      - Basic: postgres/Basic.md
       - Dataset: postgres/Dataset.md
       - Question: postgres/Question.md
       - Answer: postgres/Answer.md
